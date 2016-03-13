@@ -1,0 +1,32 @@
+{
+    "ffx":{
+        "Prod":{
+            "PODGROUP":"ffx.linux.pri",
+            "TEMPLATEID":"ffx",
+            "GROUPSIZE":5,
+            "TAGGROUPS":0
+        },
+        "DR":{
+            "PODGROUP":"ffx.linux.pri",
+            "TEMPLATEID":"ffx",
+            "GROUPSIZE":5,
+            "TAGGROUPS":0
+        },
+        "CANARY":{
+            "Prod":{
+                "PODGROUP":"gs0.canary",
+                "TEMPLATEID":"ffx",
+                "GROUPSIZE":5,
+                "TAGGROUPS":0,
+                "FILTER":"(1|2)-[2-6]"
+            },
+            "DR":{
+                "PODGROUP":"gs0.canary.sec",
+                "TEMPLATEID":"ffx",
+                "GROUPSIZE":5,
+                "TAGGROUPS":0,
+                "FILTER":"(1|2)-[2-6]"
+            }
+        }
+    }
+}
