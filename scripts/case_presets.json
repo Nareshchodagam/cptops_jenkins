@@ -1,4 +1,20 @@
 {
+	"mq":{
+		"CANARY":{
+			"Prod":{
+				"PODGROUP":"gs0.canary",
+				"TEMPLATEID":"mq.linux",
+				"GROUPSIZE":1,
+				"TAGGROUPS":0
+			},
+			"DR":{
+				"PODGROUP":"gs0.canary.sec",
+				"TEMPLATEID":"mq.linux",
+				"GROUPSIZE":1,
+				"TAGGROUPS":0
+			}
+		}
+	},
     "ffx":{
         "Prod":{
             "PODGROUP":"ffx.linux.pri",
