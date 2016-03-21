@@ -31,10 +31,10 @@
 			"TAGGROUPS":0
 			}
 	},
-	"proxy":{
+	"siteproxy":{
 		"Prod":{
 			"PODGROUP":"pod.pri",
-			"TEMPLATEID":"sitproxy.linux",
+			"TEMPLATEID":"siteproxy.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"FILTER-G1":"1-1",
@@ -144,14 +144,14 @@
                 "TEMPLATEID":"ffx",
                 "GROUPSIZE":5,
                 "TAGGROUPS":0,
-                "FILTER":"(1|2)-[2-6]"
+                "FILTER":"\"(1|2)-[2-6]\""
             },
             "DR":{
                 "PODGROUP":"gs0.canary.sec",
                 "TEMPLATEID":"ffx",
                 "GROUPSIZE":5,
                 "TAGGROUPS":0,
-                "FILTER":"(1|2)-[2-6]"
+                "FILTER":"\"(1|2)-[2-6]\""
             }
         }
     }
