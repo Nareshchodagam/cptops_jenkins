@@ -1,6 +1,6 @@
 {
 	"lapp_canary":{
-		"Canary":{
+		"CANARY":{
 			"Prod":{
 				"PODGROUP":"lacanary",
 				"TEMPLATEID":"la.kafka.linux",
