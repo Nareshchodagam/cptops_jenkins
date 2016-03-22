@@ -1,4 +1,28 @@
 {
+	"lapp_canary":{
+		"Prod":{
+			"PODGROUP":"lacanary",
+			"TEMPLATEID":"la.kafka.linux",
+			"GROUPSIZE":2,
+			"TAGGROUPS":0
+			}
+	},
+	"lapp_clusters":{
+		"Prod":{
+			"PODGROUP":"la_clusters",
+			"TEMPLATEID":"la.linux",
+			"GROUPSIZE":4,
+			"TAGGROUPS":0
+			}
+	},
+	"lapp_cs_clusters":{
+		"Prod":{
+			"PODGROUP":"la_cs_clusters",
+			"TEMPLATEID":"la.kafka.linux",
+			"GROUPSIZE":2,
+			"TAGGROUPS":0
+			}
+	},				
 	"rps":{
 		"Prod":{
 			"PODGROUP":"rpscl",
@@ -31,10 +55,10 @@
 			"TAGGROUPS":0
 			}
 	},
-	"proxy":{
+	"siteproxy":{
 		"Prod":{
 			"PODGROUP":"pod.pri",
-			"TEMPLATEID":"sitproxy.linux",
+			"TEMPLATEID":"siteproxy.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"FILTER-G1":"1-1",
@@ -144,14 +168,14 @@
                 "TEMPLATEID":"ffx",
                 "GROUPSIZE":5,
                 "TAGGROUPS":0,
-                "FILTER":"(1|2)-[2-6]"
+                "FILTER":"\"(1|2)-[2-6]\""
             },
             "DR":{
                 "PODGROUP":"gs0.canary.sec",
                 "TEMPLATEID":"ffx",
                 "GROUPSIZE":5,
                 "TAGGROUPS":0,
-                "FILTER":"(1|2)-[2-6]"
+                "FILTER":"\"(1|2)-[2-6]\""
             }
         }
     }
