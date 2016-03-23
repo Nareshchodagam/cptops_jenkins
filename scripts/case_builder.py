@@ -55,7 +55,7 @@ def pod_builder(sets):
             with open("cases.sh", 'w') as cases:
                 cases.write(file_proc.stdout.read())
         else:
-            case_cmd = "python %s -p /home/jenkins/git/cptops_case_gen/hostlists/%s -r %s -t %s -b %s -d %s -s %d -g \"%s\" --patchset %s --taggroups %d" \
+            case_cmd = "python %s -p /home/jenkins/git/cptops_case_gen/hostlists/%s -r %s -t %s -b %s -d %s -s %d -g \"%s\" -f %s --patchset %s --taggroups %d" \
                  % (pod_cmd, group_file, role, template, mon.lower(), dr.title(), gsize, status, os.environ['FILTER'], bundle, tagsize)
             logging.debug(os.environ['FILTER'])
             logging.debug(case_cmd)
