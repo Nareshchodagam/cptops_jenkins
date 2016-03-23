@@ -5,7 +5,8 @@
 				"PODGROUP":"lacanary",
 				"TEMPLATEID":"la.kafka.linux",
 				"GROUPSIZE":2,
-				"TAGGROUPS":0
+				"TAGGROUPS":0,
+				"ROLE":"lapp"
 				}
 			}
 	},
@@ -14,7 +15,8 @@
 			"PODGROUP":"la_clusters",
 			"TEMPLATEID":"la.linux",
 			"GROUPSIZE":4,
-			"TAGGROUPS":0
+			"TAGGROUPS":0,
+			"ROLE":"lapp"
 			}
 	},
 	"lapp_cs_clusters":{
@@ -22,7 +24,8 @@
 			"PODGROUP":"la_cs_clusters",
 			"TEMPLATEID":"la.kafka.linux",
 			"GROUPSIZE":2,
-			"TAGGROUPS":0
+			"TAGGROUPS":0,
+			"ROLE":"lapp"
 			}
 	},				
 	"rps":{
@@ -30,7 +33,8 @@
 			"PODGROUP":"rpscl",
 			"TEMPLATEID":"rps",
 			"GROUPSIZE":1,
-			"TAGGROUPS":0
+			"TAGGROUPS":0,
+			"ROLE":"rps"
 			}
 	},
 	"release":{
@@ -38,7 +42,8 @@
 			"PODGROUP":"releasecl",
 			"TEMPLATEID":"release",
 			"GROUPSIZE":1,
-			"TAGGROUPS":0
+			"TAGGROUPS":0,
+			"ROLE":"release"
 			}
 	},
 	"public-trust":{
@@ -46,7 +51,8 @@
 			"PODGROUP":"public-trust",
 			"TEMPLATEID":"public-trust",
 			"GROUPSIZE":1,
-			"TAGGROUPS":0
+			"TAGGROUPS":0,
+			"ROLE":"public-trust"
 			}
 	},
 	"it_edw":{
@@ -54,7 +60,8 @@
 			"PODGROUP":"dbextract",
 			"TEMPLATEID":"shared-dbextract",
 			"GROUPSIZE":1,
-			"TAGGROUPS":0
+			"TAGGROUPS":0,
+			"ROLE":"it_edw"
 			}
 	},
 	"siteproxy":{
@@ -63,14 +70,15 @@
 			"TEMPLATEID":"siteproxy.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"FILTER-G1":"1-1",
-			"FILTER-G2":"2-1"
+			"FILTER":["1-1", "2-1"],
+			"ROLE":"siteproxy"
 			},
 		 "DR":{
 		 	"PODGROUP":"pod.sec",
 			"TEMPLATEID":"sitproxy_standby.linux",
 			"GROUPSIZE":1,
-			"TAGGROUPS":0
+			"TAGGROUPS":0,
+			"ROLE":"siteproxy"
 		 	}
 	},
 	"publicproxy":{
@@ -78,7 +86,8 @@
 			"PODGROUP":"pproxy",
 			"TEMPLATEID":"public-proxy",
 			"GROUPSIZE":1,
-			"TAGGROUPS":0
+			"TAGGROUPS":0,
+			"ROLE":"publicproxy"
 			}
 	},
 	"web.chi-was":{
@@ -86,7 +95,8 @@
 			"PODGROUP":"pweb.chi-was",
 			"TEMPLATEID":"web.chi-was",
 			"GROUPSIZE":4,
-			"TAGGROUPS":0
+			"TAGGROUPS":0,
+			"ROLE":"web"
 			}
 	},
 	"web.asg-sjl":{
@@ -94,7 +104,8 @@
 			"PODGROUP":"pweb.asg-sjl",
 			"TEMPLATEID":"web.chi-was",
 			"GROUPSIZE":4,
-			"TAGGROUPS":0
+			"TAGGROUPS":0,
+			"ROLE":"web"
 		}
 	},
 	"web_stage":{
@@ -102,7 +113,8 @@
 			"PODGROUP":"pwebstg",
 			"TEMPLATEID":"web_stage.linux",
 			"GROUPSIZE":1,
-			"TAGGROUPS":0
+			"TAGGROUPS":0,
+			"ROLE":"web"
 		}
 	},
 	"web_auth":{
@@ -110,7 +122,8 @@
 			"PODGROUP":"pwebauth",
 			"TEMPLATEID":"web_auth.linux",
 			"GROUPSIZE":1,
-			"TAGGROUPS":0
+			"TAGGROUPS":0,
+			"ROLE":"web"
 			}
 	},
 	"sapp":{
@@ -118,7 +131,8 @@
 			"PODGROUP":"sapp.pri",
 			"TEMPLATEID":"generic_app",
 			"GROUPSIZE":1,
-			"TAGGROUPS":0
+			"TAGGROUPS":0,
+			"ROLE":"sapp"
 			}
 	},
 	"mq":{
@@ -127,27 +141,32 @@
 			"TEMPLATEID":"mq.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"FILTER-G1":"1-1",
-			"FILTER-G2":"\"(1-2|2-1)\""
+			"FILTER":["1-1", "\"(1-2|2-1)\""],
+			"ROLE":"mq"
 		}, 
 		"DR":{
 			"PODGROUP":"pod.sec",
 			"TEMPLATEID":"mq.linux",
 			"GROUPSIZE":1,
-			"TAGGROUPS":0
-		},
+			"TAGGROUPS":0,
+			"ROLE":"mq"
+		}
+	},
+	"mq_canary":{
 		"CANARY":{
 			"Prod":{
 				"PODGROUP":"gs0.canary",
 				"TEMPLATEID":"mq.linux",
 				"GROUPSIZE":1,
-				"TAGGROUPS":0
+				"TAGGROUPS":0,
+				"ROLE":"mq"
 			},
 			"DR":{
 				"PODGROUP":"gs0.canary.sec",
 				"TEMPLATEID":"mq.linux",
 				"GROUPSIZE":1,
-				"TAGGROUPS":0
+				"TAGGROUPS":0,
+				"ROLE":"mq"
 			}
 		}
 	},
@@ -156,28 +175,34 @@
             "PODGROUP":"ffx.linux.pri",
             "TEMPLATEID":"ffx",
             "GROUPSIZE":5,
-            "TAGGROUPS":0
+            "TAGGROUPS":0,
+            "ROLE":"ffx"
         },
         "DR":{
             "PODGROUP":"ffx.linux.sec",
             "TEMPLATEID":"ffx",
             "GROUPSIZE":5,
-            "TAGGROUPS":0
-        },
+            "TAGGROUPS":0,
+            "ROLE":"ffx"
+        }
+    },
+    "ffx_canary":{
         "CANARY":{
             "Prod":{
                 "PODGROUP":"gs0.canary",
                 "TEMPLATEID":"ffx",
                 "GROUPSIZE":5,
                 "TAGGROUPS":0,
-                "FILTER":"\"(1|2)-[2-6]\""
+                "FILTER":["\"(1|2)-[2-6]\""],
+                "ROLE":"ffx"
             },
             "DR":{
                 "PODGROUP":"gs0.canary.sec",
                 "TEMPLATEID":"ffx",
                 "GROUPSIZE":5,
                 "TAGGROUPS":0,
-                "FILTER":"\"(1|2)-[2-6]\""
+                "FILTER":["\"(1|2)-[2-6]\""],
+                "ROLE":"ffx"
             }
         }
     }
