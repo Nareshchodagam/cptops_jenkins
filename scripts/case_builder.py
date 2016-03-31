@@ -103,4 +103,4 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG)
     sets = json_imports()
     pod_builder(sets)
-    #case_executor()
+    case_executor()
