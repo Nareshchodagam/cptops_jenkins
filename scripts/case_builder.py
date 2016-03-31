@@ -48,19 +48,19 @@ def pod_builder(sets):
     logging.debug("TEMPLATEID = " + template)
     logging.debug("GROUPSIZE = " + str(gsize))
     logging.debug("TAGGROUPS = " + str(tagsize))
-    logging.devug("INFRA = " + infra_type)
+    logging.debug("INFRA = " + infra_type)
     logging.debug("ROLE = " + role)
 
     if not os.environ['FILTER']:
-        case_cmd = "python %s -p /home/jenkins/git/cptops_case_gen/hostlists/%s --infra %s -r %s -t %s -b %s -d %s -s %s -g \"%s\" --patchset %s --taggroups %s" \
-             % (pod_cmd, group_file, infra_type, role, template, mon.lower(), dr.title(), gsize, role_status, bundle, tagsize)
+        case_cmd = "python %s -p /home/jenkins/git/cptops_case_gen/hostlists/%s -r %s -t %s -b %s -d %s -s %s -g \"%s\" --patchset %s --taggroups %s  --infra %s" \
+             % (pod_cmd, group_file, role, template, mon.lower(), dr.title(), gsize, role_status, bundle, tagsize, infra_type)
         logging.debug(case_cmd)
         file_proc = subprocess.Popen(case_cmd.split(), stdout=subprocess.PIPE)
         with open(case_file, 'w') as cases:
             cases.write(file_proc.stdout.read())
     else:
-        case_cmd = "python %s -p /home/jenkins/git/cptops_case_gen/hostlists/%s --infra %s -r %s -t %s -b %s -d %s -s %s -g \"%s\" -f %s --patchset %s --taggroups %s" \
-             % (pod_cmd, group_file, infra_type, role, template, mon.lower(), dr.title(), gsize, role_status, os.environ['FILTER'], bundle, tagsize)
+        case_cmd = "python %s -p /home/jenkins/git/cptops_case_gen/hostlists/%s -r %s -t %s -b %s -d %s -s %s -g \"%s\" -f %s --patchset %s --taggroups %s  --infra %s" \
+             % (pod_cmd, group_file, role, template, mon.lower(), dr.title(), gsize, role_status, os.environ['FILTER'], bundle, tagsize, infra_type)
         logging.debug("FILTER = " + os.environ['FILTER'])
         logging.debug(case_cmd)
         file_proc = subprocess.Popen(case_cmd.split(), stdout=subprocess.PIPE)
