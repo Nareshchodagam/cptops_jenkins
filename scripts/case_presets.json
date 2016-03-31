@@ -1,17 +1,15 @@
 {
-	"lapp_canary":{
-		"CANARY":{
-			"Prod":{
-				"PODGROUP":"lacanary",
-				"TEMPLATEID":"la.kafka.linux",
-				"GROUPSIZE":2,
-				"TAGGROUPS":0,
-				"ROLE":"lapp"
-				}
+	"lapp_canary_prod":{
+		"PROD":{
+			"PODGROUP":"lacanary",
+			"TEMPLATEID":"la.kafka.linux",
+			"GROUPSIZE":2,
+			"TAGGROUPS":0,
+			"ROLE":"lapp"
 			}
 	},
-	"lapp_clusters":{
-		"Prod":{
+	"lapp_clusters_prod":{
+		"PROD":{
 			"PODGROUP":"la_clusters",
 			"TEMPLATEID":"la.linux",
 			"GROUPSIZE":4,
@@ -19,8 +17,8 @@
 			"ROLE":"lapp"
 			}
 	},
-	"lapp_cs_clusters":{
-		"Prod":{
+	"lapp_cs_clusters_prod":{
+		"PROD":{
 			"PODGROUP":"la_cs_clusters",
 			"TEMPLATEID":"la.kafka.linux",
 			"GROUPSIZE":2,
@@ -28,8 +26,8 @@
 			"ROLE":"lapp"
 			}
 	},				
-	"rps":{
-		"Prod":{
+	"rps_prod":{
+		"PROD":{
 			"PODGROUP":"rpscl",
 			"TEMPLATEID":"rps",
 			"GROUPSIZE":1,
@@ -37,8 +35,8 @@
 			"ROLE":"rps"
 			}
 	},
-	"release":{
-		"Prod":{
+	"release_prod":{
+		"PROD":{
 			"PODGROUP":"releasecl",
 			"TEMPLATEID":"release",
 			"GROUPSIZE":1,
@@ -46,8 +44,8 @@
 			"ROLE":"release"
 			}
 	},
-	"public-trust":{
-		"Prod":{
+	"public-trust_prod":{
+		"PROD":{
 			"PODGROUP":"public-trust",
 			"TEMPLATEID":"public-trust",
 			"GROUPSIZE":1,
@@ -55,8 +53,8 @@
 			"ROLE":"public-trust"
 			}
 	},
-	"it_edw":{
-		"Prod":{
+	"it_edw_prod":{
+		"PROD":{
 			"PODGROUP":"dbextract",
 			"TEMPLATEID":"shared-dbextract",
 			"GROUPSIZE":1,
@@ -64,25 +62,27 @@
 			"ROLE":"it_edw"
 			}
 	},
-	"siteproxy":{
-		"Prod":{
+	"siteproxy_prod":{
+		"PROD":{
 			"PODGROUP":"pod.pri",
 			"TEMPLATEID":"siteproxy.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"FILTER":["1-1", "2-1"],
-			"ROLE":"siteproxy"
-			},
+			"ROLE":"proxy"
+			}
+	},
+	"siteproxy_dr":{
 		 "DR":{
 		 	"PODGROUP":"pod.sec",
-			"TEMPLATEID":"sitproxy_standby.linux",
+			"TEMPLATEID":"siteproxy_standby.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"ROLE":"siteproxy"
+			"ROLE":"proxy"
 		 	}
 	},
-	"publicproxy":{
-		"Prod":{
+	"publicproxy_prod":{
+		"PROD":{
 			"PODGROUP":"pproxy",
 			"TEMPLATEID":"public-proxy",
 			"GROUPSIZE":1,
@@ -90,8 +90,8 @@
 			"ROLE":"publicproxy"
 			}
 	},
-	"web.chi-was":{
-		"Prod":{
+	"web.chi-was_prod":{
+		"PROD":{
 			"PODGROUP":"pweb.chi-was",
 			"TEMPLATEID":"web.chi-was",
 			"GROUPSIZE":4,
@@ -99,8 +99,8 @@
 			"ROLE":"web"
 			}
 	},
-	"web.asg-sjl":{
-		"Prod":{
+	"web.asg-sjl_prod":{
+		"PROD":{
 			"PODGROUP":"pweb.asg-sjl",
 			"TEMPLATEID":"web.chi-was",
 			"GROUPSIZE":4,
@@ -108,8 +108,8 @@
 			"ROLE":"web"
 		}
 	},
-	"web_stage":{
-		"Prod":{
+	"web_stage_prod":{
+		"PROD":{
 			"PODGROUP":"pwebstg",
 			"TEMPLATEID":"web_stage.linux",
 			"GROUPSIZE":1,
@@ -117,8 +117,8 @@
 			"ROLE":"web"
 		}
 	},
-	"web_auth":{
-		"Prod":{
+	"web_auth_prod":{
+		"PROD":{
 			"PODGROUP":"pwebauth",
 			"TEMPLATEID":"web_auth.linux",
 			"GROUPSIZE":1,
@@ -126,8 +126,8 @@
 			"ROLE":"web"
 			}
 	},
-	"sapp":{
-		"Prod":{
+	"sapp_prod":{
+		"PROD":{
 			"PODGROUP":"sapp.pri",
 			"TEMPLATEID":"generic_app",
 			"GROUPSIZE":1,
@@ -135,15 +135,17 @@
 			"ROLE":"sapp"
 			}
 	},
-	"mq":{
-		"Prod":{
+	"mq_prod":{
+		"PROD":{
 			"PODGROUP":"pod.pri",
 			"TEMPLATEID":"mq.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"FILTER":["1-1", "\"(1-2|2-1)\""],
 			"ROLE":"mq"
-		}, 
+			}
+	},
+	"mq_dr":{
 		"DR":{
 			"PODGROUP":"pod.sec",
 			"TEMPLATEID":"mq.linux",
@@ -152,58 +154,60 @@
 			"ROLE":"mq"
 		}
 	},
-	"mq_canary":{
-		"CANARY":{
-			"Prod":{
-				"PODGROUP":"gs0.canary",
-				"TEMPLATEID":"mq.linux",
-				"GROUPSIZE":1,
-				"TAGGROUPS":0,
-				"ROLE":"mq"
-			},
-			"DR":{
-				"PODGROUP":"gs0.canary.sec",
-				"TEMPLATEID":"mq.linux",
-				"GROUPSIZE":1,
-				"TAGGROUPS":0,
-				"ROLE":"mq"
+	"mq_canary_prod":{
+		"PROD":{
+			"PODGROUP":"gs0.canary",
+			"TEMPLATEID":"mq.linux",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"ROLE":"mq"
 			}
-		}
 	},
-    "ffx":{
-        "Prod":{
+	"mq_canary_dr":{
+		"DR":{
+			"PODGROUP":"gs0.canary.sec",
+			"TEMPLATEID":"mq.linux",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"ROLE":"mq"
+			}
+	},
+    "ffx_prod":{
+        "PROD":{
             "PODGROUP":"ffx.linux.pri",
             "TEMPLATEID":"ffx",
             "GROUPSIZE":5,
             "TAGGROUPS":0,
             "ROLE":"ffx"
-        },
+        	}
+    },
+    "ffx_dr":{
         "DR":{
             "PODGROUP":"ffx.linux.sec",
             "TEMPLATEID":"ffx",
             "GROUPSIZE":5,
             "TAGGROUPS":0,
             "ROLE":"ffx"
-        }
+        	}
     },
-    "ffx_canary":{
-        "CANARY":{
-            "Prod":{
-                "PODGROUP":"gs0.canary",
-                "TEMPLATEID":"ffx",
-                "GROUPSIZE":5,
-                "TAGGROUPS":0,
-                "FILTER":["\"(1|2)-[2-6]\""],
-                "ROLE":"ffx"
-            },
-            "DR":{
-                "PODGROUP":"gs0.canary.sec",
-                "TEMPLATEID":"ffx",
-                "GROUPSIZE":5,
-                "TAGGROUPS":0,
-                "FILTER":["\"(1|2)-[2-6]\""],
-                "ROLE":"ffx"
+    "ffx_canary_prod":{
+        "PROD":{
+            "PODGROUP":"gs0.canary",
+            "TEMPLATEID":"ffx",
+            "GROUPSIZE":5,
+            "TAGGROUPS":0,
+            "FILTER":["\"(1|2)-[2-6]\""],
+            "ROLE":"ffx"
+        	}
+    },
+    "ffx_canary_dr":{
+        "DR":{
+            "PODGROUP":"gs0.canary.sec",
+            "TEMPLATEID":"ffx",
+            "GROUPSIZE":5,
+            "TAGGROUPS":0,
+            "FILTER":["\"(1|2)-[2-6]\""],
+            "ROLE":"ffx"
             }
         }
-    }
 }
