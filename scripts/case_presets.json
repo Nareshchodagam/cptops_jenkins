@@ -1,4 +1,14 @@
 {
+	"shared-apputil_prod":{
+		"PROD":{
+			"PODGROUP":"apputil.pri",
+			"TEMPLATEID":"shared-apputil",
+			"GROUPSIZE":2,
+			"TAGGROUPS":0,
+			"INFRA":"\"Supporting Infrastructure\"",
+			"ROLE":"app"
+			}
+	},
 	"hbase_sp_prod":{
 		"PROD":{
 			"PODGROUP":"hbase_clusters",
