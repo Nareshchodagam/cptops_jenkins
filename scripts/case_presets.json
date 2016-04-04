@@ -1,4 +1,48 @@
 {
+	"search(23|43)_prod":{
+		"PROD":{
+			"PODGROUP":"pod.pri",
+			"TEMPLATEID":"search",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"FILTER":["search(23)-", "search(43)-"],
+			"INFRA":"Primary",
+			"ROLE":"search"
+			}
+	},
+	"search(21|22,41|42)_prod":{
+		"PROD":{
+			"PODGROUP":"pod.pri",
+			"TEMPLATEID":"search",
+			"GROUPSIZE":15,
+			"TAGGROUPS":0,
+			"FILTER":["search(21|22)-", "search(41|42)-"],
+			"INFRA":"Primary",
+			"ROLE":"search"
+			}
+	},
+	"search(23|43)_dr":{
+		"DR":{
+			"PODGROUP":"pod.sec",
+			"TEMPLATEID":"search",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"FILTER":["search(23)-", "search(43)-"],
+			"INFRA":"Secondary",
+			"ROLE":"search"
+			}
+	},
+	"search(21|22,41|42)_dr":{
+		"DR":{
+			"PODGROUP":"pod.sec",
+			"TEMPLATEID":"search",
+			"GROUPSIZE":15,
+			"TAGGROUPS":0,
+			"FILTER":["search(21|22)-", "search(41|42)-"],
+			"INFRA":"Secondary",
+			"ROLE":"search"
+			}
+	},
 	"shared-apputil_prod":{
 		"PROD":{
 			"PODGROUP":"apputil.pri",
