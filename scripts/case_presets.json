@@ -268,7 +268,7 @@
 		"PROD":{
 			"PODGROUP":"sapp.pri",
 			"TEMPLATEID":"generic_app",
-			"GROUPSIZE":1,
+			"GROUPSIZE":3,
 			"TAGGROUPS":0,
 			"INFRA":"Primary",
 			"ROLE":"sapp"
