@@ -52,14 +52,14 @@ def pod_builder(sets):
     logging.debug("ROLE = " + role)
 
     if not os.environ['FILTER']:
-        case_cmd = "python %s -p /home/jenkins/git/cptops_case_gen/hostlists/%s -r %s -t %s -b %s -d %s -s %s -g \"%s\" --patchset %s --taggroups %s  --infra %s" \
+        case_cmd = "python %s -p /home/jenkins/git/cptops_case_gen/hostlists/%s -r %s -t %s -b %s -d %s -s %s -g %s --patchset %s --taggroups %s  --infra %s" \
              % (pod_cmd, group_file, role, template, mon.lower(), dr.title(), gsize, role_status, bundle, tagsize, infra_type)
         logging.debug(case_cmd)
         file_proc = subprocess.Popen(case_cmd.split(), stdout=subprocess.PIPE)
         with open(case_file, 'w') as cases:
             cases.write(file_proc.stdout.read())
     else:
-        case_cmd = "python %s -p /home/jenkins/git/cptops_case_gen/hostlists/%s -r %s -t %s -b %s -d %s -s %s -g \"%s\" -f %s --patchset %s --taggroups %s  --infra %s" \
+        case_cmd = "python %s -p /home/jenkins/git/cptops_case_gen/hostlists/%s -r %s -t %s -b %s -d %s -s %s -g %s -f %s --patchset %s --taggroups %s  --infra %s" \
              % (pod_cmd, group_file, role, template, mon.lower(), dr.title(), gsize, role_status, os.environ['FILTER'], bundle, tagsize, infra_type)
         logging.debug("FILTER = " + os.environ['FILTER'])
         logging.debug(case_cmd)
@@ -75,8 +75,10 @@ def case_executor():
     '''
     case_file = '/home/jenkins/git/cases.sh'
     cmd_type = re.compile(r'^(python\s[a-z_.]*)')
+    pods = re.compile(r'--inst\s([A-Za-z0-99,]*)')
     os.chdir('/home/jenkins/git/cptops_case_gen/bin')
-
+    failed_plans = [] 
+    
     if os.path.isfile(case_file):
         with open(case_file, 'r') as cases:
             for line in cases:
@@ -84,25 +86,30 @@ def case_executor():
                 if ln_check.group() == "python gus_cases.py":
                     os.environ['https_proxy'] = "http://public-proxy1-0-sfm.data.sfdc.net:8080/"
                     logging.debug(line)
-                    retcode = subprocess.call(line.split())
+                    retcode = os.system(line)
                     logging.debug(retcode)
                     if retcode != 0:
-                      logging.debug(line)
-                      sys.exit(1)
+                        pods_match = pods.findall(line)
+                        logging.debug(pods_match)
+                        failed_plans.append(pods_match)
                 else:
                     os.environ['https_proxy'] = ""
                     logging.debug(line)
-                    retcode = subprocess.call(line.split())
+                    retcode = os.system(line)
                     logging.debug(retcode)
                     if retcode != 0:
                       logging.debug(line)
-                      sys.exit(1)
     else:
         logging.debug("cases.sh file not found!")
         sys.exit(1)
+    return failed_plans
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG)
     sets = json_imports()
     pod_builder(sets)
-    case_executor()
+    failures = case_executor()
+    if failures:
+        for fail in failures:
+            logging.debug(str(fail) + " failed to generate implementation plans.")
+        sys.exit(1)

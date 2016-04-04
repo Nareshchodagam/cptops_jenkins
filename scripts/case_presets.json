@@ -5,7 +5,7 @@
 			"TEMPLATEID":"shared-apputil",
 			"GROUPSIZE":2,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"app"
 			}
 	},
@@ -15,7 +15,7 @@
 			"TEMPLATEID":"hbase.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":20,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"mnds,dnds"
 			}
 	},
@@ -56,7 +56,7 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"FILTER":"(redis(1|2)-1-|iworker(1|2)-1-)", 
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"insights_iworker,insights_redis"
 			}
 	},
@@ -67,7 +67,7 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"FILTER":"(redis(1|2)-1-|iworker(1-15|2-9)-)",
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"insights_iworker,insights_redis"
 			}
 	},
@@ -78,7 +78,7 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"FILTER":"(redis(1|2)-1-|iworker(1-11|3-1)-)",
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"insights_iworker,insights_redis"
 			}
 	},
@@ -89,7 +89,7 @@
 			"GROUPSIZE":18,
 			"TAGGROUPS":0,
 			"FILTER":"[a-zA-Z]",
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"insights_iworker,insights_redis"
 			}
 	},
@@ -99,7 +99,7 @@
 			"TEMPLATEID":"pbsgeo.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"pbsgeo"
 			}
 	},
@@ -109,7 +109,7 @@
 			"TEMPLATEID":"pbsmatch.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"pbsmatch"
 			}
 	},
@@ -119,7 +119,7 @@
 			"TEMPLATEID":"straight-patch",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"app"
 			}
 	},
@@ -129,7 +129,7 @@
 			"TEMPLATEID":"la.kafka.linux",
 			"GROUPSIZE":2,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"lapp"
 			}
 	},
@@ -139,7 +139,7 @@
 			"TEMPLATEID":"la.linux",
 			"GROUPSIZE":4,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"lapp"
 			}
 	},
@@ -149,7 +149,7 @@
 			"TEMPLATEID":"la.kafka.linux",
 			"GROUPSIZE":2,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"lapp"
 			}
 	},				
@@ -159,7 +159,7 @@
 			"TEMPLATEID":"rps",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"rps"
 			}
 	},
@@ -169,7 +169,7 @@
 			"TEMPLATEID":"release",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"release"
 			}
 	},
@@ -179,7 +179,7 @@
 			"TEMPLATEID":"public-trust",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"trust"
 			}
 	},
@@ -189,7 +189,7 @@
 			"TEMPLATEID":"shared-dbextract",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"it_edw"
 			}
 	},
@@ -220,7 +220,7 @@
 			"TEMPLATEID":"public-proxy",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"publicproxy"
 			}
 	},
@@ -230,7 +230,7 @@
 			"TEMPLATEID":"web.chi-was",
 			"GROUPSIZE":4,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"web"
 			}
 	},
@@ -240,7 +240,7 @@
 			"TEMPLATEID":"web.chi-was",
 			"GROUPSIZE":4,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"web"
 		}
 	},
@@ -250,7 +250,7 @@
 			"TEMPLATEID":"web_stage.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"web"
 		}
 	},
@@ -260,7 +260,7 @@
 			"TEMPLATEID":"web_auth.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"web"
 			}
 	},
