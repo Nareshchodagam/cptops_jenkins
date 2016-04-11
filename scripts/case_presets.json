@@ -11,7 +11,7 @@
 	},
 	"hbase_sp_prod":{
 		"PROD":{
-			"PODGROUP":"hbase_clusters",
+			"PODGROUP":"hbase.clusters",
 			"TEMPLATEID":"hbase.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":20,
@@ -31,7 +31,7 @@
 	},
 	"hbase_dr":{
 		"DR":{
-			"PODGROUP":"hbase.secondary",
+			"PODGROUP":"hbase.sec",
 			"TEMPLATEID":"hbase.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":20,
