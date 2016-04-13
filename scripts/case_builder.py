@@ -13,6 +13,7 @@ import re
 import sys
 import logging
 import traceback
+import shlex
 
 def json_imports():
     '''
@@ -22,6 +23,18 @@ def json_imports():
     with open(presets, 'r') as pre:
         sets = json.load(pre)
     return sets
+
+def hostlist_builder():
+    create_cmd = "python /home/jenkins/git/cptops_case_gen/bin/create_cases.py -d "
+    dc_list = 'asg,sjl,chi,was,dfw,phx,lon,frf,tyo'
+    os.chdir('/home/jenkins/git/cptops_case_gen/hostlists/')
+    case_cmd = create_cmd + dc_list
+    logging.debug(case_cmd)
+    logging.debug('Building updated POD list.....')
+    retcode = subprocess.check_call(shlex.split(case_cmd))
+    if retcode != 0:
+        logging.error('POD list creation failed')
+        sys.exit(1)
 
 def pod_builder(sets):
     '''
@@ -36,7 +49,8 @@ def pod_builder(sets):
     mon = month_Dict[bundle.split('.')[1]]
     role_class = os.environ['ROLE_CLASS'].lower()
     role_status = role_class.split('_')[-1].upper()
-    dr = "True" if role_status == "DR" else "FALSE"    
+    dr = "True" if role_status == "DR" else "FALSE" 
+    sub_title = os.environ['SUBJECT'] if os.environ['SUBJECT'] else role_status
     group_file = os.environ['PODGROUP'] if os.environ['PODGROUP'] != "DEFAULT" else sets[role_class][role_status]['PODGROUP']    
     gsize = os.environ['GROUPSIZE'] if os.environ['GROUPSIZE'] != "DEFAULT" else sets[role_class][role_status]['GROUPSIZE']
     tagsize = os.environ['TAGGROUPS'] if os.environ['TAGGROUPS'] != "DEFAULT" else sets[role_class][role_status]['TAGGROUPS']
@@ -50,20 +64,21 @@ def pod_builder(sets):
     logging.debug("TAGGROUPS = " + str(tagsize))
     logging.debug("INFRA = " + infra_type)
     logging.debug("ROLE = " + role)
+    logging.debug("SUBJECT = " + sub_title)
 
     if not os.environ['FILTER']:
         case_cmd = "python %s -p /home/jenkins/git/cptops_case_gen/hostlists/%s -r %s -t %s -b %s -d %s -s %s -g %s --patchset %s --taggroups %s  --infra %s" \
-             % (pod_cmd, group_file, role, template, mon.lower(), dr.title(), gsize, role_status, bundle, tagsize, infra_type)
+             % (pod_cmd, group_file, role, template, mon.lower(), dr.title(), gsize, sub_title, bundle, tagsize, infra_type)
         logging.debug(case_cmd)
-        file_proc = subprocess.Popen(case_cmd.split(), stdout=subprocess.PIPE)
+        file_proc = subprocess.Popen(shlex.split(case_cmd), stdout=subprocess.PIPE)
         with open(case_file, 'w') as cases:
             cases.write(file_proc.stdout.read())
     else:
         case_cmd = "python %s -p /home/jenkins/git/cptops_case_gen/hostlists/%s -r %s -t %s -b %s -d %s -s %s -g %s -f %s --patchset %s --taggroups %s  --infra %s" \
-             % (pod_cmd, group_file, role, template, mon.lower(), dr.title(), gsize, role_status, os.environ['FILTER'], bundle, tagsize, infra_type)
+             % (pod_cmd, group_file, role, template, mon.lower(), dr.title(), gsize, sub_title, os.environ['FILTER'], bundle, tagsize, infra_type)
         logging.debug("FILTER = " + os.environ['FILTER'])
         logging.debug(case_cmd)
-        file_proc = subprocess.Popen(case_cmd.split(), stdout=subprocess.PIPE)
+        file_proc = subprocess.Popen(shlex.split(case_cmd), stdout=subprocess.PIPE)
         with open(case_file, 'w') as cases:
                 cases.write(file_proc.stdout.read())
 
@@ -107,6 +122,7 @@ def case_executor():
 if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG)
     sets = json_imports()
+    hostlist_builder()
     pod_builder(sets)
     failures = case_executor()
     if failures:
