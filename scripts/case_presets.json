@@ -1,4 +1,26 @@
 {
+	"search_prod": {
+		"PROD":{
+			"PODGROUP":"pod.pri",
+			"TEMPLATEID":"search",
+			"GROUPSIZE":15,
+			"TAGGROUPS":0,
+			"FILTER":["search(1|2)-"],
+			"INFRA":"Primary",
+			"ROLE":"search"
+			}
+	},
+	"search_dr":{
+		"DR":{
+			"PODGROUP":"pod.sec",
+			"TEMPLATEID":"search",
+			"GROUPSIZE":15,
+			"TAGGROUPS":0,
+			"FILTER":["search(1|2)-"],
+			"INFRA":"Secondary",
+			"ROLE":"search"
+			}
+	},
 	"search(23|43)_prod":{
 		"PROD":{
 			"PODGROUP":"pod.pri",
