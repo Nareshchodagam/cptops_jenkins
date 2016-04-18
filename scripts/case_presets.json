@@ -249,6 +249,16 @@
 			"ROLE":"trust"
 			}
 	},
+	"public-trust_dr":{
+		"DR":{
+			"PODGROUP":"public-trust",
+			"TEMPLATEID":"public-trust",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Supporting_Infrastructure",
+			"ROLE":"trust"
+			}
+	},
 	"it_edw_prod":{
 		"PROD":{
 			"PODGROUP":"dbextract",
