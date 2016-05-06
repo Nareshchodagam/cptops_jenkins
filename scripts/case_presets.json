@@ -45,18 +45,16 @@
 			"TEMPLATEID":"mgmt_hub",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"FILTER":["hub1-1", "hub2-1"],
 			"INFRA":"Primary",
 			"ROLE":"mgmt_hub"
 			}
 	},
 	"mgmt_hub_dr":{
-		"PROD":{
+		"DR":{
 			"PODGROUP":"pod.sec",
 			"TEMPLATEID":"mgmt_hub",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"FILTER":["hub1-1", "hub2-1"],
 			"INFRA":"Secondary",
 			"ROLE":"mgmt_hub"
 			}
