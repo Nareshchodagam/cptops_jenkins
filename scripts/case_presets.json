@@ -1,4 +1,84 @@
 {
+	"mmmbus_prod":{
+		"PROD":{
+			"PODGROUP":"mmmbuscl",
+			"TEMPLATEID":"mmmbus",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"ROLE":"mmmbus"
+			}
+	},
+	"mmrs_prod":{
+		"PROD":{
+			"PODGROUP":"ajnacl",
+			"TEMPLATEID":"mmrs",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"ROLE":"mmrs"
+			}
+	},
+	"mmdcs_prod":{
+		"PROD":{
+			"PODGROUP":"ajnacl",
+			"TEMPLATEID":"mmdcs",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"ROLE":"mmdcs"
+			}
+	},
+	"mmrelay_prod":{
+		"PROD":{
+			"PODGROUP":"ajnacl",
+			"TEMPLATEID":"mmrelay",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"ROLE":"mmrelay"
+			}
+	},
+	"mgmt_hub_prod":{
+		"PROD":{
+			"PODGROUP":"pod.pri",
+			"TEMPLATEID":"mgmt_hub",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"ROLE":"mgmt_hub"
+			}
+	},
+	"mgmt_hub_dr":{
+		"DR":{
+			"PODGROUP":"pod.sec",
+			"TEMPLATEID":"mgmt_hub",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Secondary",
+			"ROLE":"mgmt_hub"
+			}
+	},
+	"spellchecker_prod":{
+		"PROD":{
+			"PODGROUP":"spellchkcl",
+			"TEMPLATEID":"spellck",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"ROLE":"spellchecker"
+			}
+	},
+	"smarts_prod":{
+		"PROD":{
+			"PODGROUP":"smartscl",
+			"TEMPLATEID":"smarts",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"ROLE":"smarts"
+			} 
+	},
 	"search_prod": {
 		"PROD":{
 			"PODGROUP":"pod.pri",
@@ -241,6 +321,16 @@
 	},
 	"public-trust_prod":{
 		"PROD":{
+			"PODGROUP":"public-trust",
+			"TEMPLATEID":"public-trust",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Supporting_Infrastructure",
+			"ROLE":"trust"
+			}
+	},
+	"public-trust_dr":{
+		"DR":{
 			"PODGROUP":"public-trust",
 			"TEMPLATEID":"public-trust",
 			"GROUPSIZE":1,
