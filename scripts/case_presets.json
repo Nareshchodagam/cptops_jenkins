@@ -383,7 +383,7 @@
 	"web.chi-was_prod":{
 		"PROD":{
 			"PODGROUP":"pweb.chi-was",
-			"TEMPLATEID":"web.chi-was",
+			"TEMPLATEID":"web.chi-was.linux",
 			"GROUPSIZE":4,
 			"TAGGROUPS":0,
 			"INFRA":"Supporting_Infrastructure",
@@ -393,7 +393,7 @@
 	"web.asg-sjl_prod":{
 		"PROD":{
 			"PODGROUP":"pweb.asg-sjl",
-			"TEMPLATEID":"web.chi-was",
+			"TEMPLATEID":"web.asg-sjl.linux",
 			"GROUPSIZE":4,
 			"TAGGROUPS":0,
 			"INFRA":"Supporting_Infrastructure",
