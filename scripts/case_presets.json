@@ -46,6 +46,18 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"INFRA":"Primary",
+			"REGEX":"failoverstatus=PRIMARY",
+			"ROLE":"mgmt_hub"
+			}
+	},
+	"mgmt_hub_standby_prod":{
+		"PROD":{
+			"PODGROUP":"pod.pri",
+			"TEMPLATEID":"mgmt_hub_standby",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"REGEX":"failoverstatus=STANDBY",
 			"ROLE":"mgmt_hub"
 			}
 	},
@@ -56,6 +68,18 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"INFRA":"Secondary",
+			"REGEX":"failoverstatus=PRIMARY",
+			"ROLE":"mgmt_hub"
+			}
+	},
+	"mgmt_hub_standby_dr":{
+		"DR":{
+			"PODGROUP":"pod.sec",
+			"TEMPLATEID":"mgmt_hub_standby",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Secondary",
+			"REGEX":"failoverstatus=STANDBY",
 			"ROLE":"mgmt_hub"
 			}
 	},
@@ -383,7 +407,7 @@
 	"web.chi-was_prod":{
 		"PROD":{
 			"PODGROUP":"pweb.chi-was",
-			"TEMPLATEID":"web.chi-was",
+			"TEMPLATEID":"web.chi-was.linux",
 			"GROUPSIZE":4,
 			"TAGGROUPS":0,
 			"INFRA":"Supporting_Infrastructure",
@@ -393,7 +417,7 @@
 	"web.asg-sjl_prod":{
 		"PROD":{
 			"PODGROUP":"pweb.asg-sjl",
-			"TEMPLATEID":"web.chi-was",
+			"TEMPLATEID":"web.asg-sjl.linux",
 			"GROUPSIZE":4,
 			"TAGGROUPS":0,
 			"INFRA":"Supporting_Infrastructure",

@@ -4,7 +4,6 @@
 '''
     Jenkins Python script to create implementation plans and create cases.
 '''
-
 import json
 import subprocess
 from subprocess import PIPE, Popen
@@ -12,8 +11,6 @@ import os
 import re
 import sys
 import logging
-import traceback
-import shlex
 
 def json_imports():
     '''
@@ -36,56 +33,69 @@ def hostlist_builder():
         logging.error('POD list creation failed')
         sys.exit(1)
 
-def pod_builder(sets):
+def cmd_builder(sets):
+    '''
+    Function that builds the gen_cases.py build command. It gathers options from
+    the case_presets and builds the command.
+    '''
+    role_class = os.environ['ROLE_CLASS'].lower()
+    role_status = role_class.split('_')[-1].upper()
+    #dr = "True" if role_status == "DR" else "FALSE"
+    pod_cmd = ["python", "/home/jenkins/git/cptops_case_gen/bin/gen_cases.py" ]
+    bld_cmd = {}
+    bld_cmd['status'] = "True" if role_status == "DR" else "FALSE"
+    bld_cmd['bundle'] = os.environ['BUNDLE']
+    bld_cmd['patchset'] = os.environ['BUNDLE']
+    bld_cmd['podgroup'] = "/home/jenkins/hostlist/PODGROUP" if os.environ['PODGROUP'] != "" else "/home/jenkins/git/cptops_case_gen/hostlists/" + sets[role_class][role_status]['PODGROUP']
+    bld_cmd['gsize'] = os.environ['GROUPSIZE'] if os.environ['GROUPSIZE'] != "DEFAULT" else sets[role_class][role_status]['GROUPSIZE']
+    bld_cmd['tagsize'] = os.environ['TAGGROUPS'] if os.environ['TAGGROUPS'] != "DEFAULT" else sets[role_class][role_status]['TAGGROUPS']
+    bld_cmd['infra'] = sets[role_class][role_status]['INFRA']
+    bld_cmd['role'] = sets[role_class][role_status]['ROLE']
+    bld_cmd['template'] = sets[role_class][role_status]['TEMPLATEID']
+    bld_cmd['regexfilter'] = os.environ['REGEX']
+    bld_cmd['filter'] = os.environ['FILTER']
+    bld_cmd['subject'] = os.environ['SUBJECT']
+
+    logging.debug("TEMPLATEID = " + bld_cmd['template'])
+    logging.debug("GROUPSIZE = " + str(bld_cmd['gsize']))
+    logging.debug("TAGGROUPS = " + str(bld_cmd['tagsize']))
+    logging.debug("INFRA = " + bld_cmd['infra'])
+    logging.debug("ROLE = " + bld_cmd['role'])
+    logging.debug("SUBJECT = " + bld_cmd['subject'])
+    logging.debug("PODGROUP = " + bld_cmd['podgroup'])
+    logging.debug("REGEXFILTER = " + bld_cmd['regexfilter'])
+    logging.debug("Contents of uploaded file %s" %  os.environ['PODGROUP'])
+    with open(bld_cmd['podgroup'], 'r') as fin:
+        print fin.read()
+    pod_builder(bld_cmd)
+
+def pod_builder(bld_cmd):
     '''
     Function that extracts information from case_presets.json. Builds the
     pod_cases.py command string.
     '''
-    pod_cmd = "/home/jenkins/git/cptops_case_gen/bin/gen_cases.py"
     case_file = '/home/jenkins/git/cases.sh'
-    bundle = os.environ['BUNDLE']
-    role_class = os.environ['ROLE_CLASS'].lower()
-    role_status = role_class.split('_')[-1].upper()
-    dr = "True" if role_status == "DR" else "FALSE"
-    sub_title = os.environ['SUBJECT']
-    group_file = "/home/jenkins/hostlist/PODGROUP" if os.environ['PODGROUP'] != "" else "/home/jenkins/git/cptops_case_gen/hostlists/" + sets[role_class][role_status]['PODGROUP']
-    gsize = os.environ['GROUPSIZE'] if os.environ['GROUPSIZE'] != "DEFAULT" else sets[role_class][role_status]['GROUPSIZE']
-    tagsize = os.environ['TAGGROUPS'] if os.environ['TAGGROUPS'] != "DEFAULT" else sets[role_class][role_status]['TAGGROUPS']
-    infra_type = sets[role_class][role_status]['INFRA']
-    role = sets[role_class][role_status]['ROLE']
-    template = sets[role_class][role_status]['TEMPLATEID']
-
-    logging.debug("TEMPLATEID = " + template)
-    logging.debug("GROUPSIZE = " + str(gsize))
-    logging.debug("TAGGROUPS = " + str(tagsize))
-    logging.debug("INFRA = " + infra_type)
-    logging.debug("ROLE = " + role)
-    logging.debug("SUBJECT = " + sub_title)
-    logging.debug("PODGROUP = " + group_file)
-    logging.debug("Contents of uploaded file %s" %  os.environ['PODGROUP'])
-    with open(group_file, 'r') as fin:
-        print fin.read()
-
-    if not os.environ['FILTER']:
-        case_cmd = "python %s -p %s -r %s -t %s -b %s -d %s -s %s --patchset %s --taggroups %s  --infra %s" \
-             % (pod_cmd, group_file, role, template, bundle, dr.title(), gsize, bundle, tagsize, infra_type)
-        if sub_title:
-            case_cmd = case_cmd + " -g " + sub_title
-        logging.debug(case_cmd)
-        file_proc = subprocess.Popen(shlex.split(case_cmd), stdout=subprocess.PIPE)
-        with open(case_file, 'w') as cases:
-            cases.write(file_proc.stdout.read())
-    else:
-        case_cmd = "python %s -p %s -r %s -t %s -b %s -d %s -s %s -f %s --patchset %s --taggroups %s  --infra %s" \
-             % (pod_cmd, group_file, role, template, bundle, dr.title(), gsize, os.environ['FILTER'], bundle, tagsize, infra_type)
-        if sub_title:
-            case_cmd = case_cmd + " -g " + sub_title
-        logging.debug("FILTER = " + os.environ['FILTER'])
-        logging.debug(case_cmd)
-        file_proc = subprocess.Popen(shlex.split(case_cmd), stdout=subprocess.PIPE)
-        with open(case_file, 'w') as cases:
-                cases.write(file_proc.stdout.read())
-
+    opt_dict = {'gsize': '-s',
+                'role': '-r',
+                'podgroup': '-p',
+                'template': '-t',
+                'status': '-d',
+                'bundle': '-b',
+                'patchset': '--patchset',
+                'tagsize': '--taggroups',
+                'infra': '--infra',
+                'gsize': '-s',
+                'filter': '-f',
+                'regexfilter': '--regexfilter' }
+    pod_cmd = ["python", "/home/jenkins/git/cptops_case_gen/bin/gen_cases.py" ]
+    for opt in opt_dict.iterkeys():
+        if bld_cmd.has_key(opt) and bld_cmd[opt] != "":
+            pod_cmd.append(opt_dict[opt])
+            pod_cmd.append(str(bld_cmd[opt]))
+    logging.debug(pod_cmd)
+    file_proc = subprocess.Popen(pod_cmd, stdout=subprocess.PIPE)
+    with open(case_file, 'w') as cases:
+        cases.write(file_proc.stdout.read())
 def case_executor():
     '''
     Functions that loops thru cases.sh to create implementation plans and
@@ -128,7 +138,7 @@ if __name__ == "__main__":
     sets = json_imports()
     if os.environ['PODGROUP'] == "":
         hostlist_builder()
-    pod_builder(sets)
+    cmd_builder(sets)
     failures = case_executor()
     if failures:
         for fail in failures:
