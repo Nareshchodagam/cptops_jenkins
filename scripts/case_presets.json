@@ -46,6 +46,18 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"INFRA":"Primary",
+			"REGEX":"failoverstatus=PRIMARY",
+			"ROLE":"mgmt_hub"
+			}
+	},
+	"mgmt_hub_standby_prod":{
+		"PROD":{
+			"PODGROUP":"pod.pri",
+			"TEMPLATEID":"mgmt_hub_standby",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"REGEX":"failoverstatus=STANDBY",
 			"ROLE":"mgmt_hub"
 			}
 	},
@@ -56,6 +68,18 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"INFRA":"Secondary",
+			"REGEX":"failoverstatus=PRIMARY",
+			"ROLE":"mgmt_hub"
+			}
+	},
+	"mgmt_hub_standby_dr":{
+		"DR":{
+			"PODGROUP":"pod.sec",
+			"TEMPLATEID":"mgmt_hub_standby",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Secondary",
+			"REGEX":"failoverstatus=STANDBY",
 			"ROLE":"mgmt_hub"
 			}
 	},
