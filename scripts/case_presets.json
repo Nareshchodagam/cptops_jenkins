@@ -1,4 +1,14 @@
 {
+	"mta_prod":{
+		"PROD":{
+			"PODGROUP":"mtacl",
+			"TEMPLATEID":"mta.linux",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"ROLE":"mta"
+			}
+	},
 	"mmmbus_prod":{
 		"PROD":{
 			"PODGROUP":"mmmbuscl",

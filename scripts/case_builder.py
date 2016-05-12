@@ -11,6 +11,7 @@ import os
 import re
 import sys
 import logging
+import shlex
 
 def json_imports():
     '''
