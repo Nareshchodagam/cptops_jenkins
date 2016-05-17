@@ -1,11 +1,191 @@
 {
+	"mta_prod":{
+		"PROD":{
+			"PODGROUP":"mtacl",
+			"TEMPLATEID":"mta.linux",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"ROLE":"mta"
+			}
+	},
+	"mmmbus_prod":{
+		"PROD":{
+			"PODGROUP":"mmmbuscl",
+			"TEMPLATEID":"mmmbus",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"ROLE":"mmmbus"
+			}
+	},
+	"mmrs_prod":{
+		"PROD":{
+			"PODGROUP":"ajnacl",
+			"TEMPLATEID":"mmrs",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"ROLE":"mmrs"
+			}
+	},
+	"mmdcs_prod":{
+		"PROD":{
+			"PODGROUP":"ajnacl",
+			"TEMPLATEID":"mmdcs",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"ROLE":"mmdcs"
+			}
+	},
+	"mmrelay_prod":{
+		"PROD":{
+			"PODGROUP":"ajnacl",
+			"TEMPLATEID":"mmrelay",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"ROLE":"mmrelay"
+			}
+	},
+	"mgmt_hub_prod":{
+		"PROD":{
+			"PODGROUP":"pod.pri",
+			"TEMPLATEID":"mgmt_hub",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"REGEX":"failoverstatus=PRIMARY",
+			"ROLE":"mgmt_hub"
+			}
+	},
+	"mgmt_hub_standby_prod":{
+		"PROD":{
+			"PODGROUP":"pod.pri",
+			"TEMPLATEID":"mgmt_hub_standby",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"REGEX":"failoverstatus=STANDBY",
+			"ROLE":"mgmt_hub"
+			}
+	},
+	"mgmt_hub_dr":{
+		"DR":{
+			"PODGROUP":"pod.sec",
+			"TEMPLATEID":"mgmt_hub",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Secondary",
+			"REGEX":"failoverstatus=PRIMARY",
+			"ROLE":"mgmt_hub"
+			}
+	},
+	"mgmt_hub_standby_dr":{
+		"DR":{
+			"PODGROUP":"pod.sec",
+			"TEMPLATEID":"mgmt_hub_standby",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Secondary",
+			"REGEX":"failoverstatus=STANDBY",
+			"ROLE":"mgmt_hub"
+			}
+	},
+	"spellchecker_prod":{
+		"PROD":{
+			"PODGROUP":"spellchkcl",
+			"TEMPLATEID":"spellck",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"ROLE":"spellchecker"
+			}
+	},
+	"smarts_prod":{
+		"PROD":{
+			"PODGROUP":"smartscl",
+			"TEMPLATEID":"smarts",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"ROLE":"smarts"
+			} 
+	},
+	"search_prod": {
+		"PROD":{
+			"PODGROUP":"pod.pri",
+			"TEMPLATEID":"search",
+			"GROUPSIZE":15,
+			"TAGGROUPS":0,
+			"FILTER":["search(1|2)-"],
+			"INFRA":"Primary",
+			"ROLE":"search"
+			}
+	},
+	"search_dr":{
+		"DR":{
+			"PODGROUP":"pod.sec",
+			"TEMPLATEID":"search",
+			"GROUPSIZE":15,
+			"TAGGROUPS":0,
+			"FILTER":["search(1|2)-"],
+			"INFRA":"Secondary",
+			"ROLE":"search"
+			}
+	},
+	"search(23|43)_prod":{
+		"PROD":{
+			"PODGROUP":"pod.pri",
+			"TEMPLATEID":"search",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"FILTER":["search(23)-", "search(43)-"],
+			"INFRA":"Primary",
+			"ROLE":"search"
+			}
+	},
+	"search(21|22,41|42)_prod":{
+		"PROD":{
+			"PODGROUP":"pod.pri",
+			"TEMPLATEID":"search",
+			"GROUPSIZE":15,
+			"TAGGROUPS":0,
+			"FILTER":["search(21|22)-", "search(41|42)-"],
+			"INFRA":"Primary",
+			"ROLE":"search"
+			}
+	},
+	"search(23|43)_dr":{
+		"DR":{
+			"PODGROUP":"pod.sec",
+			"TEMPLATEID":"search",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"FILTER":["search(23)-", "search(43)-"],
+			"INFRA":"Secondary",
+			"ROLE":"search"
+			}
+	},
+	"search(21|22,41|42)_dr":{
+		"DR":{
+			"PODGROUP":"pod.sec",
+			"TEMPLATEID":"search",
+			"GROUPSIZE":15,
+			"TAGGROUPS":0,
+			"FILTER":["search(21|22)-", "search(41|42)-"],
+			"INFRA":"Secondary",
+			"ROLE":"search"
+			}
+	},
 	"shared-apputil_prod":{
 		"PROD":{
 			"PODGROUP":"apputil.pri",
 			"TEMPLATEID":"shared-apputil",
 			"GROUPSIZE":2,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"app"
 			}
 	},
@@ -15,7 +195,7 @@
 			"TEMPLATEID":"hbase.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":20,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"mnds,dnds"
 			}
 	},
@@ -56,7 +236,7 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"FILTER":"(redis(1|2)-1-|iworker(1|2)-1-)", 
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"insights_iworker,insights_redis"
 			}
 	},
@@ -67,7 +247,7 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"FILTER":"(redis(1|2)-1-|iworker(1-15|2-9)-)",
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"insights_iworker,insights_redis"
 			}
 	},
@@ -78,7 +258,7 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"FILTER":"(redis(1|2)-1-|iworker(1-11|3-1)-)",
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"insights_iworker,insights_redis"
 			}
 	},
@@ -89,7 +269,7 @@
 			"GROUPSIZE":18,
 			"TAGGROUPS":0,
 			"FILTER":"[a-zA-Z]",
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"insights_iworker,insights_redis"
 			}
 	},
@@ -99,7 +279,7 @@
 			"TEMPLATEID":"pbsgeo.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"pbsgeo"
 			}
 	},
@@ -109,7 +289,7 @@
 			"TEMPLATEID":"pbsmatch.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"pbsmatch"
 			}
 	},
@@ -119,7 +299,7 @@
 			"TEMPLATEID":"straight-patch",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"app"
 			}
 	},
@@ -129,7 +309,7 @@
 			"TEMPLATEID":"la.kafka.linux",
 			"GROUPSIZE":2,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"lapp"
 			}
 	},
@@ -139,7 +319,7 @@
 			"TEMPLATEID":"la.linux",
 			"GROUPSIZE":4,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"lapp"
 			}
 	},
@@ -149,7 +329,7 @@
 			"TEMPLATEID":"la.kafka.linux",
 			"GROUPSIZE":2,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"lapp"
 			}
 	},				
@@ -159,7 +339,7 @@
 			"TEMPLATEID":"rps",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"rps"
 			}
 	},
@@ -169,7 +349,7 @@
 			"TEMPLATEID":"release",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"release"
 			}
 	},
@@ -179,7 +359,17 @@
 			"TEMPLATEID":"public-trust",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
+			"ROLE":"trust"
+			}
+	},
+	"public-trust_dr":{
+		"DR":{
+			"PODGROUP":"public-trust",
+			"TEMPLATEID":"public-trust",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"trust"
 			}
 	},
@@ -189,7 +379,7 @@
 			"TEMPLATEID":"shared-dbextract",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"it_edw"
 			}
 	},
@@ -220,27 +410,27 @@
 			"TEMPLATEID":"public-proxy",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"publicproxy"
 			}
 	},
 	"web.chi-was_prod":{
 		"PROD":{
 			"PODGROUP":"pweb.chi-was",
-			"TEMPLATEID":"web.chi-was",
+			"TEMPLATEID":"web.chi-was.linux",
 			"GROUPSIZE":4,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"web"
 			}
 	},
 	"web.asg-sjl_prod":{
 		"PROD":{
 			"PODGROUP":"pweb.asg-sjl",
-			"TEMPLATEID":"web.chi-was",
+			"TEMPLATEID":"web.asg-sjl.linux",
 			"GROUPSIZE":4,
 			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
+			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"web"
 		}
 	},
