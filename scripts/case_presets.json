@@ -251,7 +251,7 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"INFRA":"\"Supporting Infrastructure\"",
-			"ROLE":"web"
+			"ROLE":"web_stage"
 		}
 	},
 	"web_auth_prod":{
@@ -261,7 +261,7 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"INFRA":"\"Supporting Infrastructure\"",
-			"ROLE":"web"
+			"ROLE":"web_auth"
 			}
 	},
 	"sapp_prod":{
