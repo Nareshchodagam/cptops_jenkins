@@ -440,8 +440,8 @@
 			"TEMPLATEID":"web_stage.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"Supporting_Infrastructure",
-			"ROLE":"web"
+			"INFRA":"\"Supporting Infrastructure\"",
+			"ROLE":"web_stage"
 		}
 	},
 	"web_auth_prod":{
@@ -450,8 +450,8 @@
 			"TEMPLATEID":"web_auth.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"Supporting_Infrastructure",
-			"ROLE":"web"
+			"INFRA":"\"Supporting Infrastructure\"",
+			"ROLE":"web_auth"
 			}
 	},
 	"sapp_prod":{
