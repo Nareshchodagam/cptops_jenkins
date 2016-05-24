@@ -95,7 +95,7 @@
 	},
 	"spellchecker_prod":{
 		"PROD":{
-			"PODGROUP":"spellchkcl",
+			"PODGROUP":"spellcheckcl",
 			"TEMPLATEID":"spellck",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
