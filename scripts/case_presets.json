@@ -231,45 +231,45 @@
 	},
 	"insights_canary_prod":{
 		"PROD":{
-			"PODGROUP":"insights_canary",
+			"PODGROUP":"insights.canary",
 			"TEMPLATEID":"insights",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"FILTER":"(redis(1|2)-1-|iworker(1|2)-1-)", 
-			"INFRA":"Supporting_Infrastructure",
+			"INFRA":"Supporting Infrastructure",
 			"ROLE":"insights_iworker,insights_redis"
 			}
 	},
 	"insights_canary_chi_prod":{
 		"PROD":{
-			"PODGROUP":"insights_canary.chi",
+			"PODGROUP":"insights.canary.chi",
 			"TEMPLATEID":"insights",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"FILTER":"(redis(1|2)-1-|iworker(1-15|2-9)-)",
-			"INFRA":"Supporting_Infrastructure",
+			"INFRA":"Supporting Infrastructure",
 			"ROLE":"insights_iworker,insights_redis"
 			}
 	},
 	"insights_canary_was_prod":{
 		"PROD":{
-			"PODGROUP":"insights_canary.was",
+			"PODGROUP":"insights.canary.was",
 			"TEMPLATEID":"insights",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"FILTER":"(redis(1|2)-1-|iworker(1-11|3-1)-)",
-			"INFRA":"Supporting_Infrastructure",
+			"INFRA":"Supporting Infrastructure",
 			"ROLE":"insights_iworker,insights_redis"
 			}
 	},
 	"insights_prod":{
 		"PROD":{
-			"PODGROUP":"insights_pri",
+			"PODGROUP":"insights.pri",
 			"TEMPLATEID":"insights",
 			"GROUPSIZE":18,
 			"TAGGROUPS":0,
 			"FILTER":"[a-zA-Z]",
-			"INFRA":"Supporting_Infrastructure",
+			"INFRA":"Supporting Infrastructure",
 			"ROLE":"insights_iworker,insights_redis"
 			}
 	},
@@ -414,9 +414,19 @@
 			"ROLE":"publicproxy"
 			}
 	},
-	"web.chi-was_prod":{
+	"web.chi_prod":{
 		"PROD":{
-			"PODGROUP":"pweb.chi-was",
+			"PODGROUP":"pweb.chi",
+			"TEMPLATEID":"web.chi.linux",
+			"GROUPSIZE":4,
+			"TAGGROUPS":0,
+			"INFRA":"Supporting_Infrastructure",
+			"ROLE":"web"
+			}
+	},
+	"web.was_prod":{
+		"DR":{
+			"PODGROUP":"pweb.was",
 			"TEMPLATEID":"web.chi-was.linux",
 			"GROUPSIZE":4,
 			"TAGGROUPS":0,
@@ -523,6 +533,62 @@
             "TAGGROUPS":0,
             "INFRA":"Secondary",
             "ROLE":"ffx"
+        	}
+    },
+    "hammer_prod":{
+        "PROD":{
+            "PODGROUP":"hammer.pri",
+            "TEMPLATEID":"hammer",
+            "GROUPSIZE":10,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"hammer,app",
+            "CASETYPE": "hostlist"
+        	}
+    },
+    "hammer_dr":{
+        "DR":{
+            "PODGROUP":"hammer.sec",
+            "TEMPLATEID":"hammer",
+            "GROUPSIZE":10,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"hammer,app",
+            "CASETYPE": "hostlist"
+        	}
+    },
+    "restoreffx_prod":{
+        "PROD":{
+            "PODGROUP":"restoreffx",
+            "TEMPLATEID":"straight-patch",
+            "GROUPSIZE":10,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"restoreffx",
+            "CASETYPE": "hostlist"
+        	}
+    },
+    "nbmedia_prod":{
+        "PROD":{
+            "PODGROUP":"nbmedia",
+            "TEMPLATEID":"nbmedia",
+            "GROUPSIZE":10,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"nbmedia",
+            "CASETYPE": "hostlist"
+        	}
+    },
+    "coreafw_dr":{
+        "DR":{
+            "PODGROUP":"afw.sec",
+            "TEMPLATEID":"core-afw-patch",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Secondary",
+            "ROLE":"app",
+            "IMPL_PLAN":"coreapp-canary-plan.json",  
+            "CASETYPE":"coreappafw"
         	}
     },
     "ffx_canary_prod":{
