@@ -25,7 +25,7 @@
 	},
 	"mmmbus_prod":{
 		"PROD":{
-			"PODGROUP":"mmmbuscl"	,
+			"PODGROUP":"mmmbuscl",
 			"TEMPLATEID":"mmmbus",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
