@@ -19,7 +19,7 @@
 			"FILTER":["ops-mta(20|21)-(1|2)", "ops0-mta(1|2)-(3|4)", "ops0-mta(1|2)-(1|2)-(chi|was|par)"],
 			"INFRA":"Primary",
 			"CL_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
-			"HO_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING"
+			"HO_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
 			"ROLE":"mta"
 			}
 	},
