@@ -5,7 +5,21 @@
 			"TEMPLATEID":"mta.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
+			"FILTER":["ops-mta(1|2|30|31)-(3|4)", "(ops4|ops1)-mta(1|2)-(1|2)", "ops0-mta(1|2)-(1|2)-(dfw|phx|frf)"],
 			"INFRA":"Primary",
+			"ROLE":"mta"
+			}
+	},
+	"mta-notlive_prod":{
+		"PROD": {
+			"PODGROUP": "mtacl",
+			"TEMPLATEID": "straight-patch",
+			"GROUPSIZE":4,
+			"TAGGROUPS":0,
+			"FILTER":["ops-mta(20|21)-(1|2)", "ops0-mta(1|2)-(3|4)", "ops0-mta(1|2)-(1|2)-(chi|was|par)"],
+			"INFRA":"Primary",
+			"CL_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
+			"HO_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
 			"ROLE":"mta"
 			}
 	},
