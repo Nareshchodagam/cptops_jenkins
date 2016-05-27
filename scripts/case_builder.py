@@ -59,6 +59,7 @@ def cmd_builder(sets):
     bld_cmd['regexfilter'] = os.environ['REGEX']
     bld_cmd['filter'] = os.environ['FILTER']
     bld_cmd['subject'] = os.environ['SUBJECT']
+    bld_cmd['dowork'] = os.environ['DOWORK']
     
     #Custom parameters within the case_presets.json
     #These options are not within each predefined role_class. 

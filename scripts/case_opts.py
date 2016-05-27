@@ -14,4 +14,5 @@ opt_dict = {'gsize': '-s',
             'filter': '-f',
             'regexfilter': '--regexfilter',
             'casetype': '--casetype',
+            'dowork': '--dowork',
             'idb': '--idb'}
