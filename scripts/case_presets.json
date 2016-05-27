@@ -119,7 +119,7 @@
 			"TEMPLATEID":"cfgapp",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"FILTER":["(?!cfg-cfgapp1-1-crd"],
+			"FILTER":["(?!cfg-cfgapp1-1-crd)"],
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"cms"
 			}
