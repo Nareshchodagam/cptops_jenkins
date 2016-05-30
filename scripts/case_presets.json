@@ -1,11 +1,21 @@
 {
-	"mmmbus_prod":{
+	"mmmbus_prod_sfz":{
 		"PROD":{
 			"PODGROUP":"mmmbuscl",
+			"TEMPLATEID":"mmmbus_SFZ",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA": "Supporting Infrastructure",
+			"ROLE":"mmmbus"
+			}
+	},
+	"mmmbus_prod":{
+		"PROD":{
+			"PODGROUP":"ajnacl",
 			"TEMPLATEID":"mmmbus",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"Primary",
+			"INFRA":"Supporting Infrastructure",
 			"ROLE":"mmmbus"
 			}
 	},
@@ -15,7 +25,7 @@
 			"TEMPLATEID":"mmrs",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"Primary",
+			"INFRA":"Supporting Infrastructure",
 			"ROLE":"mmrs"
 			}
 	},
@@ -25,7 +35,7 @@
 			"TEMPLATEID":"mmdcs",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"Primary",
+			"INFRA":"Supporting Infrastructure",
 			"ROLE":"mmdcs"
 			}
 	},
@@ -35,7 +45,7 @@
 			"TEMPLATEID":"mmrelay",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"Primary",
+			"INFRA": "Supporting Infrastructure",
 			"ROLE":"mmrelay"
 			}
 	},
@@ -57,6 +67,36 @@
 			"TAGGROUPS":0,
 			"INFRA":"Secondary",
 			"ROLE":"mgmt_hub"
+			}
+	},
+	"log_hub":{
+		"PROD":{
+			"PODGROUP":"hubcl",
+			"TEMPLATEID":"log_hub",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"log_hub"
+			}
+	},
+	"lhub":{
+		"PROD":{
+			"PODGROUP":"lhubcl",
+			"TEMPLATEID":"lhub",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"lhub"
+			}
+	},
+	"logbus":{
+		"PROD":{
+			"PODGROUP":"poclogcl",
+			"TEMPLATEID":"logbus",
+			"GROUPSIZE":2,
+			"TAGGROUPS":0,
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"logbus"
 			}
 	},
 	"spellchecker_prod":{
