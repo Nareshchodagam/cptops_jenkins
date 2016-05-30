@@ -60,6 +60,8 @@ def cmd_builder(sets):
     bld_cmd['filter'] = os.environ['FILTER']
     bld_cmd['subject'] = os.environ['SUBJECT']
     bld_cmd['dowork'] = os.environ['DOWORK']
+    bld_cmd['clusteropstat'] = sets[role_class][role_status]['CL_STATUS']
+    bld_cmd['hostopstat'] = sets[role_class][role_status]['HO_STATUS']
     
     #Custom parameters within the case_presets.json
     #These options are not within each predefined role_class. 
@@ -81,6 +83,8 @@ def cmd_builder(sets):
     logging.debug("REGEXFILTER = " + bld_cmd['regexfilter'])
     logging.debug("BUNDLE = " + bld_cmd['bundle'])
     logging.debug("Contents of uploaded file %s" %  os.environ['PODGROUP'])
+    logging.debug("CL_STATUS = " + bld_cmd['clusteropstat'])
+    logging.debug("HO_STATUS = " + bld_cmd['hostopstat'])
     with open(bld_cmd['podgroup'], 'r') as fin:
         print fin.read()
     case_builder(bld_cmd)
