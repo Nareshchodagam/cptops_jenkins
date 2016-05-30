@@ -15,4 +15,6 @@ opt_dict = {'gsize': '-s',
             'regexfilter': '--regexfilter',
             'casetype': '--casetype',
             'dowork': '--dowork',
+            'clusteropstat': '--clusteropstat',
+            'hostopstat': '--hostopstat',
             'idb': '--idb'}
