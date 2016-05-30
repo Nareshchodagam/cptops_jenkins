@@ -99,6 +99,16 @@
 			"ROLE":"logbus"
 			}
 	},
+	"cms":{
+		"PROD":{
+			"PODGROUP":"cmscl",
+			"TEMPLATEID":"cms",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"cms"
+			}
+	},
 	"spellchecker_prod":{
 		"PROD":{
 			"PODGROUP":"spellchkcl",
