@@ -1,4 +1,28 @@
 {
+	"mta_prod":{
+		"PROD":{
+			"PODGROUP":"mtacl",
+			"TEMPLATEID":"mta.linux",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"FILTER":["ops-mta(1|2|30|31)-(3|4)", "(ops4|ops1)-mta(1|2)-(1|2)", "ops0-mta(1|2)-(1|2)-(dfw|phx|frf)"],
+			"INFRA":"Primary",
+			"ROLE":"mta"
+			}
+	},
+	"mta-notlive_prod":{
+		"PROD": {
+			"PODGROUP": "mtacl",
+			"TEMPLATEID": "straight-patch",
+			"GROUPSIZE":4,
+			"TAGGROUPS":0,
+			"FILTER":["ops-mta(20|21)-(1|2)", "ops0-mta(1|2)-(3|4)", "ops0-mta(1|2)-(1|2)-(chi|was|par)"],
+			"INFRA":"Primary",
+			"CL_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
+			"HO_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
+			"ROLE":"mta"
+			}
+	},
 	"mmmbus_prod_sfz":{
 		"PROD":{
 			"PODGROUP":"mmmbuscl",
@@ -56,6 +80,18 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"INFRA":"Primary",
+			"REGEX":"failoverstatus=PRIMARY",
+			"ROLE":"mgmt_hub"
+			}
+	},
+	"mgmt_hub_standby_prod":{
+		"PROD":{
+			"PODGROUP":"pod.pri",
+			"TEMPLATEID":"mgmt_hub_standby",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"REGEX":"failoverstatus=STANDBY",
 			"ROLE":"mgmt_hub"
 			}
 	},
@@ -66,6 +102,18 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"INFRA":"Secondary",
+			"REGEX":"failoverstatus=PRIMARY",
+			"ROLE":"mgmt_hub"
+			}
+	},
+	"mgmt_hub_standby_dr":{
+		"DR":{
+			"PODGROUP":"pod.sec",
+			"TEMPLATEID":"mgmt_hub_standby",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Secondary",
+			"REGEX":"failoverstatus=STANDBY",
 			"ROLE":"mgmt_hub"
 			}
 	},
@@ -111,7 +159,7 @@
 	},
 	"spellchecker_prod":{
 		"PROD":{
-			"PODGROUP":"spellchkcl",
+			"PODGROUP":"spellcheckcl",
 			"TEMPLATEID":"spellck",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
@@ -128,6 +176,28 @@
 			"INFRA":"Primary",
 			"ROLE":"smarts"
 			} 
+	},
+	"cfgapp_prod": {
+		"PROD":{
+			"PODGROUP":"cfgapp",
+			"TEMPLATEID":"cfgapp",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"FILTER":["(?!cfg-cfgapp1-1-crd)"],
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"cms"
+			}
+	},
+	"cfgapp_canary_prod": {
+		"PROD":{
+			"PODGROUP":"cfgapp.canary",
+			"TEMPLATEID":"cfgapp",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"FILTER":["cfg-cfgapp1-1-crd"],
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"cms"
+			}
 	},
 	"search_prod": {
 		"PROD":{
@@ -247,45 +317,45 @@
 	},
 	"insights_canary_prod":{
 		"PROD":{
-			"PODGROUP":"insights_canary",
+			"PODGROUP":"insights.canary",
 			"TEMPLATEID":"insights",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"FILTER":"(redis(1|2)-1-|iworker(1|2)-1-)", 
-			"INFRA":"Supporting_Infrastructure",
+			"INFRA":"Supporting Infrastructure",
 			"ROLE":"insights_iworker,insights_redis"
 			}
 	},
 	"insights_canary_chi_prod":{
 		"PROD":{
-			"PODGROUP":"insights_canary.chi",
+			"PODGROUP":"insights.canary.chi",
 			"TEMPLATEID":"insights",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"FILTER":"(redis(1|2)-1-|iworker(1-15|2-9)-)",
-			"INFRA":"Supporting_Infrastructure",
+			"INFRA":"Supporting Infrastructure",
 			"ROLE":"insights_iworker,insights_redis"
 			}
 	},
 	"insights_canary_was_prod":{
 		"PROD":{
-			"PODGROUP":"insights_canary.was",
+			"PODGROUP":"insights.canary.was",
 			"TEMPLATEID":"insights",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"FILTER":"(redis(1|2)-1-|iworker(1-11|3-1)-)",
-			"INFRA":"Supporting_Infrastructure",
+			"INFRA":"Supporting Infrastructure",
 			"ROLE":"insights_iworker,insights_redis"
 			}
 	},
 	"insights_prod":{
 		"PROD":{
-			"PODGROUP":"insights_pri",
+			"PODGROUP":"insights.pri",
 			"TEMPLATEID":"insights",
 			"GROUPSIZE":18,
 			"TAGGROUPS":0,
 			"FILTER":"[a-zA-Z]",
-			"INFRA":"Supporting_Infrastructure",
+			"INFRA":"Supporting Infrastructure",
 			"ROLE":"insights_iworker,insights_redis"
 			}
 	},
@@ -430,10 +500,20 @@
 			"ROLE":"publicproxy"
 			}
 	},
-	"web.chi-was_prod":{
+	"web.chi_prod":{
 		"PROD":{
-			"PODGROUP":"pweb.chi-was",
-			"TEMPLATEID":"web.chi-was",
+			"PODGROUP":"pweb.chi",
+			"TEMPLATEID":"web.chi.linux",
+			"GROUPSIZE":4,
+			"TAGGROUPS":0,
+			"INFRA":"Supporting_Infrastructure",
+			"ROLE":"web"
+			}
+	},
+	"web.was_prod":{
+		"DR":{
+			"PODGROUP":"pweb.was",
+			"TEMPLATEID":"web.chi-was.linux",
 			"GROUPSIZE":4,
 			"TAGGROUPS":0,
 			"INFRA":"Supporting_Infrastructure",
@@ -443,7 +523,7 @@
 	"web.asg-sjl_prod":{
 		"PROD":{
 			"PODGROUP":"pweb.asg-sjl",
-			"TEMPLATEID":"web.chi-was",
+			"TEMPLATEID":"web.asg-sjl.linux",
 			"GROUPSIZE":4,
 			"TAGGROUPS":0,
 			"INFRA":"Supporting_Infrastructure",
@@ -456,8 +536,8 @@
 			"TEMPLATEID":"web_stage.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"Supporting_Infrastructure",
-			"ROLE":"web"
+			"INFRA":"\"Supporting Infrastructure\"",
+			"ROLE":"web_stage"
 		}
 	},
 	"web_auth_prod":{
@@ -466,8 +546,8 @@
 			"TEMPLATEID":"web_auth.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"Supporting_Infrastructure",
-			"ROLE":"web"
+			"INFRA":"\"Supporting Infrastructure\"",
+			"ROLE":"web_auth"
 			}
 	},
 	"sapp_prod":{
@@ -539,6 +619,62 @@
             "TAGGROUPS":0,
             "INFRA":"Secondary",
             "ROLE":"ffx"
+        	}
+    },
+    "hammer_prod":{
+        "PROD":{
+            "PODGROUP":"hammer.pri",
+            "TEMPLATEID":"hammer",
+            "GROUPSIZE":10,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"hammer,app",
+            "CASETYPE": "hostlist"
+        	}
+    },
+    "hammer_dr":{
+        "DR":{
+            "PODGROUP":"hammer.sec",
+            "TEMPLATEID":"hammer",
+            "GROUPSIZE":10,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"hammer,app",
+            "CASETYPE": "hostlist"
+        	}
+    },
+    "restoreffx_prod":{
+        "PROD":{
+            "PODGROUP":"restoreffx",
+            "TEMPLATEID":"straight-patch",
+            "GROUPSIZE":10,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"restoreffx",
+            "CASETYPE": "hostlist"
+        	}
+    },
+    "nbmedia_prod":{
+        "PROD":{
+            "PODGROUP":"nbmedia",
+            "TEMPLATEID":"nbmedia",
+            "GROUPSIZE":10,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"nbmedia",
+            "CASETYPE": "hostlist"
+        	}
+    },
+    "coreafw_dr":{
+        "DR":{
+            "PODGROUP":"afw.sec",
+            "TEMPLATEID":"core-afw-patch",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Secondary",
+            "ROLE":"app",
+            "IMPL_PLAN":"coreapp-canary-plan.json",  
+            "CASETYPE":"coreappafw"
         	}
     },
     "ffx_canary_prod":{

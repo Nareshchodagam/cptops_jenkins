@@ -12,7 +12,7 @@ import os
 import re
 
 def json_imports():
-    presets = "/home/jenkins/git/cptops_jenkins_jobs/scripts/case_presets.json"
+    presets = "/home/dsheehan/git/cptops_jenkins_jobs/scripts/case_presets.json"
     with open(presets, 'r') as pre:
         sets = json.load(pre)
 
@@ -21,7 +21,7 @@ def json_imports():
     return sets
 
 def pod_builder(sets):
-    pod_cmd = "/home/jenkins/git/cptops_case_gen/bin/pods_cases.py"
+    pod_cmd = "/home/dsheehan/git/cptops_case_gen/bin/pods_cases.py"
     role = os.environ['ROLE'].lower()
     bundle = os.environ['BUNDLE']
     dr = os.environ['DR']
@@ -41,16 +41,16 @@ def pod_builder(sets):
         tagsize = sets[role][status]['TAGGROUPS']
 
         if not os.environ['FILTER']:
-            case_cmd = "python %s -p /home/jenkins/git/cptops_case_gen/hostlists/%s -r %s -t %s -b %s -d %s -s %d -g \"%s\" --patchset %s --taggroups %d" \
+            case_cmd = "python %s -p /home/dsheehan/git/cptops_case_gen/hostlists/%s -r %s -t %s -b %s -d %s -s %d -g \"%s\" --patchset %s --taggroups %d" \
                  % (pod_cmd, group_file, role, template, mon.lower(), dr.title(), gsize, status, bundle, tagsize)
             file_proc = subprocess.Popen(case_cmd.split(), stdout=subprocess.PIPE)
-            with open("/home/jenkins/git/cases.sh", 'w') as cases:
+            with open("/home/dsheehan/git/cases.sh", 'w') as cases:
                 cases.write(file_proc.stdout.read())
         else:
-            case_cmd = "python %s -p /home/jenkins/git/cptops_case_gen/hostlists/%s -r %s -t %s -b %s -d %s -s %d -g \"%s\" --patchset %s --taggroups %d" \
+            case_cmd = "python %s -p /home/dsheehan/git/cptops_case_gen/hostlists/%s -r %s -t %s -b %s -d %s -s %d -g \"%s\" --patchset %s --taggroups %d" \
                    % (pod_cmd, group_file, role, template, mon.lower(), dr.title(), gsize, status, bundle, tagsize)
             file_proc = subprocess.Popen(case_cmd.split(), stdout=subprocess.PIPE)
-            with open("/home/jenkins/git/cases.sh", 'w') as cases:
+            with open("/home/dsheehan/git/cases.sh", 'w') as cases:
                 cases.write(file_proc.stdout.read())
     else:
         group_file = sets[role]['CANARY'][status]['PODGROUP']
@@ -59,22 +59,22 @@ def pod_builder(sets):
         tagsize = sets[role]['CANARY'][status]['TAGGROUPS']
 
         if not os.environ['FILTER']:
-            case_cmd = "python %s -p /home/jenkins/git/cptops_case_gen/hostlists/%s -r %s -t %s -b %s -d %s -s %d -g \"%s\" --patchset %s --taggroups %d" \
+            case_cmd = "python %s -p /home/dsheehan/git/cptops_case_gen/hostlists/%s -r %s -t %s -b %s -d %s -s %d -g \"%s\" --patchset %s --taggroups %d" \
                  % (pod_cmd, group_file, role, template, mon.lower(), dr.title(), gsize, status, bundle, tagsize)
             file_proc = subprocess.Popen(case_cmd.split(), stdout=subprocess.PIPE)
-            with open("/home/jenkins/git/cases.sh", 'w') as cases:
+            with open("/home/dsheehan/git/cases.sh", 'w') as cases:
                 cases.write(file_proc.stdout.read())
         else:
-            case_cmd = "python %s -p /home/jenkins/git/cptops_case_gen/hostlists/%s -r %s -t %s -b %s -d %s -s %d -g \"%s\" -f %s --patchset %s --taggroups %d" \
+            case_cmd = "python %s -p /home/dsheehan/git/cptops_case_gen/hostlists/%s -r %s -t %s -b %s -d %s -s %d -g \"%s\" -f %s --patchset %s --taggroups %d" \
                   % (pod_cmd, group_file, role, template, mon.lower(), dr.title(), gsize, status, bundle, tagsize)
             file_proc = subprocess.Popen(case_cmd.split(), stdout=subprocess.PIPE)
-            with open("/home/jenkins/git/cases.sh", 'w') as cases:
+            with open("/home/dsheehan/git/cases.sh", 'w') as cases:
                 cases.write(file_proc.stdout.read())
 
 def case_executor():
-    case_file = '/home/jenkins/git/cases.sh'
+    case_file = '/home/dsheehan/git/cases.sh'
     cmd_type = re.compile(r'^(python\s[a-z_.]*)')
-    os.chdir('/home/jenkins/git/cptops_case_gen/bin')
+    os.chdir('/home/dsheehan/git/cptops_case_gen/bin')
 
     if os.path.isfile(case_file):
         with open(case_file, 'r') as cases:
