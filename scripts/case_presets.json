@@ -123,6 +123,19 @@
 			"TEMPLATEID":"log_hub",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
+			"REGEX":"failoverstatus=PRIMARY",
+			"ROLE":"mgmt_hub"
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"log_hub"
+			}
+	},
+	"log_hub_standby":{
+		"PROD":{
+			"PODGROUP":"hubcl",
+			"TEMPLATEID":"log_hub_standby",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"REGEX":"failoverstatus=STANDBY",
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"log_hub"
 			}
@@ -133,6 +146,19 @@
 			"TEMPLATEID":"lhub",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
+			"REGEX":"failoverstatus=PRIMARY",
+			"ROLE":"lhub"
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"lhub"
+			}
+	},
+	"log_hub_standby":{
+		"PROD":{
+			"PODGROUP":"lhubcl",
+			"TEMPLATEID":"lhub_standby",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"REGEX":"failoverstatus=STANDBY",
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"lhub"
 			}
