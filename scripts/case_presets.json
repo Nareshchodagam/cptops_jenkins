@@ -453,7 +453,7 @@
 	"web.chi_prod":{
 		"PROD":{
 			"PODGROUP":"pweb.chi",
-			"TEMPLATEID":"web.chi.linux",
+			"TEMPLATEID":"web.chi-was.linux",
 			"GROUPSIZE":4,
 			"TAGGROUPS":0,
 			"INFRA":"Supporting_Infrastructure",
