@@ -329,13 +329,24 @@
 			"ROLE":"pbsmatch"
 			}
 	},
+	"dpa_prod":{
+		"PROD":{
+			"PODGROUP":"dpa",
+			"TEMPLATEID":"straight-patch",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"dpa",
+			"CASETYPE": "hostlist"
+			}
+	},
 	"restoreapp_prod":{
 		"PROD":{
 			"PODGROUP":"restoreapp",
 			"TEMPLATEID":"straight-patch",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"Supporting_Infrastructure",
+			"INFRA":"Supporting Infrastructure",
 			"ROLE":"app"
 			}
 	},
@@ -345,7 +356,7 @@
 			"TEMPLATEID":"la.kafka.linux",
 			"GROUPSIZE":2,
 			"TAGGROUPS":0,
-			"INFRA":"Supporting_Infrastructure",
+			"INFRA":"Supporting Infrastructure",
 			"ROLE":"lapp"
 			}
 	},
@@ -355,7 +366,7 @@
 			"TEMPLATEID":"la.linux",
 			"GROUPSIZE":4,
 			"TAGGROUPS":0,
-			"INFRA":"Supporting_Infrastructure",
+			"INFRA":"Supporting Infrastructure",
 			"ROLE":"lapp"
 			}
 	},
