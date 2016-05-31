@@ -73,6 +73,56 @@
 			"ROLE":"mmrelay"
 			}
 	},
+	"mandm-splunk-api_prod":{
+		"PROD":{
+			"PODGROUP":"splunk-apicl",
+			"TEMPLATEID":"mandm-splunk-api",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA": "Supporting Infrastructure",
+			"ROLE":"mandm-splunk-api"
+			}
+	},
+	"mandm-splunk-deployer_prod":{
+		"PROD":{
+			"PODGROUP":"splunk-deployercl",
+			"TEMPLATEID":"mandm-splunk-deployer",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA": "Supporting Infrastructure",
+			"ROLE":"mandm-splunk-deployer"
+			}
+	},
+	"mandm-splunk-web_prod":{
+		"PROD":{
+			"PODGROUP":"splunk-webcl",
+			"TEMPLATEID":"mandm-splunk-web",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA": "Supporting Infrastructure",
+			"ROLE":"mandm-splunk-web"
+			}
+	},
+	"mandm-splunk-idx_prod":{
+		"PROD":{
+			"PODGROUP":"splunk-idx_crzcl",
+			"TEMPLATEID":"mandm-splunk-idx",
+			"GROUPSIZE":5,
+			"TAGGROUPS":0,
+			"INFRA": "Supporting Infrastructure",
+			"ROLE":"mandm-splunk-idx"
+			}
+	},
+	"mandm-splunk-switch_prod":{
+		"PROD":{
+			"PODGROUP":"splunk-idxcl",
+			"TEMPLATEID":"mandm-splunk-switch",
+			"GROUPSIZE":15,
+			"TAGGROUPS":0,
+			"INFRA": "Supporting Infrastructure",
+			"ROLE":"mandm-splunk-switch"
+			}
+	},
 	"mgmt_hub_prod":{
 		"PROD":{
 			"PODGROUP":"pod.pri",
