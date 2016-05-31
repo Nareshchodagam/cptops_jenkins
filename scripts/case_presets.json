@@ -23,13 +23,23 @@
 			"ROLE":"mta"
 			}
 	},
-	"mmmbus_prod":{
+	"mmmbus_prod_sfz":{
 		"PROD":{
 			"PODGROUP":"mmmbuscl",
+			"TEMPLATEID":"mmmbus_SFZ",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA": "Supporting Infrastructure",
+			"ROLE":"mmmbus"
+			}
+	},
+	"mmmbus_prod":{
+		"PROD":{
+			"PODGROUP":"ajnacl",
 			"TEMPLATEID":"mmmbus",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"Primary",
+			"INFRA":"Supporting Infrastructure",
 			"ROLE":"mmmbus"
 			}
 	},
@@ -39,7 +49,7 @@
 			"TEMPLATEID":"mmrs",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"Primary",
+			"INFRA":"Supporting Infrastructure",
 			"ROLE":"mmrs"
 			}
 	},
@@ -49,7 +59,7 @@
 			"TEMPLATEID":"mmdcs",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"Primary",
+			"INFRA":"Supporting Infrastructure",
 			"ROLE":"mmdcs"
 			}
 	},
@@ -59,8 +69,58 @@
 			"TEMPLATEID":"mmrelay",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"INFRA":"Primary",
+			"INFRA": "Supporting Infrastructure",
 			"ROLE":"mmrelay"
+			}
+	},
+	"mandm-splunk-api_prod":{
+		"PROD":{
+			"PODGROUP":"splunk-apicl",
+			"TEMPLATEID":"mandm-splunk-api",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA": "Supporting Infrastructure",
+			"ROLE":"mandm-splunk-api"
+			}
+	},
+	"mandm-splunk-deployer_prod":{
+		"PROD":{
+			"PODGROUP":"splunk-deployercl",
+			"TEMPLATEID":"mandm-splunk-deployer",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA": "Supporting Infrastructure",
+			"ROLE":"mandm-splunk-deployer"
+			}
+	},
+	"mandm-splunk-web_prod":{
+		"PROD":{
+			"PODGROUP":"splunk-webcl",
+			"TEMPLATEID":"mandm-splunk-web",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA": "Supporting Infrastructure",
+			"ROLE":"mandm-splunk-web"
+			}
+	},
+	"mandm-splunk-idx_prod":{
+		"PROD":{
+			"PODGROUP":"splunk-idx_crzcl",
+			"TEMPLATEID":"mandm-splunk-idx",
+			"GROUPSIZE":5,
+			"TAGGROUPS":0,
+			"INFRA": "Supporting Infrastructure",
+			"ROLE":"mandm-splunk-idx"
+			}
+	},
+	"mandm-splunk-switch_prod":{
+		"PROD":{
+			"PODGROUP":"splunk-idxcl",
+			"TEMPLATEID":"mandm-splunk-switch",
+			"GROUPSIZE":15,
+			"TAGGROUPS":0,
+			"INFRA": "Supporting Infrastructure",
+			"ROLE":"mandm-splunk-switch"
 			}
 	},
 	"mgmt_hub_prod":{
@@ -105,6 +165,72 @@
 			"INFRA":"Secondary",
 			"REGEX":"failoverstatus=STANDBY",
 			"ROLE":"mgmt_hub"
+			}
+	},
+	"log_hub":{
+		"PROD":{
+			"PODGROUP":"hubcl",
+			"TEMPLATEID":"log_hub",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"REGEX":"failoverstatus=PRIMARY",
+			"ROLE":"mgmt_hub"
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"log_hub"
+			}
+	},
+	"log_hub_standby":{
+		"PROD":{
+			"PODGROUP":"hubcl",
+			"TEMPLATEID":"log_hub_standby",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"REGEX":"failoverstatus=STANDBY",
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"log_hub"
+			}
+	},
+	"lhub":{
+		"PROD":{
+			"PODGROUP":"lhubcl",
+			"TEMPLATEID":"lhub",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"REGEX":"failoverstatus=PRIMARY",
+			"ROLE":"lhub"
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"lhub"
+			}
+	},
+	"log_hub_standby":{
+		"PROD":{
+			"PODGROUP":"lhubcl",
+			"TEMPLATEID":"lhub_standby",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"REGEX":"failoverstatus=STANDBY",
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"lhub"
+			}
+	},
+	"logbus":{
+		"PROD":{
+			"PODGROUP":"poclogcl",
+			"TEMPLATEID":"logbus",
+			"GROUPSIZE":2,
+			"TAGGROUPS":0,
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"logbus"
+			}
+	},
+	"cms":{
+		"PROD":{
+			"PODGROUP":"cmscl",
+			"TEMPLATEID":"cms",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"cms"
 			}
 	},
 	"spellchecker_prod":{
@@ -661,3 +787,4 @@
             }
         }
 }
+
