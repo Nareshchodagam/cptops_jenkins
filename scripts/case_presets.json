@@ -174,7 +174,7 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"REGEX":"failoverstatus=PRIMARY",
-			"ROLE":"mgmt_hub"
+			"ROLE":"mgmt_hub",
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"log_hub"
 			}
