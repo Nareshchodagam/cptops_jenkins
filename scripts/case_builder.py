@@ -50,7 +50,7 @@ def cmd_builder(sets):
     bld_cmd['status'] = "True" if role_status == "DR" else "FALSE"
     bld_cmd['bundle'] = os.environ['BUNDLE'] 
     bld_cmd['patchset'] = os.environ['BUNDLE']
-    bld_cmd['podgroup'] = "/home/jenkins/hostlist/PODGROUP" if os.environ['PODGROUP'] != "" else "/home/jenkins/git/cptops_case_gen/hostlists/" + sets[role_class][role_status]['PODGROUP']
+    bld_cmd['podgroup'] = "/home/jenkins/output/PODGROUP" if os.environ['PODGROUP'] != "" else "/home/jenkins/git/cptops_case_gen/hostlists/" + sets[role_class][role_status]['PODGROUP']
     bld_cmd['gsize'] = os.environ['GROUPSIZE'] if os.environ['GROUPSIZE'] != "DEFAULT" else sets[role_class][role_status]['GROUPSIZE']
     bld_cmd['tagsize'] = os.environ['TAGGROUPS'] if os.environ['TAGGROUPS'] != "DEFAULT" else sets[role_class][role_status]['TAGGROUPS']
     bld_cmd['infra'] = sets[role_class][role_status]['INFRA']
