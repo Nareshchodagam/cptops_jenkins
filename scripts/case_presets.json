@@ -197,7 +197,7 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"REGEX":"failoverstatus=PRIMARY",
-			"ROLE":"lhub"
+			"ROLE":"lhub",
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"lhub"
 			}
