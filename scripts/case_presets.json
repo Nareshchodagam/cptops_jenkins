@@ -588,7 +588,7 @@
 			}
 	},
 	"web.chi_prod":{
-		"PROD":{
+		"DR":{
 			"PODGROUP":"pweb.chi",
 			"TEMPLATEID":"web.chi-was.linux",
 			"GROUPSIZE":4,
@@ -598,7 +598,7 @@
 			}
 	},
 	"web.was_prod":{
-		"DR":{
+		"PROD":{
 			"PODGROUP":"pweb.was",
 			"TEMPLATEID":"web.chi-was.linux",
 			"GROUPSIZE":4,
