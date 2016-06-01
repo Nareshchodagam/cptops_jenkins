@@ -588,7 +588,7 @@
 			"ROLE":"publicproxy"
 			}
 	},
-	"web.chi_prod":{
+	"web.chi_dr":{
 		"DR":{
 			"PODGROUP":"pweb.chi",
 			"TEMPLATEID":"web.chi-was.linux",
