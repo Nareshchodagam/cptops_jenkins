@@ -74,6 +74,16 @@
 			"ROLE":"mmrelay"
 			}
 	},
+    "mmpal_prod":{
+            "PROD":{
+                "PODGROUP":"mmpalcl",
+                "TEMPLATEID":"mmpal",
+                "GROUPSIZE":1,
+                "TAGGROUPS":0,
+                "INFRA":"Supporting Infrastructure",
+                "ROLE":"mmpal"
+                }
+        },
 	"mandm-splunk-api_prod":{
 		"PROD":{
 			"PODGROUP":"splunk-apicl",
