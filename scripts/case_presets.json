@@ -211,7 +211,7 @@
 			"ROLE":"lhub"
 			}
 	},
-	"log_hub_standby_prod":{
+	"lhub_standby_prod":{
 		"PROD":{
 			"PODGROUP":"lhubcl",
 			"TEMPLATEID":"lhub_standby",
