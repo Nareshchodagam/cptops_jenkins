@@ -222,7 +222,7 @@
 			"ROLE":"lhub"
 			}
 	},
-	"logbus":{
+	"logbus_prod":{
 		"PROD":{
 			"PODGROUP":"poclogcl",
 			"TEMPLATEID":"logbus",
