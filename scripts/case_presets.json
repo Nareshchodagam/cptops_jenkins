@@ -23,7 +23,7 @@
 			"ROLE":"mta"
 			}
 	},
-	"mmmbus_prod_sfz":{
+	"mmmbus_sfz_prod":{
 		"PROD":{
 			"PODGROUP":"mmmbuscl",
 			"TEMPLATEID":"mmmbus_SFZ",
