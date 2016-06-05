@@ -178,6 +178,16 @@
 			"ROLE":"mgmt_hub"
 			}
 	},
+	"dice_sfz_prod":{
+		"PROD":{
+			"PODGROUP":"dicecl",
+			"TEMPLATEID":"dice-app",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"dva-service-monitors"
+			}
+	},
 	"log_hub_prod":{
 		"PROD":{
 			"PODGROUP":"hubcl",
