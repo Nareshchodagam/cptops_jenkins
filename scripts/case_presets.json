@@ -53,6 +53,28 @@
 			"ROLE":"mmrs"
 			}
 	},
+	"mmxcvr_prod":{
+		"PROD":{
+			"PODGROUP":"ajnacl",
+			"TEMPLATEID":"mmxcvr",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"REGEX":"failoverstatus=PRIMARY",
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"mmxcvr"
+			}
+	},
+	"mmxcvr_standby_prod":{
+		"PROD":{
+			"PODGROUP":"ajnacl",
+			"TEMPLATEID":"mmxcvr_standby",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"REGEX":"failoverstatus=STANDBY",
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"mmxcvr"
+			}
+	},
 	"mmdcs_prod":{
 		"PROD":{
 			"PODGROUP":"ajnacl",
