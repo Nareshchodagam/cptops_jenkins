@@ -290,7 +290,7 @@
 			"TEMPLATEID":"search",
 			"GROUPSIZE":15,
 			"TAGGROUPS":0,
-			"FILTER":["search(1|2)-"],
+			"FILTER":["^.*search(1|2)-"],
 			"INFRA":"Primary",
 			"ROLE":"search"
 			}
@@ -301,7 +301,7 @@
 			"TEMPLATEID":"search",
 			"GROUPSIZE":15,
 			"TAGGROUPS":0,
-			"FILTER":["search(1|2)-"],
+			"FILTER":["^.*search(1|2)-"],
 			"INFRA":"Secondary",
 			"ROLE":"search"
 			}
@@ -312,7 +312,7 @@
 			"TEMPLATEID":"search",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"FILTER":["search(23)-", "search(43)-"],
+			"FILTER":["^.*search(23)-", "^.*search(43)-"],
 			"INFRA":"Primary",
 			"ROLE":"search"
 			}
@@ -323,7 +323,7 @@
 			"TEMPLATEID":"search",
 			"GROUPSIZE":15,
 			"TAGGROUPS":0,
-			"FILTER":["search(21|22)-", "search(41|42)-"],
+			"FILTER":["^.*search(21|22)-", "^.*search(41|42)-"],
 			"INFRA":"Primary",
 			"ROLE":"search"
 			}
@@ -334,7 +334,7 @@
 			"TEMPLATEID":"search",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"FILTER":["search(23)-", "search(43)-"],
+			"FILTER":["^.*search(23)-", "^.*search(43)-"],
 			"INFRA":"Secondary",
 			"ROLE":"search"
 			}
@@ -345,7 +345,7 @@
 			"TEMPLATEID":"search",
 			"GROUPSIZE":15,
 			"TAGGROUPS":0,
-			"FILTER":["search(21|22)-", "search(41|42)-"],
+			"FILTER":["^.*search(21|22)-", "^.*search(41|42)-"],
 			"INFRA":"Secondary",
 			"ROLE":"search"
 			}
@@ -406,7 +406,7 @@
 			"TEMPLATEID":"insights",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"FILTER":"(redis(1|2)-1-|iworker(1|2)-1-)", 
+			"FILTER":"^.*(redis(1|2)-1-|iworker(1|2)-1-)", 
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"insights_iworker,insights_redis"
 			}
@@ -417,7 +417,7 @@
 			"TEMPLATEID":"insights",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"FILTER":"(redis(1|2)-1-|iworker(1-15|2-9)-)",
+			"FILTER":"^.*(redis(1|2)-1-|iworker(1-15|2-9)-)",
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"insights_iworker,insights_redis"
 			}
@@ -428,7 +428,7 @@
 			"TEMPLATEID":"insights",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"FILTER":"(redis(1|2)-1-|iworker(1-11|3-1)-)",
+			"FILTER":"^.*(redis(1|2)-1-|iworker(1-11|3-1)-)",
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"insights_iworker,insights_redis"
 			}
@@ -571,7 +571,7 @@
 			"TEMPLATEID":"siteproxy.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"FILTER":["1-1", "2-1"],
+			"FILTER":["^.*1-1", "^.*2-1"],
 			"INFRA":"Primary",
 			"ROLE":"proxy"
 			}
@@ -662,7 +662,7 @@
 			"TEMPLATEID":"mq.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"FILTER":["1-1", "\"(1-2|2-1)\""],
+			"FILTER":["^*1-1", "\"^*(1-2|2-1)\""],
 			"INFRA":"Primary",
 			"ROLE":"mq"
 			}

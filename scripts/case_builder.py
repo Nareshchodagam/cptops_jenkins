@@ -58,7 +58,7 @@ def cmd_builder(sets):
     bld_cmd['template'] = sets[role_class][role_status]['TEMPLATEID']
     bld_cmd['regexfilter'] = os.environ['REGEX']
     bld_cmd['filter'] = os.environ['FILTER']
-    bld_cmd['subject'] = os.environ['SUBJECT']
+    bld_cmd['subject'] = os.environ['BUNDLE'] + " Patch Bundle " + os.environ["SUBJECT"] if os.environ['SUBJECT'] != "" else  os.environ['SUBJECT']
     bld_cmd['dowork'] = os.environ['DOWORK']
     #bld_cmd['clusteropstat'] = sets[role_class][role_status]['CL_STATUS']
     #bld_cmd['hostopstat'] = sets[role_class][role_status]['HO_STATUS']
