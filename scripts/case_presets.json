@@ -136,14 +136,14 @@
 			"ROLE":"mandm-splunk-web"
 			}
 	},
-	"mandm-splunk-idx_prod":{
+	"mandm-splunk-idxr_prod":{
 		"PROD":{
 			"PODGROUP":"splunk-idx_crzcl",
-			"TEMPLATEID":"mandm-splunk-idx",
+			"TEMPLATEID":"mandm-splunk-idxr",
 			"GROUPSIZE":5,
 			"TAGGROUPS":0,
 			"INFRA": "Supporting Infrastructure",
-			"ROLE":"mandm-splunk-idx"
+			"ROLE":"mandm-splunk-idxr"
 			}
 	},
 	"mandm-splunk-switch_prod":{
