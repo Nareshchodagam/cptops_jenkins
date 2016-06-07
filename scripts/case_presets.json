@@ -148,9 +148,19 @@
 	},
 	"mandm-splunk-switch_prod":{
 		"PROD":{
-			"PODGROUP":"splunk-idxcl",
+			"PODGROUP":"splunk_prod-idxcl",
 			"TEMPLATEID":"mandm-splunk-switch",
 			"GROUPSIZE":15,
+			"TAGGROUPS":0,
+			"INFRA": "Supporting Infrastructure",
+			"ROLE":"mandm-splunk-switch"
+			}
+	},
+	"mandm-splunk-switch_sfz_prod":{
+		"PROD":{
+			"PODGROUP":"splunk_sfz-idxcl",
+			"TEMPLATEID":"mandm-splunk-switch.SFZ",
+			"GROUPSIZE":3,
 			"TAGGROUPS":0,
 			"INFRA": "Supporting Infrastructure",
 			"ROLE":"mandm-splunk-switch"
