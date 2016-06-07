@@ -55,7 +55,7 @@
 	},
 	"mmxcvr_prod":{
 		"PROD":{
-			"PODGROUP":"ajna_prodcl",
+			"PODGROUP":"ajna_sfzcl",
 			"TEMPLATEID":"mmxcvr",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
@@ -66,7 +66,7 @@
 	},
 	"mmxcvr_standby_prod":{
 		"PROD":{
-			"PODGROUP":"ajna_prodcl",
+			"PODGROUP":"ajna_sfzcl",
 			"TEMPLATEID":"mmxcvr_standby",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
