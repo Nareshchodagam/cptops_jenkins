@@ -25,7 +25,7 @@
 	},
 	"mmmbus_sfz_prod":{
 		"PROD":{
-			"PODGROUP":"mmmbuscl",
+			"PODGROUP":"ajna_sfzcl",
 			"TEMPLATEID":"mmmbus_SFZ",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
@@ -45,7 +45,7 @@
 	},
 	"mmrs_prod":{
 		"PROD":{
-			"PODGROUP":"ajnacl",
+			"PODGROUP":"ajna_prodcl",
 			"TEMPLATEID":"mmrs",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
@@ -55,7 +55,7 @@
 	},
 	"mmxcvr_prod":{
 		"PROD":{
-			"PODGROUP":"ajnacl",
+			"PODGROUP":"ajna_prodcl",
 			"TEMPLATEID":"mmxcvr",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
@@ -66,7 +66,7 @@
 	},
 	"mmxcvr_standby_prod":{
 		"PROD":{
-			"PODGROUP":"ajnacl",
+			"PODGROUP":"ajna_prodcl",
 			"TEMPLATEID":"mmxcvr_standby",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
@@ -77,7 +77,7 @@
 	},
 	"mmdcs_prod":{
 		"PROD":{
-			"PODGROUP":"ajnacl",
+			"PODGROUP":"ajna_prodcl",
 			"TEMPLATEID":"mmdcs",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
@@ -88,7 +88,7 @@
 	},
 	"mmrelay_prod":{
 		"PROD":{
-			"PODGROUP":"ajnacl",
+			"PODGROUP":"ajna_prodcl",
 			"TEMPLATEID":"mmrelay",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
