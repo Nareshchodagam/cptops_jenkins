@@ -139,7 +139,7 @@
 	"mandm-splunk-idx_prod":{
 		"PROD":{
 			"PODGROUP":"splunk-idx_crzcl",
-			"TEMPLATEID":"mandm-splunk-idx",
+			"TEMPLATEID":"mandm-splunk-idxr",
 			"GROUPSIZE":5,
 			"TAGGROUPS":0,
 			"INFRA": "Supporting Infrastructure",
