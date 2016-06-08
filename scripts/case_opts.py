@@ -17,4 +17,5 @@ opt_dict = {'gsize': '-s',
             'dowork': '--dowork',
             'clusteropstat': '--clusteropstat',
             'hostopstat': '--hostopstat',
+            'subject': '-g',
             'idb': '--idb'}
