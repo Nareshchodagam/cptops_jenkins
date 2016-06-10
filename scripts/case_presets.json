@@ -589,8 +589,7 @@
             "GROUPSIZE":10,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "ROLE":"hammer,app",
-            "CASETYPE": "hostlist"
+            "ROLE":"hammer,app"
         	}
     },
     "hammer_dr":{
@@ -600,8 +599,7 @@
             "GROUPSIZE":10,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "ROLE":"hammer,app",
-            "CASETYPE": "hostlist"
+            "ROLE":"hammer,app"
         	}
     },
     "restoreffx_prod":{
