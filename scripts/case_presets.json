@@ -339,7 +339,7 @@
 	},
 	"dustyhub_canary_prod": {
     	"PROD":{
-        "PODGROUP":"dustyhub_canary",
+        "PODGROUP":"dustyhub.canary",
         "TEMPLATEID":"dusty",
         "GROUPSIZE":1,
         "TAGGROUPS":0,
