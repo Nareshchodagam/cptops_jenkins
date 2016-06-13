@@ -585,7 +585,7 @@
     "hammer_prod":{
         "PROD":{
             "PODGROUP":"hammer.pri",
-            "TEMPLATEID":"hammer",
+            "TEMPLATEID":"hammer-patch",
             "GROUPSIZE":10,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
@@ -595,7 +595,7 @@
     "hammer_dr":{
         "DR":{
             "PODGROUP":"hammer.sec",
-            "TEMPLATEID":"hammer",
+            "TEMPLATEID":"hammer-patch",
             "GROUPSIZE":10,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
