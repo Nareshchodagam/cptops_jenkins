@@ -333,8 +333,8 @@
         "GROUPSIZE":1,
         "TAGGROUPS":0,
         "FILTER":["(?!shared-dhub1-1-sjl)"],
-		"REGEX":"failoverstatus=PRIMARY",
         "INFRA":"Supporting Infrastructure",
+        "REGEX":"failoverstatus=PRIMARY",
         "ROLE":"dusty"
         }
 	},
@@ -345,8 +345,8 @@
         "GROUPSIZE":1,
         "TAGGROUPS":0,
         "FILTER":["shared-dhub1-1-sjl"],
-	    "REGEX":"failoverstatus=PRIMARY",
         "INFRA":"Supporting Infrastructure",
+        "REGEX":"failoverstatus=PRIMARY",
         "ROLE":"dusty"
         }
 	},
@@ -357,8 +357,8 @@
         "GROUPSIZE":1,
         "TAGGROUPS":0,
         "FILTER":["(?!shared-dhub1-1-sjl)"],
-	    "REGEX":"failoverstatus=STANDBY",
         "INFRA":"Secondary",
+        "REGEX":"failoverstatus=STANDBY",
         "ROLE":"dusty"
         }
 },
