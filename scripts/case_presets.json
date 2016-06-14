@@ -25,7 +25,7 @@
 	},
 	"mmmbus_sfz_prod":{
 		"PROD":{
-			"PODGROUP":"mmmbuscl",
+			"PODGROUP":"ajna_sfzcl",
 			"TEMPLATEID":"mmmbus_SFZ",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
@@ -45,7 +45,7 @@
 	},
 	"mmrs_prod":{
 		"PROD":{
-			"PODGROUP":"ajnacl",
+			"PODGROUP":"ajna_prodcl",
 			"TEMPLATEID":"mmrs",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
@@ -53,9 +53,31 @@
 			"ROLE":"mmrs"
 			}
 	},
+	"mmxcvr_prod":{
+		"PROD":{
+			"PODGROUP":"ajna_sfzcl",
+			"TEMPLATEID":"mmxcvr",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"REGEX":"failoverstatus=PRIMARY",
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"mmxcvr"
+			}
+	},
+	"mmxcvr_standby_prod":{
+		"PROD":{
+			"PODGROUP":"ajna_sfzcl",
+			"TEMPLATEID":"mmxcvr_standby",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"REGEX":"failoverstatus=STANDBY",
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"mmxcvr"
+			}
+	},
 	"mmdcs_prod":{
 		"PROD":{
-			"PODGROUP":"ajnacl",
+			"PODGROUP":"ajna_prodcl",
 			"TEMPLATEID":"mmdcs",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
@@ -66,7 +88,7 @@
 	},
 	"mmrelay_prod":{
 		"PROD":{
-			"PODGROUP":"ajnacl",
+			"PODGROUP":"ajna_prodcl",
 			"TEMPLATEID":"mmrelay",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
@@ -114,21 +136,31 @@
 			"ROLE":"mandm-splunk-web"
 			}
 	},
-	"mandm-splunk-idx_prod":{
+	"mandm-splunk-idxr_prod":{
 		"PROD":{
 			"PODGROUP":"splunk-idx_crzcl",
-			"TEMPLATEID":"mandm-splunk-idx",
+			"TEMPLATEID":"mandm-splunk-idxr",
 			"GROUPSIZE":5,
 			"TAGGROUPS":0,
 			"INFRA": "Supporting Infrastructure",
-			"ROLE":"mandm-splunk-idx"
+			"ROLE":"mandm-splunk-idxr"
 			}
 	},
 	"mandm-splunk-switch_prod":{
 		"PROD":{
-			"PODGROUP":"splunk-idxcl",
+			"PODGROUP":"splunk_prod-idxcl",
 			"TEMPLATEID":"mandm-splunk-switch",
 			"GROUPSIZE":15,
+			"TAGGROUPS":0,
+			"INFRA": "Supporting Infrastructure",
+			"ROLE":"mandm-splunk-switch"
+			}
+	},
+	"mandm-splunk-switch_sfz_prod":{
+		"PROD":{
+			"PODGROUP":"splunk_sfz-idxcl",
+			"TEMPLATEID":"mandm-splunk-switch.SFZ",
+			"GROUPSIZE":3,
 			"TAGGROUPS":0,
 			"INFRA": "Supporting Infrastructure",
 			"ROLE":"mandm-splunk-switch"
@@ -176,6 +208,16 @@
 			"INFRA":"Secondary",
 			"REGEX":"failoverstatus=STANDBY",
 			"ROLE":"mgmt_hub"
+			}
+	},
+	"dice_sfz_prod":{
+		"PROD":{
+			"PODGROUP":"dicecl",
+			"TEMPLATEID":"dice-app",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"dva-service-monitors"
 			}
 	},
 	"log_hub_prod":{
@@ -284,6 +326,42 @@
 			"ROLE":"cms"
 			}
 	},
+	"dustyhub_prod": {
+    	"PROD":{
+        "PODGROUP":"dustyhubcl",
+        "TEMPLATEID":"dusty",
+        "GROUPSIZE":1,
+        "TAGGROUPS":0,
+        "FILTER":["(?!shared-dhub1-1-sjl)"],
+        "INFRA":"Supporting Infrastructure",
+        "REGEX":"failoverstatus=PRIMARY",
+        "ROLE":"dusty"
+        }
+	},
+	"dustyhub_canary_prod": {
+    	"PROD":{
+        "PODGROUP":"dustyhub.canary",
+        "TEMPLATEID":"dusty",
+        "GROUPSIZE":1,
+        "TAGGROUPS":0,
+        "FILTER":["shared-dhub1-1-sjl"],
+        "INFRA":"Supporting Infrastructure",
+        "REGEX":"failoverstatus=PRIMARY",
+        "ROLE":"dusty"
+        }
+	},
+	"dustyhub_standby_prod": {
+    	"PROD":{
+        "PODGROUP":"dustyhubcl",
+        "TEMPLATEID":"dusty_standby",
+        "GROUPSIZE":1,
+        "TAGGROUPS":0,
+        "FILTER":["(?!shared-dhub1-1-sjl)"],
+        "INFRA":"Secondary",
+        "REGEX":"failoverstatus=STANDBY",
+        "ROLE":"dusty"
+        }
+},
 	"search_prod": {
 		"PROD":{
 			"PODGROUP":"pod.pri",
@@ -374,7 +452,7 @@
 		"PROD":{
 			"PODGROUP":"hbase.pri",
 			"TEMPLATEID":"hbase.linux",
-			"GROUPSIZE":1,
+			"GROUPSIZE":3,
 			"TAGGROUPS":20,
 			"INFRA":"Primary",
 			"ROLE":"mnds,dnds"
@@ -384,7 +462,7 @@
 		"DR":{
 			"PODGROUP":"hbase.sec",
 			"TEMPLATEID":"hbase.linux",
-			"GROUPSIZE":1,
+			"GROUPSIZE":3,
 			"TAGGROUPS":20,
 			"INFRA":"Secondary",
 			"ROLE":"mnds,dnds"
@@ -498,7 +576,7 @@
 	"lapp_clusters_prod":{
 		"PROD":{
 			"PODGROUP":"la_clusters",
-			"TEMPLATEID":"la.linux",
+			"TEMPLATEID":"la.kafka.linux",
 			"GROUPSIZE":4,
 			"TAGGROUPS":0,
 			"INFRA":"Supporting Infrastructure",
@@ -717,26 +795,44 @@
             "ROLE":"ffx"
         	}
     },
-    "hammer_prod":{
+    "hammer_htgapp_prod":{
         "PROD":{
             "PODGROUP":"hammer.pri",
-            "TEMPLATEID":"hammer",
+            "TEMPLATEID":"straight-patch-nag",
             "GROUPSIZE":10,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "ROLE":"hammer,app",
-            "CASETYPE": "hostlist"
+            "ROLE":"htgapp"
         	}
     },
-    "hammer_dr":{
+    "hammer_htgapp_dr":{
         "DR":{
             "PODGROUP":"hammer.sec",
-            "TEMPLATEID":"hammer",
+            "TEMPLATEID":"straight-patch-nag",
             "GROUPSIZE":10,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "ROLE":"hammer,app",
-            "CASETYPE": "hostlist"
+            "ROLE":"htgapp"
+        	}
+    },
+    "hammer_app_prod":{
+        "PROD":{
+            "PODGROUP":"hammer.pri",
+            "TEMPLATEID":"hammer-patch",
+            "GROUPSIZE":10,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"app"
+        	}
+    },
+    "hammer_app_dr":{
+        "DR":{
+            "PODGROUP":"hammer.sec",
+            "TEMPLATEID":"hammer-patch",
+            "GROUPSIZE":10,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"app"
         	}
     },
     "restoreffx_prod":{
