@@ -795,24 +795,44 @@
             "ROLE":"ffx"
         	}
     },
-    "hammer_prod":{
+    "hammer_htgapp_prod":{
+        "PROD":{
+            "PODGROUP":"hammer.pri",
+            "TEMPLATEID":"straight-patch-nag",
+            "GROUPSIZE":10,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"htgapp"
+        	}
+    },
+    "hammer_htgapp_dr":{
+        "DR":{
+            "PODGROUP":"hammer.sec",
+            "TEMPLATEID":"straight-patch-nag",
+            "GROUPSIZE":10,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"htgapp"
+        	}
+    },
+    "hammer_app_prod":{
         "PROD":{
             "PODGROUP":"hammer.pri",
             "TEMPLATEID":"hammer-patch",
             "GROUPSIZE":10,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "ROLE":"htgapp,app"
+            "ROLE":"app"
         	}
     },
-    "hammer_dr":{
+    "hammer_app_dr":{
         "DR":{
             "PODGROUP":"hammer.sec",
             "TEMPLATEID":"hammer-patch",
             "GROUPSIZE":10,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "ROLE":"htgapp,app"
+            "ROLE":"app"
         	}
     },
     "restoreffx_prod":{
