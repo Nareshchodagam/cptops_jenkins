@@ -326,6 +326,42 @@
 			"ROLE":"cms"
 			}
 	},
+	"dustyhub_prod": {
+    	"PROD":{
+        "PODGROUP":"dustyhubcl",
+        "TEMPLATEID":"dusty",
+        "GROUPSIZE":1,
+        "TAGGROUPS":0,
+        "FILTER":["(?!shared-dhub1-1-sjl)"],
+        "INFRA":"Supporting Infrastructure",
+        "REGEX":"failoverstatus=PRIMARY",
+        "ROLE":"dusty"
+        }
+	},
+	"dustyhub_canary_prod": {
+    	"PROD":{
+        "PODGROUP":"dustyhub.canary",
+        "TEMPLATEID":"dusty",
+        "GROUPSIZE":1,
+        "TAGGROUPS":0,
+        "FILTER":["shared-dhub1-1-sjl"],
+        "INFRA":"Supporting Infrastructure",
+        "REGEX":"failoverstatus=PRIMARY",
+        "ROLE":"dusty"
+        }
+	},
+	"dustyhub_standby_prod": {
+    	"PROD":{
+        "PODGROUP":"dustyhubcl",
+        "TEMPLATEID":"dusty_standby",
+        "GROUPSIZE":1,
+        "TAGGROUPS":0,
+        "FILTER":["(?!shared-dhub1-1-sjl)"],
+        "INFRA":"Secondary",
+        "REGEX":"failoverstatus=STANDBY",
+        "ROLE":"dusty"
+        }
+},
 	"search_prod": {
 		"PROD":{
 			"PODGROUP":"pod.pri",
