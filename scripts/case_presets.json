@@ -802,7 +802,7 @@
             "GROUPSIZE":10,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "ROLE":"hammer,app"
+            "ROLE":"htgapp,app"
         	}
     },
     "hammer_dr":{
@@ -812,7 +812,7 @@
             "GROUPSIZE":10,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "ROLE":"hammer,app"
+            "ROLE":"htgapp,app"
         	}
     },
     "restoreffx_prod":{
