@@ -25,18 +25,6 @@ def json_imports():
         sets = json.load(pre)
     return sets
 
-def hostlist_builder():
-    create_cmd = "python /home/jenkins/git/cptops_case_gen/bin/create_cases.py -d "
-    dc_list = 'asg,sjl,chi,was,dfw,phx,lon,frf,tyo'
-    os.chdir('/home/jenkins/git/cptops_case_gen/hostlists/')
-    case_cmd = create_cmd + dc_list
-    logging.debug(case_cmd)
-    logging.debug('Building updated POD list.....')
-    retcode = subprocess.check_call(shlex.split(case_cmd))
-    if retcode != 0:
-        logging.debug('POD list creation failed')
-        sys.exit(1)
-
 def cmd_builder(sets):
     '''
     Function that builds the gen_cases.py build command. It gathers options from
@@ -153,8 +141,6 @@ if __name__ == "__main__":
     
     logging.basicConfig(level=logging.DEBUG)
     sets = json_imports()
-    if os.environ['PODGROUP'] == "":
-        hostlist_builder()
     cmd_builder(sets)
     if not options.dryrun:
         failures = case_executor()

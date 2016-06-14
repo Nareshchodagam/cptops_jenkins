@@ -388,7 +388,7 @@
 		"PROD":{
 			"PODGROUP":"pod.pri",
 			"TEMPLATEID":"search",
-			"GROUPSIZE":1,
+			"GROUPSIZE":15,
 			"TAGGROUPS":0,
 			"FILTER":["^.*search(23)-", "^.*search(43)-"],
 			"INFRA":"Primary",
@@ -410,7 +410,7 @@
 		"DR":{
 			"PODGROUP":"pod.sec",
 			"TEMPLATEID":"search",
-			"GROUPSIZE":1,
+			"GROUPSIZE":15,
 			"TAGGROUPS":0,
 			"FILTER":["^.*search(23)-", "^.*search(43)-"],
 			"INFRA":"Secondary",
@@ -777,7 +777,7 @@
 	},
     "ffx_prod":{
         "PROD":{
-            "PODGROUP":"ffx.linux.pri",
+            "PODGROUP":"pod.pri",
             "TEMPLATEID":"ffx",
             "GROUPSIZE":5,
             "TAGGROUPS":0,
@@ -787,7 +787,7 @@
     },
     "ffx_dr":{
         "DR":{
-            "PODGROUP":"ffx.linux.sec",
+            "PODGROUP":"pod.sec",
             "TEMPLATEID":"ffx",
             "GROUPSIZE":5,
             "TAGGROUPS":0,
