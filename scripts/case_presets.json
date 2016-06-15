@@ -195,7 +195,7 @@
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA": "Secondary",
-            "REGEX":"failoverstatus=STANDBY",`x`
+            "REGEX":"failoverstatus=STANDBY",
             "FILTER":["(?!dust-app1-1-sfm)"],
             "ROLE":"dust_delphi"
         }
