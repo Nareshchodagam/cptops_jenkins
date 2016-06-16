@@ -33,6 +33,16 @@
 			"ROLE":"mmmbus"
 			}
 	},
+	"mmmbus_funnel_sfz_prod":{
+		"PROD":{
+			"PODGROUP":"ajna_sfz11cl",
+			"TEMPLATEID":"mmmbus_11SFZ",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA": "Supporting Infrastructure",
+			"ROLE":"mmmbus"
+			}
+	},
 	"mmmbus_prod":{
 		"PROD":{
 			"PODGROUP":"ajnacl",
