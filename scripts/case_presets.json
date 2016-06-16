@@ -179,7 +179,7 @@
     "dust_delphi_prod":{
         "PROD":{
             "PODGROUP":"delphicl",
-            "TEMPLATEID":"manage-apps-patch",
+            "TEMPLATEID":"manage_apps-patch",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA": "Supporting Infrastructure",
@@ -189,8 +189,8 @@
     },
     "dust_delphi_canary_prod":{
         "PROD":{
-            "PODGROUP":"delphicl",
-            "TEMPLATEID":"manage-apps-patch",
+            "PODGROUP":"delphi.canary",
+            "TEMPLATEID":"manage_apps-patch",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA": "Supporting Infrastructure",
@@ -201,7 +201,7 @@
     "dust_delphi_standby_prod":{
         "PROD":{
             "PODGROUP":"delphicl",
-            "TEMPLATEID":"manage-apps-patch",
+            "TEMPLATEID":"manage_apps-patch",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA": "Secondary",
@@ -213,7 +213,7 @@
     "dust_delphi_gackparser_prod":{
         "PROD":{
             "PODGROUP":"delphicl",
-            "TEMPLATEID":"manage-apps-patch",
+            "TEMPLATEID":"manage_apps-patch",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
@@ -224,7 +224,7 @@
     "dust_delphi_gackparser_canary_prod":{
         "PROD":{
             "PODGROUP":"delphicl",
-            "TEMPLATEID":"manage-apps-patch",
+            "TEMPLATEID":"manage_apps-patch",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
