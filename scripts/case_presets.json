@@ -223,7 +223,7 @@
     },
     "dust_delphi_gackparser_canary_prod":{
         "PROD":{
-            "PODGROUP":"delphicl",
+            "PODGROUP":"delphi.canary",
             "TEMPLATEID":"manage_apps-patch",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
