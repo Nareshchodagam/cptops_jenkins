@@ -374,8 +374,21 @@
 			"TEMPLATEID":"logbus",
 			"GROUPSIZE":2,
 			"TAGGROUPS":0,
+			"FILTER":["(?!poc-logbus1-23-sfm)", "(?!poc-logbus1-24-sfm)"],
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"logbus"
+			}
+	},
+	"logbus_canary_prod":{
+		"PROD":{
+			"PODGROUP":"dva_log_transport.canary",
+			"TEMPLATEID":"logbus",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"FILTER":["poc-logbus1-23-sfm", "poc-logbus1-24-sfm"],
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"logbus",
+			"CASETYPE": "hostlist"
 			}
 	},
 	"cms":{
