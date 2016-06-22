@@ -82,7 +82,7 @@
 			"TEMPLATEID":"mmrs",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"FILTER":["ops-mmrs1-1-asg "],
+			"FILTER":["ops-mmrs1-1-asg"],
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"mmrs"
 			}
