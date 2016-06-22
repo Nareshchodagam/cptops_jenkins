@@ -331,6 +331,7 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"REGEX":"failoverstatus=PRIMARY",
+			"FILTER":["(?!shared-hub3-1-asg)"],
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"log_hub"
 			}
@@ -344,6 +345,19 @@
 			"REGEX":"failoverstatus=STANDBY",
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"log_hub"
+			}
+	},
+	"log_hub_canary_prod":{
+		"PROD":{
+			"PODGROUP":"dva_log_transport.canary",
+			"TEMPLATEID":"log_hub",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"REGEX":"failoverstatus=PRIMARY",
+			"INFRA":"Supporting Infrastructure",
+			"FILTER":["shared-hub3-1-asg"],
+			"ROLE":"log_hub",
+			"CASETYPE":"hostlist"
 			}
 	},
 	"lhub_prod":{
