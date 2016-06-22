@@ -53,6 +53,17 @@
 			"ROLE":"mmmbus"
 			}
 	},
+	"mmmbus_canary_prod":{
+		"PROD":{
+			"PODGROUP":"dva_databroker.canary",
+			"TEMPLATEID":"mmmbus",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Supporting Infrastructure",
+			"FILTER":["ops-mmmbus1-1-asg"],
+			"ROLE":"mmmbus"
+			}
+	},
 	"mmrs_prod":{
 		"PROD":{
 			"PODGROUP":"ajna_prodcl",
