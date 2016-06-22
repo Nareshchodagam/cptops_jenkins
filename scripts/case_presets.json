@@ -49,8 +49,21 @@
 			"TEMPLATEID":"mmmbus",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
+			"FILTER":["?!(ops-mmmbus1-1-asg)"],
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"mmmbus"
+			}
+	},
+	"mmmbus_canary_prod":{
+		"PROD":{
+			"PODGROUP":"dva_databroker.canary",
+			"TEMPLATEID":"mmmbus",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Supporting Infrastructure",
+			"FILTER":["ops-mmmbus1-1-asg"],
+			"ROLE":"mmmbus",
+			"CASETYPE": "hostlist"
 			}
 	},
 	"mmrs_prod":{
@@ -59,8 +72,21 @@
 			"TEMPLATEID":"mmrs",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
+			"FILTER":["(?!ops-mmrs1-1-asg)"],
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"mmrs"
+			}
+	},
+	"mmrs_canary_prod":{
+		"PROD":{
+			"PODGROUP":"dva_databroker.canary",
+			"TEMPLATEID":"mmrs",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"FILTER":["ops-mmrs1-1-asg"],
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"mmrs",
+			"CASETYPE": "hostlist"
 			}
 	},
 	"mmxcvr_prod":{
@@ -94,6 +120,18 @@
 			"FILTER":["(?!ops-mmdcs1-1-asg)"],
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"mmdcs"
+			}
+	},
+	"mmdcs_canary_prod":{
+		"PROD":{
+			"PODGROUP":"dva_databroker.canary",
+			"TEMPLATEID":"mmdcs",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"FILTER":["ops-mmdcs1-1-asg"],
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"mmdcs",
+			"CASETYPE": "hostlist"
 			}
 	},
 	"mmrelay_prod":{
@@ -293,6 +331,7 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"REGEX":"failoverstatus=PRIMARY",
+			"FILTER":["(?!shared-hub3-1-asg)"],
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"log_hub"
 			}
@@ -308,6 +347,19 @@
 			"ROLE":"log_hub"
 			}
 	},
+	"log_hub_canary_prod":{
+		"PROD":{
+			"PODGROUP":"dva_log_transport.canary",
+			"TEMPLATEID":"log_hub",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"REGEX":"failoverstatus=PRIMARY",
+			"INFRA":"Supporting Infrastructure",
+			"FILTER":["shared-hub3-1-asg"],
+			"ROLE":"log_hub",
+			"CASETYPE":"hostlist"
+			}
+	},
 	"lhub_prod":{
 		"PROD":{
 			"PODGROUP":"lhubcl",
@@ -315,6 +367,7 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"REGEX":"failoverstatus=PRIMARY",
+			"FILTER":["(?!shared-lhub14-1-sfz)"],
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"lhub"
 			}
@@ -330,14 +383,40 @@
 			"ROLE":"lhub"
 			}
 	},
+	"lhub_canary_prod":{
+		"PROD":{
+			"PODGROUP":"dva_lhub.canary",
+			"TEMPLATEID":"lhub",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"REGEX":"failoverstatus=PRIMARY",
+			"FILTER":["shared-lhub14-1-sfz"],
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"lhub",
+			"CASETYPE":"hostlist"
+			}
+	},
 	"logbus_prod":{
 		"PROD":{
 			"PODGROUP":"poclogcl",
 			"TEMPLATEID":"logbus",
 			"GROUPSIZE":2,
 			"TAGGROUPS":0,
+			"FILTER":["(?!poc-logbus1-23-sfm)", "(?!poc-logbus1-24-sfm)"],
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"logbus"
+			}
+	},
+	"logbus_canary_prod":{
+		"PROD":{
+			"PODGROUP":"dva_log_transport.canary",
+			"TEMPLATEID":"logbus",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"FILTER":["poc-logbus1-23-sfm", "poc-logbus1-24-sfm"],
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"logbus",
+			"CASETYPE": "hostlist"
 			}
 	},
 	"cms":{
