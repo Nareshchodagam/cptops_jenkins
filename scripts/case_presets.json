@@ -367,6 +367,7 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"REGEX":"failoverstatus=PRIMARY",
+			"FILTER":["(?!shared-lhub14-1-sfz)"],
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"lhub"
 			}
@@ -380,6 +381,19 @@
 			"REGEX":"failoverstatus=STANDBY",
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"lhub"
+			}
+	},
+	"lhub_canary_prod":{
+		"PROD":{
+			"PODGROUP":"dva_lhub.canary",
+			"TEMPLATEID":"lhub",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"REGEX":"failoverstatus=PRIMARY",
+			"FILTER":["shared-lhub14-1-sfz"],
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"lhub",
+			"CASETYPE":"hostlist"
 			}
 	},
 	"logbus_prod":{
