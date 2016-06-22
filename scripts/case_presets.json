@@ -62,7 +62,8 @@
 			"TAGGROUPS":0,
 			"INFRA":"Supporting Infrastructure",
 			"FILTER":["ops-mmmbus1-1-asg"],
-			"ROLE":"mmmbus"
+			"ROLE":"mmmbus",
+			"CASETYPE": "hostlist"
 			}
 	},
 	"mmrs_prod":{
@@ -84,7 +85,8 @@
 			"TAGGROUPS":0,
 			"FILTER":["ops-mmrs1-1-asg"],
 			"INFRA":"Supporting Infrastructure",
-			"ROLE":"mmrs"
+			"ROLE":"mmrs",
+			"CASETYPE": "hostlist"
 			}
 	},
 	"mmxcvr_prod":{
@@ -128,7 +130,8 @@
 			"TAGGROUPS":0,
 			"FILTER":["ops-mmdcs1-1-asg"],
 			"INFRA":"Supporting Infrastructure",
-			"ROLE":"mmdcs"
+			"ROLE":"mmdcs",
+			"CASETYPE": "hostlist"
 			}
 	},
 	"mmrelay_prod":{
