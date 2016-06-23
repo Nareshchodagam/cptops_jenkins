@@ -346,15 +346,14 @@
 	},
 	"log_hub_canary_prod":{
 		"PROD":{
-			"PODGROUP":"dva_log_transport.canary",
+			"PODGROUP":"hubcl.canary",
 			"TEMPLATEID":"log_hub",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"REGEX":"failoverstatus=PRIMARY",
 			"INFRA":"Supporting Infrastructure",
 			"FILTER":["shared-hub3-1-asg"],
-			"ROLE":"log_hub",
-			"CASETYPE":"hostlist"
+			"ROLE":"log_hub"
 			}
 	},
 	"lhub_prod":{
@@ -382,15 +381,14 @@
 	},
 	"lhub_canary_prod":{
 		"PROD":{
-			"PODGROUP":"dva_lhub.canary",
+			"PODGROUP":"lhubcl",
 			"TEMPLATEID":"lhub",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"REGEX":"failoverstatus=PRIMARY",
 			"FILTER":["shared-lhub14-1-sfz"],
 			"INFRA":"Supporting Infrastructure",
-			"ROLE":"lhub",
-			"CASETYPE":"hostlist"
+			"ROLE":"lhub"
 			}
 	},
 	"logbus_prod":{
@@ -406,14 +404,13 @@
 	},
 	"logbus_canary_prod":{
 		"PROD":{
-			"PODGROUP":"dva_log_transport.canary",
+			"PODGROUP":"poclogcl.canary",
 			"TEMPLATEID":"logbus",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"FILTER":["poc-logbus1-23-sfm", "poc-logbus1-24-sfm"],
 			"INFRA":"Supporting Infrastructure",
-			"ROLE":"logbus",
-			"CASETYPE": "hostlist"
+			"ROLE":"logbus"
 			}
 	},
 	"cms":{
