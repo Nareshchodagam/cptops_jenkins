@@ -56,14 +56,13 @@
 	},
 	"mmmbus_canary_prod":{
 		"PROD":{
-			"PODGROUP":"dva_databroker.canary",
+			"PODGROUP":"ajna_canary_prodcl",
 			"TEMPLATEID":"mmmbus",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"INFRA":"Supporting Infrastructure",
 			"FILTER":["ops-mmmbus1-1-asg"],
-			"ROLE":"mmmbus",
-			"CASETYPE": "hostlist"
+			"ROLE":"mmmbus"
 			}
 	},
 	"mmrs_prod":{
@@ -79,14 +78,13 @@
 	},
 	"mmrs_canary_prod":{
 		"PROD":{
-			"PODGROUP":"dva_databroker.canary",
+			"PODGROUP":"ajna_canary_prodcl",
 			"TEMPLATEID":"mmrs",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"FILTER":["ops-mmrs1-1-asg"],
 			"INFRA":"Supporting Infrastructure",
-			"ROLE":"mmrs",
-			"CASETYPE": "hostlist"
+			"ROLE":"mmrs"
 			}
 	},
 	"mmxcvr_prod":{
@@ -124,14 +122,13 @@
 	},
 	"mmdcs_canary_prod":{
 		"PROD":{
-			"PODGROUP":"dva_databroker.canary",
+			"PODGROUP":"ajna_canary_prodcl",
 			"TEMPLATEID":"mmdcs",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"FILTER":["ops-mmdcs1-1-asg"],
 			"INFRA":"Supporting Infrastructure",
-			"ROLE":"mmdcs",
-			"CASETYPE": "hostlist"
+			"ROLE":"mmdcs"
 			}
 	},
 	"mmrelay_prod":{
