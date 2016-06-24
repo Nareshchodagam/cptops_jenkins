@@ -503,6 +503,16 @@
 			"ROLE":"smarts"
 			} 
 	},
+	"smarts_canary_prod":{
+		"PROD":{
+			"PODGROUP":"smartscl.canary",
+			"TEMPLATEID":"smarts",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"ROLE":"smarts"
+			}
+	},
 	"cfgapp_prod": {
 		"PROD":{
 			"PODGROUP":"cfgapp",
