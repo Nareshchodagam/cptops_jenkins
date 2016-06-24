@@ -1,8 +1,8 @@
 #!/usr/bin/python
 #
 '''
-Creates hostlist via create_cases.py script. Program creates a update branch,
-runs the create_cases program and then creates PR to the master. It can also
+Creates hostlist via gen_podlist.py script. Program creates a update branch,
+runs the gen_podlist program and then creates PR to the master. It can also
 auto-merge the pull requests. 
 '''
 import os
@@ -16,15 +16,15 @@ def create_hostlist():
     _wrkspc = os.environ['WORKSPACE']
     os.environ['HOME'] = _wrkspc
     os.environ['PYTHONPATH'] = _wrkspc + "/git/cptops_case_gen/idbhost/includes"
-    cmd = "python " + _wrkspc + "/git/cptops_case_gen/bin/create_cases.py "
+    cmd = "python " + _wrkspc + "/git/cptops_case_gen/bin/gen_podlist.py "
     git_add = 'git add .'
     git_commit = 'git commit -m "Jenkins Automated Hostlist builder"'
     os.chdir( _wrkspc + "/git/cptops_case_gen/hostlists")
-    opt_dict = {"pod": "all",
-                "afw": "all",
-                "DATA_RESTORE": "all",
-                "hammer": "all",
-                "mta": "all" }
+    opt_dict = {"pod": "all_prod",
+                "afw": "all_prod",
+                "DATA_RESTORE": "all_prod",
+                "hammer": "all_prod",
+                "mta": "all_prod" }
     for key,val in opt_dict.iteritems():
         retcode = subprocess.check_call(shlex.split(cmd + "-t %s -d %s" % (key, val)))
         if retcode != 0:
