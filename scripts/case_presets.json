@@ -1074,7 +1074,7 @@
             "TAGGROUPS":0,
             "INFRA":"Secondary",
             "ROLE":"app",
-            "IMPL_PLAN":"coreapp-canary-plan.json",  
+            "IMPL_PLAN":"coreapp-afw-plan.json",
             "CASETYPE":"coreappafw"
         	}
     },
