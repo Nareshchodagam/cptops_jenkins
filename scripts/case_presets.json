@@ -105,6 +105,7 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"REGEX":"failoverstatus=PRIMARY",
+			"FILTER":"ops-mmxcvr1-1-sfz",
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"mmxcvr"
 			}
@@ -148,6 +149,7 @@
 			"TEMPLATEID":"mmrelay",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
+			"FILTER":"ops-mmrelay1-1-asg",
 			"INFRA": "Supporting Infrastructure",
 			"ROLE":"mmrelay"
 			}
@@ -178,6 +180,7 @@
 			"TEMPLATEID":"mmpal",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
+			"FILTER":"ops-mmpal1-1-chi",
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"mmpal"
 			}
@@ -409,6 +412,7 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"INFRA":"Primary",
+			"FILTER":"cs13-hub1-1-asg",
 			"REGEX":"failoverstatus=PRIMARY",
 			"ROLE":"mgmt_hub"
 			}
