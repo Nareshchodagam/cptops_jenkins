@@ -590,7 +590,7 @@
         "TEMPLATEID":"dusty",
         "GROUPSIZE":1,
         "TAGGROUPS":0,
-        "FILTER":["(?!shared-dhub1-1-sjl)"],
+        "FILTER":["(?!shared-dhub1-1-asg)"],
         "INFRA":"Supporting Infrastructure",
         "REGEX":"failoverstatus=PRIMARY",
         "ROLE":"dusty"
@@ -602,7 +602,7 @@
         "TEMPLATEID":"dusty",
         "GROUPSIZE":1,
         "TAGGROUPS":0,
-        "FILTER":["shared-dhub1-1-sjl"],
+        "FILTER":["shared-dhub1-1-asg"],
         "INFRA":"Supporting Infrastructure",
         "REGEX":"failoverstatus=PRIMARY",
         "ROLE":"dusty"
