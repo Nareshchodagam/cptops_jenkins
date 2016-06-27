@@ -98,6 +98,17 @@
 			"ROLE":"mmxcvr"
 			}
 	},
+	"mmxcvr_canary_prod":{
+		"PROD":{
+			"PODGROUP":"ajna_sfzcl.canary",
+			"TEMPLATEID":"mmxcvr",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"REGEX":"failoverstatus=PRIMARY",
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"mmxcvr"
+			}
+	},
 	"mmxcvr_standby_prod":{
 		"PROD":{
 			"PODGROUP":"ajna_sfzcl",
@@ -141,16 +152,36 @@
 			"ROLE":"mmrelay"
 			}
 	},
-    "mmpal_prod":{
-            "PROD":{
-                "PODGROUP":"mmpalcl",
-                "TEMPLATEID":"mmpal",
-                "GROUPSIZE":1,
-                "TAGGROUPS":0,
-                "INFRA":"Supporting Infrastructure",
-                "ROLE":"mmpal"
-                }
-        },
+	"mmrelay_canary_prod":{
+		"PROD":{
+			"PODGROUP":"ajna_prodcl.canary",
+			"TEMPLATEID":"mmrelay",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA": "Supporting Infrastructure",
+			"ROLE":"mmrelay"
+			}
+	},
+	"mmpal_prod":{
+		"PROD":{
+			"PODGROUP":"mmpalcl",
+			"TEMPLATEID":"mmpal",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"mmpal"
+			}
+	},
+	"mmpal_canary_prod":{
+		"PROD":{
+			"PODGROUP":"mmpalcl.canary",
+			"TEMPLATEID":"mmpal",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"mmpal"
+			}
+	},
 	"mandm_splunk_api_prod":{
 		"PROD":{
 			"PODGROUP":"splunk-apicl",
@@ -368,6 +399,17 @@
 			"TAGGROUPS":0,
 			"INFRA":"Secondary",
 			"REGEX":"failoverstatus=STANDBY",
+			"ROLE":"mgmt_hub"
+			}
+	},
+	"mgmt_hub_canary_prod":{
+		"PROD":{
+			"PODGROUP":"mgmt_hub.canary",
+			"TEMPLATEID":"mgmt_hub",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"REGEX":"failoverstatus=PRIMARY",
 			"ROLE":"mgmt_hub"
 			}
 	},
