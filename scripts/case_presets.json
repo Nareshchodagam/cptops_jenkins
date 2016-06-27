@@ -93,7 +93,20 @@
 			"TEMPLATEID":"mmxcvr",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
+			"FILTER":["(?!ops-mmxcvr1-1-sfz)"],
 			"REGEX":"failoverstatus=PRIMARY",
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"mmxcvr"
+			}
+	},
+	"mmxcvr_canary_prod":{
+		"PROD":{
+			"PODGROUP":"ajna_sfzcl.canary",
+			"TEMPLATEID":"mmxcvr",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"REGEX":"failoverstatus=PRIMARY",
+			"FILTER":["ops-mmxcvr1-1-sfz"],
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"mmxcvr"
 			}
@@ -137,20 +150,43 @@
 			"TEMPLATEID":"mmrelay",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
+			"FILTER":["(?!ops-mmrelay1-1-asg)"],
 			"INFRA": "Supporting Infrastructure",
 			"ROLE":"mmrelay"
 			}
 	},
-    "mmpal_prod":{
-            "PROD":{
-                "PODGROUP":"mmpalcl",
-                "TEMPLATEID":"mmpal",
-                "GROUPSIZE":1,
-                "TAGGROUPS":0,
-                "INFRA":"Supporting Infrastructure",
-                "ROLE":"mmpal"
-                }
-        },
+	"mmrelay_canary_prod":{
+		"PROD":{
+			"PODGROUP":"ajna_prodcl.canary",
+			"TEMPLATEID":"mmrelay",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"FILTER":["ops-mmrelay1-1-asg"],
+			"INFRA": "Supporting Infrastructure",
+			"ROLE":"mmrelay"
+			}
+	},
+	"mmpal_prod":{
+		"PROD":{
+			"PODGROUP":"mmpalcl",
+			"TEMPLATEID":"mmpal",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"mmpal"
+			}
+	},
+	"mmpal_canary_prod":{
+		"PROD":{
+			"PODGROUP":"mmpalcl.canary",
+			"TEMPLATEID":"mmpal",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"FILTER":["ops-mmpal1-1-chi"],
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"mmpal"
+			}
+	},
 	"mandm_splunk_api_prod":{
 		"PROD":{
 			"PODGROUP":"splunk-apicl",
@@ -334,6 +370,7 @@
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"INFRA":"Primary",
+			"FILTER":["(?!cs13-hub1-1-asg)"],
 			"REGEX":"failoverstatus=PRIMARY",
 			"ROLE":"mgmt_hub"
 			}
@@ -368,6 +405,18 @@
 			"TAGGROUPS":0,
 			"INFRA":"Secondary",
 			"REGEX":"failoverstatus=STANDBY",
+			"ROLE":"mgmt_hub"
+			}
+	},
+	"mgmt_hub_canary_prod":{
+		"PROD":{
+			"PODGROUP":"mgmt_hub.canary",
+			"TEMPLATEID":"mgmt_hub",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Primary",
+			"FILTER":["cs13-hub1-1-asg"],
+			"REGEX":"failoverstatus=PRIMARY",
 			"ROLE":"mgmt_hub"
 			}
 	},
@@ -1074,7 +1123,7 @@
             "TAGGROUPS":0,
             "INFRA":"Secondary",
             "ROLE":"app",
-            "IMPL_PLAN":"coreapp-canary-plan.json",  
+            "IMPL_PLAN":"coreapp-plan.json",
             "CASETYPE":"coreappafw"
         	}
     },
