@@ -313,10 +313,11 @@
             "TEMPLATEID":"manage_apps-patch",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
+			"REGEX":"failoverstatus=PRIMARY",
             "INFRA": "Supporting Infrastructure",
             "FILTER":["(?!dust-app1-1-sfm)"],
             "ROLE":"dust_delphi"
-        }
+        	}
     },
     "dust_delphi_canary_prod":{
         "PROD":{
@@ -325,21 +326,22 @@
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA": "Supporting Infrastructure",
+			"REGEX":"failoverstatus=PRIMARY",
             "FILTER":["dust-app1-1-sfm"],
             "ROLE":"dust_delphi"
-        }
+        	}
     },
     "dust_delphi_standby_prod":{
         "PROD":{
             "PODGROUP":"delphicl",
-            "TEMPLATEID":"manage_apps-patch",
+            "TEMPLATEID":"straight-patch",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA": "Secondary",
             "REGEX":"failoverstatus=STANDBY",
             "FILTER":["(?!dust-app1-1-sfm)"],
             "ROLE":"dust_delphi"
-        }
+        	}
     },
     "dust_delphi_gackparser_prod":{
         "PROD":{
@@ -347,10 +349,11 @@
             "TEMPLATEID":"manage_apps-patch",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
+			"REGEX":"failoverstatus=PRIMARY",
             "INFRA":"Supporting Infrastructure",
-            "FILTER":["(?!dust-app2-2-sfm)"],
+            "FILTER":["(?!dust-app2-1-sfm)"],
             "ROLE":"gackparser"
-        }
+        	}
     },
     "dust_delphi_gackparser_canary_prod":{
         "PROD":{
@@ -358,10 +361,23 @@
             "TEMPLATEID":"manage_apps-patch",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
+			"REGEX":"failoverstatus=PRIMARY",
             "INFRA":"Supporting Infrastructure",
-            "FILTER":["dust-app2-2-sfm"],
+            "FILTER":["dust-app2-1-sfm"],
             "ROLE":"gackparser"
-        }
+        	}
+    },
+	"dust_delphi_gackparser_standby_prod":{
+        "PROD":{
+            "PODGROUP":"delphi",
+            "TEMPLATEID":"straight-patch",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+			"REGEX":"failoverstatus=STANDBY",
+            "INFRA":"Supporting Infrastructure",
+            "FILTER":["(?!dust-app2-1-sfm)"],
+            "ROLE":"gackparser"
+        	}
     },
 	"mgmt_hub_prod":{
 		"PROD":{
