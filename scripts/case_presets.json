@@ -425,13 +425,13 @@
 			}
 	},
 	"mgmt_hub_canary_prod":{
-		"PROD":{
+		"DR":{
 			"PODGROUP":"mgmt_hub.canary",
 			"TEMPLATEID":"mgmt_hub",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
 			"INFRA":"Primary",
-			"FILTER":["cs13-hub1-1-asg"],
+			"FILTER":["cs23-hub1-1-was|cs24-hub1-1-was"],
 			"REGEX":"failoverstatus=PRIMARY",
 			"ROLE":"mgmt_hub"
 			}
