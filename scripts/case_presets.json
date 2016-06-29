@@ -424,7 +424,7 @@
 			"ROLE":"mgmt_hub"
 			}
 	},
-	"mgmt_hub_canary_prod":{
+	"mgmt_hub_canary_dr":{
 		"DR":{
 			"PODGROUP":"mgmt_hub.canary",
 			"TEMPLATEID":"mgmt_hub",
