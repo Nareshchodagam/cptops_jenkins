@@ -18,4 +18,5 @@ opt_dict = {'gsize': '-s',
             'clusteropstat': '--clusteropstat',
             'hostopstat': '--hostopstat',
             'subject': '-g',
-            'idb': '--idb'}
+            'idb': '--idb',
+            'impl_plan': '--implplan'}
