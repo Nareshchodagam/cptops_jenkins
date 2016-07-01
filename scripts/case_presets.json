@@ -369,7 +369,7 @@
     },
 	"dust_delphi_gackparser_standby_prod":{
         "PROD":{
-            "PODGROUP":"delphi",
+            "PODGROUP":"delphicl",
             "TEMPLATEID":"straight-patch",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
