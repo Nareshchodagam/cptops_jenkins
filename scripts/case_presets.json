@@ -1149,7 +1149,7 @@
             "TEMPLATEID":"core-afw-patch",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "INFRA":"Secondary",
+            "INFRA":"Primary",
             "ROLE":"app",
             "IMPL_PLAN":"coreapp-plan.json",
             "CASETYPE":"coreappafw"
