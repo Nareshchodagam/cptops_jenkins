@@ -1143,6 +1143,18 @@
             "CASETYPE":"coreappafw"
         	}
     },
+	"coreafw_prod":{
+        "DR":{
+            "PODGROUP":"afw.pri",
+            "TEMPLATEID":"core-afw-patch",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Secondary",
+            "ROLE":"app",
+            "IMPL_PLAN":"coreapp-plan.json",
+            "CASETYPE":"coreappafw"
+        	}
+    },
     "ffx_canary_prod":{
         "PROD":{
             "PODGROUP":"gs0.canary",
