@@ -369,7 +369,7 @@
     },
 	"dust_delphi_gackparser_standby_prod":{
         "PROD":{
-            "PODGROUP":"delphi",
+            "PODGROUP":"delphicl",
             "TEMPLATEID":"straight-patch",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
@@ -630,7 +630,7 @@
         "TEMPLATEID":"dusty_standby",
         "GROUPSIZE":1,
         "TAGGROUPS":0,
-        "FILTER":["(?!shared-dhub1-1-sjl)"],
+        "FILTER":["(?!shared-dhub1-1-asg)"],
         "INFRA":"Secondary",
         "REGEX":"failoverstatus=STANDBY",
         "ROLE":"dusty"

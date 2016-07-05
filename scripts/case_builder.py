@@ -55,11 +55,8 @@ def cmd_builder(sets):
     #These options are not within each predefined role_class. 
     #So we test if values are present. 
     for key in ['CASETYPE', 'IMPL_PLAN']:
-        try:
+        if key in sets[role_class][role_status]:
             bld_cmd[str.lower(key)] = sets[role_class][role_status][key]
-        except KeyError:
-            if key == "IMPL_PLAN":
-                bld_cmd[str.lower(key)] = os.environ['BUNDLE']
 
     logging.debug("TEMPLATEID = " + bld_cmd['template'])
     logging.debug("GROUPSIZE = " + str(bld_cmd['gsize']))
