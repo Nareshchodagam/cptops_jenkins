@@ -1144,7 +1144,7 @@
         	}
     },
 	"coreafw_prod":{
-        "DR":{
+        "PROD":{
             "PODGROUP":"afw.pri",
             "TEMPLATEID":"core-afw-patch",
             "GROUPSIZE":1,
