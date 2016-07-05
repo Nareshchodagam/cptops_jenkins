@@ -54,9 +54,9 @@ def cmd_builder(sets):
     #Custom parameters within the case_presets.json
     #These options are not within each predefined role_class. 
     #So we test if values are present. 
-    for key in ['CASETYPE', 'IMPL_PLAN']:
-        if sets[role_class][role_status][key]:
-            bld_cmd[str.lower(key)] = sets[role_class][role_status][key]
+    #for key in ['CASETYPE', 'IMPL_PLAN']:
+    #    if sets[role_class][role_status][key]:
+    #        bld_cmd[str.lower(key)] = sets[role_class][role_status][key]
 
     logging.debug("TEMPLATEID = " + bld_cmd['template'])
     logging.debug("GROUPSIZE = " + str(bld_cmd['gsize']))
