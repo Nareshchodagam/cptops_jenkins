@@ -1188,6 +1188,17 @@
             "CASETYPE":"coreappafw"
         	}
     },
+	"safenet_prod":{
+        "PROD":{
+            "PODGROUP":"safenet",
+            "TEMPLATEID":"straight-patch",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"safenet",
+            "CASETYPE": "hostlist"
+        	}
+    },
     "ffx_canary_prod":{
         "PROD":{
             "PODGROUP":"gs0.canary",
