@@ -1162,9 +1162,9 @@
             "INFRA":"Supporting Infrastructure",
             "ROLE":"nbmedia",
             "CASETYPE": "hostlist"
-        	}
+            }
     },
-    "coreafw_dr":{
+   "coreafw_dr":{
         "DR":{
             "PODGROUP":"afw.sec",
             "TEMPLATEID":"core-afw-patch",
@@ -1174,9 +1174,9 @@
             "ROLE":"app",
             "IMPL_PLAN":"coreapp-plan.json",
             "CASETYPE":"coreappafw"
-        	}
+            }
     },
-	"coreafw_prod":{
+    "coreafw_prod":{
         "PROD":{
             "PODGROUP":"afw.pri",
             "TEMPLATEID":"core-afw-patch",
@@ -1186,9 +1186,9 @@
             "ROLE":"app",
             "IMPL_PLAN":"coreapp-plan.json",
             "CASETYPE":"coreappafw"
-        	}
+            }
     },
-	"safenet_prod":{
+    "safenet_prod":{
         "PROD":{
             "PODGROUP":"safenet",
             "TEMPLATEID":"straight-patch",
@@ -1197,7 +1197,7 @@
             "INFRA":"Supporting Infrastructure",
             "ROLE":"safenet",
             "CASETYPE": "hostlist"
-        	}
+            }
     },
     "ffx_canary_prod":{
         "PROD":{
