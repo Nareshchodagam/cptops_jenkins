@@ -558,6 +558,17 @@
 			"ROLE":"spellchecker"
 			}
 	},
+	"public-content_prod":{
+		"PROD":{
+			"PODGROUP":"spellcheckcl",
+			"TEMPLATEID":"spellck",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"FILTER":["^public-content"],
+			"INFRA":"Primary",
+			"ROLE":"spellchecker"
+		}
+	},
 	"smarts_prod":{
 		"PROD":{
 			"PODGROUP":"smartscl",
@@ -827,6 +838,17 @@
 			"CASETYPE": "hostlist"
 			}
 	},
+	"stgpm_prod":{
+		"PROD":{
+			"PODGROUP":"stgpm",
+			"TEMPLATEID":"straight-patch",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Supporting Infrastructure",
+			"ROLE":"stgpm",
+			"CASETYPE": "hostlist"
+			}
+	},
 	"restoreapp_prod":{
 		"PROD":{
 			"PODGROUP":"restoreapp",
@@ -835,6 +857,17 @@
 			"TAGGROUPS":0,
 			"INFRA":"Supporting Infrastructure",
 			"ROLE":"app"
+			}
+	},
+	"netbot_prod":{
+		"PROD":{
+			"PODGROUP":"netbot",
+			"TEMPLATEID":"straight-patch",
+			"GROUPSIZE":1,
+			"TAGGROUPS":0,
+			"INFRA":"Supporting Infrastructure",
+			"CASETYPE":"hostlist",
+			"ROLE":"netbot"
 			}
 	},
 	"lapp_canary_prod":{
