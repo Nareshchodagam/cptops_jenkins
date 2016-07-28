@@ -189,126 +189,126 @@
             "ROLE":"mmpal"
             }
     },
-	"mandm_splunk_api_prod":{
-		"PROD":{
-			"PODGROUP":"splunk-apicl",
-			"TEMPLATEID":"mandm-splunk-api",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["(?!shared-searchhead2-5-crz)"],
-			"INFRA": "Supporting Infrastructure",
-			"ROLE":"mandm-splunk-api"
-			}
-	},
-	"mandm_splunk_api_canary_prod":{
-		"PROD":{
-			"PODGROUP":"splunk-apicl",
-			"TEMPLATEID":"mandm-splunk-api",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["shared-searchhead2-5-crz"],
-			"INFRA": "Supporting Infrastructure",
-			"ROLE":"mandm-splunk-api"
-			}
-	},
-	"mandm_splunk_deployer_prod":{
-		"PROD":{
-			"PODGROUP":"splunk-deployercl",
-			"TEMPLATEID":"mandm-splunk-deployer",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["(?!shared-searchhead1-10-crz)"],
-			"INFRA": "Supporting Infrastructure",
-			"ROLE":"mandm-splunk-deployer"
-			}
-	},
-	"mandm_splunk_deployer_canary_prod":{
-		"PROD":{
-			"PODGROUP":"splunk-deployercl",
-			"TEMPLATEID":"mandm-splunk-deployer",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["shared-searchhead1-10-crz"],
-			"INFRA": "Supporting Infrastructure",
-			"ROLE":"mandm-splunk-deployer"
-			}
-	},
-	"mandm_splunk_web_prod":{
-		"PROD":{
-			"PODGROUP":"splunk-webcl",
-			"TEMPLATEID":"mandm-splunk-web",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["(?!shared-searchhead1-1-crz)"],
-			"INFRA": "Supporting Infrastructure",
-			"ROLE":"mandm-splunk-web"
-			}
-	},
-	"mandm_splunk_web_canary_prod":{
-		"PROD":{
-			"PODGROUP":"splunk-webcl",
-			"TEMPLATEID":"mandm-splunk-web",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["shared-searchhead1-1-crz"],
-			"INFRA": "Supporting Infrastructure",
-			"ROLE":"mandm-splunk-web"
-			}
-	},
-	"mandm_splunk_idxr_prod":{
-		"PROD":{
-			"PODGROUP":"splunk-idx_crzcl",
-			"TEMPLATEID":"mandm-splunk-idxr",
-			"GROUPSIZE":5,
-			"TAGGROUPS":0,
-			"FILTER":["(?!shared-logsearch100-4-crz)"],
-			"INFRA": "Supporting Infrastructure",
-			"ROLE":"mandm-splunk-idxr"
-			}
-	},
-	"mandm_splunk_idxr_canary_prod":{
-		"PROD":{
-			"PODGROUP":"splunk-idx_crzcl.canary",
-			"TEMPLATEID":"mandm-splunk-idxr",
-			"GROUPSIZE":5,
-			"TAGGROUPS":0,
-			"FILTER":["shared-logsearch100-4-crz"],
-			"INFRA": "Supporting Infrastructure",
-			"ROLE":"mandm-splunk-idxr"
-			}
-	},
-	"mandm_splunk_switch_prod":{
-		"PROD":{
-			"PODGROUP":"splunk_prod-idxcl",
-			"TEMPLATEID":"mandm-splunk-switch",
-			"GROUPSIZE":15,
-			"TAGGROUPS":0,
-			"FILTER":["(?!shared-logsearch4-1-asg)"],
-			"INFRA": "Supporting Infrastructure",
-			"ROLE":"mandm-splunk-switch"
-			}
-	},
-	"mandm_splunk_switch_canary_prod":{
-		"PROD":{
-			"PODGROUP":"splunk_prod-idxcl.canary",
-			"TEMPLATEID":"mandm-splunk-switch",
-			"GROUPSIZE":15,
-			"TAGGROUPS":0,
-			"FILTER":["shared-logsearch4-1-asg"],
-			"INFRA": "Supporting Infrastructure",
-			"ROLE":"mandm-splunk-switch"
-			}
-	},
-	"mandm_splunk_switch_sfz_prod":{
-		"PROD":{
-			"PODGROUP":"splunk_sfz-idxcl",
-			"TEMPLATEID":"mandm-splunk-switch.SFZ",
-			"GROUPSIZE":3,
-			"TAGGROUPS":0,
-			"INFRA": "Supporting Infrastructure",
-			"ROLE":"mandm-splunk-switch"
-			}
-	},
+    "mandm_splunk_api_prod":{
+        "PROD":{
+            "PODGROUP":"splunk-apicl",
+            "TEMPLATEID":"mandm-splunk-api",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["(?!shared-searchhead2-5-crz)"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"mandm-splunk-api"
+            }
+    },
+    "mandm_splunk_api_canary_prod":{
+        "PROD":{
+            "PODGROUP":"splunk-apicl",
+            "TEMPLATEID":"mandm-splunk-api",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["shared-searchhead2-5-crz"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"mandm-splunk-api"
+            }
+    },
+    "mandm_splunk_deployer_prod":{
+        "PROD":{
+            "PODGROUP":"splunk-deployercl",
+            "TEMPLATEID":"mandm-splunk-deployer",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["(?!shared-searchhead1-10-crz)"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"mandm-splunk-deployer"
+            }
+    },
+    "mandm_splunk_deployer_canary_prod":{
+        "PROD":{
+            "PODGROUP":"splunk-deployercl",
+            "TEMPLATEID":"mandm-splunk-deployer",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["shared-searchhead1-10-crz"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"mandm-splunk-deployer"
+            }
+    },
+    "mandm_splunk_web_prod":{
+        "PROD":{
+            "PODGROUP":"splunk-webcl",
+            "TEMPLATEID":"mandm-splunk-web",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["(?!shared-searchhead1-1-crz)"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"mandm-splunk-web"
+            }
+    },
+    "mandm_splunk_web_canary_prod":{
+        "PROD":{
+            "PODGROUP":"splunk-webcl",
+            "TEMPLATEID":"mandm-splunk-web",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["shared-searchhead1-1-crz"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"mandm-splunk-web"
+            }
+    },
+    "mandm_splunk_idxr_prod":{
+        "PROD":{
+            "PODGROUP":"splunk-idx_crzcl",
+            "TEMPLATEID":"mandm-splunk-idxr",
+            "GROUPSIZE":5,
+            "TAGGROUPS":0,
+            "FILTER":["(?!shared-logsearch100-4-crz)"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"mandm-splunk-idxr"
+            }
+    },
+    "mandm_splunk_idxr_canary_prod":{
+        "PROD":{
+            "PODGROUP":"splunk-idx_crzcl.canary",
+            "TEMPLATEID":"mandm-splunk-idxr",
+            "GROUPSIZE":5,
+            "TAGGROUPS":0,
+            "FILTER":["shared-logsearch100-4-crz"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"mandm-splunk-idxr"
+            }
+    },
+    "mandm_splunk_switch_prod":{
+        "PROD":{
+            "PODGROUP":"splunk_prod-idxcl",
+            "TEMPLATEID":"mandm-splunk-switch",
+            "GROUPSIZE":5,
+            "TAGGROUPS":0,
+            "FILTER":["(?!shared-logsearch4-1-asg)"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"mandm-splunk-switch"
+            }
+    },
+    "mandm_splunk_switch_canary_prod":{
+        "PROD":{
+            "PODGROUP":"splunk_prod-idxcl.canary",
+            "TEMPLATEID":"mandm-splunk-switch",
+            "GROUPSIZE":5,
+            "TAGGROUPS":0,
+            "FILTER":["shared-logsearch4-1-asg"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"mandm-splunk-switch"
+            }
+    },
+    "mandm_splunk_switch_sfz_prod":{
+        "PROD":{
+            "PODGROUP":"splunk_sfz-idxcl",
+            "TEMPLATEID":"mandm-splunk-switch.SFZ",
+            "GROUPSIZE":3,
+            "TAGGROUPS":0,
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"mandm-splunk-switch"
+            }
+    },
     "dust_delphi_prod":{
         "PROD":{
             "PODGROUP":"delphicl",
