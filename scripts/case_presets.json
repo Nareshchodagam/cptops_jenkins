@@ -1,192 +1,194 @@
 {
-	"mta_prod":{
-		"PROD":{
-			"PODGROUP":"mtacl",
-			"TEMPLATEID":"mta.linux",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["ops-mta(1|2|30|31)-(3|4)", "(ops4|ops1)-mta(1|2)-(1|2)", "ops0-mta(1|2)-(1|2)-(dfw|phx|frf)"],
-			"INFRA":"Primary",
-			"ROLE":"mta"
-			}
-	},
-	"mta-notlive_prod":{
-		"PROD": {
-			"PODGROUP": "mtacl",
-			"TEMPLATEID": "straight-patch",
-			"GROUPSIZE":4,
-			"TAGGROUPS":0,
-			"FILTER":["ops-mta(20|21)-(1|2)", "ops0-mta(1|2)-(3|4)", "ops0-mta(1|2)-(1|2)-(chi|was|par)"],
-			"INFRA":"Primary",
-			"CL_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
-			"HO_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
-			"ROLE":"mta"
-			}
-	},
-	"mmmbus_sfz_prod":{
-		"PROD":{
-			"PODGROUP":"ajna_sfzcl",
-			"TEMPLATEID":"mmmbus_SFZ",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA": "Supporting Infrastructure",
-			"ROLE":"mmmbus"
-			}
-	},
+    "mta_prod":{
+        "PROD":{
+            "PODGROUP":"mtacl",
+            "TEMPLATEID":"mta.linux",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["ops-mta(1|2|30|31)-(3|4)", "(ops4|ops1)-mta(1|2)-(1|2)", "ops0-mta(1|2)-(1|2)-(dfw|phx|frf)"],
+            "INFRA":"Primary",
+            "ROLE":"mta"
+            }
+    },
+    "mta-notlive_prod":{
+        "PROD": {
+            "PODGROUP": "mtacl",
+            "TEMPLATEID": "straight-patch",
+            "GROUPSIZE":4,
+            "TAGGROUPS":0,
+            "FILTER":["ops-mta(20|21)-(1|2)", "ops0-mta(1|2)-(3|4)", "ops0-mta(1|2)-(1|2)-(chi|was|par)"],
+            "INFRA":"Primary",
+            "CL_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
+            "HO_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
+            "ROLE":"mta"
+            }
+    },
+    "mmmbus_sfz_prod":{
+        "PROD":{
+            "PODGROUP":"ajna_sfzcl",
+            "TEMPLATEID":"mmmbus_SFZ",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["?!(ops-mmmbus11-[1-5])"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"mmmbus"
+            }
+    },
 	"mmmbus_funnel_sfz_prod":{
-		"PROD":{
-			"PODGROUP":"ajna_sfz11cl",
-			"TEMPLATEID":"mmmbus_11SFZ",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA": "Supporting Infrastructure",
-			"ROLE":"mmmbus"
-			}
-	},
-	"mmmbus_prod":{
-		"PROD":{
-			"PODGROUP":"ajnacl",
-			"TEMPLATEID":"mmmbus",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["?!(ops-mmmbus1-1-asg)"],
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"mmmbus"
-			}
-	},
-	"mmmbus_canary_prod":{
-		"PROD":{
-			"PODGROUP":"ajna_canary_prodcl",
-			"TEMPLATEID":"mmmbus",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting Infrastructure",
-			"FILTER":["ops-mmmbus1-1-asg"],
-			"ROLE":"mmmbus"
-			}
-	},
-	"mmrs_prod":{
-		"PROD":{
-			"PODGROUP":"ajna_prodcl",
-			"TEMPLATEID":"mmrs",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["(?!ops-mmrs1-1-asg)"],
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"mmrs"
-			}
-	},
-	"mmrs_canary_prod":{
-		"PROD":{
-			"PODGROUP":"ajna_canary_prodcl",
-			"TEMPLATEID":"mmrs",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["ops-mmrs1-1-asg"],
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"mmrs"
-			}
-	},
-	"mmxcvr_prod":{
-		"PROD":{
-			"PODGROUP":"ajna_sfzcl",
-			"TEMPLATEID":"mmxcvr",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["(?!ops-mmxcvr1-1-sfz)"],
-			"REGEX":"failoverstatus=PRIMARY",
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"mmxcvr"
-			}
-	},
-	"mmxcvr_canary_prod":{
-		"PROD":{
-			"PODGROUP":"ajna_sfzcl.canary",
-			"TEMPLATEID":"mmxcvr",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"REGEX":"failoverstatus=PRIMARY",
-			"FILTER":["ops-mmxcvr1-1-sfz"],
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"mmxcvr"
-			}
-	},
-	"mmxcvr_standby_prod":{
-		"PROD":{
-			"PODGROUP":"ajna_sfzcl",
-			"TEMPLATEID":"mmxcvr_standby",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"REGEX":"failoverstatus=STANDBY",
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"mmxcvr"
-			}
-	},
-	"mmdcs_prod":{
-		"PROD":{
-			"PODGROUP":"ajna_prodcl",
-			"TEMPLATEID":"mmdcs",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["(?!ops-mmdcs1-1-asg)"],
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"mmdcs"
-			}
-	},
-	"mmdcs_canary_prod":{
-		"PROD":{
-			"PODGROUP":"ajna_canary_prodcl",
-			"TEMPLATEID":"mmdcs",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["ops-mmdcs1-1-asg"],
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"mmdcs"
-			}
-	},
-	"mmrelay_prod":{
-		"PROD":{
-			"PODGROUP":"ajna_prodcl",
-			"TEMPLATEID":"mmrelay",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["(?!ops-mmrelay1-1-asg)"],
-			"INFRA": "Supporting Infrastructure",
-			"ROLE":"mmrelay"
-			}
-	},
-	"mmrelay_canary_prod":{
-		"PROD":{
-			"PODGROUP":"ajna_prodcl.canary",
-			"TEMPLATEID":"mmrelay",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["ops-mmrelay1-1-asg"],
-			"INFRA": "Supporting Infrastructure",
-			"ROLE":"mmrelay"
-			}
-	},
-	"mmpal_prod":{
-		"PROD":{
-			"PODGROUP":"mmpalcl",
-			"TEMPLATEID":"mmpal",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"mmpal"
-			}
-	},
-	"mmpal_canary_prod":{
-		"PROD":{
-			"PODGROUP":"mmpalcl.canary",
-			"TEMPLATEID":"mmpal",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["ops-mmpal1-1-chi"],
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"mmpal"
-			}
-	},
+        "PROD":{
+            "PODGROUP":"ajna_sfz11cl",
+            "TEMPLATEID":"mmmbus_11SFZ",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["ops-mmmbus11-[1-5]"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"mmmbus"
+            }
+    },
+    "mmmbus_prod":{
+        "PROD":{
+            "PODGROUP":"ajna_prodcl",
+            "TEMPLATEID":"mmmbus",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["?!(ops-mmmbus1-1-asg)"],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"mmmbus"
+            }
+    },
+    "mmmbus_canary_prod":{
+        "PROD":{
+            "PODGROUP":"ajna_canary_prodcl",
+            "TEMPLATEID":"mmmbus",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "FILTER":["ops-mmmbus1-1-asg"],
+            "ROLE":"mmmbus"
+            }
+    },
+    "mmrs_prod":{
+        "PROD":{
+            "PODGROUP":"ajna_prodcl",
+            "TEMPLATEID":"mmrs",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["(?!ops-mmrs1-1-asg)"],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"mmrs"
+            }
+    },
+    "mmrs_canary_prod":{
+        "PROD":{
+            "PODGROUP":"ajna_canary_prodcl",
+            "TEMPLATEID":"mmrs",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["ops-mmrs1-1-asg"],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"mmrs"
+            }
+    },
+    "mmxcvr_prod":{
+        "PROD":{
+            "PODGROUP":"ajna_sfzcl",
+            "TEMPLATEID":"mmxcvr",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["(?!ops-mmxcvr1-1-sfz)"],
+            "REGEX":"failoverstatus=PRIMARY",
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"mmxcvr"
+            }
+    },
+    "mmxcvr_canary_prod":{
+        "PROD":{
+            "PODGROUP":"ajna_sfzcl.canary",
+            "TEMPLATEID":"mmxcvr",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "REGEX":"failoverstatus=PRIMARY",
+            "FILTER":["ops-mmxcvr1-1-sfz"],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"mmxcvr"
+            }
+    },
+    "mmxcvr_standby_prod":{
+        "PROD":{
+            "PODGROUP":"ajna_sfzcl",
+            "TEMPLATEID":"mmxcvr_standby",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "REGEX":"failoverstatus=STANDBY",
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"mmxcvr"
+            }
+    },
+    "mmdcs_prod":{
+        "PROD":{
+            "PODGROUP":"ajna_prodcl",
+            "TEMPLATEID":"mmdcs",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["(?!ops-mmdcs1-1-asg)"],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"mmdcs"
+            }
+    },
+    "mmdcs_canary_prod":{
+        "PROD":{
+            "PODGROUP":"ajna_canary_prodcl",
+            "TEMPLATEID":"mmdcs",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["ops-mmdcs1-1-asg"],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"mmdcs"
+            }
+    },
+    "mmrelay_prod":{
+        "PROD":{
+            "PODGROUP":"ajna_prodcl",
+            "TEMPLATEID":"mmrelay",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["(?!ops-mmrelay1-1-asg)"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"mmrelay"
+            }
+    },
+    "mmrelay_canary_prod":{
+        "PROD":{
+            "PODGROUP":"ajna_prodcl.canary",
+            "TEMPLATEID":"mmrelay",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["ops-mmrelay1-1-asg"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"mmrelay"
+            }
+    },
+    "mmpal_prod":{
+        "PROD":{
+            "PODGROUP":"mmpalcl",
+            "TEMPLATEID":"mmpal",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"mmpal"
+            }
+    },
+    "mmpal_canary_prod":{
+        "PROD":{
+            "PODGROUP":"mmpalcl.canary",
+            "TEMPLATEID":"mmpal",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["ops-mmpal1-1-chi"],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"mmpal"
+            }
+    },
 	"mandm_splunk_api_prod":{
 		"PROD":{
 			"PODGROUP":"splunk-apicl",
@@ -1162,9 +1164,9 @@
             "INFRA":"Supporting Infrastructure",
             "ROLE":"nbmedia",
             "CASETYPE": "hostlist"
-        	}
+            }
     },
-    "coreafw_dr":{
+   "coreafw_dr":{
         "DR":{
             "PODGROUP":"afw.sec",
             "TEMPLATEID":"core-afw-patch",
@@ -1174,9 +1176,9 @@
             "ROLE":"app",
             "IMPL_PLAN":"coreapp-plan.json",
             "CASETYPE":"coreappafw"
-        	}
+            }
     },
-	"coreafw_prod":{
+    "coreafw_prod":{
         "PROD":{
             "PODGROUP":"afw.pri",
             "TEMPLATEID":"core-afw-patch",
@@ -1186,7 +1188,18 @@
             "ROLE":"app",
             "IMPL_PLAN":"coreapp-plan.json",
             "CASETYPE":"coreappafw"
-        	}
+            }
+    },
+    "safenet_prod":{
+        "PROD":{
+            "PODGROUP":"safenet",
+            "TEMPLATEID":"straight-patch",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"safenet",
+            "CASETYPE": "hostlist"
+            }
     },
     "ffx_canary_prod":{
         "PROD":{
