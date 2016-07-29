@@ -1201,6 +1201,17 @@
             "CASETYPE": "hostlist"
             }
     },
+    "monitor_canary_prod":{
+        "PROD":{
+            "PODGROUP":"monitor.caanry",
+            "TEMPLATEID":"monitor",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "FILTER":["ops-monitor2-1-sfm"],
+            "ROLE":"monitor"
+            }
+    },
     "ffx_canary_prod":{
         "PROD":{
             "PODGROUP":"gs0.canary",
