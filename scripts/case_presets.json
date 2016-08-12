@@ -958,7 +958,7 @@
 			"TEMPLATEID":"siteproxy.linux",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
-			"FILTER":["^.*1-1", "^.*2-1"],
+			"FILTER":["^.*1-1", "^.*2-1", "(?!blitz1-proxy1-(1|2)-(sfm|crd))"],
 			"INFRA":"Primary",
 			"ROLE":"proxy"
 			}
@@ -973,16 +973,42 @@
 			"ROLE":"proxy"
 		 	}
 	},
+    "siteproxy_canary_prod":{
+        "PROD":{
+            "PODGROUP":"pod.pri",
+            "TEMPLATEID":"sproxy.canary",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["blitz1-proxy1-(1|2)-(sfm|crd)"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"proxy"
+        }
+    },
 	"publicproxy_prod":{
 		"PROD":{
 			"PODGROUP":"pproxy",
 			"TEMPLATEID":"public-proxy",
 			"GROUPSIZE":1,
 			"TAGGROUPS":0,
+            "FILTER":["(?!public-proxy(1|2)-1-crd)", "(?!public-proxy(3|4)-1-sfm)"],
 			"INFRA":"Supporting_Infrastructure",
 			"ROLE":"publicproxy"
 			}
 	},
+    "publicproxy_canary_prod":{
+        "PROD":{
+            "PODGROUP":"pproxy.canary",
+            "TEMPLATEID":"public-proxy",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":[
+                "public-proxy(1|2)-1-crd",
+                "public-proxy(3|4)-1-sfm"
+            ],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"publicproxy"
+        }
+    },
 	"web.chi_dr":{
 		"DR":{
 			"PODGROUP":"pweb.chi",
