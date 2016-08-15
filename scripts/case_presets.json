@@ -1166,7 +1166,7 @@
             "CASETYPE": "hostlist"
             }
     },
-   "coreafw_dr":{
+  "coreafw_dr": {
         "DR":{
             "PODGROUP":"afw.sec",
             "TEMPLATEID":"core-afw-patch",
@@ -1189,6 +1189,18 @@
             "IMPL_PLAN":"coreapp-plan.json",
             "CASETYPE":"coreappafw"
             }
+    },
+  "coreafw_canary_prod": {
+    "PROD": {
+      "PODGROUP": "coreapp.canary",
+      "TEMPLATEID": "core-afw-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Primary",
+      "ROLE": "app",
+      "IMPL_PLAN": "coreapp-afw-plan.json",
+      "CASETYPE": "coreapp-canary"
+    }
     },
     "safenet_prod":{
         "PROD":{
