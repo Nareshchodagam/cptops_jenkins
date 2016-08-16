@@ -958,7 +958,7 @@
             "TEMPLATEID":"siteproxy.linux",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":["^.*1-1", "^.*2-1", "(?!blitz1-proxy1-(1|2)-(sfm|crd))"],
+            "FILTER":["^.*1-1", "^.*2-1"],
             "INFRA":"Primary",
             "ROLE":"proxy"
             }
@@ -980,7 +980,7 @@
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "FILTER":["blitz1-proxy1-(1|2)-(sfm|crd)"],
-            "INFRA": "Supporting Infrastructure",
+            "INFRA": "Primary",
             "ROLE":"proxy"
         }
     },
@@ -990,7 +990,6 @@
             "TEMPLATEID":"public-proxy",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":["(?!public-proxy(3|4)-1-sfm)"],
             "INFRA":"Supporting_Infrastructure",
             "ROLE":"publicproxy"
             }
@@ -1002,8 +1001,7 @@
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "FILTER":[
-                "public-proxy(1|2)-1-crd",
-                "public-proxy(3|4)-1-sfm"
+                "public-proxy(1|2)-1-crd|public-proxy(3|4)-1-sfm"
             ],
             "INFRA": "Supporting Infrastructure",
             "ROLE":"publicproxy"
