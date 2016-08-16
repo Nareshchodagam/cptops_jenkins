@@ -34,7 +34,7 @@
             "ROLE":"mmmbus"
             }
     },
-	"mmmbus_funnel_sfz_prod":{
+    "mmmbus_funnel_sfz_prod":{
         "PROD":{
             "PODGROUP":"ajna_sfz11cl",
             "TEMPLATEID":"mmmbus_11SFZ",
@@ -315,11 +315,11 @@
             "TEMPLATEID":"manage_apps-patch",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-			"REGEX":"failoverstatus=PRIMARY",
+            "REGEX":"failoverstatus=PRIMARY",
             "INFRA": "Supporting Infrastructure",
             "FILTER":["(?!dust-app1-1-sfm)"],
             "ROLE":"dust_delphi"
-        	}
+            }
     },
     "dust_delphi_canary_prod":{
         "PROD":{
@@ -328,10 +328,10 @@
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA": "Supporting Infrastructure",
-			"REGEX":"failoverstatus=PRIMARY",
+            "REGEX":"failoverstatus=PRIMARY",
             "FILTER":["dust-app1-1-sfm"],
             "ROLE":"dust_delphi"
-        	}
+            }
     },
     "dust_delphi_standby_prod":{
         "PROD":{
@@ -343,7 +343,7 @@
             "REGEX":"failoverstatus=STANDBY",
             "FILTER":["(?!dust-app1-1-sfm)"],
             "ROLE":"dust_delphi"
-        	}
+            }
     },
     "dust_delphi_gackparser_prod":{
         "PROD":{
@@ -351,11 +351,11 @@
             "TEMPLATEID":"manage_apps-patch",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-			"REGEX":"failoverstatus=PRIMARY",
+            "REGEX":"failoverstatus=PRIMARY",
             "INFRA":"Supporting Infrastructure",
             "FILTER":["(?!dust-app2-1-sfm)"],
             "ROLE":"gackparser"
-        	}
+            }
     },
     "dust_delphi_gackparser_canary_prod":{
         "PROD":{
@@ -363,258 +363,258 @@
             "TEMPLATEID":"manage_apps-patch",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-			"REGEX":"failoverstatus=PRIMARY",
+            "REGEX":"failoverstatus=PRIMARY",
             "INFRA":"Supporting Infrastructure",
             "FILTER":["dust-app2-1-sfm"],
             "ROLE":"gackparser"
-        	}
+            }
     },
-	"dust_delphi_gackparser_standby_prod":{
+    "dust_delphi_gackparser_standby_prod":{
         "PROD":{
             "PODGROUP":"delphicl",
             "TEMPLATEID":"straight-patch",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-			"REGEX":"failoverstatus=STANDBY",
+            "REGEX":"failoverstatus=STANDBY",
             "INFRA":"Supporting Infrastructure",
             "FILTER":["(?!dust-app2-1-sfm)"],
             "ROLE":"gackparser"
-        	}
+            }
     },
-	"mgmt_hub_prod":{
-		"PROD":{
-			"PODGROUP":"pod.pri",
-			"TEMPLATEID":"mgmt_hub",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Primary",
-			"FILTER":["(?!cs13-hub1-1-asg)"],
-			"REGEX":"failoverstatus=PRIMARY",
-			"ROLE":"mgmt_hub"
-			}
-	},
-	"mgmt_hub_standby_prod":{
-		"PROD":{
-			"PODGROUP":"pod.pri",
-			"TEMPLATEID":"mgmt_hub_standby",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Primary",
-			"REGEX":"failoverstatus=STANDBY",
-			"ROLE":"mgmt_hub"
-			}
-	},
-	"mgmt_hub_dr":{
-		"DR":{
-			"PODGROUP":"pod.sec",
-			"TEMPLATEID":"mgmt_hub",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Secondary",
-			"REGEX":"failoverstatus=PRIMARY",
-			"ROLE":"mgmt_hub"
-			}
-	},
-	"mgmt_hub_standby_dr":{
-		"DR":{
-			"PODGROUP":"pod.sec",
-			"TEMPLATEID":"mgmt_hub_standby",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Secondary",
-			"REGEX":"failoverstatus=STANDBY",
-			"ROLE":"mgmt_hub"
-			}
-	},
-	"mgmt_hub_canary_dr":{
-		"DR":{
-			"PODGROUP":"mgmt_hub.canary",
-			"TEMPLATEID":"mgmt_hub",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Primary",
-			"FILTER":["cs23-hub1-1-was|cs24-hub1-1-was"],
-			"REGEX":"failoverstatus=PRIMARY",
-			"ROLE":"mgmt_hub"
-			}
-	},
-	"dice_sfz_prod":{
-		"PROD":{
-			"PODGROUP":"dicecl",
-			"TEMPLATEID":"dice-app",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"dva-service-monitors"
-			}
-	},
-	"log_hub_prod":{
-		"PROD":{
-			"PODGROUP":"hubcl",
-			"TEMPLATEID":"log_hub",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"REGEX":"failoverstatus=PRIMARY",
-			"FILTER":["(?!shared-hub3-1-asg)"],
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"log_hub"
-			}
-	},
-	"log_hub_standby_prod":{
-		"PROD":{
-			"PODGROUP":"hubcl",
-			"TEMPLATEID":"log_hub_standby",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"REGEX":"failoverstatus=STANDBY",
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"log_hub"
-			}
-	},
-	"log_hub_canary_prod":{
-		"PROD":{
-			"PODGROUP":"hubcl.canary",
-			"TEMPLATEID":"log_hub",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"REGEX":"failoverstatus=PRIMARY",
-			"INFRA":"Supporting Infrastructure",
-			"FILTER":["shared-hub3-1-asg"],
-			"ROLE":"log_hub"
-			}
-	},
-	"lhub_prod":{
-		"PROD":{
-			"PODGROUP":"lhubcl",
-			"TEMPLATEID":"lhub",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"REGEX":"failoverstatus=PRIMARY",
-			"FILTER":["(?!shared-lhub14-1-sfz)"],
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"lhub"
-			}
-	},
-	"lhub_standby_prod":{
-		"PROD":{
-			"PODGROUP":"lhubcl",
-			"TEMPLATEID":"lhub_standby",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"REGEX":"failoverstatus=STANDBY",
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"lhub"
-			}
-	},
-	"lhub_canary_prod":{
-		"PROD":{
-			"PODGROUP":"lhubcl",
-			"TEMPLATEID":"lhub",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"REGEX":"failoverstatus=PRIMARY",
-			"FILTER":["shared-lhub14-1-sfz"],
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"lhub"
-			}
-	},
-	"logbus_prod":{
-		"PROD":{
-			"PODGROUP":"poclogcl",
-			"TEMPLATEID":"logbus",
-			"GROUPSIZE":2,
-			"TAGGROUPS":0,
-			"FILTER":["(?!poc-logbus1-23-sfm)", "(?!poc-logbus1-24-sfm)"],
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"logbus"
-			}
-	},
-	"logbus_canary_prod":{
-		"PROD":{
-			"PODGROUP":"poclogcl.canary",
-			"TEMPLATEID":"logbus",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["poc-logbus1-23-sfm", "poc-logbus1-24-sfm"],
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"logbus"
-			}
-	},
-	"cms":{
-		"PROD":{
-			"PODGROUP":"cmscl",
-			"TEMPLATEID":"cms",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"cms"
-			}
-	},
-	"spellchecker_prod":{
-		"PROD":{
-			"PODGROUP":"spellcheckcl",
-			"TEMPLATEID":"spellck",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Primary",
-			"ROLE":"spellchecker"
-			}
-	},
-	"public-content_prod":{
-		"PROD":{
-			"PODGROUP":"spellcheckcl",
-			"TEMPLATEID":"spellck",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["^public-content"],
-			"INFRA":"Primary",
-			"ROLE":"spellchecker"
-		}
-	},
-	"smarts_prod":{
-		"PROD":{
-			"PODGROUP":"smartscl",
-			"TEMPLATEID":"smarts",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Primary",
-			"ROLE":"smarts"
-			} 
-	},
-	"smarts_canary_prod":{
-		"PROD":{
-			"PODGROUP":"smartscl.canary",
-			"TEMPLATEID":"smarts",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Primary",
-			"ROLE":"smarts"
-			}
-	},
-	"cfgapp_prod": {
-		"PROD":{
-			"PODGROUP":"cfgapp",
-			"TEMPLATEID":"cfgapp",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["(?!cfg-cfgapp1-1-crd)"],
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"cms"
-			}
-	},
-	"cfgapp_canary_prod": {
-		"PROD":{
-			"PODGROUP":"cfgapp.canary",
-			"TEMPLATEID":"cfgapp",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["cfg-cfgapp1-1-crd"],
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"cms"
-			}
-	},
-	"dustyhub_prod": {
-    	"PROD":{
+    "mgmt_hub_prod":{
+        "PROD":{
+            "PODGROUP":"pod.pri",
+            "TEMPLATEID":"mgmt_hub",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Primary",
+            "FILTER":["(?!cs13-hub1-1-asg)"],
+            "REGEX":"failoverstatus=PRIMARY",
+            "ROLE":"mgmt_hub"
+            }
+    },
+    "mgmt_hub_standby_prod":{
+        "PROD":{
+            "PODGROUP":"pod.pri",
+            "TEMPLATEID":"mgmt_hub_standby",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Primary",
+            "REGEX":"failoverstatus=STANDBY",
+            "ROLE":"mgmt_hub"
+            }
+    },
+    "mgmt_hub_dr":{
+        "DR":{
+            "PODGROUP":"pod.sec",
+            "TEMPLATEID":"mgmt_hub",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Secondary",
+            "REGEX":"failoverstatus=PRIMARY",
+            "ROLE":"mgmt_hub"
+            }
+    },
+    "mgmt_hub_standby_dr":{
+        "DR":{
+            "PODGROUP":"pod.sec",
+            "TEMPLATEID":"mgmt_hub_standby",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Secondary",
+            "REGEX":"failoverstatus=STANDBY",
+            "ROLE":"mgmt_hub"
+            }
+    },
+    "mgmt_hub_canary_dr":{
+        "DR":{
+            "PODGROUP":"mgmt_hub.canary",
+            "TEMPLATEID":"mgmt_hub",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Primary",
+            "FILTER":["cs23-hub1-1-was|cs24-hub1-1-was"],
+            "REGEX":"failoverstatus=PRIMARY",
+            "ROLE":"mgmt_hub"
+            }
+    },
+    "dice_sfz_prod":{
+        "PROD":{
+            "PODGROUP":"dicecl",
+            "TEMPLATEID":"dice-app",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"dva-service-monitors"
+            }
+    },
+    "log_hub_prod":{
+        "PROD":{
+            "PODGROUP":"hubcl",
+            "TEMPLATEID":"log_hub",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "REGEX":"failoverstatus=PRIMARY",
+            "FILTER":["(?!shared-hub3-1-asg)"],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"log_hub"
+            }
+    },
+    "log_hub_standby_prod":{
+        "PROD":{
+            "PODGROUP":"hubcl",
+            "TEMPLATEID":"log_hub_standby",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "REGEX":"failoverstatus=STANDBY",
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"log_hub"
+            }
+    },
+    "log_hub_canary_prod":{
+        "PROD":{
+            "PODGROUP":"hubcl.canary",
+            "TEMPLATEID":"log_hub",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "REGEX":"failoverstatus=PRIMARY",
+            "INFRA":"Supporting Infrastructure",
+            "FILTER":["shared-hub3-1-asg"],
+            "ROLE":"log_hub"
+            }
+    },
+    "lhub_prod":{
+        "PROD":{
+            "PODGROUP":"lhubcl",
+            "TEMPLATEID":"lhub",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "REGEX":"failoverstatus=PRIMARY",
+            "FILTER":["(?!shared-lhub14-1-sfz)"],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"lhub"
+            }
+    },
+    "lhub_standby_prod":{
+        "PROD":{
+            "PODGROUP":"lhubcl",
+            "TEMPLATEID":"lhub_standby",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "REGEX":"failoverstatus=STANDBY",
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"lhub"
+            }
+    },
+    "lhub_canary_prod":{
+        "PROD":{
+            "PODGROUP":"lhubcl",
+            "TEMPLATEID":"lhub",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "REGEX":"failoverstatus=PRIMARY",
+            "FILTER":["shared-lhub14-1-sfz"],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"lhub"
+            }
+    },
+    "logbus_prod":{
+        "PROD":{
+            "PODGROUP":"poclogcl",
+            "TEMPLATEID":"logbus",
+            "GROUPSIZE":2,
+            "TAGGROUPS":0,
+            "FILTER":["(?!poc-logbus1-23-sfm)", "(?!poc-logbus1-24-sfm)"],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"logbus"
+            }
+    },
+    "logbus_canary_prod":{
+        "PROD":{
+            "PODGROUP":"poclogcl.canary",
+            "TEMPLATEID":"logbus",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["poc-logbus1-23-sfm", "poc-logbus1-24-sfm"],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"logbus"
+            }
+    },
+    "cms":{
+        "PROD":{
+            "PODGROUP":"cmscl",
+            "TEMPLATEID":"cms",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"cms"
+            }
+    },
+    "spellchecker_prod":{
+        "PROD":{
+            "PODGROUP":"spellcheckcl",
+            "TEMPLATEID":"spellck",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Primary",
+            "ROLE":"spellchecker"
+            }
+    },
+    "public-content_prod":{
+        "PROD":{
+            "PODGROUP":"spellcheckcl",
+            "TEMPLATEID":"spellck",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["^public-content"],
+            "INFRA":"Primary",
+            "ROLE":"spellchecker"
+        }
+    },
+    "smarts_prod":{
+        "PROD":{
+            "PODGROUP":"smartscl",
+            "TEMPLATEID":"smarts",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Primary",
+            "ROLE":"smarts"
+            }
+    },
+    "smarts_canary_prod":{
+        "PROD":{
+            "PODGROUP":"smartscl.canary",
+            "TEMPLATEID":"smarts",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Primary",
+            "ROLE":"smarts"
+            }
+    },
+    "cfgapp_prod": {
+        "PROD":{
+            "PODGROUP":"cfgapp",
+            "TEMPLATEID":"cfgapp",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["(?!cfg-cfgapp1-1-crd)"],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"cms"
+            }
+    },
+    "cfgapp_canary_prod": {
+        "PROD":{
+            "PODGROUP":"cfgapp.canary",
+            "TEMPLATEID":"cfgapp",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["cfg-cfgapp1-1-crd"],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"cms"
+            }
+    },
+    "dustyhub_prod": {
+        "PROD":{
         "PODGROUP":"dustyhubcl",
         "TEMPLATEID":"dusty",
         "GROUPSIZE":1,
@@ -624,9 +624,9 @@
         "REGEX":"failoverstatus=PRIMARY",
         "ROLE":"dusty"
         }
-	},
-	"dustyhub_canary_prod": {
-    	"PROD":{
+    },
+    "dustyhub_canary_prod": {
+        "PROD":{
         "PODGROUP":"dustyhub.canary",
         "TEMPLATEID":"dusty",
         "GROUPSIZE":1,
@@ -636,9 +636,9 @@
         "REGEX":"failoverstatus=PRIMARY",
         "ROLE":"dusty"
         }
-	},
-	"dustyhub_standby_prod": {
-    	"PROD":{
+    },
+    "dustyhub_standby_prod": {
+        "PROD":{
         "PODGROUP":"dustyhubcl",
         "TEMPLATEID":"dusty_standby",
         "GROUPSIZE":1,
@@ -649,334 +649,334 @@
         "ROLE":"dusty"
         }
 },
-	"search_prod": {
-		"PROD":{
-			"PODGROUP":"pod.pri",
-			"TEMPLATEID":"search",
-			"GROUPSIZE":15,
-			"TAGGROUPS":0,
-			"FILTER":["^.*search(1|2)-"],
-			"INFRA":"Primary",
-			"ROLE":"search"
-			}
-	},
-	"search_dr":{
-		"DR":{
-			"PODGROUP":"pod.sec",
-			"TEMPLATEID":"search",
-			"GROUPSIZE":15,
-			"TAGGROUPS":0,
-			"FILTER":["^.*search(1|2)-"],
-			"INFRA":"Secondary",
-			"ROLE":"search"
-			}
-	},
-	"search(23|43)_prod":{
-		"PROD":{
-			"PODGROUP":"pod.pri",
-			"TEMPLATEID":"search",
-			"GROUPSIZE":15,
-			"TAGGROUPS":0,
-			"FILTER":["^.*search(23)-", "^.*search(43)-"],
-			"INFRA":"Primary",
-			"ROLE":"search"
-			}
-	},
-	"search(21|22,41|42)_prod":{
-		"PROD":{
-			"PODGROUP":"pod.pri",
-			"TEMPLATEID":"search",
-			"GROUPSIZE":15,
-			"TAGGROUPS":0,
-			"FILTER":["^.*search(21|22)-", "^.*search(41|42)-"],
-			"INFRA":"Primary",
-			"ROLE":"search"
-			}
-	},
-	"search(23|43)_dr":{
-		"DR":{
-			"PODGROUP":"pod.sec",
-			"TEMPLATEID":"search",
-			"GROUPSIZE":15,
-			"TAGGROUPS":0,
-			"FILTER":["^.*search(23)-", "^.*search(43)-"],
-			"INFRA":"Secondary",
-			"ROLE":"search"
-			}
-	},
-	"search(21|22,41|42)_dr":{
-		"DR":{
-			"PODGROUP":"pod.sec",
-			"TEMPLATEID":"search",
-			"GROUPSIZE":15,
-			"TAGGROUPS":0,
-			"FILTER":["^.*search(21|22)-", "^.*search(41|42)-"],
-			"INFRA":"Secondary",
-			"ROLE":"search"
-			}
-	},
-	"shared-apputil_prod":{
-		"PROD":{
-			"PODGROUP":"apputil.pri",
-			"TEMPLATEID":"shared-apputil",
-			"GROUPSIZE":2,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting_Infrastructure",
-			"ROLE":"app"
-			}
-	},
-	"hbase_sp_prod":{
-		"PROD":{
-			"PODGROUP":"hbase.clusters",
-			"TEMPLATEID":"hbase.linux",
-			"GROUPSIZE":1,
-			"TAGGROUPS":20,
-			"INFRA":"Supporting_Infrastructure",
-			"ROLE":"mnds,dnds"
-			}
-	},
-	"hbase_prod":{
-		"PROD":{
-			"PODGROUP":"hbase.pri",
-			"TEMPLATEID":"hbase.linux",
-			"GROUPSIZE":3,
-			"TAGGROUPS":20,
-			"INFRA":"Primary",
-			"ROLE":"mnds,dnds"
-			}
-	},
-	"hbase_dr":{
-		"DR":{
-			"PODGROUP":"hbase.sec",
-			"TEMPLATEID":"hbase.linux",
-			"GROUPSIZE":3,
-			"TAGGROUPS":20,
-			"INFRA":"Secondary",
-			"ROLE":"mnds,dnds"
-			}
-	},
-	"gforce_prod":{
-		"PROD":{
-			"PODGROUP":"gforce",
-			"TEMPLATEID":"gforce.linux",
-			"GROUPSIZE":1,
-			"TAGGROUPS":4,
-			"INFRA":"Primary",
-			"ROLE":"mnds,dnds"
-			}
-	},
-	"insights_canary_prod":{
-		"PROD":{
-			"PODGROUP":"insights.canary",
-			"TEMPLATEID":"insights",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":"^.*(redis(1|2)-1-|iworker(1|2)-1-)", 
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"insights_iworker,insights_redis"
-			}
-	},
-	"insights_canary_chi_prod":{
-		"PROD":{
-			"PODGROUP":"insights.canary.chi",
-			"TEMPLATEID":"insights",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":"^.*(redis(1|2)-1-|iworker(1-15|2-9)-)",
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"insights_iworker,insights_redis"
-			}
-	},
-	"insights_canary_was_prod":{
-		"PROD":{
-			"PODGROUP":"insights.canary.was",
-			"TEMPLATEID":"insights",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":"^.*(redis(1|2)-1-|iworker(1-11|3-1)-)",
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"insights_iworker,insights_redis"
-			}
-	},
-	"insights_prod":{
-		"PROD":{
-			"PODGROUP":"insights.pri",
-			"TEMPLATEID":"insights",
-			"GROUPSIZE":18,
-			"TAGGROUPS":0,
-			"FILTER":"[a-zA-Z]",
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"insights_iworker,insights_redis"
-			}
-	},
-	"pbsgeo_prod":{
-		"PROD":{
-			"PODGROUP":"pbsgeo",
-			"TEMPLATEID":"pbsgeo.linux",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting_Infrastructure",
-			"ROLE":"pbsgeo"
-			}
-	},
-	"pbsmatch_prod":{
-		"PROD":{
-			"PODGROUP":"pbsmatch",
-			"TEMPLATEID":"pbsmatch.linux",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting_Infrastructure",
-			"ROLE":"pbsmatch"
-			}
-	},
-	"dpa_prod":{
-		"PROD":{
-			"PODGROUP":"dpa",
-			"TEMPLATEID":"straight-patch",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"dpa",
-			"CASETYPE": "hostlist"
-			}
-	},
-	"stgpm_prod":{
-		"PROD":{
-			"PODGROUP":"stgpm",
-			"TEMPLATEID":"straight-patch",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"stgpm",
-			"CASETYPE": "hostlist"
-			}
-	},
-	"restoreapp_prod":{
-		"PROD":{
-			"PODGROUP":"restoreapp",
-			"TEMPLATEID":"straight-patch",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"app"
-			}
-	},
-	"netbot_prod":{
-		"PROD":{
-			"PODGROUP":"netbot",
-			"TEMPLATEID":"straight-patch",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting Infrastructure",
-			"CASETYPE":"hostlist",
-			"ROLE":"netbot"
-			}
-	},
-	"lapp_canary_prod":{
-		"PROD":{
-			"PODGROUP":"lacanary",
-			"TEMPLATEID":"la.kafka.linux",
-			"GROUPSIZE":2,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"lapp"
-			}
-	},
-	"lapp_clusters_prod":{
-		"PROD":{
-			"PODGROUP":"la_clusters",
-			"TEMPLATEID":"la.kafka.linux",
-			"GROUPSIZE":4,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting Infrastructure",
-			"ROLE":"lapp"
-			}
-	},
-	"lapp_cs_clusters_prod":{
-		"PROD":{
-			"PODGROUP":"la_cs_clusters",
-			"TEMPLATEID":"la.kafka.linux",
-			"GROUPSIZE":2,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting_Infrastructure",
-			"ROLE":"lapp"
-			}
-	},				
-	"rps_prod":{
-		"PROD":{
-			"PODGROUP":"rpscl",
-			"TEMPLATEID":"rps",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting_Infrastructure",
-			"ROLE":"rps"
-			}
-	},
-	"release_prod":{
-		"PROD":{
-			"PODGROUP":"releasecl",
-			"TEMPLATEID":"release",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting_Infrastructure",
-			"ROLE":"release"
-			}
-	},
-	"public-trust_prod":{
-		"PROD":{
-			"PODGROUP":"public-trust",
-			"TEMPLATEID":"public-trust",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting_Infrastructure",
-			"ROLE":"trust"
-			}
-	},
-	"public-trust_dr":{
-		"DR":{
-			"PODGROUP":"public-trust",
-			"TEMPLATEID":"public-trust",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting_Infrastructure",
-			"ROLE":"trust"
-			}
-	},
-	"it_edw_prod":{
-		"PROD":{
-			"PODGROUP":"dbextract",
-			"TEMPLATEID":"shared-dbextract",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting_Infrastructure",
-			"ROLE":"it_edw"
-			}
-	},
-	"siteproxy_prod":{
-		"PROD":{
-			"PODGROUP":"pod.pri",
-			"TEMPLATEID":"siteproxy.linux",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["^.*1-1", "^.*2-1", "(?!blitz1-proxy1-(1|2)-(sfm|crd))"],
-			"INFRA":"Primary",
-			"ROLE":"proxy"
-			}
-	},
-	"siteproxy_dr":{
-		 "DR":{
-		 	"PODGROUP":"pod.sec",
-			"TEMPLATEID":"siteproxy_standby.linux",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Secondary",
-			"ROLE":"proxy"
-		 	}
-	},
-    "siteproxy_canary_prod":{
+    "search_prod": {
         "PROD":{
             "PODGROUP":"pod.pri",
-            "TEMPLATEID":"sproxy.canary",
+            "TEMPLATEID":"search",
+            "GROUPSIZE":15,
+            "TAGGROUPS":0,
+            "FILTER":["^.*search(1|2)-"],
+            "INFRA":"Primary",
+            "ROLE":"search"
+            }
+    },
+    "search_dr":{
+        "DR":{
+            "PODGROUP":"pod.sec",
+            "TEMPLATEID":"search",
+            "GROUPSIZE":15,
+            "TAGGROUPS":0,
+            "FILTER":["^.*search(1|2)-"],
+            "INFRA":"Secondary",
+            "ROLE":"search"
+            }
+    },
+    "search(23|43)_prod":{
+        "PROD":{
+            "PODGROUP":"pod.pri",
+            "TEMPLATEID":"search",
+            "GROUPSIZE":15,
+            "TAGGROUPS":0,
+            "FILTER":["^.*search(23)-", "^.*search(43)-"],
+            "INFRA":"Primary",
+            "ROLE":"search"
+            }
+    },
+    "search(21|22,41|42)_prod":{
+        "PROD":{
+            "PODGROUP":"pod.pri",
+            "TEMPLATEID":"search",
+            "GROUPSIZE":15,
+            "TAGGROUPS":0,
+            "FILTER":["^.*search(21|22)-", "^.*search(41|42)-"],
+            "INFRA":"Primary",
+            "ROLE":"search"
+            }
+    },
+    "search(23|43)_dr":{
+        "DR":{
+            "PODGROUP":"pod.sec",
+            "TEMPLATEID":"search",
+            "GROUPSIZE":15,
+            "TAGGROUPS":0,
+            "FILTER":["^.*search(23)-", "^.*search(43)-"],
+            "INFRA":"Secondary",
+            "ROLE":"search"
+            }
+    },
+    "search(21|22,41|42)_dr":{
+        "DR":{
+            "PODGROUP":"pod.sec",
+            "TEMPLATEID":"search",
+            "GROUPSIZE":15,
+            "TAGGROUPS":0,
+            "FILTER":["^.*search(21|22)-", "^.*search(41|42)-"],
+            "INFRA":"Secondary",
+            "ROLE":"search"
+            }
+    },
+    "shared-apputil_prod":{
+        "PROD":{
+            "PODGROUP":"apputil.pri",
+            "TEMPLATEID":"shared-apputil",
+            "GROUPSIZE":2,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting_Infrastructure",
+            "ROLE":"app"
+            }
+    },
+    "hbase_sp_prod":{
+        "PROD":{
+            "PODGROUP":"hbase.clusters",
+            "TEMPLATEID":"hbase.linux",
+            "GROUPSIZE":1,
+            "TAGGROUPS":20,
+            "INFRA":"Supporting_Infrastructure",
+            "ROLE":"mnds,dnds"
+            }
+    },
+    "hbase_prod":{
+        "PROD":{
+            "PODGROUP":"hbase.pri",
+            "TEMPLATEID":"hbase.linux",
+            "GROUPSIZE":3,
+            "TAGGROUPS":20,
+            "INFRA":"Primary",
+            "ROLE":"mnds,dnds"
+            }
+    },
+    "hbase_dr":{
+        "DR":{
+            "PODGROUP":"hbase.sec",
+            "TEMPLATEID":"hbase.linux",
+            "GROUPSIZE":3,
+            "TAGGROUPS":20,
+            "INFRA":"Secondary",
+            "ROLE":"mnds,dnds"
+            }
+    },
+    "gforce_prod":{
+        "PROD":{
+            "PODGROUP":"gforce",
+            "TEMPLATEID":"gforce.linux",
+            "GROUPSIZE":1,
+            "TAGGROUPS":4,
+            "INFRA":"Primary",
+            "ROLE":"mnds,dnds"
+            }
+    },
+    "insights_canary_prod":{
+        "PROD":{
+            "PODGROUP":"insights.canary",
+            "TEMPLATEID":"insights",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":"^.*(redis(1|2)-1-|iworker(1|2)-1-)",
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"insights_iworker,insights_redis"
+            }
+    },
+    "insights_canary_chi_prod":{
+        "PROD":{
+            "PODGROUP":"insights.canary.chi",
+            "TEMPLATEID":"insights",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":"^.*(redis(1|2)-1-|iworker(1-15|2-9)-)",
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"insights_iworker,insights_redis"
+            }
+    },
+    "insights_canary_was_prod":{
+        "PROD":{
+            "PODGROUP":"insights.canary.was",
+            "TEMPLATEID":"insights",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":"^.*(redis(1|2)-1-|iworker(1-11|3-1)-)",
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"insights_iworker,insights_redis"
+            }
+    },
+    "insights_prod":{
+        "PROD":{
+            "PODGROUP":"insights.pri",
+            "TEMPLATEID":"insights",
+            "GROUPSIZE":18,
+            "TAGGROUPS":0,
+            "FILTER":"[a-zA-Z]",
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"insights_iworker,insights_redis"
+            }
+    },
+    "pbsgeo_prod":{
+        "PROD":{
+            "PODGROUP":"pbsgeo",
+            "TEMPLATEID":"pbsgeo.linux",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting_Infrastructure",
+            "ROLE":"pbsgeo"
+            }
+    },
+    "pbsmatch_prod":{
+        "PROD":{
+            "PODGROUP":"pbsmatch",
+            "TEMPLATEID":"pbsmatch.linux",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting_Infrastructure",
+            "ROLE":"pbsmatch"
+            }
+    },
+    "dpa_prod":{
+        "PROD":{
+            "PODGROUP":"dpa",
+            "TEMPLATEID":"straight-patch",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"dpa",
+            "CASETYPE": "hostlist"
+            }
+    },
+    "stgpm_prod":{
+        "PROD":{
+            "PODGROUP":"stgpm",
+            "TEMPLATEID":"straight-patch",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"stgpm",
+            "CASETYPE": "hostlist"
+            }
+    },
+    "restoreapp_prod":{
+        "PROD":{
+            "PODGROUP":"restoreapp",
+            "TEMPLATEID":"straight-patch",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"app"
+            }
+    },
+    "netbot_prod":{
+        "PROD":{
+            "PODGROUP":"netbot",
+            "TEMPLATEID":"straight-patch",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "CASETYPE":"hostlist",
+            "ROLE":"netbot"
+            }
+    },
+    "lapp_canary_prod":{
+        "PROD":{
+            "PODGROUP":"lacanary",
+            "TEMPLATEID":"la.kafka.linux",
+            "GROUPSIZE":2,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"lapp"
+            }
+    },
+    "lapp_clusters_prod":{
+        "PROD":{
+            "PODGROUP":"la_clusters",
+            "TEMPLATEID":"la.kafka.linux",
+            "GROUPSIZE":4,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"lapp"
+            }
+    },
+    "lapp_cs_clusters_prod":{
+        "PROD":{
+            "PODGROUP":"la_cs_clusters",
+            "TEMPLATEID":"la.kafka.linux",
+            "GROUPSIZE":2,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting_Infrastructure",
+            "ROLE":"lapp"
+            }
+    },
+    "rps_prod":{
+        "PROD":{
+            "PODGROUP":"rpscl",
+            "TEMPLATEID":"rps",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting_Infrastructure",
+            "ROLE":"rps"
+            }
+    },
+    "release_prod":{
+        "PROD":{
+            "PODGROUP":"releasecl",
+            "TEMPLATEID":"release",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting_Infrastructure",
+            "ROLE":"release"
+            }
+    },
+    "public-trust_prod":{
+        "PROD":{
+            "PODGROUP":"public-trust",
+            "TEMPLATEID":"public-trust",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting_Infrastructure",
+            "ROLE":"trust"
+            }
+    },
+    "public-trust_dr":{
+        "DR":{
+            "PODGROUP":"public-trust",
+            "TEMPLATEID":"public-trust",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting_Infrastructure",
+            "ROLE":"trust"
+            }
+    },
+    "it_edw_prod":{
+        "PROD":{
+            "PODGROUP":"dbextract",
+            "TEMPLATEID":"shared-dbextract",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting_Infrastructure",
+            "ROLE":"it_edw"
+            }
+    },
+    "siteproxy_prod":{
+        "PROD":{
+            "PODGROUP":"pod.pri",
+            "TEMPLATEID":"siteproxy.linux",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["^.*1-1", "^.*2-1", "(?!blitz1-proxy1-(1|2)-(sfm|crd))"],
+            "INFRA":"Primary",
+            "ROLE":"proxy"
+            }
+    },
+    "siteproxy_dr":{
+         "DR":{
+            "PODGROUP":"pod.sec",
+            "TEMPLATEID":"siteproxy_standby.linux",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Secondary",
+            "ROLE":"proxy"
+            }
+    },
+    "siteproxy_canary_prod":{
+        "PROD":{
+            "PODGROUP":"sproxy.canary",
+            "TEMPLATEID":"siteproxy.linux",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "FILTER":["blitz1-proxy1-(1|2)-(sfm|crd)"],
@@ -984,17 +984,17 @@
             "ROLE":"proxy"
         }
     },
-	"publicproxy_prod":{
-		"PROD":{
-			"PODGROUP":"pproxy",
-			"TEMPLATEID":"public-proxy",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-            "FILTER":["(?!public-proxy(1|2)-1-crd)", "(?!public-proxy(3|4)-1-sfm)"],
-			"INFRA":"Supporting_Infrastructure",
-			"ROLE":"publicproxy"
-			}
-	},
+    "publicproxy_prod":{
+        "PROD":{
+            "PODGROUP":"pproxy",
+            "TEMPLATEID":"public-proxy",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["(?!public-proxy(3|4)-1-sfm)"],
+            "INFRA":"Supporting_Infrastructure",
+            "ROLE":"publicproxy"
+            }
+    },
     "publicproxy_canary_prod":{
         "PROD":{
             "PODGROUP":"pproxy.canary",
@@ -1009,107 +1009,107 @@
             "ROLE":"publicproxy"
         }
     },
-	"web.chi_dr":{
-		"DR":{
-			"PODGROUP":"pweb.chi",
-			"TEMPLATEID":"web.chi-was.linux",
-			"GROUPSIZE":4,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting_Infrastructure",
-			"ROLE":"web"
-			}
-	},
-	"web.was_prod":{
-		"PROD":{
-			"PODGROUP":"pweb.was",
-			"TEMPLATEID":"web.chi-was.linux",
-			"GROUPSIZE":4,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting_Infrastructure",
-			"ROLE":"web"
-			}
-	},
-	"web.asg-sjl_prod":{
-		"PROD":{
-			"PODGROUP":"pweb.asg-sjl",
-			"TEMPLATEID":"web.asg-sjl.linux",
-			"GROUPSIZE":4,
-			"TAGGROUPS":0,
-			"INFRA":"Supporting_Infrastructure",
-			"ROLE":"web"
-		}
-	},
-	"web_stage_prod":{
-		"PROD":{
-			"PODGROUP":"pwebstg",
-			"TEMPLATEID":"web_stage.linux",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
-			"ROLE":"web_stage"
-		}
-	},
-	"web_auth_prod":{
-		"PROD":{
-			"PODGROUP":"pwebauth",
-			"TEMPLATEID":"web_auth.linux",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"\"Supporting Infrastructure\"",
-			"ROLE":"web_auth"
-			}
-	},
-	"sapp_prod":{
-		"PROD":{
-			"PODGROUP":"sapp.pri",
-			"TEMPLATEID":"generic_app",
-			"GROUPSIZE":3,
-			"TAGGROUPS":0,
-			"INFRA":"Primary",
-			"ROLE":"sapp"
-			}
-	},
-	"mq_prod":{
-		"PROD":{
-			"PODGROUP":"pod.pri",
-			"TEMPLATEID":"mq.linux",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"FILTER":["^*1-1", "\"^*(1-2|2-1)\""],
-			"INFRA":"Primary",
-			"ROLE":"mq"
-			}
-	},
-	"mq_dr":{
-		"DR":{
-			"PODGROUP":"pod.sec",
-			"TEMPLATEID":"mq.linux",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Secondary",
-			"ROLE":"mq"
-		}
-	},
-	"mq_canary_prod":{
-		"PROD":{
-			"PODGROUP":"gs0.canary",
-			"TEMPLATEID":"mq.linux",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Primary",
-			"ROLE":"mq"
-			}
-	},
-	"mq_canary_dr":{
-		"DR":{
-			"PODGROUP":"gs0.canary.sec",
-			"TEMPLATEID":"mq.linux",
-			"GROUPSIZE":1,
-			"TAGGROUPS":0,
-			"INFRA":"Secondary",
-			"ROLE":"mq"
-			}
-	},
+    "web.chi_dr":{
+        "DR":{
+            "PODGROUP":"pweb.chi",
+            "TEMPLATEID":"web.chi-was.linux",
+            "GROUPSIZE":4,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting_Infrastructure",
+            "ROLE":"web"
+            }
+    },
+    "web.was_prod":{
+        "PROD":{
+            "PODGROUP":"pweb.was",
+            "TEMPLATEID":"web.chi-was.linux",
+            "GROUPSIZE":4,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting_Infrastructure",
+            "ROLE":"web"
+            }
+    },
+    "web.asg-sjl_prod":{
+        "PROD":{
+            "PODGROUP":"pweb.asg-sjl",
+            "TEMPLATEID":"web.asg-sjl.linux",
+            "GROUPSIZE":4,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting_Infrastructure",
+            "ROLE":"web"
+        }
+    },
+    "web_stage_prod":{
+        "PROD":{
+            "PODGROUP":"pwebstg",
+            "TEMPLATEID":"web_stage.linux",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"\"Supporting Infrastructure\"",
+            "ROLE":"web_stage"
+        }
+    },
+    "web_auth_prod":{
+        "PROD":{
+            "PODGROUP":"pwebauth",
+            "TEMPLATEID":"web_auth.linux",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"\"Supporting Infrastructure\"",
+            "ROLE":"web_auth"
+            }
+    },
+    "sapp_prod":{
+        "PROD":{
+            "PODGROUP":"sapp.pri",
+            "TEMPLATEID":"generic_app",
+            "GROUPSIZE":3,
+            "TAGGROUPS":0,
+            "INFRA":"Primary",
+            "ROLE":"sapp"
+            }
+    },
+    "mq_prod":{
+        "PROD":{
+            "PODGROUP":"pod.pri",
+            "TEMPLATEID":"mq.linux",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["^*1-1", "\"^*(1-2|2-1)\""],
+            "INFRA":"Primary",
+            "ROLE":"mq"
+            }
+    },
+    "mq_dr":{
+        "DR":{
+            "PODGROUP":"pod.sec",
+            "TEMPLATEID":"mq.linux",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Secondary",
+            "ROLE":"mq"
+        }
+    },
+    "mq_canary_prod":{
+        "PROD":{
+            "PODGROUP":"gs0.canary",
+            "TEMPLATEID":"mq.linux",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Primary",
+            "ROLE":"mq"
+            }
+    },
+    "mq_canary_dr":{
+        "DR":{
+            "PODGROUP":"gs0.canary.sec",
+            "TEMPLATEID":"mq.linux",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Secondary",
+            "ROLE":"mq"
+            }
+    },
     "ffx_prod":{
         "PROD":{
             "PODGROUP":"pod.pri",
@@ -1118,7 +1118,7 @@
             "TAGGROUPS":0,
             "INFRA":"Primary",
             "ROLE":"ffx"
-        	}
+            }
     },
     "ffx_dr":{
         "DR":{
@@ -1128,7 +1128,7 @@
             "TAGGROUPS":0,
             "INFRA":"Secondary",
             "ROLE":"ffx"
-        	}
+            }
     },
     "hammer_htgapp_prod":{
         "PROD":{
@@ -1138,7 +1138,7 @@
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
             "ROLE":"htgapp"
-        	}
+            }
     },
     "hammer_htgapp_dr":{
         "DR":{
@@ -1148,7 +1148,7 @@
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
             "ROLE":"htgapp"
-        	}
+            }
     },
     "hammer_app_prod":{
         "PROD":{
@@ -1158,7 +1158,7 @@
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
             "ROLE":"app"
-        	}
+            }
     },
     "hammer_app_dr":{
         "DR":{
@@ -1168,7 +1168,7 @@
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
             "ROLE":"app"
-        	}
+            }
     },
     "restoreffx_prod":{
         "PROD":{
@@ -1179,7 +1179,7 @@
             "INFRA":"Supporting Infrastructure",
             "ROLE":"restoreffx",
             "CASETYPE": "hostlist"
-        	}
+            }
     },
     "nbmedia_prod":{
         "PROD":{
@@ -1236,7 +1236,7 @@
             "FILTER":["\"(1|2)-[2-6]\""],
             "INFRA":"Primary",
             "ROLE":"ffx"
-        	}
+            }
     },
     "ffx_canary_dr":{
         "DR":{
