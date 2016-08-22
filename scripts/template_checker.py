@@ -1,6 +1,5 @@
 #
 #
-#
 import os
 import sys
 import re
@@ -11,15 +10,15 @@ import subprocess
 
 global _wrkspc
 global _pullid
-global _token
 
 def pull_files():
+    token = os.environ['GIT_TOKEN']
     endpoint = "https://git.soma.salesforce.com/api/v3"
-    resource = "/repos/mgaddy/test_hook/pulls/%s/files"
+    resource = "/repos/cpt/cptops_case_gen/pulls/%s/files"
     files = []
     filereg = re.compile(r'(?<=templates\/)(.*\.template)$', re.MULTILINE)
     filesurl = endpoint + resource % (_pullid)
-    out = requests.get(filesurl, auth=("mgaddy", _token))
+    out = requests.get(filesurl, auth=("mgaddy", token))
     data = out.json()
     for file in data:
         if filereg.search(file['filename']):
@@ -29,11 +28,9 @@ def pull_files():
 
 def run_lint(files):
     rtn_codes = {}
-    os.chdir(_wrkspc + "/bin")
-    #lint_script = _wrkspc + "/bin/template_lint.py -v -t "
-    lint_script = "template_lint.py -v -t "
+    lint_script = _wrkspc + "cptops_template-linter/template_lint.py -v -t "
     for file in files:
-        command = "python " + lint_script + file
+        command = "python " + lint_script + _wrkspc + "/templates/" + file
         output = subprocess.Popen(command.split(), stdout=PIPE)
         report = output.stdout.read()
         data = output.communicate()[0]
@@ -43,16 +40,18 @@ def run_lint(files):
     return rtn_codes
 
 def post_updates(report):
+    token = os.environ['GIT_TOKEN']
     endpoint = "https://git.soma.salesforce.com/api/v3"
-    comments_resource = "/repos/mgaddy/test_hook/issues/%s/comments"
+    comments_resource = "/repos/cpt/cptops_case_gen/issues/%s/comments"
     com_url = endpoint + comments_resource % (_pullid)
     post_comment = {"body": report}
-    requests.post(com_url, json=post_comment, auth=("mgaddy", _token))
+    requests.post(com_url, json=post_comment, auth=("mgaddy", token))
 
 if __name__ == "__main__":
     _wrkspc = os.environ['WORKSPACE']
     _pullid = os.environ['ghprbPullId']
-    _token = "4f9625970b5c9334e2e15af341bd100e0d4feecb"
+    print _pullid
+    print _wrkspc
     files = pull_files()
     rc = run_lint(files)
     for val in rc.itervalues():
