@@ -66,8 +66,8 @@ def cmd_builder(sets):
         if options.roleclass in co.req_sub:
             if not options.subject:
                 options.subject = raw_input("\nPreset %s requires custom subject.\nPlease add subject line: " % options.roleclass)
-    else:
-        options.subject = ""
+        else:
+            options.subject = ""
     bld_cmd['subject'] = options.subject
     bld_cmd['dowork'] = options.dowork
     #bld_cmd['clusteropstat'] = sets[role_class][role_status]['CL_STATUS']
