@@ -28,7 +28,7 @@ def pull_files():
 
 def run_lint(files):
     rtn_codes = {}
-    lint_script = _wrkspc + "cptops_template-linter/template_lint.py -v -t "
+    lint_script = _wrkspc + "/cptops_template-linter/template_lint.py -v -t "
     for file in files:
         command = "python " + lint_script + _wrkspc + "/templates/" + file
         output = subprocess.Popen(command.split(), stdout=PIPE)
