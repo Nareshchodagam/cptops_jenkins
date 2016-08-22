@@ -30,20 +30,74 @@ _Example_
 					}
 			},
 
-_case_builder Jenkins job_
+#CPTIAB - CASE_BUILDER
 
-After updating the case_presets file the following steps need to be done for 
-the case_builder jenkins job.  
+Case builder can be run within the CPTIAB docker image. Use the instruction below to create cases. 
 
-	1. Update the ROLE_CLASS parameter with the new role_title. In the job the list is sorted. 
-	2. If you job contains any filters update the groovy script with the associated filters for the ROLE_CLASS. 
-			Example. 
-					if (ROLE_CLASS.equals("FFX_CANARY_PROD")) {
-						return ["(1|2)-[2-6]"]
-					}
-	3. If you job has a special Subject tile then update the groovy script with the title for that ROLE_CLASS.
-			Example. 
-					 if (ROLE_CLASS.equals("SEARCH(21|22,41|42)_DR") || ROLE_CLASS.equals("SEARCH(21|22,41|42)_PROD")){
-					     return ["\"DR 20's\"", "\"DR 40's\"", "\"PROD 20's\"", "\"PROD40's\""]
-	4. Run the docker-case-builder job under Docker Builds to rebuild the case_builder image. 
+		usage: case_builder.py [-h] [--dry-run] [-l] [-s SEARCH_ROLE]
+                       [--roleclass ROLECLASS] [--podgroup PODGROUP]
+                       [--groupsize GROUPSIZE] [--taggroups TAGGROUPS]
+                       [--bundle BUNDLE] [--subject SUBJECT] [--dowork DOWORK]
+                       [--clusstat CLUSTSTAT] [--hoststat HOSTSTAT] [-r REGEX]
+                       [-f FILTER]
+
+		Case Builder Program
+		
+		optional arguments:
+		  -h, --help            show this help message and exit
+		  --dry-run             Dry run of build no case will be generated.
+		  -l, --list            List active role classes.
+		  -s SEARCH_ROLE        Search for a role.
+		  --roleclass ROLECLASS
+		                        Role Class
+		  --podgroup PODGROUP   Hostlist file for role.
+		  --groupsize GROUPSIZE
+		                        Groupsize.
+		  --taggroups TAGGROUPS
+		                        Taggroups.
+		  --bundle BUNDLE       Patch Bundle.
+		  --subject SUBJECT     Subject.
+		  --dowork DOWORK       Task to perform
+		  --clusstat CLUSTSTAT  Cluster Status.
+		  --hoststat HOSTSTAT   Host Status.
+		  -r REGEX              Regex Filter
+		  -f FILTER             Filter
+		
+#Search for available roles classes.
+
+			# python case_builder.py -s search
+			search(23|43)_prod
+			search(21|22,41|42)_prod
+			search_dr
+			search_prod
+			search(23|43)_dr
+			search(21|22,41|42)_dr
+
+#List all available role classes.
+
+			# python case_builder.py -l 
+			shared-apputil_prod
+			siteproxy_canary_prod
+			siteproxy_dr
+			siteproxy_prod
+			smarts_canary_prod
+			smarts_prod
+			spellchecker_prod
+			stgpm_prod
+			web.asg-sjl_prod
+			web.chi_dr
+			web.was_prod
+			web_auth_prod
+			web_stage_prod
+			
+			Total Roles: 117
+			
+#Create cases for a specified role.
+
+If a role contains multiple filters or requires a custom subject line. You will be prompted for 
+that information. 
+
+			# python case_builder --dry-run --roleclass "search(23|43)_prod" --bundle 2016.09 --dowork centos_migration
+			
+			
 	
