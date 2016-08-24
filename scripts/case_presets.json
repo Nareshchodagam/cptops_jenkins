@@ -479,7 +479,7 @@
             "TAGGROUPS":0,
             "REGEX":"failoverstatus=PRIMARY",
             "INFRA":"Supporting Infrastructure",
-            "FILTER":["shared-hub3-1-asg"],
+            "FILTER":["shared-hub4-1-asg"],
             "ROLE":"log_hub"
             }
     },
