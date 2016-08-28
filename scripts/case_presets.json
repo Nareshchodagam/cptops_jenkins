@@ -29,7 +29,7 @@
             "TEMPLATEID":"mmmbus_SFZ",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":["?!(ops-mmmbus11-[1-5])"],
+            "FILTER":["(?!ops-mmmbus11-[1-5])"],
             "INFRA": "Supporting Infrastructure",
             "ROLE":"mmmbus"
             }
@@ -51,7 +51,7 @@
             "TEMPLATEID":"mmmbus",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":["?!(ops-mmmbus1-1-asg)"],
+            "FILTER":["(?!ops-mmmbus1-1-asg)"],
             "INFRA":"Supporting Infrastructure",
             "ROLE":"mmmbus"
             }
