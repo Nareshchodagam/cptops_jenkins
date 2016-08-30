@@ -1073,7 +1073,7 @@
             "TEMPLATEID":"mq.linux",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":["^*1-1", "\"^*(1-2|2-1)\""],
+            "FILTER":["^.*1-1", "^.*(1-2|2-1)"],
             "INFRA":"Primary",
             "ROLE":"mq"
             }
