@@ -675,7 +675,7 @@
         "PROD":{
             "PODGROUP":"pod.pri",
             "TEMPLATEID":"search",
-            "GROUPSIZE":15,
+            "GROUPSIZE":1,
             "TAGGROUPS":0,
             "FILTER":["^.*search(23)-", "^.*search(43)-"],
             "INFRA":"Primary",
