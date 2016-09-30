@@ -16,7 +16,7 @@ def create_hostlist():
     _wrkspc = os.environ['WORKSPACE']
     os.environ['HOME'] = _wrkspc
     os.environ['PYTHONPATH'] = _wrkspc + "/idbhost/includes"
-    cmd = "python " + _wrkspc + "/cptops_case_gen/bin/gen_podlist.py "
+    cmd = "python " + _wrkspc + "/bin/gen_podlist.py "
     git_add = 'git add .'
     git_commit = 'git commit -m "Jenkins Automated Hostlist builder"'
     os.chdir( _wrkspc + "/hostlists")
