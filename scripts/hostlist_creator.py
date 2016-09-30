@@ -15,11 +15,11 @@ import shlex
 def create_hostlist():
     _wrkspc = os.environ['WORKSPACE']
     os.environ['HOME'] = _wrkspc
-    os.environ['PYTHONPATH'] = _wrkspc + "/git/cptops_case_gen/idbhost/includes"
-    cmd = "python " + _wrkspc + "/git/cptops_case_gen/bin/gen_podlist.py "
+    os.environ['PYTHONPATH'] = _wrkspc + "/cptops_case_gen/idbhost/includes"
+    cmd = "python " + _wrkspc + "/cptops_case_gen/bin/gen_podlist.py "
     git_add = 'git add .'
     git_commit = 'git commit -m "Jenkins Automated Hostlist builder"'
-    os.chdir( _wrkspc + "/git/cptops_case_gen/hostlists")
+    os.chdir( _wrkspc + "/cptops_case_gen/hostlists")
     opt_dict = {"pod": "all_prod",
                 "afw": "all_prod",
                 "DATA_RESTORE": "all_prod",
