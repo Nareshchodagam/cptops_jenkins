@@ -1281,7 +1281,7 @@
             "ROLE":"argus_ws"
             }
     },
-    "argusws_caanry_prod":{
+    "argusws_canary_prod":{
         "PROD":{
             "PODGROUP":"arguscl",
             "TEMPLATEID":"argusws",
