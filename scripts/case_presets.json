@@ -1280,6 +1280,27 @@
             "INFRA": "Supporting Infrastructure",
             "ROLE":"argus_ws"
             }
+    },
+    "searchzk_prod":{
+        "PROD":{
+            "PODGROUP":"searchzkcl",
+            "TEMPLATEID":"searchzk",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["^shared0-searchzk4.*", "^shared0-searchzk2.*"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"searchzk"
+            }
+    },
+    "piperepo_prod":{
+    	"PROD":{
+	    	"PODGROUP":"piperepocl",
+	        "TEMPLATEID":"piperepo",
+	        "GROUPSIZE":1,
+	        "TAGGROUPS":0,
+	    	"FILTER":["^.*1-1", "^.*2-1"],
+	        "INFRA": "Supporting Infrastructure",
+	        "ROLE":"piperepo"
+            }
     }
 }
-
