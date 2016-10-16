@@ -122,7 +122,7 @@ def case_executor():
     gus cases. Gus_cases.py requires proxy setting while build_plan.py
     does not require proxy setting. Hence the loop.
     '''
-    case_file = os.environ["HOME"] + '/cases.sh'
+    case_file = os.getcwd() + '/cases.sh'
     cmd_type = re.compile(r'^(python\s[a-z_.]*)')
     pods = re.compile(r'--inst\s([A-Za-z0-99,]*)')
     os.chdir(os.environ["HOME"] + '/git/cptops_case_gen')
@@ -150,6 +150,7 @@ def case_executor():
                       logging.debug(line)
     else:
         logging.debug("cases.sh file not found!")
+        logging.debug(case_file)
         sys.exit(1)
     return failed_plans
 
