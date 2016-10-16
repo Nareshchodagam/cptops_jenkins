@@ -34,7 +34,7 @@ def cmd_builder(sets):
     role_class = options.roleclass
     role_status = role_class.split('_')[-1].upper()
     #dr = "True" if role_status == "DR" else "FALSE"
-    pod_cmd = ["python", home_dir + "/git/cptops_case_gen/bin/gen_cases.py" ]
+    pod_cmd = ["python", home_dir + "/git/cptops_case_gen/gen_cases.py" ]
     bld_cmd = {}
     bld_cmd['status'] = "True" if role_status == "DR" else "FALSE"
     bld_cmd['bundle'] = options.bundle
@@ -104,7 +104,7 @@ def case_builder(bld_cmd):
     '''
     cmd = ''
     case_file = 'cases.sh'
-    pod_cmd = ["python", os.environ["HOME"] + "/git/cptops_case_gen/bin/gen_cases.py" ]
+    pod_cmd = ["python", os.environ["HOME"] + "/git/cptops_case_gen/gen_cases.py" ]
     for opt in co.opt_dict.iterkeys():
         if bld_cmd.has_key(opt) and bld_cmd[opt] != "":
             pod_cmd.append(co.opt_dict[opt])
@@ -125,7 +125,7 @@ def case_executor():
     case_file = os.environ["HOME"] + '/cases.sh'
     cmd_type = re.compile(r'^(python\s[a-z_.]*)')
     pods = re.compile(r'--inst\s([A-Za-z0-99,]*)')
-    os.chdir(os.environ["HOME"] + '/git/cptops_case_gen/bin')
+    os.chdir(os.environ["HOME"] + '/git/cptops_case_gen')
     failed_plans = []
 
     if os.path.isfile(case_file):
