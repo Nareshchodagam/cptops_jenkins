@@ -1280,17 +1280,6 @@
             "INFRA": "Supporting Infrastructure",
             "ROLE":"argus_ws"
             }
-    },
-    "argusws_canary_prod":{
-        "PROD":{
-            "PODGROUP":"arguscl",
-            "TEMPLATEID":"argusws",
-            "GROUPSIZE":1,
-            "TAGGROUPS":0,
-            "FILTER":["'.*(argusws2-5-)'"],
-            "INFRA": "Supporting Infrastructure",
-            "ROLE":"argus_ws"
-            }
     }
 }
 
