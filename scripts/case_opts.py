@@ -19,6 +19,7 @@ opt_dict = {'gsize': '-s',
             'hostopstat': '--hostopstat',
             'subject': '-g',
             'idb': '--idb',
+            'excludes': '--exclude',
             'impl_plan': '--implplan'}
 
 req_sub = ['search(23|43)_prod',

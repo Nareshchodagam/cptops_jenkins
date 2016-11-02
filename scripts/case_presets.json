@@ -1256,6 +1256,7 @@
             "TAGGROUPS":0,
             "FILTER":["\"(1|2)-[2-6]\""],
             "INFRA":"Primary",
+            "EXCLUDE_LIST": "ffxexclude"
             "ROLE":"ffx"
             }
     },

@@ -45,6 +45,7 @@ def cmd_builder(sets):
     bld_cmd['infra'] = sets[role_class][role_status]['INFRA']
     bld_cmd['role'] = sets[role_class][role_status]['ROLE']
     bld_cmd['template'] = sets[role_class][role_status]['TEMPLATEID']
+    bld_cmd['excludes'] = "hostlists/" + sets[role_class][role_status]['EXCLUDE_LIST']
     if options.regex == None:
         if 'REGEX' in sets[role_class][role_status]:
             options.regex = sets[role_class][role_status]['REGEX']
