@@ -1256,7 +1256,7 @@
             "TAGGROUPS":0,
             "FILTER":["^.*(1|2)-[2-6]"],
             "INFRA":"Primary",
-            "EXCLUDE_LIST": "ffxexclude"
+            "EXCLUDES": "ffxexclude",
             "ROLE":"ffx"
             }
     },
@@ -1267,6 +1267,7 @@
             "GROUPSIZE":5,
             "TAGGROUPS":0,
             "FILTER":["^.*(1|2)-[2-6]"],
+            "EXCLUDES": "ffxexclude",
             "INFRA":"Secondary",
             "ROLE":"ffx"
             }
