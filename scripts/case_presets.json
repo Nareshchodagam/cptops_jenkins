@@ -1254,7 +1254,7 @@
             "TEMPLATEID":"ffx",
             "GROUPSIZE":5,
             "TAGGROUPS":0,
-            "FILTER":["\"(1|2)-[2-6]\""],
+            "FILTER":["^.*(1|2)-[2-6]"],
             "INFRA":"Primary",
             "EXCLUDE_LIST": "ffxexclude"
             "ROLE":"ffx"
@@ -1266,7 +1266,7 @@
             "TEMPLATEID":"ffx",
             "GROUPSIZE":5,
             "TAGGROUPS":0,
-            "FILTER":["\"(1|2)-[2-6]\""],
+            "FILTER":["^.*(1|2)-[2-6]"],
             "INFRA":"Secondary",
             "ROLE":"ffx"
             }
