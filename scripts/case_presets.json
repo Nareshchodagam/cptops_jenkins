@@ -771,7 +771,7 @@
             "TEMPLATEID":"insights",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":"^.*(redis(1|2)-1-|iworker(1|2)-1-)",
+            "FILTER":["^.*(redis(1|2)-1-|iworker(1|2)-1-)"],
             "INFRA":"Supporting Infrastructure",
             "ROLE":"insights_iworker,insights_redis"
             }
@@ -782,7 +782,7 @@
             "TEMPLATEID":"insights",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":"^.*(redis(1|2)-1-|iworker(1-15|2-9)-)",
+            "FILTER":["^.*(redis(1|2)-1-|iworker(1-15|2-9)-)"],
             "INFRA":"Supporting Infrastructure",
             "ROLE":"insights_iworker,insights_redis"
             }
@@ -793,7 +793,7 @@
             "TEMPLATEID":"insights",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":"^.*(redis(1|2)-1-|iworker(1-11|3-1)-)",
+            "FILTER":["^.*(redis(1|2)-1-|iworker(1-11|3-1)-)"],
             "INFRA":"Supporting Infrastructure",
             "ROLE":"insights_iworker,insights_redis"
             }
