@@ -1315,5 +1315,16 @@
 	        "INFRA": "Supporting Infrastructure",
 	        "ROLE":"piperepo"
             }
+    },
+     "acs_prod":{
+        "PROD":{
+            "PODGROUP":"acs.pri",
+            "TEMPLATEID":"acs",
+            "GROUPSIZE":2,
+            "TAGGROUPS":0,
+            "FILTER":[],
+            "INFRA": "Primary",
+            "ROLE":"acs"
+            }
     }
 }
