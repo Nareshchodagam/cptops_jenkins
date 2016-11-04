@@ -44,6 +44,7 @@ def cmd_builder(sets):
     bld_cmd['tagsize'] = options.taggroups if options.taggroups != None else sets[role_class][role_status]['TAGGROUPS']
     bld_cmd['infra'] = sets[role_class][role_status]['INFRA']
     bld_cmd['role'] = sets[role_class][role_status]['ROLE']
+    bld_cmd['template'] = sets[role_class][role_status]['TEMPLATEID']
 
     if options.regex == None:
         if 'REGEX' in sets[role_class][role_status]:
