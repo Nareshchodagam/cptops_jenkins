@@ -759,8 +759,8 @@
         "PROD":{
             "PODGROUP":"gforce",
             "TEMPLATEID":"gforce.linux",
-            "GROUPSIZE":1,
-            "TAGGROUPS":4,
+            "GROUPSIZE":10,
+            "TAGGROUPS":0,
             "INFRA":"Primary",
             "ROLE":"mnds,dnds"
             }
