@@ -762,7 +762,7 @@
             "GROUPSIZE":10,
             "TAGGROUPS":0,
             "INFRA":"Primary",
-            "ROLE":"mnds,dnds"
+            "ROLE":"mnds,dnds,gforce"
             }
     },
     "insights_canary_prod":{
@@ -886,7 +886,7 @@
         "PROD":{
             "PODGROUP":"la_clusters",
             "TEMPLATEID":"la.kafka.linux",
-            "GROUPSIZE":4,
+            "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
             "ROLE":"lapp"
