@@ -1327,7 +1327,7 @@
             "ROLE":"acs"
             }
     },
-    "ops-air":{
+    "ops-air_prod":{
         "PROD":{
             "PODGROUP":"aircl",
             "TEMPLATEID":"air",
