@@ -1326,5 +1326,16 @@
             "INFRA": "Primary",
             "ROLE":"acs"
             }
+    },
+    "ops-air":{
+        "PROD":{
+            "PODGROUP":"aircl",
+            "TEMPLATEID":"air",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":[],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"air"
+        }
     }
 }
