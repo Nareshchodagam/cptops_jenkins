@@ -876,7 +876,7 @@
         "PROD":{
             "PODGROUP":"lacanary",
             "TEMPLATEID":"la.kafka.linux",
-            "GROUPSIZE":2,
+            "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
             "ROLE":"lapp"
