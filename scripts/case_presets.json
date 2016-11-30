@@ -524,7 +524,7 @@
             "TEMPLATEID":"logbus",
             "GROUPSIZE":2,
             "TAGGROUPS":0,
-            "FILTER":["(?!poc-logbus1-23-sfm)", "(?!poc-logbus1-24-sfm)"],
+            "FILTER":["(?!.*(poc-logbus1-(23|24)-))"],
             "INFRA":"Supporting Infrastructure",
             "ROLE":"logbus"
             }
@@ -535,7 +535,7 @@
             "TEMPLATEID":"logbus",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":["poc-logbus1-23-sfm", "poc-logbus1-24-sfm"],
+            "FILTER":["poc-logbus1-(23|24)-"],
             "INFRA":"Supporting Infrastructure",
             "ROLE":"logbus"
             }
@@ -1239,7 +1239,7 @@
     },
     "monitor_canary_prod":{
         "PROD":{
-            "PODGROUP":"monitor.caanry",
+            "PODGROUP":"monitor.canary",
             "TEMPLATEID":"monitor",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
@@ -1278,7 +1278,7 @@
             "TEMPLATEID":"argusws",
             "GROUPSIZE":3,
             "TAGGROUPS":0,
-            "FILTER":["'.*(argusws(1|2)-[1-4]-|argusws1-5-)'"],
+            "FILTER":[".*(argusws(1|2)-[1-4]-|argusws1-5-)"],
             "INFRA": "Supporting Infrastructure",
             "ROLE":"argus_ws"
             }
@@ -1289,7 +1289,7 @@
             "TEMPLATEID":"argusws",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":["'.*(argusws2-5-)'"],
+            "FILTER":[".*(argusws2-5-)"],
             "INFRA": "Supporting Infrastructure",
             "ROLE":"argus_ws"
             }
@@ -1327,15 +1327,38 @@
             "ROLE":"acs"
             }
     },
-    "ops-air_prod":{
+    "ops-air_prod": {
+        "PROD": {
+            "PODGROUP": "aircl",
+            "TEMPLATEID": "air",
+            "GROUPSIZE": 1,
+            "TAGGROUPS": 0,
+            "FILTER": [],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE": "air"
+        }
+    },
+    "argusui_prod":{
         "PROD":{
-            "PODGROUP":"aircl",
-            "TEMPLATEID":"air",
+            "PODGROUP":"arguscl",
+            "TEMPLATEID":"argusui",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":[],
-            "INFRA":"Supporting Infrastructure",
-            "ROLE":"air"
+            "FILTER":[".*(argusui1-[1-2])"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"argus_ui"
+        }
+    },
+    "argusui_canary_prod":{
+        "PROD":{
+            "PODGROUP":"arguscl",
+            "TEMPLATEID":"argusui",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":[".*(argusui2-1-)"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"argus_ui"
+            
         }
     }
 }
