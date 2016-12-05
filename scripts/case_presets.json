@@ -135,6 +135,17 @@
             "ROLE":"mmdcs"
             }
     },
+    "mmdcs_sfz_prod":{
+        "PROD":{
+            "PODGROUP":"ajna_sfzcl",
+            "TEMPLATEID":"mmdcs",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":[],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"mmdcs"
+            }
+    },
     "mmdcs_canary_prod":{
         "PROD":{
             "PODGROUP":"ajna_canary_prodcl",
@@ -524,7 +535,7 @@
             "TEMPLATEID":"logbus",
             "GROUPSIZE":2,
             "TAGGROUPS":0,
-            "FILTER":["(?!poc-logbus1-23-sfm)", "(?!poc-logbus1-24-sfm)"],
+            "FILTER":["(?!.*(poc-logbus1-(23|24)-))"],
             "INFRA":"Supporting Infrastructure",
             "ROLE":"logbus"
             }
@@ -535,7 +546,7 @@
             "TEMPLATEID":"logbus",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":["poc-logbus1-23-sfm", "poc-logbus1-24-sfm"],
+            "FILTER":["poc-logbus1-(23|24)-"],
             "INFRA":"Supporting Infrastructure",
             "ROLE":"logbus"
             }
@@ -759,10 +770,10 @@
         "PROD":{
             "PODGROUP":"gforce",
             "TEMPLATEID":"gforce.linux",
-            "GROUPSIZE":1,
-            "TAGGROUPS":4,
+            "GROUPSIZE":10,
+            "TAGGROUPS":0,
             "INFRA":"Primary",
-            "ROLE":"mnds,dnds"
+            "ROLE":"mnds,dnds,gforce"
             }
     },
     "insights_canary_prod":{
@@ -771,7 +782,7 @@
             "TEMPLATEID":"insights",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":"^.*(redis(1|2)-1-|iworker(1|2)-1-)",
+            "FILTER":["^.*(redis(1|2)-1-|iworker(1|2)-1-)"],
             "INFRA":"Supporting Infrastructure",
             "ROLE":"insights_iworker,insights_redis"
             }
@@ -782,7 +793,7 @@
             "TEMPLATEID":"insights",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":"^.*(redis(1|2)-1-|iworker(1-15|2-9)-)",
+            "FILTER":["^.*(redis(1|2)-1-|iworker(1-15|2-9)-)"],
             "INFRA":"Supporting Infrastructure",
             "ROLE":"insights_iworker,insights_redis"
             }
@@ -793,7 +804,7 @@
             "TEMPLATEID":"insights",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":"^.*(redis(1|2)-1-|iworker(1-11|3-1)-)",
+            "FILTER":["^.*(redis(1|2)-1-|iworker(1-11|3-1)-)"],
             "INFRA":"Supporting Infrastructure",
             "ROLE":"insights_iworker,insights_redis"
             }
@@ -876,7 +887,7 @@
         "PROD":{
             "PODGROUP":"lacanary",
             "TEMPLATEID":"la.kafka.linux",
-            "GROUPSIZE":2,
+            "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
             "ROLE":"lapp"
@@ -886,7 +897,7 @@
         "PROD":{
             "PODGROUP":"la_clusters",
             "TEMPLATEID":"la.kafka.linux",
-            "GROUPSIZE":4,
+            "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
             "ROLE":"lapp"
@@ -1239,7 +1250,7 @@
     },
     "monitor_canary_prod":{
         "PROD":{
-            "PODGROUP":"monitor.caanry",
+            "PODGROUP":"monitor.canary",
             "TEMPLATEID":"monitor",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
@@ -1254,8 +1265,9 @@
             "TEMPLATEID":"ffx",
             "GROUPSIZE":5,
             "TAGGROUPS":0,
-            "FILTER":["\"(1|2)-[2-6]\""],
+            "FILTER":["^.*(1|2)-[2-6]"],
             "INFRA":"Primary",
+            "EXCLUDES": "ffxexclude",
             "ROLE":"ffx"
             }
     },
@@ -1265,7 +1277,8 @@
             "TEMPLATEID":"ffx",
             "GROUPSIZE":5,
             "TAGGROUPS":0,
-            "FILTER":["\"(1|2)-[2-6]\""],
+            "FILTER":["^.*(1|2)-[2-6]"],
+            "EXCLUDES": "ffxexclude",
             "INFRA":"Secondary",
             "ROLE":"ffx"
             }
@@ -1276,7 +1289,7 @@
             "TEMPLATEID":"argusws",
             "GROUPSIZE":3,
             "TAGGROUPS":0,
-            "FILTER":["'.*(argusws(1|2)-[1-4]-|argusws1-5-)'"],
+            "FILTER":[".*(argusws(1|2)-[1-4]-|argusws1-5-)"],
             "INFRA": "Supporting Infrastructure",
             "ROLE":"argus_ws"
             }
@@ -1287,7 +1300,7 @@
             "TEMPLATEID":"argusws",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":["'.*(argusws2-5-)'"],
+            "FILTER":[".*(argusws2-5-)"],
             "INFRA": "Supporting Infrastructure",
             "ROLE":"argus_ws"
             }
@@ -1313,5 +1326,50 @@
 	        "INFRA": "Supporting Infrastructure",
 	        "ROLE":"piperepo"
             }
+    },
+     "acs_prod":{
+        "PROD":{
+            "PODGROUP":"acs.pri",
+            "TEMPLATEID":"acs",
+            "GROUPSIZE":2,
+            "TAGGROUPS":0,
+            "FILTER":[],
+            "INFRA": "Primary",
+            "ROLE":"acs"
+            }
+    },
+    "ops-air_prod": {
+        "PROD": {
+            "PODGROUP": "aircl",
+            "TEMPLATEID": "air",
+            "GROUPSIZE": 1,
+            "TAGGROUPS": 0,
+            "FILTER": [],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE": "air"
+        }
+    },
+    "argusui_prod":{
+        "PROD":{
+            "PODGROUP":"arguscl",
+            "TEMPLATEID":"argusui",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":[".*(argusui1-[1-2])"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"argus_ui"
+        }
+    },
+    "argusui_canary_prod":{
+        "PROD":{
+            "PODGROUP":"arguscl",
+            "TEMPLATEID":"argusui",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":[".*(argusui2-1-)"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"argus_ui"
+            
+        }
     }
 }
