@@ -135,6 +135,17 @@
             "ROLE":"mmdcs"
             }
     },
+    "mmdcs_sfz_prod":{
+        "PROD":{
+            "PODGROUP":"ajna_sfzcl",
+            "TEMPLATEID":"mmdcs",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":[],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"mmdcs"
+            }
+    },
     "mmdcs_canary_prod":{
         "PROD":{
             "PODGROUP":"ajna_canary_prodcl",
