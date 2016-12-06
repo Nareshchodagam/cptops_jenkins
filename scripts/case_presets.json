@@ -1369,7 +1369,18 @@
             "FILTER":[".*(argusui2-1-)"],
             "INFRA": "Supporting Infrastructure",
             "ROLE":"argus_ui"
-            
+        }
+    },
+    "elkpoc_sfz_prod":{
+        "PROD":{
+            "PODGROUP":"elkpoccl",
+            "TEMPLATEID":"straight-patch",
+            "GROUPSIZE":5,
+            "TAGGROUPS":0,
+            "FILTER":[],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"elkpoc",
+            "CASETYPE": "hostlist"
         }
     }
 }
