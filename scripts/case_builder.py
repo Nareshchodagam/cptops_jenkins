@@ -154,23 +154,24 @@ def case_executor():
     if os.path.isfile(case_file):
         with open(case_file, 'r') as cases:
             for line in cases:
-                ln_check = cmd_type.match(line)
-                if ln_check.group() == "python gus_cases_vault.py":
-                    #os.environ['https_proxy'] = "http://public-proxy1-0-sfm.data.sfdc.net:8080/"
-                    logging.debug(line)
-                    retcode = os.system(line)
-                    logging.debug(retcode)
-                    if retcode != 0:
-                        pods_match = pods.findall(line)
-                        logging.debug(pods_match)
-                        failed_plans.append(pods_match)
-                else:
-                    #os.environ['https_proxy'] = ""
-                    logging.debug(line)
-                    retcode = os.system(line)
-                    logging.debug(retcode)
-                    if retcode != 0:
-                      logging.debug(line)
+                if not line.startswith("#"):
+                    ln_check = cmd_type.match(line)
+                    if ln_check.group() == "python gus_cases_vault.py":
+                        #os.environ['https_proxy'] = "http://public-proxy1-0-sfm.data.sfdc.net:8080/"
+                        logging.debug(line)
+                        retcode = os.system(line)
+                        logging.debug(retcode)
+                        if retcode != 0:
+                            pods_match = pods.findall(line)
+                            logging.debug(pods_match)
+                            failed_plans.append(pods_match)
+                    else:
+                        #os.environ['https_proxy'] = ""
+                        logging.debug(line)
+                        retcode = os.system(line)
+                        logging.debug(retcode)
+                        if retcode != 0:
+                          logging.debug(line)
     else:
         logging.debug("cases.sh file not found!")
         logging.debug(case_file)
