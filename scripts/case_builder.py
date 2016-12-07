@@ -14,6 +14,7 @@ import logging
 import shlex
 import argparse
 import case_opts as co
+import pprint
 
 
 def json_imports():
@@ -188,6 +189,7 @@ if __name__ == "__main__":
     parser.add_argument("--dry-run", action="store_true", dest="dryrun",
                         help="Dry run of build no case will be generated.")
     parser.add_argument("-l", "--list", action="store_true", dest="list", help="List active role classes.")
+    parser.add_argument("--full", action="store_true", dest="full_list", help="View presets of a roleclass.")
     parser.add_argument("-s", dest="search_role", help="Search for a role.")
     parser.add_argument("--roleclass", dest="roleclass", help="Role Class")
     parser.add_argument("--podgroup", dest="podgroup", help="Hostlist file for role.")
@@ -204,6 +206,18 @@ if __name__ == "__main__":
     
     logging.basicConfig(level=logging.DEBUG)
     sets = json_imports()
+    if options.full_list and options.roleclass:
+        pp = pprint.PrettyPrinter(indent=2)
+        pp.pprint("Presets contents for %s" % (options.roleclass))
+        pp.pprint("=====================================================")
+        try:
+            pp.pprint(sets[options.roleclass])
+            sys.exit(0)
+        except KeyError:
+            logging.error("No such role %s in presets.", options.roleclass)
+            sys.exit(1)
+    elif options.full_list and not options.roleclass:
+        logging.error("Usage: No role specifed to search.")
     if options.search_role:
         find_role(sets)
     if options.list:
