@@ -1371,6 +1371,17 @@
             "ROLE":"argus_ui"
         }
     },
+    "irc_prod":{
+        "PROD":{
+            "PODGROUP":"irccl",
+            "TEMPLATEID":"irc",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["ops-irc(1|2)-(1|2)-(sfm|crd)"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"irc"
+        }
+    },
     "elkpoc_sfz_prod":{
         "PROD":{
             "PODGROUP":"elkpoccl",
