@@ -1261,11 +1261,11 @@
     },
     "ffx_canary_prod":{
         "PROD":{
-            "PODGROUP":"gs0.canary",
+            "PODGROUP":"ffx.canary",
             "TEMPLATEID":"ffx",
             "GROUPSIZE":5,
             "TAGGROUPS":0,
-            "FILTER":["^.*(1|2)-[2-6]"],
+            "FILTER":["^.*(1|2)-[2-6]|cs46*"],
             "INFRA":"Primary",
             "EXCLUDES": "ffxexclude",
             "ROLE":"ffx"
@@ -1273,11 +1273,11 @@
     },
     "ffx_canary_dr":{
         "DR":{
-            "PODGROUP":"gs0.canary.sec",
+            "PODGROUP":"ffx.canary.sec",
             "TEMPLATEID":"ffx",
             "GROUPSIZE":5,
             "TAGGROUPS":0,
-            "FILTER":["^.*(1|2)-[2-6]"],
+            "FILTER":["^.*(1|2)-[2-6]|cs46*"],
             "EXCLUDES": "ffxexclude",
             "INFRA":"Secondary",
             "ROLE":"ffx"
