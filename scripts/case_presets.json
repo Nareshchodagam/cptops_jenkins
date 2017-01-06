@@ -1305,6 +1305,17 @@
             "ROLE":"argus_ws"
             }
     },
+    "searchzk_canary_prod":{
+        "PROD":{
+            "PODGROUP":"searchzkcl",
+            "TEMPLATEID":"searchzk",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["^perfeng0-searchzk4.*", "^perfeng0-searchzk2.*"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"searchzk"
+            }
+    },
     "searchzk_prod":{
         "PROD":{
             "PODGROUP":"searchzkcl",

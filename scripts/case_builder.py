@@ -250,7 +250,7 @@ if __name__ == "__main__":
             logging.error("No such role %s in presets.", options.roleclass)
             sys.exit(1)
     elif options.full_list and not options.roleclass:
-        logging.error("Usage: No role specifed to search.")
+        logging.error("Usage: No role specified to search.")
     if options.search_role:
         find_role(sets)
     if options.list:
@@ -264,6 +264,3 @@ if __name__ == "__main__":
         for canary in canary_cases:
             cmd_builder(sets, canary)
         dryrun()
-    else:
-        logging.error("No Role Selected")
-        sys.exit(1)
