@@ -1393,5 +1393,49 @@
             "ROLE":"elkpoc",
             "CASETYPE": "hostlist"
         }
+    },
+        "ns_prod":{
+        "PROD":{
+            "PODGROUP":"nshl",
+            "TEMPLATEID":"ns",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"ns",
+            "CASETYPE": "hostlist"
+        }
+    },
+    "isnt_prod":{
+        "PROD":{
+            "PODGROUP":"insthl",
+            "TEMPLATEID":"inst",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"isnt",
+            "CASETYPE": "hostlist"
+        }
+    },
+    "edns_prod":{
+        "PROD":{
+            "PODGROUP":"ednshl",
+            "TEMPLATEID":"edns",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"edns",
+            "CASETYPE": "hostlist"
+        }
+    },
+    "netmgt_prod":{
+        "PROD":{
+            "PODGROUP":"netmgthl",
+            "TEMPLATEID":"netmgt",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"netmgt",
+            "CASETYPE": "hostlist"
+        }
     }
 }
