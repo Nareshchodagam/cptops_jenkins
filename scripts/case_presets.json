@@ -1349,6 +1349,17 @@
             "ROLE":"acs"
             }
     },
+    "acs_dr":{
+        "PROD":{
+            "PODGROUP":"acs.sec",
+            "TEMPLATEID":"acs",
+            "GROUPSIZE":2,
+            "TAGGROUPS":0,
+            "FILTER":[],
+            "INFRA": "Secondary",
+            "ROLE":"acs"
+            }
+    },
     "ops-air_prod": {
         "PROD": {
             "PODGROUP": "aircl",
