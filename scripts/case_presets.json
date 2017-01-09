@@ -935,7 +935,7 @@
     },
     "public-trust_dr":{
         "DR":{
-            "PODGROUP":"public-trust",
+            "PODGROUP":"public-trust.sec",
             "TEMPLATEID":"public-trust",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
