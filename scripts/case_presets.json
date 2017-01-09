@@ -718,7 +718,7 @@
     },
     "shared-apputil_prod":{
         "PROD":{
-            "PODGROUP":"apputil.pri",
+            "PODGROUP":"restoreapp",
             "TEMPLATEID":"shared-apputil",
             "GROUPSIZE":2,
             "TAGGROUPS":0,
