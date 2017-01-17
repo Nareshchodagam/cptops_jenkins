@@ -1259,6 +1259,30 @@
             "ROLE":"monitor"
             }
     },
+    "monitor_standby_prod":{
+        "PROD":{
+            "PODGROUP":"monitor.sec",
+            "TEMPLATEID":"monitor_standby",
+            "GROUPSIZE":4,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"monitor",
+            "CASETYPE":"hostlist",
+            "LIST_FILTER":"True"
+            }
+    },
+    "monitor_primary_prod":{
+    	"PROD":{
+    		"PODGROUP":"monitor.pri",
+    		"TEMPLATEID":"monitor",
+    		"GROUPSIZE":3,
+    		"TAGGROUPS":0,
+    		"INFRA":"Supporting Infrastructure",
+    		"ROLE":"monitor",
+    		"CASETYPE":"hostlist",
+    		"LIST_FILTER":"True"
+    		}
+   },
     "ffx_canary_prod":{
         "PROD":{
             "PODGROUP":"gs0.canary",
