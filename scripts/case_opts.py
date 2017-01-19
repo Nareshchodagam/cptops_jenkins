@@ -20,10 +20,14 @@ opt_dict = {'gsize': '-s',
             'subject': '-g',
             'idb': '--idb',
             'excludes': '--exclude',
+            'list_filter': '--HLGrp',
             'impl_plan': '--implplan'}
 
 req_sub = ['search(23|43)_prod',
            'search(21|22,41|42)_prod',
            'search(21|22,41|42)_prod',
            'search(23|43)_dr',
-           'search(21|22,41|42)_dr']
+           'search(21|22,41|42)_dr',
+           'monitor_standby_prod',
+           'monitor_primary_prod',
+           'monitor_canary_prod']
