@@ -10,9 +10,14 @@ _JSON Format_
 						"TEMPLATEID":Template to use,
 						"GROUPSIZE": Default group size,
 						"TAGGROUPS":Default taggroups,
-						"FILTER": Optional Filters
 						"INFRA":Primary, Secondary or Supporting Infrastructure
 						"ROLE": Application role. 
+					#optional 
+						"FILTER": Optional Filters
+						"CASETYPE": Hostlist or coreappafw.
+						"REGEX":"failoverstatus=Primary or Standby
+						"LIST_FILTER": True or False. Used in conjuction with CASETYPE option. 
+						
 					}
 			}
 	
@@ -29,6 +34,7 @@ _Example_
 					"ROLE":"search"
 					}
 			},
+			
 
 #CPTIAB - CASE_BUILDER
 
