@@ -81,6 +81,8 @@ def cmd_builder(sets, r_class=False):
                 options.subject = ""
     bld_cmd['subject'] = options.subject
     bld_cmd['dowork'] = options.dowork
+    # This change will help user to choose the way he/she wants to create case.
+    bld_cmd['host_validation'] = options.host_validation
     #bld_cmd['clusteropstat'] = sets[role_class][role_status]['CL_STATUS']
     #bld_cmd['hostopstat'] = sets[role_class][role_status]['HO_STATUS']
 
@@ -233,6 +235,7 @@ if __name__ == "__main__":
     parser.add_argument("--hoststat", dest="hoststat", help="Host Status.")
     parser.add_argument("-r", dest="regex", help="Regex Filter")
     parser.add_argument("-f", dest="filter", help="Filter")
+    parser.add_argument("--host_validation", dest="host_validation", action="store_true", default=False, help="Flag to verify remote hosts")
     parser.add_argument("--canary", dest="canary", action ="store_true", help="All canary cases")
     options = parser.parse_args()
 
