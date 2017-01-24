@@ -1356,7 +1356,7 @@
         "PROD":{
             "PODGROUP":"acs.pri",
             "TEMPLATEID":"acs",
-            "GROUPSIZE":2,
+            "GROUPSIZE":1,
             "TAGGROUPS":0,
             "FILTER":[],
             "INFRA": "Primary",
@@ -1367,7 +1367,7 @@
         "PROD":{
             "PODGROUP":"acs.sec",
             "TEMPLATEID":"acs",
-            "GROUPSIZE":2,
+            "GROUPSIZE":1,
             "TAGGROUPS":0,
             "FILTER":[],
             "INFRA": "Secondary",
