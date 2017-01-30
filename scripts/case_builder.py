@@ -239,7 +239,7 @@ if __name__ == "__main__":
     parser.add_argument("-r", dest="regex", help="Regex Filter")
     parser.add_argument("-f", dest="filter", help="Filter")
     parser.add_argument("--host_validation", dest="host_validation", action="store_true", default=False, help="Flag to verify remote hosts")
-    parser.add_argument("--auto_close_case", dest="auto_close_case", action="store_true", default=False, help="To close the cases during "
+    parser.add_argument("--auto_close_case", dest="auto_close_case", action="store_true", default=True, help="To close the cases during "
                                                                                                          "execution")
     parser.add_argument("--canary", dest="canary", action ="store_true", help="All canary cases")
     options = parser.parse_args()
