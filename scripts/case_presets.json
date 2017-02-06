@@ -977,7 +977,7 @@
     "siteproxy_canary_prod":{
         "PROD":{
             "PODGROUP":"sproxy.canary",
-            "TEMPLATEID":"siteproxy.linux",
+            "TEMPLATEID":"siteproxy_canary.linux",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "FILTER":["blitz1-proxy1-(1|2)-(sfm|crd)"],
