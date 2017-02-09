@@ -923,6 +923,16 @@
             "ROLE":"release"
             }
     },
+    "hwmon_prod":{
+        "PROD":{
+            "PODGROUP":"hwmon",
+            "TEMPLATEID":"hwmon",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting_Infrastructure",
+            "ROLE":"hwmon"
+            }
+    },
     "public-trust_prod":{
         "PROD":{
             "PODGROUP":"public-trust",
