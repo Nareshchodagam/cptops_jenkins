@@ -1321,11 +1321,11 @@
     },
     "searchzk_canary_prod":{
         "PROD":{
-            "PODGROUP":"searchzkcl",
+            "PODGROUP":"searchzkcl_canary",
             "TEMPLATEID":"searchzk",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":["^perfeng0-searchzk4.*", "^perfeng0-searchzk2.*"],
+            "FILTER":["(^perfeng0-searchzk2.*|^perfeng0-searchzk4.*)"],
             "INFRA": "Supporting Infrastructure",
             "ROLE":"searchzk"
             }
