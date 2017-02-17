@@ -616,40 +616,40 @@
     },
     "dustyhub_prod": {
         "PROD":{
-        "PODGROUP":"dustyhubcl",
-        "TEMPLATEID":"dusty",
-        "GROUPSIZE":1,
-        "TAGGROUPS":0,
-        "FILTER":["(?!shared-dhub1-1-asg)"],
-        "INFRA":"Supporting Infrastructure",
-        "REGEX":"failoverstatus=PRIMARY",
-        "ROLE":"dusty"
-        }
+	        "PODGROUP":"dustyhubcl",
+	        "TEMPLATEID":"dusty",
+	        "GROUPSIZE":1,
+	        "TAGGROUPS":0,
+	        "FILTER":["(?!shared-dhub1-1-asg)"],
+	        "INFRA":"Supporting Infrastructure",
+	        "REGEX":"failoverstatus=PRIMARY",
+	        "ROLE":"dusty"
+	        }
     },
     "dustyhub_canary_prod": {
         "PROD":{
-        "PODGROUP":"dustyhub.canary",
-        "TEMPLATEID":"dusty",
-        "GROUPSIZE":1,
-        "TAGGROUPS":0,
-        "FILTER":["shared-dhub1-1-asg"],
-        "INFRA":"Supporting Infrastructure",
-        "REGEX":"failoverstatus=PRIMARY",
-        "ROLE":"dusty"
-        }
+	        "PODGROUP":"dustyhub.canary",
+	        "TEMPLATEID":"dusty",
+	        "GROUPSIZE":1,
+	        "TAGGROUPS":0,
+	        "FILTER":["shared-dhub1-1-asg"],
+	        "INFRA":"Supporting Infrastructure",
+	        "REGEX":"failoverstatus=PRIMARY",
+	        "ROLE":"dusty"
+	        }
     },
     "dustyhub_standby_prod": {
         "PROD":{
-        "PODGROUP":"dustyhubcl",
-        "TEMPLATEID":"dusty_standby",
-        "GROUPSIZE":1,
-        "TAGGROUPS":0,
-        "FILTER":["(?!shared-dhub1-1-asg)"],
-        "INFRA":"Secondary",
-        "REGEX":"failoverstatus=STANDBY",
-        "ROLE":"dusty"
-        }
-},
+	        "PODGROUP":"dustyhubcl",
+	        "TEMPLATEID":"dusty_standby",
+	        "GROUPSIZE":1,
+	        "TAGGROUPS":0,
+	        "FILTER":["(?!shared-dhub1-1-asg)"],
+	        "INFRA":"Secondary",
+	        "REGEX":"failoverstatus=STANDBY",
+	        "ROLE":"dusty"
+        	}
+	},
     "search_prod": {
         "PROD":{
             "PODGROUP":"pod.pri",
@@ -1011,9 +1011,7 @@
             "TEMPLATEID":"public-proxy",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":[
-                "public-proxy(1|2)-1-crd|public-proxy(3|4)-1-sfm"
-            ],
+            "FILTER":["public-proxy(1|2)-1-crd|public-proxy(3|4)-1-sfm"],
             "INFRA": "Supporting Infrastructure",
             "ROLE":"publicproxy"
         }
@@ -1368,7 +1366,6 @@
             "TEMPLATEID":"acs",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":[],
             "INFRA": "Primary",
             "ROLE":"acs"
             }
@@ -1379,7 +1376,6 @@
             "TEMPLATEID":"acs",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":[],
             "INFRA": "Secondary",
             "ROLE":"acs"
             }
@@ -1440,7 +1436,7 @@
             "CASETYPE": "hostlist"
         }
     },
-        "ns_prod":{
+    "ns_prod":{
         "PROD":{
             "PODGROUP":"nshl",
             "TEMPLATEID":"ns",
@@ -1472,6 +1468,26 @@
             "ROLE":"edns",
             "CASETYPE": "hostlist"
         }
+    },
+    "nodeapp_prod":{
+    	"PROD":{
+	    	"PODGROUP":"nodeappcl",
+	        "TEMPLATEID":"nodeapp",
+	        "GROUPSIZE":2,
+	        "TAGGROUPS":0,
+	        "INFRA": "Supporting Infrastructure",
+	        "ROLE":"nodeapp"
+            }
+    },
+    "nodeapp_canary_prod":{
+    	"PROD":{
+	    	"PODGROUP":"nodeappcl.canary",
+	        "TEMPLATEID":"nodeapp",
+	        "GROUPSIZE":2,
+	        "TAGGROUPS":0,
+	        "INFRA": "Supporting Infrastructure",
+	        "ROLE":"nodeapp"
+            }
     },
     "netmgt_prod":{
         "PROD":{
