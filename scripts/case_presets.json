@@ -1450,35 +1450,32 @@
     },
     "ns_prod":{
         "PROD":{
-            "PODGROUP":"nshl",
+            "PODGROUP":"nscl",
             "TEMPLATEID":"ns",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "ROLE":"ns",
-            "CASETYPE": "hostlist"
+            "ROLE":"ns"
         }
     },
-    "isnt_prod":{
+    "inst_prod":{
         "PROD":{
-            "PODGROUP":"insthl",
+            "PODGROUP":"instcl",
             "TEMPLATEID":"inst",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "ROLE":"isnt",
-            "CASETYPE": "hostlist"
+            "ROLE":"inst"
         }
     },
     "edns_prod":{
         "PROD":{
-            "PODGROUP":"ednshl",
+            "PODGROUP":"ednscl",
             "TEMPLATEID":"edns",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "ROLE":"edns",
-            "CASETYPE": "hostlist"
+            "ROLE":"edns"
         }
     },
     "nodeapp_prod":{
