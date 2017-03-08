@@ -1058,16 +1058,6 @@
             "ROLE":"web"
             }
     },
-    "web.asg-sjl_prod":{
-        "PROD":{
-            "PODGROUP":"pweb.asg-sjl",
-            "TEMPLATEID":"web.asg-sjl.linux",
-            "GROUPSIZE":4,
-            "TAGGROUPS":0,
-            "INFRA":"Supporting_Infrastructure",
-            "ROLE":"web"
-        }
-    },
     "web_stage_prod":{
         "PROD":{
             "PODGROUP":"pwebstg",
