@@ -98,6 +98,8 @@ def cmd_builder(sets, r_class=False):
                 bld_cmd[str.lower(key)] = "hostlists/" + sets[role_class][role_status][key]
             else:
                 bld_cmd[str.lower(key)] = sets[role_class][role_status][key]
+    if options.cluststat:
+       bld_cmd['clusteropstat'] = options.cluststat
 
     logging.debug("TEMPLATEID = " + bld_cmd['template'])
     logging.debug("GROUPSIZE = " + str(bld_cmd['gsize']))

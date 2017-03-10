@@ -1489,6 +1489,27 @@
 	        "ROLE":"nodeapp"
             }
     },
+    "sam_kube_prod":{
+    	"PROD":{
+    		"PODGROUP":"samkubhl",
+            "TEMPLATEID":"sam",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"samkubeapi"
+        }
+    },
+    "sam_compute_prod":{
+    	"PROD":{
+    		"PODGROUP":"samcomputehl",
+            "TEMPLATEID":"sam",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":[".*(caasminion).*", ".*(samminionreportcollector).*", ".*(samminiongater).*"],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"samcompute"
+        }
+    },
     "netmgt_prod":{
         "PROD":{
             "PODGROUP":"netmgthl",
