@@ -23,6 +23,28 @@
             "ROLE":"mta"
             }
     },
+    "argus_writed_matrics_prod":{
+        "PROD":{
+            "PODGROUP":"arguscl",
+            "TEMPLATEID":"argus_writed_matrics",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "FILTER":["(?!shared1-argustsdbw1-1-prd)"],
+            "ROLE":"argus_writed"
+            }
+    },
+    "argus_writed_matrics_canary_prod":{
+        "PROD":{
+            "PODGROUP":"arguscl",
+            "TEMPLATEID":"argus_writed_matrics",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "FILTER":["shared1-argustsdbw1-1-prd"],
+            "ROLE":"argus_writed"
+            }
+    },
     "obmm_prod":{
         "PROD":{
             "PODGROUP":"obmmcl",
@@ -1292,7 +1314,7 @@
     		"CASETYPE":"hostlist",
     		"LIST_FILTER":"True"
     		}
-   },
+    },
     "ffx_canary_prod":{
         "PROD":{
             "PODGROUP":"ffx.canary",
