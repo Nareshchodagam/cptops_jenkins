@@ -1447,6 +1447,28 @@
             "ROLE":"argus_ui"
         }
     },
+    "argus_alert_prod":{
+        "PROD":{
+            "PODGROUP":"arguscl",
+            "TEMPLATEID":"argusalert",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":[".*(argusalert[1-2]-[1-2])"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"argus_alert"
+        }
+    },
+    "argus_alert_canary_prod":{
+        "PROD":{
+            "PODGROUP":"arguscl",
+            "TEMPLATEID":"argusalert",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":[".*(argusalert1-3-)"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"argus_alert"
+        }
+    },
     "irc_prod":{
         "PROD":{
             "PODGROUP":"irccl",
