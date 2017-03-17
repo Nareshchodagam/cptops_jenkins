@@ -86,6 +86,8 @@ def cmd_builder(sets, r_class=False):
         bld_cmd['host_validation'] = options.host_validation
     if options.auto_close_case:
         bld_cmd['auto_close_case'] = options.auto_close_case
+    if options.nolinebacker:
+        bld_cmd['nolinebacker'] = options.nolinebacker
     #bld_cmd['clusteropstat'] = sets[role_class][role_status]['CL_STATUS']
     #bld_cmd['hostopstat'] = sets[role_class][role_status]['HO_STATUS']
 
@@ -243,6 +245,9 @@ if __name__ == "__main__":
     parser.add_argument("--host_validation", dest="host_validation", action="store_true", default=False, help="Flag to verify remote hosts")
     parser.add_argument("--auto_close_case", dest="auto_close_case", action="store_true", default=True, help="To close the cases during "
                                                                                                          "execution")
+    # Added as per W-3779869 to skip linebacker
+    parser.add_argument("--nolinebacker", dest="nolinebacker", action="store_true", default=False, help="Don't use line backer")
+
     parser.add_argument("--canary", dest="canary", action ="store_true", help="All canary cases")
     options = parser.parse_args()
 
