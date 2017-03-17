@@ -973,6 +973,7 @@
             "TEMPLATEID":"hwmon",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
+            "FILTER":["ops0-hwmon(1|2)"],
             "INFRA":"Supporting_Infrastructure",
             "ROLE":"hwmon"
             }
