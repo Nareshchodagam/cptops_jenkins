@@ -45,6 +45,28 @@
             "ROLE":"argus_writed"
             }
     },
+   "argusreadd_prod":{
+	    "PROD":{
+            "PODGROUP":"argusreaddcl",
+            "TEMPLATEID":"argusreadd",
+            "GROUPSIZE":2,
+            "TAGGROUPS":0,
+            "FILTER":[".*(argustsdbr(1|2)-[1-4]-|argustsdbr1-5-)"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"argus_readd"
+            } 
+    },
+    "argusreadd_canary_prod":{
+           "PROD":{
+           "PODGROUP":"argusreaddcl",
+           "TEMPLATEID":"argusreadd",
+           "GROUPSIZE":1,
+           "TAGGROUPS":0,
+           "FILTER":[".*(argustsdbr2-5-)"],
+           "INFRA": "Supporting Infrastructure",
+           "ROLE":"argus_readd"
+           }
+     },
     "obmm_prod":{
         "PROD":{
             "PODGROUP":"obmmcl",
