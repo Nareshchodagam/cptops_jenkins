@@ -47,7 +47,7 @@
     },
    "argusreadd_prod":{
 	    "PROD":{
-            "PODGROUP":"argusreaddcl",
+            "PODGROUP":"arguscl",
             "TEMPLATEID":"argusreadd",
             "GROUPSIZE":2,
             "TAGGROUPS":0,
@@ -58,7 +58,7 @@
     },
     "argusreadd_canary_prod":{
            "PROD":{
-           "PODGROUP":"argusreaddcl",
+           "PODGROUP":"arguscl",
            "TEMPLATEID":"argusreadd",
            "GROUPSIZE":1,
            "TAGGROUPS":0,
