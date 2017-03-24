@@ -68,7 +68,17 @@ Case builder can be run within the CPTIAB docker image. Use the instruction belo
 		  --hoststat HOSTSTAT   Host Status.
 		  -r REGEX              Regex Filter
 		  -f FILTER             Filter
-		
+		  --host_validation     To check if remote hosts are already patched OR not accessible.
+		  --nolinebacker        To skip linebacker in load balancer operations.
+		  
+# Canary cass creation in a single go
+
+    python case_builder.py --canary --bundle 2017.04 --dowork all_updates|centos_migration <--host_validation>
+
+* `all_updates` - Centos_migration + Firmware Patching
+ * `centos_migration` - Only Centos migration
+
+    
 #Search for available roles classes.
 
 			# python case_builder.py -s search
