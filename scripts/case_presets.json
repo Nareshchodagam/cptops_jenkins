@@ -34,6 +34,16 @@
             "ROLE":"argus_writed"
             }
     },
+    "umps_prod":{
+        "PROD":{
+            "PODGROUP":"chattercl",
+            "TEMPLATEID":"umps.linux",
+            "GROUPSIZE":20,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"prsn,chan,msg,dstore"
+            }
+    },
     "argus_writed_matrics_canary_prod":{
         "PROD":{
             "PODGROUP":"arguscl",
