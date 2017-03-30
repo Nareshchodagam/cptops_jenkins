@@ -1496,7 +1496,7 @@
             "TEMPLATEID":"argusalert",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":[".*(argusalert[1-2]-[1-2])"],
+	    "FILTER":["(?!shared1-argusalert1-2-prd)"],
             "INFRA": "Supporting Infrastructure",
             "ROLE":"argus_alert"
         }
@@ -1507,7 +1507,7 @@
             "TEMPLATEID":"argusalert",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":[".*(argusalert1-3-)"],
+	    "FILTER":["shared1-argusalert1-2-prd"],
             "INFRA": "Supporting Infrastructure",
             "ROLE":"argus_alert"
         }
