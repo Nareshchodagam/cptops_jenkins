@@ -77,28 +77,6 @@
            "ROLE":"argus_readd"
            }
      },
-    "obmm_prod":{
-        "PROD":{
-            "PODGROUP":"obmmcl",
-            "TEMPLATEID":"obmm",
-            "GROUPSIZE":1,
-            "TAGGROUPS":0,
-            "REGEX":"failoverstatus=PRIMARY",
-            "INFRA":"Primary",
-            "ROLE":"obmm"
-            }
-    },
-    "obmm_standby_prod":{
-        "PROD":{
-            "PODGROUP":"obmmcl",
-            "TEMPLATEID":"obmm_standby",
-            "GROUPSIZE":1,
-            "TAGGROUPS":0,
-            "REGEX":"failoverstatus=STANDBY",
-            "INFRA":"Primary",
-            "ROLE":"obmm"
-            }
-    },
     "mmmbus_sfz_prod":{
         "PROD":{
             "PODGROUP":"ajna_sfzcl",
