@@ -77,6 +77,28 @@
            "ROLE":"argus_readd"
            }
      },
+     "ajna_broker_prod":{
+        "PROD":{
+            "PODGROUP":"ajna_prodcl",
+            "TEMPLATEID":"ajna_broker",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["(?!(ajna0-broker1-1-frf|ajna0-broker1-1-prd))"],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"ajna_broker"
+            }
+    },
+    "ajna_broker_canary_prod":{
+        "PROD":{
+            "PODGROUP":"ajna_canary_prodcl",
+            "TEMPLATEID":"ajna_broker",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "FILTER":["ajna0-broker1-1-frf|ajna0-broker1-1-prd"],
+            "ROLE":"ajna_broker"
+            }
+    },
     "mmmbus_sfz_prod":{
         "PROD":{
             "PODGROUP":"ajna_sfzcl",
