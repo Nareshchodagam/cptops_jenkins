@@ -1426,7 +1426,7 @@
             }
     },
     "acs_dr":{
-        "PROD":{
+        "DR":{
             "PODGROUP":"acs.sec",
             "TEMPLATEID":"acs",
             "GROUPSIZE":1,
