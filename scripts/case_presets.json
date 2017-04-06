@@ -61,14 +61,14 @@
             "TEMPLATEID":"ajna_zk",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":["?!(ajna0-zk1-1-frf|ajna0-zk1-1-prd)"],
+            "FILTER":["(?!(ajna0-zk1-1-frf|ajna0-zk1-1-prd))"],
             "INFRA":"Supporting Infrastructure",
             "ROLE":"ajna_zk"
             }
     },
     "ajna_zk_canary_prod": {
         "PROD": {
-            "PODGROUP": "ajna_canary_prodcl",
+            "PODGROUP": "ajna_prodcl_canary",
             "TEMPLATEID": "ajna_zk",
             "GROUPSIZE": 1,
             "TAGGROUPS": 0,
