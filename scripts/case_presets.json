@@ -1273,8 +1273,7 @@
             "GROUPSIZE":10,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "ROLE":"ffx",
-            "CASETYPE": "hostlist"
+            "ROLE":"ffx"
             }
     },
     "nbmedia_prod":{
