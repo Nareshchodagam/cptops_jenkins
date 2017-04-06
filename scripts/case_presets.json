@@ -244,17 +244,6 @@
             "ROLE":"mmdcs"
             }
     },
-    "mmdcs_canary_prod":{
-        "PROD":{
-            "PODGROUP":"ajna_canary_prodcl",
-            "TEMPLATEID":"mmdcs",
-            "GROUPSIZE":1,
-            "TAGGROUPS":0,
-            "FILTER":["ops-mmdcs1-1-asg"],
-            "INFRA":"Supporting Infrastructure",
-            "ROLE":"mmdcs"
-            }
-    },
     "mmrelay_prod":{
         "PROD":{
             "PODGROUP":"ajna_prodcl",
