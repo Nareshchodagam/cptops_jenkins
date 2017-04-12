@@ -23,7 +23,8 @@ opt_dict = {'gsize': '-s',
             'list_filter': '--HLGrp',
             'impl_plan': '--implplan',
             'host_validation': '--host_validation',
-            'auto_close_case': '--auto_close_case'}
+            'auto_close_case': '--auto_close_case',
+            'nolinebacker': '--nolinebacker'}
 
 req_sub = ['search(23|43)_prod',
            'search(21|22,41|42)_prod',

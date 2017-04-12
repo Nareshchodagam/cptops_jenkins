@@ -99,26 +99,26 @@
            "ROLE":"argus_readd"
            }
      },
-    "obmm_prod":{
+     "ajna_broker_prod":{
         "PROD":{
-            "PODGROUP":"obmmcl",
-            "TEMPLATEID":"obmm",
+            "PODGROUP":"ajna_prodcl",
+            "TEMPLATEID":"ajna_broker",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "REGEX":"failoverstatus=PRIMARY",
-            "INFRA":"Primary",
-            "ROLE":"obmm"
+            "FILTER":["(?!(ajna0-broker1-1-frf|ajna0-broker1-1-prd))"],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"ajna_broker"
             }
     },
-    "obmm_standby_prod":{
+    "ajna_broker_canary_prod":{
         "PROD":{
-            "PODGROUP":"obmmcl",
-            "TEMPLATEID":"obmm_standby",
+            "PODGROUP":"ajna_canary_prodcl",
+            "TEMPLATEID":"ajna_broker",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "REGEX":"failoverstatus=STANDBY",
-            "INFRA":"Primary",
-            "ROLE":"obmm"
+            "INFRA":"Supporting Infrastructure",
+            "FILTER":["ajna0-broker1-1-frf|ajna0-broker1-1-prd"],
+            "ROLE":"ajna_broker"
             }
     },
     "mmmbus_sfz_prod":{
@@ -1093,6 +1093,16 @@
             "ROLE":"publicproxy"
             }
     },
+    "publicproxy_prd_prod":{
+        "PROD":{
+            "PODGROUP":"pproxy.prd",
+            "TEMPLATEID":"public-proxy",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting_Infrastructure",
+            "ROLE":"publicproxy"
+            }
+    },
     "publicproxy_canary_prod":{
         "PROD":{
             "PODGROUP":"pproxy.canary",
@@ -1448,7 +1458,7 @@
             }
     },
     "acs_dr":{
-        "PROD":{
+        "DR":{
             "PODGROUP":"acs.sec",
             "TEMPLATEID":"acs",
             "GROUPSIZE":1,
@@ -1496,7 +1506,7 @@
             "TEMPLATEID":"argusalert",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":[".*(argusalert[1-2]-[1-2])"],
+	    "FILTER":["(?!shared1-argusalert1-2-prd)"],
             "INFRA": "Supporting Infrastructure",
             "ROLE":"argus_alert"
         }
@@ -1507,7 +1517,7 @@
             "TEMPLATEID":"argusalert",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":[".*(argusalert1-3-)"],
+	    "FILTER":["shared1-argusalert1-2-prd"],
             "INFRA": "Supporting Infrastructure",
             "ROLE":"argus_alert"
         }
