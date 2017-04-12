@@ -55,6 +55,28 @@
             "ROLE":"argus_writed"
             }
     },
+    "ajna_zk_prod":{
+        "PROD":{
+            "PODGROUP":"ajna_prodcl",
+            "TEMPLATEID":"ajna_zk",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["(?!(ajna0-zk1-1-frf|ajna0-zk1-1-prd))"],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"ajna_zk"
+            }
+    },
+    "ajna_zk_canary_prod": {
+        "PROD": {
+            "PODGROUP": "ajna_prodcl_canary",
+            "TEMPLATEID": "ajna_zk",
+            "GROUPSIZE": 1,
+            "TAGGROUPS": 0,
+            "FILTER": ["ajna0-zk1-1-frf|ajna0-zk1-1-prd"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE": "ajna_zk"
+        }
+    },
    "argusreadd_prod":{
 	    "PROD":{
             "PODGROUP":"arguscl",
@@ -218,17 +240,6 @@
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "FILTER":[],
-            "INFRA":"Supporting Infrastructure",
-            "ROLE":"mmdcs"
-            }
-    },
-    "mmdcs_canary_prod":{
-        "PROD":{
-            "PODGROUP":"ajna_canary_prodcl",
-            "TEMPLATEID":"mmdcs",
-            "GROUPSIZE":1,
-            "TAGGROUPS":0,
-            "FILTER":["ops-mmdcs1-1-asg"],
             "INFRA":"Supporting Infrastructure",
             "ROLE":"mmdcs"
             }
@@ -1261,8 +1272,7 @@
             "GROUPSIZE":10,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "ROLE":"restoreffx",
-            "CASETYPE": "hostlist"
+            "ROLE":"ffx"
             }
     },
     "nbmedia_prod":{
@@ -1606,14 +1616,20 @@
             "ROLE":"samcompute"
         }
     },
-    "netmgt_prod":{
-        "PROD":{
-            "PODGROUP":"netmgtcl",
-            "TEMPLATEID":"netmgt",
-            "GROUPSIZE":1,
-            "TAGGROUPS":0,
-            "INFRA":"Supporting Infrastructure",
-            "ROLE":"netmgt"
+    "netmgt_prod": {
+        "PROD": {
+            "PODGROUP": "netmgtcl",
+            "TEMPLATEID": "netmgt",
+            "GROUPSIZE": 1,
+            "TAGGROUPS": 0,
+            "FILTER": [
+                "^.*netmgt1-",
+                "^.*netmgt2-",
+                "^.*netmgt3-",
+                "^.*netmgt4-"
+            ],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE": "netmgt"
         }
     }
 }
