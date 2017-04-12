@@ -1606,15 +1606,20 @@
             "ROLE":"samcompute"
         }
     },
-    "netmgt_prod":{
-        "PROD":{
-            "PODGROUP":"netmgthl",
-            "TEMPLATEID":"netmgt",
-            "GROUPSIZE":1,
-            "TAGGROUPS":0,
-            "INFRA":"Supporting Infrastructure",
-            "ROLE":"netmgt",
-            "CASETYPE": "hostlist"
+    "netmgt_prod": {
+        "PROD": {
+            "PODGROUP": "netmgtcl",
+            "TEMPLATEID": "netmgt",
+            "GROUPSIZE": 1,
+            "TAGGROUPS": 0,
+            "FILTER": [
+                "^.*netmgt1-",
+                "^.*netmgt2-",
+                "^.*netmgt3-",
+                "^.*netmgt4-"
+            ],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE": "netmgt"
         }
     }
 }
