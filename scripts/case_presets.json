@@ -1454,17 +1454,17 @@
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA": "Primary",
-            "ROLE":"acs"
+            "ROLE":"acs,computedocker"
             }
     },
     "acs_dr":{
         "DR":{
             "PODGROUP":"acs.sec",
-            "TEMPLATEID":"acs",
+            "TEMPLATEID":"acs-dr",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA": "Secondary",
-            "ROLE":"acs"
+            "ROLE":"acs,computedocker"
             }
     },
     "ops-air_prod": {
