@@ -42,7 +42,6 @@ def cmd_builder(sets, r_class=False):
     pod_cmd = ["python", home_dir + "/git/cptops_case_gen/gen_cases.py" ]
     bld_cmd = {}
     bld_cmd['status'] = "True" if role_status == "DR" else "FALSE"
-    bld_cmd['bundle'] = options.bundle
     bld_cmd['patchset'] = options.bundle
     bld_cmd['podgroup'] = options.podgroup if options.podgroup != None else home_dir + "/git/cptops_case_gen/hostlists/" + sets[role_class][role_status]['PODGROUP']
     bld_cmd['gsize'] = options.groupsize if options.groupsize != None else sets[role_class][role_status]['GROUPSIZE']
@@ -112,7 +111,7 @@ def cmd_builder(sets, r_class=False):
     logging.debug("PODGROUP = " + bld_cmd['podgroup'])
     logging.debug("REGEXFILTER = " + bld_cmd['regexfilter'])
     logging.debug("FILTER = " + bld_cmd['filter'])
-    logging.debug("BUNDLE = " + bld_cmd['bundle'])
+    logging.debug("PATCHSET = " + bld_cmd['patchset'])
     logging.debug("Contents of uploaded file %s" %  bld_cmd['podgroup'])
     #logging.debug("CL_STATUS = " + bld_cmd['clusteropstat'])
     #logging.debug("HO_STATUS = " + bld_cmd['hostopstat'])
@@ -235,7 +234,7 @@ if __name__ == "__main__":
     parser.add_argument("--podgroup", dest="podgroup", help="Hostlist file for role.")
     parser.add_argument("--groupsize", dest="groupsize", help="Groupsize.")
     parser.add_argument("--taggroups", dest="taggroups", help="Taggroups.")
-    parser.add_argument("--bundle", dest="bundle", help="Patch Bundle.")
+    parser.add_argument("--bundle", dest="bundle", default="None", help="Patch Bundle.")
     parser.add_argument("--subject", dest="subject", help="Subject.")
     parser.add_argument("--dowork", dest="dowork", help="Task to perform")
     parser.add_argument("--clusstat", dest="cluststat", help="Cluster Status.")
