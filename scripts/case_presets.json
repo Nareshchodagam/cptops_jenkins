@@ -983,7 +983,7 @@
     "lapp_cs_clusters_prod":{
         "PROD":{
             "PODGROUP":"la_cs_clusters",
-            "TEMPLATEID":"la.kafka.linux",
+            "TEMPLATEID":"la.kafka.linux202.template",
             "GROUPSIZE":2,
             "TAGGROUPS":0,
             "INFRA":"Supporting_Infrastructure",
