@@ -553,7 +553,7 @@
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "REGEX":"failoverstatus=PRIMARY",
-            "FILTER":["(?!shared-hub3-1-asg)"],
+            "FILTER":["(?!shared-hub3-1-was)"],
             "INFRA":"Supporting Infrastructure",
             "ROLE":"log_hub"
             }
@@ -577,7 +577,7 @@
             "TAGGROUPS":0,
             "REGEX":"failoverstatus=PRIMARY",
             "INFRA":"Supporting Infrastructure",
-            "FILTER":["shared-hub4-1-asg"],
+            "FILTER":["shared-hub3-1-was"],
             "ROLE":"log_hub"
             }
     },
@@ -707,7 +707,7 @@
 	        "TEMPLATEID":"dusty",
 	        "GROUPSIZE":1,
 	        "TAGGROUPS":0,
-	        "FILTER":["(?!shared-dhub1-1-asg)"],
+	        "FILTER":["(?!shared-dhub1-1-chi)"],
 	        "INFRA":"Supporting Infrastructure",
 	        "REGEX":"failoverstatus=PRIMARY",
 	        "ROLE":"dusty"
@@ -719,7 +719,7 @@
 	        "TEMPLATEID":"dusty",
 	        "GROUPSIZE":1,
 	        "TAGGROUPS":0,
-	        "FILTER":["shared-dhub1-1-asg"],
+	        "FILTER":["shared-dhub1-1-chi"],
 	        "INFRA":"Supporting Infrastructure",
 	        "REGEX":"failoverstatus=PRIMARY",
 	        "ROLE":"dusty"
@@ -731,7 +731,7 @@
 	        "TEMPLATEID":"dusty_standby",
 	        "GROUPSIZE":1,
 	        "TAGGROUPS":0,
-	        "FILTER":["(?!shared-dhub1-1-asg)"],
+	        "FILTER":["(?!shared-dhub1-1-chi)"],
 	        "INFRA":"Secondary",
 	        "REGEX":"failoverstatus=STANDBY",
 	        "ROLE":"dusty"
