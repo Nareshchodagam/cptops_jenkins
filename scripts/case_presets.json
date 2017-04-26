@@ -486,7 +486,7 @@
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Primary",
-            "FILTER":["(?!cs13-hub1-1-asg)"],
+            "FILTER":["(?!(cs23-hub1-1-was|cs24-hub1-1-was))"],
             "REGEX":"failoverstatus=PRIMARY",
             "ROLE":"mgmt_hub"
             }
