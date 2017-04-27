@@ -78,7 +78,7 @@
         }
     },
    "argusreadd_prod":{
-	    "PROD":{
+        "PROD":{
             "PODGROUP":"arguscl",
             "TEMPLATEID":"argusreadd",
             "GROUPSIZE":2,
@@ -86,7 +86,7 @@
             "FILTER":[".*(argustsdbr(1|2)-[1-4]-|argustsdbr1-5-)"],
             "INFRA": "Supporting Infrastructure",
             "ROLE":"argus_readd"
-            } 
+            }
     },
     "argusreadd_canary_prod":{
            "PROD":{
@@ -171,20 +171,30 @@
             "TEMPLATEID":"mmrs",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":["(?!ops-mmrs1-1-asg)"],
             "INFRA":"Supporting Infrastructure",
             "ROLE":"mmrs"
             }
     },
-    "mmrs_canary_prod":{
+    "ajna_mirror_prod":{
+        "PROD":{
+            "PODGROUP":"ajna_prodcl",
+            "TEMPLATEID":"mmrs",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["(?!(ajna0-mirror1-1-frf|ajna0-mirror1-1-prd))"],
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"ajna_mirror"
+            }
+    },
+    "ajna_mirror_canary_prod":{
         "PROD":{
             "PODGROUP":"ajna_canary_prodcl",
             "TEMPLATEID":"mmrs",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":["ops-mmrs1-1-asg"],
+            "FILTER":["ajna0-mirror1-1-frf|ajna0-mirror1-1-prd"],
             "INFRA":"Supporting Infrastructure",
-            "ROLE":"mmrs"
+            "ROLE":"ajna_mirror"
             }
     },
     "mmxcvr_prod":{
@@ -703,40 +713,40 @@
     },
     "dustyhub_prod": {
         "PROD":{
-	        "PODGROUP":"dustyhubcl",
-	        "TEMPLATEID":"dusty",
-	        "GROUPSIZE":1,
-	        "TAGGROUPS":0,
-	        "FILTER":["(?!shared-dhub1-1-chi)"],
-	        "INFRA":"Supporting Infrastructure",
-	        "REGEX":"failoverstatus=PRIMARY",
-	        "ROLE":"dusty"
-	        }
+            "PODGROUP":"dustyhubcl",
+            "TEMPLATEID":"dusty",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["(?!shared-dhub1-1-chi)"],
+            "INFRA":"Supporting Infrastructure",
+            "REGEX":"failoverstatus=PRIMARY",
+            "ROLE":"dusty"
+            }
     },
     "dustyhub_canary_prod": {
         "PROD":{
-	        "PODGROUP":"dustyhub.canary",
-	        "TEMPLATEID":"dusty",
-	        "GROUPSIZE":1,
-	        "TAGGROUPS":0,
-	        "FILTER":["shared-dhub1-1-chi"],
-	        "INFRA":"Supporting Infrastructure",
-	        "REGEX":"failoverstatus=PRIMARY",
-	        "ROLE":"dusty"
-	        }
+            "PODGROUP":"dustyhub.canary",
+            "TEMPLATEID":"dusty",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["shared-dhub1-1-chi"],
+            "INFRA":"Supporting Infrastructure",
+            "REGEX":"failoverstatus=PRIMARY",
+            "ROLE":"dusty"
+            }
     },
     "dustyhub_standby_prod": {
         "PROD":{
-	        "PODGROUP":"dustyhubcl",
-	        "TEMPLATEID":"dusty_standby",
-	        "GROUPSIZE":1,
-	        "TAGGROUPS":0,
-	        "FILTER":["(?!shared-dhub1-1-chi)"],
-	        "INFRA":"Secondary",
-	        "REGEX":"failoverstatus=STANDBY",
-	        "ROLE":"dusty"
-        	}
-	},
+            "PODGROUP":"dustyhubcl",
+            "TEMPLATEID":"dusty_standby",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["(?!shared-dhub1-1-chi)"],
+            "INFRA":"Secondary",
+            "REGEX":"failoverstatus=STANDBY",
+            "ROLE":"dusty"
+            }
+    },
     "search_prod": {
         "PROD":{
             "PODGROUP":"pod.pri",
@@ -1357,16 +1367,16 @@
             }
     },
     "monitor_primary_prod":{
-    	"PROD":{
-    		"PODGROUP":"monitor.pri",
-    		"TEMPLATEID":"monitor",
-    		"GROUPSIZE":3,
-    		"TAGGROUPS":0,
-    		"INFRA":"Supporting Infrastructure",
-    		"ROLE":"monitor",
-    		"CASETYPE":"hostlist",
-    		"LIST_FILTER":"True"
-    		}
+        "PROD":{
+            "PODGROUP":"monitor.pri",
+            "TEMPLATEID":"monitor",
+            "GROUPSIZE":3,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"monitor",
+            "CASETYPE":"hostlist",
+            "LIST_FILTER":"True"
+            }
     },
     "ffx_canary_prod":{
         "PROD":{
@@ -1437,14 +1447,14 @@
             }
     },
     "piperepo_prod":{
-    	"PROD":{
-	    	"PODGROUP":"piperepocl",
-	        "TEMPLATEID":"piperepo",
-	        "GROUPSIZE":1,
-	        "TAGGROUPS":0,
-	    	"FILTER":["^.*1-1", "^.*2-1"],
-	        "INFRA": "Supporting Infrastructure",
-	        "ROLE":"piperepo"
+        "PROD":{
+            "PODGROUP":"piperepocl",
+            "TEMPLATEID":"piperepo",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "FILTER":["^.*1-1", "^.*2-1"],
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"piperepo"
             }
     },
      "acs_prod":{
@@ -1506,7 +1516,7 @@
             "TEMPLATEID":"argusalert",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-	    "FILTER":["(?!shared1-argusalert1-2-prd)"],
+        "FILTER":["(?!shared1-argusalert1-2-prd)"],
             "INFRA": "Supporting Infrastructure",
             "ROLE":"argus_alert"
         }
@@ -1517,7 +1527,7 @@
             "TEMPLATEID":"argusalert",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-	    "FILTER":["shared1-argusalert1-2-prd"],
+        "FILTER":["shared1-argusalert1-2-prd"],
             "INFRA": "Supporting Infrastructure",
             "ROLE":"argus_alert"
         }
@@ -1576,28 +1586,28 @@
         }
     },
     "nodeapp_prod":{
-    	"PROD":{
-	    	"PODGROUP":"nodeappcl",
-	        "TEMPLATEID":"nodeapp",
-	        "GROUPSIZE":2,
-	        "TAGGROUPS":0,
-	        "INFRA": "Supporting Infrastructure",
-	        "ROLE":"nodeapp"
+        "PROD":{
+            "PODGROUP":"nodeappcl",
+            "TEMPLATEID":"nodeapp",
+            "GROUPSIZE":2,
+            "TAGGROUPS":0,
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"nodeapp"
             }
     },
     "nodeapp_canary_prod":{
-    	"PROD":{
-	    	"PODGROUP":"nodeappcl.canary",
-	        "TEMPLATEID":"nodeapp",
-	        "GROUPSIZE":2,
-	        "TAGGROUPS":0,
-	        "INFRA": "Supporting Infrastructure",
-	        "ROLE":"nodeapp"
+        "PROD":{
+            "PODGROUP":"nodeappcl.canary",
+            "TEMPLATEID":"nodeapp",
+            "GROUPSIZE":2,
+            "TAGGROUPS":0,
+            "INFRA": "Supporting Infrastructure",
+            "ROLE":"nodeapp"
             }
     },
     "sam_kube_prod":{
-    	"PROD":{
-    		"PODGROUP":"samcontrol.pri",
+        "PROD":{
+            "PODGROUP":"samcontrol.pri",
             "TEMPLATEID":"sam",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
@@ -1606,8 +1616,8 @@
         }
     },
     "sam_compute_prod":{
-    	"PROD":{
-    		"PODGROUP":"samcontrol.pri",
+        "PROD":{
+            "PODGROUP":"samcontrol.pri",
             "TEMPLATEID":"sam",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
@@ -1616,8 +1626,8 @@
         }
     },
      "sam_other_prod":{
-    	"PROD":{
-    		"PODGROUP":"samminion.pri",
+        "PROD":{
+            "PODGROUP":"samminion.pri",
             "TEMPLATEID":"sam",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
