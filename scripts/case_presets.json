@@ -1651,5 +1651,25 @@
             "INFRA": "Supporting Infrastructure",
             "ROLE": "netmgt"
         }
+    },
+    "polcore_prod":{
+        "PROD":{
+            "PODGROUP":"polcorecl",
+            "TEMPLATEID":"polcore",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"polcore"
+        }
+    },
+    "poldata_prod":{
+        "PROD":{
+            "PODGROUP":"poldatacl",
+            "TEMPLATEID":"poldata",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"poldata"
+        }
     }
 }
