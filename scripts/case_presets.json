@@ -1671,5 +1671,26 @@
             "INFRA":"Supporting Infrastructure",
             "ROLE":"poldata"
         }
+    },
+    "cmgt_active_prod":{
+        "PROD":{
+            "PODGROUP":"cmgt.was",
+            "TEMPLATEID":"cmgt",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"cmgt",
+        }
+    },
+    "cmgt_passive_prod":{
+        "PROD":{
+            "PODGROUP":"cmgt.chi",
+            "TEMPLATEID":"cmgt_standby",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"cmgt",
+            "CASETYPE": "hostlist"
+        }
     }
 }
