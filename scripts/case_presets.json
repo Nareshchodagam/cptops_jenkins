@@ -1679,7 +1679,7 @@
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "ROLE":"cmgt",
+            "ROLE":"cmgt"
         }
     },
     "cmgt_passive_prod":{
