@@ -1690,6 +1690,31 @@
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
             "ROLE":"cmgt",
+            "LIST_FILTER":"True",
+            "CASETYPE": "hostlist"
+        }
+    },
+    "pkica_prod":{
+        "PROD":{
+            "PODGROUP":"pkicacl",
+            "TEMPLATEID":"pkica",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"pkica",
+            "LIST_FILTER":"True",
+            "CASETYPE": "hostlist"
+        }
+    },
+    "pkicontroller_prod":{
+        "PROD":{
+            "PODGROUP":"pkicontrollercl",
+            "TEMPLATEID":"pkicontroller",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "ROLE":"pkicontroller",
+            "LIST_FILTER":"True",
             "CASETYPE": "hostlist"
         }
     }
