@@ -5,7 +5,11 @@
             "TEMPLATEID":"mta.linux",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":["ops-mta(1|2|30|31)-(3|4)", "(ops4|ops1)-mta(1|2)-(1|2)", "ops0-mta(1|2)-(1|2)-(dfw|phx|frf)"],
+            "FILTER":["ops-mta(1|2|30|31)-(3|4)",
+                        "(ops4|ops1)-mta(1|2)-(1|2)",
+                        "ops0-mta(1|2)-(1|2)-(frf|par|iad|ord|ukb)",
+                        "ops0-mta(1|2)-(1|2|3|4|5|6|7|8)-(dfw|phx)"
+            ],
             "INFRA":"Primary",
             "ROLE":"mta"
             }
@@ -1679,7 +1683,7 @@
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "ROLE":"cmgt",
+            "ROLE":"cmgt"
         }
     },
     "cmgt_passive_prod":{
