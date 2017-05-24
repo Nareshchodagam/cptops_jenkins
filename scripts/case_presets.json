@@ -1663,16 +1663,18 @@
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
+            "FILTER":["(?!(ops0-polcore[12]-1-prd))"],
             "ROLE":"polcore"
         }
     },
     "polcore_canary_prod":{
         "PROD":{
-            "PODGROUP":"polcore.canary",
+            "PODGROUP":"polcore",
             "TEMPLATEID":"polcore",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
+            "FILTER":["ops0-polcore[12]-1-prd"],
             "ROLE":"polcore"
         }
     },
@@ -1683,16 +1685,18 @@
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
+            "FILTER":["(?!(ops0-poldata[12]-1-prd))"],
             "ROLE":"poldata"
         }
     },
     "poldata_canary_prod":{
         "PROD":{
-            "PODGROUP":"poldata.canary",
+            "PODGROUP":"poldata",
             "TEMPLATEID":"poldata",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
+            "FILTER":["ops0-poldata[12]-1-prd"],
             "ROLE":"poldata"
         }
     },
@@ -1725,7 +1729,7 @@
             "GROUPSIZE":2,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "FILTER":["^.*pkica(1|2)-"],
+            "FILTER":["(?!(ops0-pkica[12]-[12]-prd))"],
             "CL_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
             "ROLE":"pkica"
         }
@@ -1737,7 +1741,7 @@
             "GROUPSIZE":2,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "FILTER":["^.*pkica(1|2)-"],
+            "FILTER":["ops0-pkica[12]-[12]-prd"],
             "CL_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
             "ROLE":"pkica"
         }
@@ -1749,7 +1753,7 @@
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "FILTER":["^.*pkicontroller(1|2)-"],
+            "FILTER":["(?!(ops0-pkicontroller[12]-1-prd))"],
             "CL_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
             "ROLE":"pkicontroller"
         }
@@ -1761,7 +1765,7 @@
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "FILTER":["^.*pkicontroller(1|2)-"],
+            "FILTER":["ops0-pkicontroller[12]-1-prd"],
             "CL_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
             "ROLE":"pkicontroller"
         }
