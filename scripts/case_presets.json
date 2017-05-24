@@ -1658,7 +1658,7 @@
     },
     "polcore_prod":{
         "PROD":{
-            "PODGROUP":"polcore",
+            "PODGROUP":"illumio",
             "TEMPLATEID":"polcore",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
@@ -1669,7 +1669,7 @@
     },
     "polcore_canary_prod":{
         "PROD":{
-            "PODGROUP":"polcore",
+            "PODGROUP":"illumio",
             "TEMPLATEID":"polcore",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
@@ -1680,7 +1680,7 @@
     },
     "poldata_prod":{
         "PROD":{
-            "PODGROUP":"poldata",
+            "PODGROUP":"illumio",
             "TEMPLATEID":"poldata",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
@@ -1691,7 +1691,7 @@
     },
     "poldata_canary_prod":{
         "PROD":{
-            "PODGROUP":"poldata",
+            "PODGROUP":"illumio",
             "TEMPLATEID":"poldata",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
