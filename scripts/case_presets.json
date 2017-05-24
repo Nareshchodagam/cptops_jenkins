@@ -1658,21 +1658,45 @@
     },
     "polcore_prod":{
         "PROD":{
-            "PODGROUP":"polcorecl",
+            "PODGROUP":"polcore",
             "TEMPLATEID":"polcore",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
+            "FILTER":["(?!(ops0-polcore[12]-1-prd))"],
+            "ROLE":"polcore"
+        }
+    },
+    "polcore_canary_prod":{
+        "PROD":{
+            "PODGROUP":"polcore",
+            "TEMPLATEID":"polcore",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "FILTER":["ops0-polcore[12]-1-prd"],
             "ROLE":"polcore"
         }
     },
     "poldata_prod":{
         "PROD":{
-            "PODGROUP":"poldatacl",
+            "PODGROUP":"poldata",
             "TEMPLATEID":"poldata",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
+            "FILTER":["(?!(ops0-poldata[12]-1-prd))"],
+            "ROLE":"poldata"
+        }
+    },
+    "poldata_canary_prod":{
+        "PROD":{
+            "PODGROUP":"poldata",
+            "TEMPLATEID":"poldata",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "FILTER":["ops0-poldata[12]-1-prd"],
             "ROLE":"poldata"
         }
     },
@@ -1700,26 +1724,50 @@
     },
     "pkica_prod":{
         "PROD":{
-            "PODGROUP":"pkicacl",
+            "PODGROUP":"pki",
             "TEMPLATEID":"pkica",
-            "GROUPSIZE":1,
+            "GROUPSIZE":2,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "ROLE":"pkica",
-            "LIST_FILTER":"True",
-            "CASETYPE": "hostlist"
+            "FILTER":["(?!(ops0-pkica[12]-[12]-prd))"],
+            "CL_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
+            "ROLE":"pkica"
+        }
+    },
+    "pkica_canary_prod":{
+        "PROD":{
+            "PODGROUP":"pki",
+            "TEMPLATEID":"pkica",
+            "GROUPSIZE":2,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "FILTER":["ops0-pkica[12]-[12]-prd"],
+            "CL_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
+            "ROLE":"pkica"
         }
     },
     "pkicontroller_prod":{
         "PROD":{
-            "PODGROUP":"pkicontrollercl",
+            "PODGROUP":"pki",
             "TEMPLATEID":"pkicontroller",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "ROLE":"pkicontroller",
-            "LIST_FILTER":"True",
-            "CASETYPE": "hostlist"
+            "FILTER":["(?!(ops0-pkicontroller[12]-1-prd))"],
+            "CL_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
+            "ROLE":"pkicontroller"
+        }
+    },
+    "pkicontroller_canary_prod":{
+        "PROD":{
+            "PODGROUP":"pki",
+            "TEMPLATEID":"pkicontroller",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "FILTER":["ops0-pkicontroller[12]-1-prd"],
+            "CL_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
+            "ROLE":"pkicontroller"
         }
     }
 }
