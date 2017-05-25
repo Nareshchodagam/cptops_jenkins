@@ -1729,8 +1729,8 @@
       "CLUSTER_TYPE":"CMGT"
     }
   },
-  "cmgt_passive_prod":{
-    "PROD":{
+  "cmgt_passive_prod": {
+    "PROD": {
       "PODGROUP": "cmgt.chi",
       "TEMPLATEID": "cmgt_standby",
       "GROUPSIZE": 1,
@@ -1738,6 +1738,66 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "cmgt",
       "CASETYPE": "hostlist"
+    }
+  },
+  "pkica_prod": {
+    "PROD": {
+      "PODGROUP": "pki",
+      "TEMPLATEID": "pkica",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?!(ops0-pkica[12]-[12]-prd))"
+      ],
+      "CL_STATUS": "ACTIVE,PROVISIONING,HW_PROVISIONING",
+      "ROLE": "pkica",
+      "CLUSTER_TYPE": "PKI"
+    }
+  },
+  "pkica_canary_prod": {
+    "PROD": {
+      "PODGROUP": "pki",
+      "TEMPLATEID": "pkica",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "ops0-pkica[12]-[12]-prd"
+      ],
+      "CL_STATUS": "ACTIVE,PROVISIONING,HW_PROVISIONING",
+      "ROLE": "pkica",
+      "CLUSTER_TYPE": "PKI"
+    }
+  },
+  "pkicontroller_prod": {
+    "PROD": {
+      "PODGROUP": "pki",
+      "TEMPLATEID": "pkicontroller",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?!(ops0-pkicontroller[12]-1-prd))"
+      ],
+      "CL_STATUS": "ACTIVE,PROVISIONING,HW_PROVISIONING",
+      "ROLE": "pkicontroller",
+      "CLUSTER_TYPE": "PKI"
+    }
+  },
+  "pkicontroller_canary_prod": {
+    "PROD": {
+      "PODGROUP": "pki",
+      "TEMPLATEID": "pkicontroller",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "ops0-pkicontroller[12]-1-prd"
+      ],
+      "CL_STATUS": "ACTIVE,PROVISIONING,HW_PROVISIONING",
+      "ROLE": "pkicontroller",
+      "CLUSTER_TYPE": "PKI"
     }
   }
 }
