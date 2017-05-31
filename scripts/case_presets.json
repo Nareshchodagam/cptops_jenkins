@@ -1,4 +1,32 @@
 {
+    "argusmq_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "argusmq",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!shared1-argusmq2-5-prd)"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_mq",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
+  "argusmq_canary_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "argusmq",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+       "FILTER": [
+        "shared1-argusmq2-5-prd"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_mq",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
     "mta_prod":{
         "PROD":{
             "PODGROUP":"mtacl",
