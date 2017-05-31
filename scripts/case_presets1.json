@@ -635,7 +635,7 @@
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!shared-logsearch4-1-asg)"
+        "(?!shared1-logsearch1-1-frf)"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mandm-splunk-switch",
@@ -649,7 +649,7 @@
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
       "FILTER": [
-        "shared-logsearch4-1-asg"
+        "shared1-logsearch1-1-frf"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mandm-splunk-switch",
