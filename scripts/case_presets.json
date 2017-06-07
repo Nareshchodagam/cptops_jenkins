@@ -1805,7 +1805,7 @@
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "FILTER":["(?!(ops0-secmgt[12]-[12]-prd))"],
+            "FILTER":["(?!(ops0-secmgt[12]-[12]-(prd|crz)))"],
             "ROLE":"secmgt"
         }
     },
@@ -1816,7 +1816,7 @@
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "FILTER":["ops0?-secmgt[12]-[12]-prd"],
+            "FILTER":["ops0?-secmgt[12]-[12]-(prd|crz)"],
             "ROLE":"secmgt"
         }
     }

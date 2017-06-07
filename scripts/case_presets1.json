@@ -1836,7 +1836,7 @@
       "TAGGROUPS":0,
       "INFRA":"Supporting Infrastructure",
       "FILTER":[
-        "(?!(ops0-secmgt[12]-[12]-prd))"
+        "(?!(ops0-secmgt[12]-[12]-(prd|crz)))"
       ],
       "ROLE":"secmgt",
       "CLUSTER_TYPE": "SECMGT"
@@ -1850,7 +1850,7 @@
       "TAGGROUPS":0,
       "INFRA":"Supporting Infrastructure",
       "FILTER":[
-        "ops0?-secmgt[12]-[12]-prd"
+        "ops0?-secmgt[12]-[12]-(prd|crz)"
       ],
       "ROLE":"secmgt",
       "CLUSTER_TYPE": "SECMGT"
