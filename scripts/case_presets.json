@@ -1797,5 +1797,27 @@
             "CL_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
             "ROLE":"pkicontroller"
         }
+    },
+    "secmgt_prod":{
+        "PROD":{
+            "PODGROUP":"secmgt",
+            "TEMPLATEID":"secmgt",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "FILTER":["(?!(ops0-secmgt[12]-[12]-(prd|crz)))"],
+            "ROLE":"secmgt"
+        }
+    },
+    "secmgt_canary_prod":{
+        "PROD":{
+            "PODGROUP":"secmgt",
+            "TEMPLATEID":"secmgt",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "FILTER":["ops0?-secmgt[12]-[12]-(prd|crz)"],
+            "ROLE":"secmgt"
+        }
     }
 }

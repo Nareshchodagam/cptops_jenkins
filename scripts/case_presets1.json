@@ -1827,5 +1827,33 @@
       "ROLE": "pkicontroller",
       "CLUSTER_TYPE": "PKI"
     }
+  },
+  "secmgt_prod":{
+    "PROD":{
+      "PODGROUP":"secmgt",
+      "TEMPLATEID":"secmgt",
+      "GROUPSIZE":1,
+      "TAGGROUPS":0,
+      "INFRA":"Supporting Infrastructure",
+      "FILTER":[
+        "(?!(ops0-secmgt[12]-[12]-(prd|crz)))"
+      ],
+      "ROLE":"secmgt",
+      "CLUSTER_TYPE": "SECMGT"
+    }
+  },
+  "secmgt_canary_prod":{
+    "PROD":{
+      "PODGROUP":"secmgt",
+      "TEMPLATEID":"secmgt",
+      "GROUPSIZE":1,
+      "TAGGROUPS":0,
+      "INFRA":"Supporting Infrastructure",
+      "FILTER":[
+        "ops0?-secmgt[12]-[12]-(prd|crz)"
+      ],
+      "ROLE":"secmgt",
+      "CLUSTER_TYPE": "SECMGT"
+    }
   }
 }
