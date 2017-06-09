@@ -1,4 +1,32 @@
 {
+    "argusmq_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "argusmq",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!shared1-argusmq2-5-prd)"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_mq",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
+  "argusmq_canary_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "argusmq",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+       "FILTER": [
+        "shared1-argusmq2-5-prd"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_mq",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
     "mta_prod":{
         "PROD":{
             "PODGROUP":"mtacl",
@@ -1658,7 +1686,7 @@
     },
     "polcore_prod":{
         "PROD":{
-            "PODGROUP":"polcore",
+            "PODGROUP":"illumio",
             "TEMPLATEID":"polcore",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
@@ -1669,7 +1697,7 @@
     },
     "polcore_canary_prod":{
         "PROD":{
-            "PODGROUP":"polcore",
+            "PODGROUP":"illumio",
             "TEMPLATEID":"polcore",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
@@ -1680,7 +1708,7 @@
     },
     "poldata_prod":{
         "PROD":{
-            "PODGROUP":"poldata",
+            "PODGROUP":"illumio",
             "TEMPLATEID":"poldata",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
@@ -1691,7 +1719,7 @@
     },
     "poldata_canary_prod":{
         "PROD":{
-            "PODGROUP":"poldata",
+            "PODGROUP":"illumio",
             "TEMPLATEID":"poldata",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
@@ -1768,6 +1796,28 @@
             "FILTER":["ops0-pkicontroller[12]-1-prd"],
             "CL_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
             "ROLE":"pkicontroller"
+        }
+    },
+    "secmgt_prod":{
+        "PROD":{
+            "PODGROUP":"secmgt",
+            "TEMPLATEID":"secmgt",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "FILTER":["(?!(ops0-secmgt[12]-[12]-(prd|crz)))"],
+            "ROLE":"secmgt"
+        }
+    },
+    "secmgt_canary_prod":{
+        "PROD":{
+            "PODGROUP":"secmgt",
+            "TEMPLATEID":"secmgt",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "FILTER":["ops0?-secmgt[12]-[12]-(prd|crz)"],
+            "ROLE":"secmgt"
         }
     }
 }
