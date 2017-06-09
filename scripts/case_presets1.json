@@ -1,4 +1,32 @@
 {
+  "argusmq_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "argusmq",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!shared1-argusmq2-5-prd)"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_mq",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
+  "argusmq_canary_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "argusmq",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+       "FILTER": [
+        "shared1-argusmq2-5-prd"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_mq",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
   "argus_writed_matrics_prod": {
     "PROD": {
       "PODGROUP": "arguscl",
@@ -95,7 +123,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!ops-mmmbus11-[1-5]-sfz)"
+        "ops[0-9]?-((?!mmmbus11-[1-5])(mmmbus\\d+-\\d+-sfz))"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mmmbus",
@@ -123,7 +151,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!ops-mmmbus1-1-asg)"
+        "ops[0-9]?-(?!mmmbus1-1-asg)(?!mmmbus\\d+-\\d+-sfz).*"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mmmbus",
@@ -635,7 +663,7 @@
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!shared-logsearch4-1-asg)"
+        "(?!shared1-logsearch1-1-frf)"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mandm-splunk-switch",
@@ -649,7 +677,7 @@
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
       "FILTER": [
-        "shared-logsearch4-1-asg"
+        "shared1-logsearch1-1-frf"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mandm-splunk-switch",
@@ -857,6 +885,7 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "monitor",
       "CASETYPE": "hostlist",
+      "CLUSTER_TYPE":"monitor",
       "LIST_FILTER": "True"
     }
   },
@@ -869,6 +898,7 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "monitor",
       "CASETYPE": "hostlist",
+      "CLUSTER_TYPE":"monitor",
       "LIST_FILTER": "True"
     }
   },
@@ -1727,8 +1757,8 @@
       "CLUSTER_TYPE":"CMGT"
     }
   },
-  "cmgt_passive_prod":{
-    "PROD":{
+  "cmgt_passive_prod": {
+    "PROD": {
       "PODGROUP": "cmgt.chi",
       "TEMPLATEID": "cmgt_standby",
       "GROUPSIZE": 1,
@@ -1750,16 +1780,118 @@
       "CLUSTER_TYPE":"ARGUS"
     }
   },
-  "argus_mq_zk_canary_prod":{
+  "argus_mq_zk_canary_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "argus_mq_zk",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "shared1-argusmqzk2-1-prd"
+      ],
+      "ROLE": "argus_mq_zk",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
+  "pkica_prod": {
+    "PROD": {
+      "PODGROUP": "pki",
+      "TEMPLATEID": "pkica",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?!(ops0-pkica[12]-[12]-prd))"
+      ],
+      "CL_STATUS": "ACTIVE,PROVISIONING,HW_PROVISIONING",
+      "ROLE": "pkica",
+      "CLUSTER_TYPE": "PKI"
+    }
+  },
+  "pkica_canary_prod": {
+    "PROD": {
+      "PODGROUP": "pki",
+      "TEMPLATEID": "pkica",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "ops0-pkica[12]-[12]-prd"
+      ],
+      "CL_STATUS": "ACTIVE,PROVISIONING,HW_PROVISIONING",
+      "ROLE": "pkica",
+      "CLUSTER_TYPE": "PKI"
+    }
+  },
+  "pkicontroller_prod": {
+    "PROD": {
+      "PODGROUP": "pki",
+      "TEMPLATEID": "pkicontroller",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?!(ops0-pkicontroller[12]-1-prd))"
+      ],
+      "CL_STATUS": "ACTIVE,PROVISIONING,HW_PROVISIONING",
+      "ROLE": "pkicontroller",
+      "CLUSTER_TYPE": "PKI"
+    }
+  },
+  "pkicontroller_canary_prod": {
+    "PROD": {
+      "PODGROUP": "pki",
+      "TEMPLATEID": "pkicontroller",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "ops0-pkicontroller[12]-1-prd"
+      ],
+      "CL_STATUS": "ACTIVE,PROVISIONING,HW_PROVISIONING",
+      "ROLE": "pkicontroller",
+      "CLUSTER_TYPE": "PKI"
+    }
+  },
+  "netbot_prod":{
     "PROD":{
-      "PODGROUP":"arguscl",
-      "TEMPLATEID":"argus_mq_zk",
+      "PODGROUP":"netbot",
+      "TEMPLATEID":"straight-patch",
       "GROUPSIZE":1,
       "TAGGROUPS":0,
       "INFRA":"Supporting Infrastructure",
-      "FILTER":["shared1-argusmqzk2-1-prd"],
-      "ROLE":"argus_mq_zk",
-      "CLUSTER_TYPE":"ARGUS"
+      "CASETYPE":"hostlist",
+      "ROLE":"netbot",
+      "CLUSTER_TYPE":"OPSNETBOT"
+    }
+  },
+  "secmgt_prod":{
+    "PROD":{
+      "PODGROUP":"secmgt",
+      "TEMPLATEID":"secmgt",
+      "GROUPSIZE":1,
+      "TAGGROUPS":0,
+      "INFRA":"Supporting Infrastructure",
+      "FILTER":[
+        "(?!(ops0-secmgt[12]-[12]-(prd|crz)))"
+      ],
+      "ROLE":"secmgt",
+      "CLUSTER_TYPE": "SECMGT"
+    }
+  },
+  "secmgt_canary_prod":{
+    "PROD":{
+      "PODGROUP":"secmgt",
+      "TEMPLATEID":"secmgt",
+      "GROUPSIZE":1,
+      "TAGGROUPS":0,
+      "INFRA":"Supporting Infrastructure",
+      "FILTER":[
+        "ops0?-secmgt[12]-[12]-(prd|crz)"
+      ],
+      "ROLE":"secmgt",
+      "CLUSTER_TYPE": "SECMGT"
     }
   }
 }

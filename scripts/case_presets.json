@@ -1,4 +1,32 @@
 {
+    "argusmq_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "argusmq",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!shared1-argusmq2-5-prd)"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_mq",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
+  "argusmq_canary_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "argusmq",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+       "FILTER": [
+        "shared1-argusmq2-5-prd"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_mq",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
     "mta_prod":{
         "PROD":{
             "PODGROUP":"mtacl",
@@ -873,7 +901,7 @@
             "TEMPLATEID":"insights",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
-            "FILTER":["^.*(redis(1|2)-1-|iworker(1|2)-1-)"],
+            "FILTER":["^.*(redis(1|2)-1-|iworker(1|2)-1-(chi|dfw|lon))"],
             "INFRA":"Supporting Infrastructure",
             "ROLE":"insights_iworker,insights_redis"
             }
@@ -906,7 +934,7 @@
             "TEMPLATEID":"insights",
             "GROUPSIZE":18,
             "TAGGROUPS":0,
-            "FILTER":["(?!.*(redis[1-2]-1-(chi|lon|dfw|was)|iworker((1-15|2-9)-chi|(1-11|3-1)-was|[1-2]-1-)))"],
+            "FILTER":["(?!.*(redis(1|2)-1-(chi|lon|dfw|was)|iworker((1-15|2-9)-chi|(1-11|3-1)-was|(1|2)-1-(chi|dfw|lon))))"],
             "INFRA":"Supporting Infrastructure",
             "ROLE":"insights_iworker,insights_redis"
             }
@@ -1781,15 +1809,38 @@
             "ROLE":"argus_mq_zk"
             }
     },
-    "argus_mq_zk_canary":{
+    "argus_mq_zk_canary": {
+      "PROD": {
+        "PODGROUP": "argusmqzkcl",
+        "TEMPLATEID": "argus_mq_zk",
+        "GROUPSIZE": 1,
+        "TAGGROUPS": 0,
+        "INFRA": "Supporting Infrastructure",
+        "FILTER": [
+          "shared1-argusmqzk2-1-prd"],
+        "ROLE": "argus_mq_zk"
+      }
+    },
+    "secmgt_prod":{
         "PROD":{
-            "PODGROUP":"argusmqzkcl",
-            "TEMPLATEID":"argus_mq_zk",
+            "PODGROUP":"secmgt",
+            "TEMPLATEID":"secmgt",
             "GROUPSIZE":1,
             "TAGGROUPS":0,
             "INFRA":"Supporting Infrastructure",
-            "FILTER":["shared1-argusmqzk2-1-prd"],
-            "ROLE":"argus_mq_zk"
-            }
+            "FILTER":["(?!(ops0-secmgt[12]-[12]-(prd|crz)))"],
+            "ROLE":"secmgt"
+        }
+    },
+    "secmgt_canary_prod":{
+        "PROD":{
+            "PODGROUP":"secmgt",
+            "TEMPLATEID":"secmgt",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "FILTER":["ops0?-secmgt[12]-[12]-(prd|crz)"],
+            "ROLE":"secmgt"
+        }
     }
 }
