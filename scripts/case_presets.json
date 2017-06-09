@@ -1798,6 +1798,29 @@
             "ROLE":"pkicontroller"
         }
     },
+    "argus_mq_zk":{
+        "PROD":{
+            "PODGROUP":"argusmqzkcl",
+            "TEMPLATEID":"argus_mq_zk",
+            "GROUPSIZE":1,
+            "TAGGROUPS":0,
+            "INFRA":"Supporting Infrastructure",
+            "FILTER":["(?!shared1-argusmqzk2-1-prd)"],
+            "ROLE":"argus_mq_zk"
+            }
+    },
+    "argus_mq_zk_canary": {
+      "PROD": {
+        "PODGROUP": "argusmqzkcl",
+        "TEMPLATEID": "argus_mq_zk",
+        "GROUPSIZE": 1,
+        "TAGGROUPS": 0,
+        "INFRA": "Supporting Infrastructure",
+        "FILTER": [
+          "shared1-argusmqzk2-1-prd"],
+        "ROLE": "argus_mq_zk"
+      }
+    },
     "secmgt_prod":{
         "PROD":{
             "PODGROUP":"secmgt",

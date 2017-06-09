@@ -1693,7 +1693,7 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "irc",
       "CLUSTER_TYPE":"OPS"
-      
+
     }
   },
   "ajna_mirror_prod": {
@@ -1766,6 +1766,32 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "cmgt",
       "CASETYPE": "hostlist"
+    }
+  },
+  "argus_mq_zk_prod":{
+    "PROD":{
+      "PODGROUP":"arguscl",
+      "TEMPLATEID":"argus_mq_zk",
+      "GROUPSIZE":1,
+      "TAGGROUPS":0,
+      "INFRA":"Supporting Infrastructure",
+      "FILTER":["(?!shared1-argusmqzk2-1-prd)"],
+      "ROLE":"argus_mq_zk",
+      "CLUSTER_TYPE":"ARGUS"
+    }
+  },
+  "argus_mq_zk_canary_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "argus_mq_zk",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "shared1-argusmqzk2-1-prd"
+      ],
+      "ROLE": "argus_mq_zk",
+      "CLUSTER_TYPE": "ARGUS"
     }
   },
   "pkica_prod": {
