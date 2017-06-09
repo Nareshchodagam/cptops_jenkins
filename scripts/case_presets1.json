@@ -1828,6 +1828,18 @@
       "CLUSTER_TYPE": "PKI"
     }
   },
+  "netbot_prod":{
+    "PROD":{
+      "PODGROUP":"netbot",
+      "TEMPLATEID":"straight-patch",
+      "GROUPSIZE":1,
+      "TAGGROUPS":0,
+      "INFRA":"Supporting Infrastructure",
+      "CASETYPE":"hostlist",
+      "ROLE":"netbot",
+      "CLUSTER_TYPE":"OPSNETBOT"
+    }
+  },
   "secmgt_prod":{
     "PROD":{
       "PODGROUP":"secmgt",
