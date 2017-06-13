@@ -1726,7 +1726,7 @@
   },
   "polcore_prod": {
     "PROD": {
-      "PODGROUP": "polcorecl",
+      "PODGROUP": "illumio",
       "TEMPLATEID": "polcore",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -1737,7 +1737,7 @@
   },
   "poldata_prod": {
     "PROD": {
-      "PODGROUP": "poldatacl",
+      "PODGROUP": "illumio",
       "TEMPLATEID": "poldata",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
