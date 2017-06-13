@@ -1765,6 +1765,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "cmgt",
+      "LIST_FILTER": "True",
       "CASETYPE": "hostlist"
     }
   },
@@ -1866,32 +1867,34 @@
       "CLUSTER_TYPE":"OPSNETBOT"
     }
   },
-  "secmgt_prod":{
+  "appauth_prod":{
     "PROD":{
-      "PODGROUP":"secmgt",
-      "TEMPLATEID":"secmgt",
-      "GROUPSIZE":1,
-      "TAGGROUPS":0,
-      "INFRA":"Supporting Infrastructure",
-      "FILTER":[
-        "(?!(ops0-secmgt[12]-[12]-(prd|crz)))"
-      ],
-      "ROLE":"secmgt",
-      "CLUSTER_TYPE": "SECMGT"
-    }
+      "PODGROUP":"appauth",
+      "TEMPLATEID":"appauth",
+        "GROUPSIZE":1,
+        "TAGGROUPS":0,
+        "INFRA":"Supporting Infrastructure",
+        "FILTER":[
+          "(?!(ops[01234]-appauth[12]-[12]-(prd|crz|sfz)))"
+        ],
+        "ROLE":"appauth",
+        "LIST_FILTER":"True",
+        "CASETYPE": "hostlist"
+      }
   },
-  "secmgt_canary_prod":{
+  "appauth_canary_prod":{
     "PROD":{
-      "PODGROUP":"secmgt",
-      "TEMPLATEID":"secmgt",
+      "PODGROUP":"appauth.canary",
+      "TEMPLATEID":"appauth",
       "GROUPSIZE":1,
       "TAGGROUPS":0,
       "INFRA":"Supporting Infrastructure",
       "FILTER":[
-        "ops0?-secmgt[12]-[12]-(prd|crz)"
+        "ops[01234]-appauth[12]-[12]-(prd|crz|sfz)"
       ],
-      "ROLE":"secmgt",
-      "CLUSTER_TYPE": "SECMGT"
+      "ROLE":"appauth",
+      "LIST_FILTER":"True",
+      "CASETYPE": "hostlist"
     }
   }
 }
