@@ -1880,7 +1880,7 @@
         "ROLE":"appauth",
         "LIST_FILTER":"True",
         "CASETYPE": "hostlist"
-      }
+    }
   },
   "appauth_canary_prod":{
     "PROD":{
