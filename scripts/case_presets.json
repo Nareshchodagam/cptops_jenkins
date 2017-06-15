@@ -1805,6 +1805,30 @@
       "CLUSTER_TYPE": "ARGUS"
     }
   },
+  "argus_cache_prod":{
+    "PROD":{
+      "PODGROUP":"arguscl",
+      "TEMPLATEID":"argus_cache",
+      "GROUPSIZE":1,
+      "TAGGROUPS":0,
+      "INFRA":"Supporting Infrastructure",
+      "FILTER":["(?!shared1-arguscache1-3-prd)"],
+      "ROLE":"argus_cache",
+      "CLUSTER_TYPE":"ARGUS"
+    }
+  },
+  "argus_cache_canary_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "argus_cache",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": ["shared1-arguscache1-3-prd"],
+      "ROLE": "argus_cache",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
   "pkica_prod": {
     "PROD": {
       "PODGROUP": "pki",
