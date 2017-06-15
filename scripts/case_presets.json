@@ -1050,6 +1050,16 @@
       "CLUSTER_TYPE": "DATA_RESTORE"
     }
   },
+    "gforce_gia": {
+        "GIA": {
+            "PODGROUP": "gforce_gia",
+            "TEMPLATEID": "gforce.linux",
+            "GROUPSIZE": 10,
+            "TAGGROUPS": 0,
+            "INFRA": "Primary",
+            "ROLE": "mnds,dnds,gforce"
+            }
+    },
   "hbase_sp_prod": {
     "PROD": {
       "PODGROUP": "hbase.clusters",
