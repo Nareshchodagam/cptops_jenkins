@@ -113,7 +113,8 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "lapp",
-      "CLUSTER_TYPE": "liveagent"
+      "CLUSTER_TYPE": "liveagent",
+      "SUBJECT": "CS MAINT WINDOW"
     }
   },
   "mmmbus_sfz_prod": {

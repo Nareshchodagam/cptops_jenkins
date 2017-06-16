@@ -73,11 +73,12 @@ def cmd_builder(sets, r_class=False):
         if options.roleclass in co.req_sub:
             if not options.subject:
                 options.subject = raw_input("\nPreset %s requires custom subject.\nPlease add subject line: " % options.roleclass)
+        elif options.canary:
+            options.subject = "CANARY"
+        elif 'SUBJECT' in sets[role_class][role_status].keys():
+            options.subject = sets[role_class][role_status]['SUBJECT']
         else:
-            if options.canary:
-                options.subject = "CANARY"
-            else:
-                options.subject = ""
+            options.subject = ""
     bld_cmd['subject'] = options.subject
     bld_cmd['dowork'] = options.dowork
     # This change will help user to choose the way he/she wants to create case.
