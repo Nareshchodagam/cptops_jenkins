@@ -1756,6 +1756,34 @@
       "CLUSTER_TYPE": "ILLUMIO"
     }
   },
+  "polcore_canary_prod":{
+    "PROD":{
+      "PODGROUP":"illumio",
+      "TEMPLATEID":"polcore",
+      "GROUPSIZE":1,
+      "TAGGROUPS":0,
+      "INFRA":"Supporting Infrastructure",
+      "FILTER":[
+        "ops0-polcore[12]-1-prd"
+      ],
+      "ROLE":"polcore",
+      "CLUSTER_TYPE": "ILLUMIO"
+   }
+ },
+  "poldata_canary_prod":{
+    "PROD":{
+      "PODGROUP":"illumio",
+      "TEMPLATEID":"poldata",
+      "GROUPSIZE":1,
+      "TAGGROUPS":0,
+      "INFRA":"Supporting Infrastructure",
+      "FILTER":[
+        "ops0-poldata[12]-1-prd"
+      ],
+      "ROLE":"poldata",
+      "CLUSTER_TYPE": "ILLUMIO"
+    }
+  },
   "cmgt_active_prod":{
     "PROD":{
       "PODGROUP":"cmgt.was",
@@ -1839,7 +1867,6 @@
       "FILTER": [
         "(?!(ops0-pkica[12]-[12]-prd))"
       ],
-      "CL_STATUS": "ACTIVE,PROVISIONING,HW_PROVISIONING",
       "ROLE": "pkica",
       "CLUSTER_TYPE": "PKI"
     }
@@ -1854,7 +1881,6 @@
       "FILTER": [
         "ops0-pkica[12]-[12]-prd"
       ],
-      "CL_STATUS": "ACTIVE,PROVISIONING,HW_PROVISIONING",
       "ROLE": "pkica",
       "CLUSTER_TYPE": "PKI"
     }
@@ -1869,7 +1895,6 @@
       "FILTER": [
         "(?!(ops0-pkicontroller[12]-1-prd))"
       ],
-      "CL_STATUS": "ACTIVE,PROVISIONING,HW_PROVISIONING",
       "ROLE": "pkicontroller",
       "CLUSTER_TYPE": "PKI"
     }
@@ -1884,7 +1909,6 @@
       "FILTER": [
         "ops0-pkicontroller[12]-1-prd"
       ],
-      "CL_STATUS": "ACTIVE,PROVISIONING,HW_PROVISIONING",
       "ROLE": "pkicontroller",
       "CLUSTER_TYPE": "PKI"
     }
@@ -1931,6 +1955,34 @@
       "LIST_FILTER":"True",
       "CASETYPE": "hostlist",
       "CLUSTER_TYPE": "APPAUTH"
+    }
+  },
+  "grok_prod": {
+    "PROD": {
+      "PODGROUP": "grok",
+      "TEMPLATEID": "grok",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?!(ops0-grok[15]-1-prd))"
+      ],
+      "ROLE": "grok",
+      "CLUSTER_TYPE": "GROK"
+    }
+  },
+  "grok_canary_prod": {
+    "PROD": {
+      "PODGROUP": "grok",
+      "TEMPLATEID": "grok",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "ops0-grok[15]-1-prd"
+      ],
+      "ROLE": "grok",
+      "CLUSTER_TYPE": "GROK"
     }
   }
 }
