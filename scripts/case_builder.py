@@ -49,6 +49,8 @@ def cmd_builder(sets, r_class=False):
     bld_cmd['infra'] = sets[role_class][role_status]['INFRA']
     bld_cmd['role'] = sets[role_class][role_status]['ROLE']
     bld_cmd['template'] = sets[role_class][role_status]['TEMPLATEID']
+    if 'IMPLPLAN' in sets[role_class][role_status].keys():
+        bld_cmd['impl_plan'] = "templates/"+sets[role_class][role_status]['IMPLPLAN']+".json"
 
     if options.regex is None:
         if 'REGEX' in sets[role_class][role_status]:
