@@ -114,7 +114,8 @@
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "lapp",
       "CLUSTER_TYPE": "liveagent",
-      "SUBJECT": "CS MAINT WINDOW"
+      "SUBJECT": "CS MAINT WINDOW",
+      "IMPLPLAN": "lapp_cs"
     }
   },
   "mmmbus_sfz_prod": {
