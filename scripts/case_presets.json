@@ -1062,6 +1062,16 @@
       "ROLE": "artifactrepo"
     }
   },
+    "tools_gia": {
+    "GIA": {
+      "PODGROUP": "tools_gia",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "tools"
+    }
+  },
     "gforce_gia": {
         "GIA": {
             "PODGROUP": "gforce_gia",
