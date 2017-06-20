@@ -1093,15 +1093,26 @@
       "CASETYPE": "hostlist"
     }
   },
+  "umps_gia": {
+    "GIA": {
+      "PODGROUP": "chattercl_gia",
+      "TEMPLATEID": "umps.linux",
+      "GROUPSIZE": 5,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "sshare",
+      "CLUSTER_TYPE": "CHATTER"
+    }
+  },
     "gforce_gia": {
-        "GIA": {
-            "PODGROUP": "gforce_gia",
-            "TEMPLATEID": "gforce.linux",
-            "GROUPSIZE": 10,
-            "TAGGROUPS": 0,
-            "INFRA": "Primary",
-            "ROLE": "mnds,dnds,gforce"
-            }
+    "GIA": {
+          "PODGROUP": "gforce_gia",
+          "TEMPLATEID": "gforce.linux",
+          "GROUPSIZE": 10,
+          "TAGGROUPS": 0,
+          "INFRA": "Primary",
+          "ROLE": "mnds,dnds,gforce"
+          }
     },
   "hbase_sp_prod": {
     "PROD": {
