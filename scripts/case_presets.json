@@ -1072,6 +1072,16 @@
       "ROLE": "tools"
     }
   },
+    "ppm_gia": {
+    "GIA": {
+      "PODGROUP": "puppet_gia",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "rdb,ppm"
+    }
+  },
     "gforce_gia": {
         "GIA": {
             "PODGROUP": "gforce_gia",
