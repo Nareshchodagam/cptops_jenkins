@@ -1082,6 +1082,17 @@
       "ROLE": "rdb,ppm"
     }
   },
+    "nbmedia_gia": {
+    "GIA": {
+      "PODGROUP": "nbmedia_gia",
+      "TEMPLATEID": "nbmedia",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "nbmedia",
+      "CASETYPE": "hostlist"
+    }
+  },
     "gforce_gia": {
         "GIA": {
             "PODGROUP": "gforce_gia",
