@@ -1052,6 +1052,16 @@
       "CLUSTER_TYPE": "DATA_RESTORE"
     }
   },
+    "artifactrepo_gia": {
+    "GIA": {
+      "PODGROUP": "artifactrepo",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "artifactrepo"
+    }
+  },
     "gforce_gia": {
         "GIA": {
             "PODGROUP": "gforce_gia",
