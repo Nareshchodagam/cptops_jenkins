@@ -1052,15 +1052,67 @@
       "CLUSTER_TYPE": "DATA_RESTORE"
     }
   },
+    "artifactrepo_gia": {
+    "GIA": {
+      "PODGROUP": "artifactrepo",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "artifactrepo"
+    }
+  },
+    "tools_gia": {
+    "GIA": {
+      "PODGROUP": "tools_gia",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "tools"
+    }
+  },
+    "ppm_gia": {
+    "GIA": {
+      "PODGROUP": "puppet_gia",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "rdb,ppm"
+    }
+  },
+    "nbmedia_gia": {
+    "GIA": {
+      "PODGROUP": "nbmedia_gia",
+      "TEMPLATEID": "nbmedia",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "nbmedia",
+      "CASETYPE": "hostlist"
+    }
+  },
+  "umps_gia": {
+    "GIA": {
+      "PODGROUP": "chattercl_gia",
+      "TEMPLATEID": "umps.linux",
+      "GROUPSIZE": 5,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "sshare",
+      "CLUSTER_TYPE": "CHATTER"
+    }
+  },
     "gforce_gia": {
-        "GIA": {
-            "PODGROUP": "gforce_gia",
-            "TEMPLATEID": "gforce.linux",
-            "GROUPSIZE": 10,
-            "TAGGROUPS": 0,
-            "INFRA": "Primary",
-            "ROLE": "mnds,dnds,gforce"
-            }
+    "GIA": {
+          "PODGROUP": "gforce_gia",
+          "TEMPLATEID": "gforce.linux",
+          "GROUPSIZE": 10,
+          "TAGGROUPS": 0,
+          "INFRA": "Primary",
+          "ROLE": "mnds,dnds,gforce"
+          }
     },
   "hbase_sp_prod": {
     "PROD": {
