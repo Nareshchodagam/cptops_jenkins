@@ -39,6 +39,7 @@ def cmd_builder(sets, r_class=False):
         role_class = options.roleclass
     role_status = role_class.split('_')[-1].upper()
     #dr = "True" if role_status == "DR" else "FALSE"
+
     pod_cmd = ["python", home_dir + "/git/cptops_case_gen/gen_cases.py" ]
     bld_cmd = {}
     bld_cmd['status'] = "True" if role_status == "DR" else "FALSE"
@@ -51,6 +52,16 @@ def cmd_builder(sets, r_class=False):
     bld_cmd['template'] = sets[role_class][role_status]['TEMPLATEID']
     if 'IMPLPLAN' in sets[role_class][role_status].keys():
         bld_cmd['impl_plan'] = "templates/"+sets[role_class][role_status]['IMPLPLAN']+".json"
+    if bld_cmd['role'] == 'app':
+        #Takes pool percentage to calculate host count per block
+        if options.hostpercent == 'None':
+            flag = raw_input("\n Do you want to give pool percentage[y|n] :" )
+            if flag.lower() == 'y':
+                options.hostpercent = raw_input("\nPreset requires min pool percentage. eg 33 : ")
+            else:
+                options.hostpercent = 'None'
+
+    bld_cmd['hostpercent'] = options.hostpercent
 
     if options.regex is None:
         if 'REGEX' in sets[role_class][role_status]:
@@ -71,6 +82,7 @@ def cmd_builder(sets, r_class=False):
             filter = ""
     bld_cmd['filter'] = filter
     bld_cmd['regexfilter'] = options.regex
+
     if options.subject == None:
         if options.roleclass in co.req_sub:
             if not options.subject:
@@ -115,6 +127,7 @@ def cmd_builder(sets, r_class=False):
     logging.debug("REGEXFILTER = " + bld_cmd['regexfilter'])
     logging.debug("FILTER = " + bld_cmd['filter'])
     logging.debug("PATCHSET = " + bld_cmd['patchset'])
+    logging.debug("HOSTPERCENT = " + bld_cmd['hostpercent'])
     logging.debug("Contents of uploaded file %s" %  bld_cmd['podgroup'])
     #logging.debug("CL_STATUS = " + bld_cmd['clusteropstat'])
     #logging.debug("HO_STATUS = " + bld_cmd['hostopstat'])
@@ -240,6 +253,7 @@ if __name__ == "__main__":
     parser.add_argument("--bundle", dest="bundle", default="None", help="Patch Bundle.")
     parser.add_argument("--subject", dest="subject", help="Subject.")
     parser.add_argument("--dowork", dest="dowork", help="Task to perform")
+    parser.add_argument("--hostpercent", dest="hostpercent",default="None", help="Host percentage for core app")
     parser.add_argument("--clusstat", dest="cluststat", help="Cluster Status.")
     parser.add_argument("--hoststat", dest="hoststat", help="Host Status.")
     parser.add_argument("-r", dest="regex", help="Regex Filter")
