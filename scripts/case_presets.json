@@ -245,7 +245,7 @@
     "PROD": {
       "PODGROUP": "afw.pri",
       "TEMPLATEID": "coreapp-prod",
-      "GROUPSIZE": 33,
+      "GROUPSIZE": 3,
       "TAGGROUPS": 0,
       "INFRA": "Primary",
       "ROLE": "app",
@@ -269,7 +269,7 @@
     "DR": {
       "PODGROUP": "afw.sec",
       "TEMPLATEID": "coreapp-dr",
-      "GROUPSIZE": 33,
+      "GROUPSIZE": 3,
       "TAGGROUPS": 0,
       "INFRA": "Secondary",
       "ROLE": "app",
