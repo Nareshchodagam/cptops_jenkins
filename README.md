@@ -35,7 +35,6 @@ _Example_
 					}
 			},
 			
-case_presets.json takes minimum host percentage for core app
 
 #CPTIAB - CASE_BUILDER
 
