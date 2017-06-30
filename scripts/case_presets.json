@@ -2019,7 +2019,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?!(ops0-grok[15]-1-prd))"
+        "(?!(ops0-grok[12345]-1-prd))"
       ],
       "ROLE": "grok",
       "CLUSTER_TYPE": "GROK"
@@ -2033,7 +2033,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "ops0-grok[15]-1-prd"
+        "ops0-grok[12345]-1-prd"
       ],
       "ROLE": "grok",
       "CLUSTER_TYPE": "GROK"
