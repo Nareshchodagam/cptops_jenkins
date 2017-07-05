@@ -244,13 +244,11 @@
   "coreafw_prod": {
     "PROD": {
       "PODGROUP": "afw.pri",
-      "TEMPLATEID": "core-afw-patch",
-      "GROUPSIZE": 1,
+      "TEMPLATEID": "coreapp-prod",
+      "GROUPSIZE": 3,
       "TAGGROUPS": 0,
       "INFRA": "Primary",
       "ROLE": "app",
-      "IMPL_PLAN": "coreapp-plan.json",
-      "CASETYPE": "coreappafw",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -270,13 +268,11 @@
   "coreafw_dr": {
     "DR": {
       "PODGROUP": "afw.sec",
-      "TEMPLATEID": "core-afw-patch",
-      "GROUPSIZE": 1,
+      "TEMPLATEID": "coreapp-dr",
+      "GROUPSIZE": 3,
       "TAGGROUPS": 0,
       "INFRA": "Secondary",
       "ROLE": "app",
-      "IMPL_PLAN": "coreapp-plan.json",
-      "CASETYPE": "coreappafw",
       "CLUSTER_TYPE": "POD"
     }
   },
