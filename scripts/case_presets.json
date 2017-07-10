@@ -283,7 +283,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Primary",
-      "ROLE": "acs",
+      "ROLE": "acs,computedocker",
       "CLUSTER_TYPE": "ACS"
     }
   },
@@ -294,7 +294,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Secondary",
-      "ROLE": "acs",
+      "ROLE": "acs,computedocker",
       "CLUSTER_TYPE": "ACS"
     }
   },
