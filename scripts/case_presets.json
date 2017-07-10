@@ -284,7 +284,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Primary",
       "ROLE": "acs",
-      "CLUSTER_TYPE": "POD"
+      "CLUSTER_TYPE": "ACS"
     }
   },
   "acs_dr": {
@@ -295,7 +295,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Secondary",
       "ROLE": "acs",
-      "CLUSTER_TYPE": "POD"
+      "CLUSTER_TYPE": "ACS"
     }
   },
   "search_prod": {
