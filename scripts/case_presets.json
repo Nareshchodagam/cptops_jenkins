@@ -1966,11 +1966,10 @@
   "netbot_prod":{
     "PROD":{
       "PODGROUP":"netbot",
-      "TEMPLATEID":"straight-patch",
+      "TEMPLATEID":"netbot",
       "GROUPSIZE":1,
       "TAGGROUPS":0,
       "INFRA":"Supporting Infrastructure",
-      "CASETYPE":"hostlist",
       "ROLE":"netbot",
       "CLUSTER_TYPE":"OPSNETBOT"
     }
