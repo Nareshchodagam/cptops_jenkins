@@ -1988,7 +1988,6 @@
       "ROLE":"appauth",
       "LIST_FILTER":"True",
       "CASETYPE": "hostlist",
-      "CLUSTER_TYPE": "APPAUTH"
     }
   },
   "appauth_canary_prod":{
@@ -2004,7 +2003,6 @@
       "ROLE":"appauth",
       "LIST_FILTER":"True",
       "CASETYPE": "hostlist",
-      "CLUSTER_TYPE": "APPAUTH"
     }
   },
   "grok_prod": {
