@@ -19,7 +19,7 @@
       "TEMPLATEID": "argusmq",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-       "FILTER": [
+      "FILTER": [
         "shared1-argusmq2-5-prd"
       ],
       "INFRA": "Supporting Infrastructure",
@@ -249,6 +249,28 @@
       "TAGGROUPS": 0,
       "INFRA": "Primary",
       "ROLE": "app",
+      "CLUSTER_TYPE": "POD"
+    }
+  },
+  "coreafw-cbatch-dapp_prod": {
+    "PROD": {
+      "PODGROUP": "afw.pri",
+      "TEMPLATEID": "cbatch-dapp-prod",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "INFRA": "Primary",
+      "ROLE": "cbatch,dapp",
+      "CLUSTER_TYPE": "POD"
+    }
+  },
+  "coreafw-cbatch-dapp_dr": {
+    "DR": {
+      "PODGROUP": "afw.sec",
+      "TEMPLATEID": "cbatch-dapp-dr",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "INFRA": "Secondary",
+      "ROLE": "cbatch,dapp",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -1048,7 +1070,7 @@
       "CLUSTER_TYPE": "DATA_RESTORE"
     }
   },
-    "artifactrepo_gia": {
+  "artifactrepo_gia": {
     "GIA": {
       "PODGROUP": "artifactrepo",
       "TEMPLATEID": "straight-patch",
@@ -1058,7 +1080,7 @@
       "ROLE": "artifactrepo"
     }
   },
-    "tools_gia": {
+  "tools_gia": {
     "GIA": {
       "PODGROUP": "tools_gia",
       "TEMPLATEID": "straight-patch",
@@ -1068,7 +1090,7 @@
       "ROLE": "tools"
     }
   },
-    "ppm_gia": {
+  "ppm_gia": {
     "GIA": {
       "PODGROUP": "puppet_gia",
       "TEMPLATEID": "straight-patch",
@@ -1078,7 +1100,7 @@
       "ROLE": "rdb,ppm"
     }
   },
-    "nbmedia_gia": {
+  "nbmedia_gia": {
     "GIA": {
       "PODGROUP": "nbmedia_gia",
       "TEMPLATEID": "nbmedia",
@@ -1100,16 +1122,16 @@
       "CLUSTER_TYPE": "CHATTER"
     }
   },
-    "gforce_gia": {
+  "gforce_gia": {
     "GIA": {
-          "PODGROUP": "gforce_gia",
-          "TEMPLATEID": "gforce.linux",
-          "GROUPSIZE": 10,
-          "TAGGROUPS": 0,
-          "INFRA": "Primary",
-          "ROLE": "mnds,dnds,gforce"
-          }
-    },
+      "PODGROUP": "gforce_gia",
+      "TEMPLATEID": "gforce.linux",
+      "GROUPSIZE": 10,
+      "TAGGROUPS": 0,
+      "INFRA": "Primary",
+      "ROLE": "mnds,dnds,gforce"
+    }
+  },
   "hbase_sp_prod": {
     "PROD": {
       "PODGROUP": "hbase.clusters",
@@ -1753,7 +1775,7 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "irc",
       "CLUSTER_TYPE":"OPS"
-
+      
     }
   },
   "ajna_mirror_prod": {
@@ -1818,8 +1840,8 @@
       ],
       "ROLE":"polcore",
       "CLUSTER_TYPE": "ILLUMIO"
-   }
- },
+    }
+  },
   "poldata_canary_prod":{
     "PROD":{
       "PODGROUP":"illumio",
