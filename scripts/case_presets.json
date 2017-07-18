@@ -420,12 +420,26 @@
       "FILTER": [
         "ops-mta(1|2|30|31)-(3|4)",
         "(ops4|ops1)-mta(1|2)-(1|2)",
-        "ops0-mta(1|2)-(1|2)-(dfw|phx|frf)"
+        "ops0-mta(1|2)-(1|2)-(frf|par|iad|ord|ukb)",
+        "ops0-mta(1|2)-(1|2|3|4|5|6|7|8)-(dfw|phx)"
       ],
       "INFRA": "Primary",
       "ROLE": "mta",
       "CLUSTER_TYPE": "MTA"
-    }
+      }
+    },
+  "mta-notlive_prod":{
+        "PROD": {
+            "PODGROUP": "mtacl",
+            "TEMPLATEID": "straight-patch",
+            "GROUPSIZE":4,
+            "TAGGROUPS":0,
+            "FILTER":["ops-mta(20|21)-(1|2)", "ops0-mta(1|2)-(3|4)", "ops0-mta(1|2)-(1|2)-(chi|was|par)"],
+            "INFRA":"Primary",
+            "CL_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
+            "HO_STATUS":"ACTIVE,PROVISIONING,HW_PROVISIONING",
+            "ROLE":"mta"
+            }
   },
   "ajna_broker_prod": {
     "PROD": {
