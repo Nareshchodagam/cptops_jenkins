@@ -2022,7 +2022,7 @@
       ],
       "ROLE":"appauth",
       "LIST_FILTER":"True",
-      "CASETYPE": "hostlist",
+      "CASETYPE": "hostlist"
     }
   },
   "appauth_canary_prod":{
@@ -2037,7 +2037,7 @@
       ],
       "ROLE":"appauth",
       "LIST_FILTER":"True",
-      "CASETYPE": "hostlist",
+      "CASETYPE": "hostlist"
     }
   },
   "grok_prod": {
