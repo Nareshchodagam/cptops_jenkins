@@ -2018,7 +2018,7 @@
       "TAGGROUPS":0,
       "INFRA":"Supporting Infrastructure",
       "FILTER":[
-        "(?!(ops[01234]-appauth[12]-[12]-(prd|crz|sfz)))"
+        "(?!(ops[01234]-appauth[12]-[12]-prd)"
       ],
       "ROLE":"appauth",
       "LIST_FILTER":"True",
@@ -2033,7 +2033,7 @@
       "TAGGROUPS":0,
       "INFRA":"Supporting Infrastructure",
       "FILTER":[
-        "ops[01234]-appauth[12]-[12]-(prd|crz|sfz)"
+        "ops[01234]-appauth[12]-[12]-prd"
       ],
       "ROLE":"appauth",
       "LIST_FILTER":"True",
