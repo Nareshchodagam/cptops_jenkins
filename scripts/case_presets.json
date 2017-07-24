@@ -1784,12 +1784,26 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "ops-irc(1|2)-(1|2)-(sfm|crd)"
+        "ops-irc(1|2)-(1|2)-(sfm)"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "irc",
       "CLUSTER_TYPE":"OPS"
       
+    }
+  },
+  "irc_crd_prod": {
+    "PROD": {
+      "PODGROUP": "irccl",
+      "TEMPLATEID": "irc",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "ops-irc(1|2)-(1|2)-(crd)"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "irc",
+      "CLUSTER_TYPE":"OPS"
     }
   },
   "ajna_mirror_prod": {
