@@ -2081,5 +2081,35 @@
       "ROLE": "grok",
       "CLUSTER_TYPE": "GROK"
     }
+  },
+  "vc_prod":{
+    "PROD":{
+      "PODGROUP":"vc",
+      "TEMPLATEID":"vc",
+      "GROUPSIZE":1,
+      "TAGGROUPS":0,
+      "INFRA":"Supporting Infrastructure",
+      "FILTER":[
+        "(?!(ops0-vc[12]-1-prd)"
+      ],
+      "ROLE":"vc",
+      "LIST_FILTER":"True",
+      "CASETYPE": "hostlist"
+    }
+  },
+  "vc_canary_prod":{
+    "PROD":{
+      "PODGROUP":"vc.canary",
+      "TEMPLATEID":"vc",
+      "GROUPSIZE":1,
+      "TAGGROUPS":0,
+      "INFRA":"Supporting Infrastructure",
+      "FILTER":[
+        "ops0-vc[12]-1-prd"
+      ],
+      "ROLE":"vc",
+      "LIST_FILTER":"True",
+      "CASETYPE": "hostlist"
+    }
   }
 }
