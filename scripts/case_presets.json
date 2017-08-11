@@ -1841,22 +1841,14 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
+      "FILTER":[
+        "(?!(ops0-polcore[12]-1-prd))"
+      ],
       "ROLE": "polcore",
       "CLUSTER_TYPE": "ILLUMIO"
     }
   },
-  "poldata_prod": {
-    "PROD": {
-      "PODGROUP": "illumio",
-      "TEMPLATEID": "poldata",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "poldata",
-      "CLUSTER_TYPE": "ILLUMIO"
-    }
-  },
-  "polcore_canary_prod":{
+   "polcore_canary_prod":{
     "PROD":{
       "PODGROUP":"illumio",
       "TEMPLATEID":"polcore",
@@ -1867,6 +1859,20 @@
         "ops0-polcore[12]-1-prd"
       ],
       "ROLE":"polcore",
+      "CLUSTER_TYPE": "ILLUMIO"
+    }
+  },
+  "poldata_prod": {
+    "PROD": {
+      "PODGROUP": "illumio",
+      "TEMPLATEID": "poldata",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER":[
+        "(?!(ops0-poldata[12]-1-prd))"
+      ],
+      "ROLE": "poldata",
       "CLUSTER_TYPE": "ILLUMIO"
     }
   },
@@ -2080,6 +2086,36 @@
       ],
       "ROLE": "grok",
       "CLUSTER_TYPE": "GROK"
+    }
+  },
+  "vc_prod":{
+    "PROD":{
+      "PODGROUP":"vc",
+      "TEMPLATEID":"vc",
+      "GROUPSIZE":1,
+      "TAGGROUPS":0,
+      "INFRA":"Supporting Infrastructure",
+      "FILTER":[
+        "(?!(ops0-vc[12]-1-prd)"
+      ],
+      "ROLE":"vc",
+      "LIST_FILTER":"True",
+      "CASETYPE": "hostlist"
+    }
+  },
+  "vc_canary_prod":{
+    "PROD":{
+      "PODGROUP":"vc.canary",
+      "TEMPLATEID":"vc",
+      "GROUPSIZE":1,
+      "TAGGROUPS":0,
+      "INFRA":"Supporting Infrastructure",
+      "FILTER":[
+        "ops0-vc[12]-1-prd"
+      ],
+      "ROLE":"vc",
+      "LIST_FILTER":"True",
+      "CASETYPE": "hostlist"
     }
   }
 }
