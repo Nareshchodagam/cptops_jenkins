@@ -1084,10 +1084,10 @@
       "CLUSTER_TYPE": "DATA_RESTORE"
     }
   },
-  "artifactrepo_gia": {
-    "GIA": {
+  "artifactrepo_prod": {
+    "PROD": {
       "PODGROUP": "artifactrepo",
-      "TEMPLATEID": "straight-patch",
+      "TEMPLATEID": "artifactrepo",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
