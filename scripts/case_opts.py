@@ -21,7 +21,7 @@ opt_dict = {'gsize': '-s',
             'excludes': '--exclude',
             'list_filter': '--HLGrp',
             'impl_plan': '--implplan',
-            'host_validation': '--host_validation',
+            'no_host_validation': '--no_host_validation',
             'auto_close_case': '--auto_close_case',
             'nolinebacker': '--nolinebacker',
             'hostpercent': '--hostpercent'}

@@ -96,8 +96,12 @@ def cmd_builder(sets, r_class=False):
     bld_cmd['subject'] = options.subject
     bld_cmd['dowork'] = options.dowork
     # This change will help user to choose the way he/she wants to create case.
-    if options.host_validation:
-        bld_cmd['host_validation'] = options.host_validation
+
+    if 'prsn' in bld_cmd['role'] or 'chan' in bld_cmd['role']: # To make sure we are not using host_validation during UMPS case creation
+        bld_cmd['no_host_validation'] = '--no_host_validation'
+
+    if options.no_host_v:
+        bld_cmd['no_host_validation'] = options.no_host_v
     if options.auto_close_case:
         bld_cmd['auto_close_case'] = options.auto_close_case
     if options.nolinebacker:
@@ -153,6 +157,9 @@ def case_builder(bld_cmd):
     pod_cmd = ["python", os.environ["HOME"] + "/git/cptops_case_gen/gen_cases.py" ]
     for opt in co.opt_dict.iterkeys():
         if bld_cmd.has_key(opt) and bld_cmd[opt] != "":
+            if opt == 'no_host_validation' and bld_cmd['no_host_validation'] != '':
+                pod_cmd.append(co.opt_dict[opt])
+                continue
             pod_cmd.append(co.opt_dict[opt])
             pod_cmd.append(str(bld_cmd[opt]))
     for item in pod_cmd:
@@ -258,7 +265,7 @@ if __name__ == "__main__":
     parser.add_argument("--hoststat", dest="hoststat", help="Host Status.")
     parser.add_argument("-r", dest="regex", help="Regex Filter")
     parser.add_argument("-f", dest="filter", help="Filter")
-    parser.add_argument("--host_validation", dest="host_validation", action="store_true", default=False, help="Flag to verify remote hosts")
+    parser.add_argument("--no_host_validation", dest="no_host_v", action="store_true", help="Flag to skip verify remote hosts")
     parser.add_argument("--auto_close_case", dest="auto_close_case", action="store_true", default=True, help="To close the cases during "
                                                                                                          "execution")
     # Added as per W-3779869 to skip linebacker
