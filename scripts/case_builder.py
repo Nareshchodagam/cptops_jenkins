@@ -39,7 +39,6 @@ def cmd_builder(sets, r_class=False):
         role_class = options.roleclass
     role_status = role_class.split('_')[-1].upper()
     #dr = "True" if role_status == "DR" else "FALSE"
-
     pod_cmd = ["python", home_dir + "/git/cptops_case_gen/gen_cases.py" ]
     bld_cmd = {}
     bld_cmd['status'] = "True" if role_status == "DR" else "FALSE"
@@ -49,7 +48,7 @@ def cmd_builder(sets, r_class=False):
     bld_cmd['tagsize'] = options.taggroups if options.taggroups != None else sets[role_class][role_status]['TAGGROUPS']
     bld_cmd['infra'] = sets[role_class][role_status]['INFRA']
     bld_cmd['role'] = sets[role_class][role_status]['ROLE']
-    bld_cmd['template'] = sets[role_class][role_status]['TEMPLATEID']
+    bld_cmd['template'] = options.template if options.template != None else sets[role_class][role_status]['TEMPLATEID']
     if 'IMPLPLAN' in sets[role_class][role_status].keys():
         bld_cmd['impl_plan'] = "templates/"+sets[role_class][role_status]['IMPLPLAN']+".json"
     if bld_cmd['role'] == 'app':
@@ -254,6 +253,7 @@ if __name__ == "__main__":
     parser.add_argument("--full", action="store_true", dest="full_list", help="View presets of a roleclass.")
     parser.add_argument("-s", dest="search_role", help="Search for a role.")
     parser.add_argument("--roleclass", dest="roleclass", help="Role Class")
+    parser.add_argument("--template", dest="template", help="Template to use")
     parser.add_argument("--podgroup", dest="podgroup", help="Hostlist file for role.")
     parser.add_argument("--groupsize", dest="groupsize", help="Groupsize.")
     parser.add_argument("--taggroups", dest="taggroups", help="Taggroups.")
@@ -302,3 +302,4 @@ if __name__ == "__main__":
         for canary in canary_cases:
             cmd_builder(sets, canary)
         dryrun()
+
