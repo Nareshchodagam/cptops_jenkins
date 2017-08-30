@@ -106,7 +106,8 @@ def cmd_builder(sets, r_class=False):
     if options.nolinebacker:
         bld_cmd['nolinebacker'] = options.nolinebacker
     #bld_cmd['clusteropstat'] = sets[role_class][role_status]['CL_STATUS']
-    #bld_cmd['hostopstat'] = sets[role_class][role_status]['HO_STATUS']
+    if 'HO_STATUS' in sets[role_class][role_status].keys():
+	bld_cmd['hostopstat'] = sets[role_class][role_status]['HO_STATUS']
 
     #Custom parameters within the case_presets.json
     #These options are not within each predefined role_class.
@@ -119,7 +120,8 @@ def cmd_builder(sets, r_class=False):
                 bld_cmd[str.lower(key)] = sets[role_class][role_status][key]
     if options.cluststat:
        bld_cmd['clusteropstat'] = options.cluststat
-
+    if options.hoststat:
+	bld_cmd['hostopstat'] = options.hoststat
     logging.debug("TEMPLATEID = " + bld_cmd['template'])
     logging.debug("GROUPSIZE = " + str(bld_cmd['gsize']))
     logging.debug("TAGGROUPS = " + str(bld_cmd['tagsize']))
@@ -133,7 +135,8 @@ def cmd_builder(sets, r_class=False):
     logging.debug("HOSTPERCENT = " + bld_cmd['hostpercent'])
     logging.debug("Contents of uploaded file %s" %  bld_cmd['podgroup'])
     #logging.debug("CL_STATUS = " + bld_cmd['clusteropstat'])
-    #logging.debug("HO_STATUS = " + bld_cmd['hostopstat'])
+    if 'HO_STATUS' in sets[role_class][role_status].keys() or options.hoststat:
+	logging.debug("HO_STATUS = " + bld_cmd['hostopstat'])
     with open(bld_cmd['podgroup'], 'r') as fin:
         print fin.read()
     case_builder(bld_cmd)

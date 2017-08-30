@@ -49,6 +49,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "prsn,chan,msg,dstore",
+      "HO_STATUS": "ACTIVE,IN_MAINTENANCE",
       "CLUSTER_TYPE": "CHATTER"
     }
   },
@@ -1425,7 +1426,7 @@
     "PROD": {
       "PODGROUP": "insights.pri",
       "TEMPLATEID": "insights",
-      "GROUPSIZE": 18,
+      "GROUPSIZE": 20,
       "TAGGROUPS": 0,
       "FILTER": [
         "(?!.*(redis[1-2]-1-(chi|lon|dfw|was)|iworker((1-15|2-9)-chi|(1-11|3-1)-was|[1-2]-1-)))"
