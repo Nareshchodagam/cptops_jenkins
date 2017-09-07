@@ -688,12 +688,12 @@
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mandm-splunk-idxr",
-      "CLUSTER_TYPE": "SPLUNK-IDX"
+      "CLUSTER_TYPE": "SPLUNK-IDX-OPS"
     }
   },
   "mandm_splunk_switch_prod": {
     "PROD": {
-      "PODGROUP": "splunk_prod-idxcl",
+      "PODGROUP": "splunk-prod-idxcl",
       "TEMPLATEID": "mandm-splunk-switch",
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
@@ -707,7 +707,7 @@
   },
   "mandm_splunk_switch_canary_prod": {
     "PROD": {
-      "PODGROUP": "splunk_prod-idxcl.canary",
+      "PODGROUP": "splunk-prod-idxcl",
       "TEMPLATEID": "mandm-splunk-switch",
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
@@ -721,7 +721,7 @@
   },
   "mandm_splunk_switch_sfz_prod": {
     "PROD": {
-      "PODGROUP": "splunk_prod-idxcl",
+      "PODGROUP": "splunk-prod-idxcl",
       "TEMPLATEID": "mandm-splunk-switch.SFZ",
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
