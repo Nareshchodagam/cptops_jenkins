@@ -2000,7 +2000,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?!(ops0-pkicontroller[12]-1-prd))"
+        "(?!(ops0-pkicontroller[12]-[12]-prd))"
       ],
       "ROLE": "pkicontroller",
       "CLUSTER_TYPE": "PKI"
@@ -2014,7 +2014,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "ops0-pkicontroller[12]-1-prd"
+        "ops0-pkicontroller[12]-[12]-prd"
       ],
       "ROLE": "pkicontroller",
       "CLUSTER_TYPE": "PKI"
