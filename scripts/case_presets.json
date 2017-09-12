@@ -1706,7 +1706,7 @@
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
       "FILTER": [
-        ".*(argusws(1|2)-[1-4]-|argusws1-5-)"
+        "(?!(.*argusws2-5-))"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "argus_ws",
