@@ -2000,7 +2000,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?!(ops0-pkicontroller[12]-1-prd))"
+        "(?!(ops0-pkicontroller[12]-[12]-prd))"
       ],
       "ROLE": "pkicontroller",
       "CLUSTER_TYPE": "PKI"
@@ -2014,7 +2014,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "ops0-pkicontroller[12]-1-prd"
+        "ops0-pkicontroller[12]-[12]-prd"
       ],
       "ROLE": "pkicontroller",
       "CLUSTER_TYPE": "PKI"
@@ -2117,6 +2117,34 @@
       "ROLE":"vc",
       "LIST_FILTER":"True",
       "CASETYPE": "hostlist"
+    }
+  },
+  "syslog_prod": {
+    "PROD": {
+      "PODGROUP": "syslog",
+      "TEMPLATEID": "syslog",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?!(ops0-syslog[12]-1-prd))"
+      ],
+      "ROLE": "syslog",
+      "CLUSTER_TYPE": "SYSLOG"
+    }
+  },
+  "syslog_canary_prod": {
+    "PROD": {
+      "PODGROUP": "syslog",
+      "TEMPLATEID": "syslog",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "ops0-syslog[12]-1-prd"
+      ],
+      "ROLE": "syslog",
+      "CLUSTER_TYPE": "SYSLOG"
     }
   }
 }
