@@ -1947,7 +1947,7 @@
       "GROUPSIZE":1,
       "TAGGROUPS":0,
       "INFRA":"Supporting Infrastructure",
-      "FILTER":["(?!shared1-arguscache1-3-prd|shared1-arguscache2-2-prd)"],
+      "FILTER":["(?!(shared1-arguscache1-3-prd|shared1-arguscache2-2-prd))"],
       "ROLE":"argus_cache",
       "CLUSTER_TYPE":"ARGUS"
     }
