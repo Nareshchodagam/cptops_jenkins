@@ -878,7 +878,7 @@
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "searchzk",
-      "CLUSTER_TYPE": "ASSETS"
+      "CLUSTER_TYPE": "SEARCHZK"
     }
   },
   "ffx_canary_prod": {
@@ -958,7 +958,8 @@
       "FILTER": [
         "ops-monitor2-1-sfm"
       ],
-      "ROLE": "monitor"
+      "ROLE": "monitor",
+      "CASETYPE": "hostlist"
     }
   },
   "restoreffx_prod": {
