@@ -878,7 +878,7 @@
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "searchzk",
-      "CLUSTER_TYPE": "SEARCHZK"
+      "CLUSTER_TYPE": "ASSETS"
     }
   },
   "ffx_canary_prod": {
