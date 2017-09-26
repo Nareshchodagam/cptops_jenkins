@@ -958,7 +958,8 @@
       "FILTER": [
         "ops-monitor2-1-sfm"
       ],
-      "ROLE": "monitor"
+      "ROLE": "monitor",
+      "CASETYPE": "hostlist"
     }
   },
   "restoreffx_prod": {
