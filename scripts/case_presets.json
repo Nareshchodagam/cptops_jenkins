@@ -253,6 +253,41 @@
       "CLUSTER_TYPE": "POD"
     }
   },
+  "coreafw_canary_prod": {
+    "PROD": {
+      "PODGROUP": "coreapp.canary",
+      "TEMPLATEID": "coreapp-prod",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [".*app1-.*"],
+      "INFRA": "Primary",
+      "ROLE": "app",
+      "CLUSTER_TYPE": "POD"
+    }
+  },
+  "coreafw_app_reboot_prod": {
+    "PROD": {
+      "PODGROUP": "coreapp.canary",
+      "TEMPLATEID": "coreapp-reboot",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": ["eu4-app2-.*"],
+      "INFRA": "Primary",
+      "ROLE": "app",
+      "CLUSTER_TYPE": "POD"
+    }
+  },
+  "coreafw_dr": {
+    "DR": {
+      "PODGROUP": "afw.sec",
+      "TEMPLATEID": "coreapp-dr",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 0,
+      "INFRA": "Secondary",
+      "ROLE": "app",
+      "CLUSTER_TYPE": "POD"
+    }
+  },
   "coreafw-cbatch-dapp_prod": {
     "PROD": {
       "PODGROUP": "afw.pri",
@@ -275,27 +310,15 @@
       "CLUSTER_TYPE": "POD"
     }
   },
-  "coreafw_canary_prod": {
+  "coreafw_cbatch_dapp_canary_prod": {
     "PROD": {
       "PODGROUP": "coreapp.canary",
-      "TEMPLATEID": "core-afw-patch",
-      "GROUPSIZE": 1,
+      "TEMPLATEID": "cbatch-dapp-prod",
+      "GROUPSIZE": 2,
       "TAGGROUPS": 0,
+      "FILTER": [".*[cbatch|dapp]1-.*"],
       "INFRA": "Primary",
-      "ROLE": "app",
-      "IMPL_PLAN": "coreapp-afw-plan.json",
-      "CASETYPE": "coreapp-canary",
-      "CLUSTER_TYPE": "POD"
-    }
-  },
-  "coreafw_dr": {
-    "DR": {
-      "PODGROUP": "afw.sec",
-      "TEMPLATEID": "coreapp-dr",
-      "GROUPSIZE": 3,
-      "TAGGROUPS": 0,
-      "INFRA": "Secondary",
-      "ROLE": "app",
+      "ROLE": "cbatch,dapp",
       "CLUSTER_TYPE": "POD"
     }
   },
