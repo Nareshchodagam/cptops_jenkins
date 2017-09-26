@@ -692,17 +692,28 @@
       "TEMPLATEID": "mandm-splunk-idxr",
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!shared-logsearch100-4-crz)"
-      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mandm-splunk-idxr",
       "CLUSTER_TYPE": "SPLUNK-IDX"
     }
   },
-  "mandm_splunk_idxr_canary_crz_prod": {
+  "mandm_splunk_idxr_ops_crz_prod": {
     "PROD": {
-      "PODGROUP": "splunk-idx_crzcl.canary",
+      "PODGROUP": "splunk-idx-ops_crzcl",
+      "TEMPLATEID": "mandm-splunk-idxr",
+      "GROUPSIZE": 5,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!shared-logsearch100-4-crz)"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "mandm-splunk-idxr",
+      "CLUSTER_TYPE": "SPLUNK-IDX-OPS"
+    }
+  },
+  "mandm_splunk_idxr_ops_canary_crz_prod": {
+    "PROD": {
+      "PODGROUP": "splunk-idx-ops_crzcl",
       "TEMPLATEID": "mandm-splunk-idxr",
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
