@@ -1928,7 +1928,7 @@
   },
   "cmgt_active_prod":{
     "PROD":{
-      "PODGROUP":"cmgt.was",
+      "PODGROUP":"cmgt.active",
       "TEMPLATEID":"cmgt",
       "GROUPSIZE":1,
       "TAGGROUPS":0,
@@ -1939,7 +1939,7 @@
   },
   "cmgt_passive_prod": {
     "PROD": {
-      "PODGROUP": "cmgt.chi",
+      "PODGROUP": "cmgt.passive",
       "TEMPLATEID": "cmgt_standby",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
