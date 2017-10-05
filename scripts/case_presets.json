@@ -759,6 +759,9 @@
       "TEMPLATEID": "mandm-splunk-switch.SFZ",
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
+      "FILTER": [
+        ".*-sfz"
+       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mandm-splunk-switch",
       "CLUSTER_TYPE": "SPLUNK-IDX"
