@@ -2167,10 +2167,11 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "ops0-cmgtapi1-1-prd|ops0-cmgtapi2-1-prd"
+      ],
       "ROLE": "cmgtapi",
-      "CASETYPE": "hostlist",
-      "CLUSTER_TYPE":"cmgtapi",
-      "LIST_FILTER": "True"
+      "CLUSTER_TYPE":"ENG"
     }
   }
 }
