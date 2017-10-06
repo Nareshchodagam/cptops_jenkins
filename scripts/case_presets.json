@@ -556,7 +556,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!ops-mmrelay1-1-asg)"
+        "(?!ops0-mmrelay1-1-frf)"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mmrelay",
@@ -570,7 +570,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "ops-mmrelay1-1-asg"
+        "ops0-mmrelay1-1-frf"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mmrelay",
