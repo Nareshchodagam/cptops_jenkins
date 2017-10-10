@@ -556,7 +556,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!ops-mmrelay1-1-asg)"
+        "(?!ops0-mmrelay1-1-frf)"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mmrelay",
@@ -570,7 +570,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "ops-mmrelay1-1-asg"
+        "ops0-mmrelay1-1-frf"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mmrelay",
@@ -759,6 +759,9 @@
       "TEMPLATEID": "mandm-splunk-switch.SFZ",
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
+      "FILTER": [
+        ".*-sfz"
+       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mandm-splunk-switch",
       "CLUSTER_TYPE": "SPLUNK-IDX"
@@ -1182,24 +1185,28 @@
       "ROLE": "mnds,dnds,gforce"
     }
   },
-  "hbase_sp_prod": {
+   "hbase_sp_prod": {
     "PROD": {
       "PODGROUP": "hbase.clusters",
       "TEMPLATEID": "hbase.linux",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 20,
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 10,
+      "FILTER": ["(?!(hdaas.*))"
+      ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds,dnds",
       "CLUSTER_TYPE": "HBASE"
     }
   },
-  "hbase_prod": {
+  "hbase_deepsea_prod": {
     "PROD": {
-      "PODGROUP": "hbase.pri",
+      "PODGROUP": "hbase.clusters",
       "TEMPLATEID": "hbase.linux",
-      "GROUPSIZE": 3,
-      "TAGGROUPS": 20,
-      "INFRA": "Primary",
+      "GROUPSIZE": 5,
+      "TAGGROUPS": 5,
+      "FILTER": ["(hdaas.*)"
+      ],
+      "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds,dnds",
       "CLUSTER_TYPE": "HBASE"
     }
@@ -1379,6 +1386,20 @@
       "CLUSTER_TYPE": "RELEASE"
     }
   },
+  "hwmon_crd_prod": {
+    "PROD": {
+      "PODGROUP": "hwmon.crd",
+      "TEMPLATEID": "hwmon",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "iops-lab2-2-crd"
+      ],
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "hwmon",
+      "CLUSTER_TYPE": "IOPS-LAB"
+    }
+  },  
   "hwmon_prod": {
     "PROD": {
       "PODGROUP": "hwmon",
