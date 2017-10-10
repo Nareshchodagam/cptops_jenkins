@@ -1386,6 +1386,20 @@
       "CLUSTER_TYPE": "RELEASE"
     }
   },
+  "hwmon_crd_prod": {
+    "PROD": {
+      "PODGROUP": "hwmon.crd",
+      "TEMPLATEID": "hwmon",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "iops-lab2-2-crd"
+      ],
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "hwmon",
+      "CLUSTER_TYPE": "IOPS-LAB"
+    }
+  },  
   "hwmon_prod": {
     "PROD": {
       "PODGROUP": "hwmon",
