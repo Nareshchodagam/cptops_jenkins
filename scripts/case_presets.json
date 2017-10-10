@@ -767,6 +767,34 @@
       "CLUSTER_TYPE": "SPLUNK-IDX"
     }
   },
+  "mandm_splunk_switch_prod": {
+    "PROD": {
+      "PODGROUP": "splunk-switch_crzcl",
+      "TEMPLATEID": "mandm-splunk-switch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!shared-logsearch2-11-crz)"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "mandm-splunk-switch",
+      "CLUSTER_TYPE": "SPLUNK-SWITCH"
+    }
+  },
+  "mandm_splunk_switch_canary_prod": {
+    "PROD": {
+      "PODGROUP": "splunk-switch_crzcl",
+      "TEMPLATEID": "mandm-splunk-switch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "shared-logsearch2-11-crz"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "mandm-splunk-switch",
+      "CLUSTER_TYPE": "SPLUNK-SWITCH"
+    }
+  },
   "mgmt_hub_prod": {
     "PROD": {
       "PODGROUP": "pod.pri",
