@@ -2203,7 +2203,7 @@
       "CLUSTER_TYPE": "SYSLOG"
     }
   },
-   "cmgtapi_prod": {
+   "cmgtapi_crz_prod": {
     "PROD": {
       "PODGROUP": "cmgtapi",
       "TEMPLATEID": "cmgtapi",
@@ -2214,6 +2214,20 @@
       "CASETYPE": "hostlist",
       "CLUSTER_TYPE":"cmgtapi",
       "LIST_FILTER": "True"
+    }
+  },
+  "cmgtapi_prd_prod": {
+    "PROD": {
+      "PODGROUP": "cmgtapi_prd",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "ops0-cmgtapi1-1-prd|ops0-cmgtapi2-1-prd"
+      ],
+      "ROLE": "cmgtapi",
+      "CLUSTER_TYPE":"ENG"
     }
   }
 }
