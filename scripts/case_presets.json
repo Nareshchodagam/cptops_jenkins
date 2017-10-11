@@ -767,6 +767,34 @@
       "CLUSTER_TYPE": "SPLUNK-IDX"
     }
   },
+  "mandm_splunk_switch_prod": {
+    "PROD": {
+      "PODGROUP": "splunk-switch_crzcl",
+      "TEMPLATEID": "mandm-splunk-switch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!shared-logsearch2-11-crz)"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "mandm-splunk-switch",
+      "CLUSTER_TYPE": "SPLUNK-SWITCH"
+    }
+  },
+  "mandm_splunk_switch_canary_prod": {
+    "PROD": {
+      "PODGROUP": "splunk-switch_crzcl",
+      "TEMPLATEID": "mandm-splunk-switch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "shared-logsearch2-11-crz"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "mandm-splunk-switch",
+      "CLUSTER_TYPE": "SPLUNK-SWITCH"
+    }
+  },
   "mgmt_hub_prod": {
     "PROD": {
       "PODGROUP": "pod.pri",
@@ -1949,7 +1977,7 @@
   },
   "cmgt_active_prod":{
     "PROD":{
-      "PODGROUP":"cmgt.was",
+      "PODGROUP":"cmgt.active",
       "TEMPLATEID":"cmgt",
       "GROUPSIZE":1,
       "TAGGROUPS":0,
@@ -1960,7 +1988,7 @@
   },
   "cmgt_passive_prod": {
     "PROD": {
-      "PODGROUP": "cmgt.chi",
+      "PODGROUP": "cmgt.passive",
       "TEMPLATEID": "cmgt_standby",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
