@@ -770,7 +770,7 @@
   "mandm_splunk_switch_prod": {
     "PROD": {
       "PODGROUP": "splunk-switch_crzcl",
-      "TEMPLATEID": "mandm-splunk-switch",
+      "TEMPLATEID": "mandm-splunk-switch.SFZ",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
@@ -784,7 +784,7 @@
   "mandm_splunk_switch_canary_prod": {
     "PROD": {
       "PODGROUP": "splunk-switch_crzcl",
-      "TEMPLATEID": "mandm-splunk-switch",
+      "TEMPLATEID": "mandm-splunk-switch.SFZ",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
