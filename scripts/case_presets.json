@@ -1421,7 +1421,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "iops-lab2-2-crd"
+        "ops-hwmon1-1-crd"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "hwmon",
