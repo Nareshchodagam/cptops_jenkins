@@ -767,10 +767,10 @@
       "CLUSTER_TYPE": "SPLUNK-IDX"
     }
   },
-  "mandm_splunk_switch_prod": {
+  "mandm_splunk_switch_crz_prod": {
     "PROD": {
       "PODGROUP": "splunk-switch_crzcl",
-      "TEMPLATEID": "mandm-splunk-switch",
+      "TEMPLATEID": "mandm-splunk-switch.CRZ",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
@@ -781,10 +781,10 @@
       "CLUSTER_TYPE": "SPLUNK-SWITCH"
     }
   },
-  "mandm_splunk_switch_canary_prod": {
+  "mandm_splunk_switch_crz_canary_prod": {
     "PROD": {
       "PODGROUP": "splunk-switch_crzcl",
-      "TEMPLATEID": "mandm-splunk-switch",
+      "TEMPLATEID": "mandm-splunk-switch.CRZ",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
