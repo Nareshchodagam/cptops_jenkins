@@ -514,7 +514,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!ops-mmxcvr1-1-sfz)"
+        "(?!ops-mmxcvr16-2-sfz)"
       ],
       "REGEX": "failoverstatus=PRIMARY",
       "INFRA": "Supporting Infrastructure",
@@ -530,7 +530,7 @@
       "TAGGROUPS": 0,
       "REGEX": "failoverstatus=PRIMARY",
       "FILTER": [
-        "ops-mmxcvr1-1-sfz"
+        "ops-mmxcvr16-2-sfz"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mmxcvr",
