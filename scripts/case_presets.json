@@ -2310,5 +2310,33 @@
       "ROLE": "scrtkafka",
       "CLUSTER_TYPE": "scrtkafka"
     }
+  },
+  "vnscanam_prod": {
+    "PROD": {
+      "PODGROUP": "vulnscan",
+      "TEMPLATEID": "vnscanam",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER":[
+        "(?!(sec0-vnscanam[12]-1-par))"
+      ],
+      "ROLE": "vnscanam",
+      "CLUSTER_TYPE": "VULNSCAN"
+    }
+  },
+   "vnscanam_canary_prod":{
+    "PROD":{
+      "PODGROUP":"vulnscan",
+      "TEMPLATEID":"vnscanam",
+      "GROUPSIZE":1,
+      "TAGGROUPS":0,
+      "INFRA":"Supporting Infrastructure",
+      "FILTER":[
+        "sec0-vnscanam[12]-1-par"
+      ],
+      "ROLE":"vnscanam",
+      "CLUSTER_TYPE": "VULNSCAN"
+    }
   }
 }
