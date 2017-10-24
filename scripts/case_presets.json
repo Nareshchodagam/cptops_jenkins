@@ -2291,7 +2291,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?!(gla3-scrtkafka.*)"
+        "(?!(gla3-scrtkafka.*))"
       ],
       "ROLE": "scrtkafka",
       "CLUSTER_TYPE": "scrtkafka"
