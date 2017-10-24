@@ -1620,7 +1620,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Primary",
-      "ROLE": "smarts",
+      "ROLE": "smarts,nms",
       "CLUSTER_TYPE": "SMARTS"
     }
   },
@@ -1631,7 +1631,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Primary",
-      "ROLE": "smarts",
+      "ROLE": "smarts,nms",
       "CLUSTER_TYPE": "SMARTS"
     }
   },
