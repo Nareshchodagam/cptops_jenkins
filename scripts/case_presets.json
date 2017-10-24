@@ -1139,7 +1139,7 @@
   },
   "sapp_prod": {
     "PROD": {
-      "PODGROUP": "sapp.pri",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "generic_app",
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
