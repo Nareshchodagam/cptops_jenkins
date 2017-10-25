@@ -2338,5 +2338,40 @@
       "ROLE":"vnscanam",
       "CLUSTER_TYPE": "VULNSCAN"
     }
+  },
+  "logbus_dev_prod": {
+    "PROD": {
+      "PODGROUP": "logbuscl",
+      "TEMPLATEID": "logbus",
+      "GROUPSIZE": 15,
+      "TAGGROUPS": 0,
+      "INFRA": "Secondary",
+      "EXCLUDES": "logbus_prod",
+      "ROLE": "logbus",
+      "CLUSTER_TYPE": "POD"
+    }
+  },
+  "logbus_prod": {
+    "PROD": {
+      "PODGROUP": "logbus_prod",
+      "TEMPLATEID": "logbus",
+      "GROUPSIZE": 10,
+      "TAGGROUPS": 0,
+      "INFRA": "Primary",
+      "ROLE": "logbus",
+      "CASETYPE": "hostlist",
+      "CLUSTER_TYPE": "POD"
+    }
+  },
+  "gateway_prod": {
+    "PROD": {
+      "PODGROUP": "gatewaycl",
+      "TEMPLATEID": "gateway",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Primary",
+      "ROLE": "gateway",
+      "CLUSTER_TYPE": "POD"
+    }
   }
 }
