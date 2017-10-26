@@ -2299,7 +2299,7 @@
   },
   "lapp_scrtkafka_canary_prod": {
     "PROD": {
-      "PODGROUP": "lapp_scrtkafka",
+      "PODGROUP": "lapp_scrtkafka_clusters",
       "TEMPLATEID": "lapp_scrtkafka",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
