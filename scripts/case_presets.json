@@ -1899,7 +1899,7 @@
     "praapp_prd_prod": {
     "PROD": {
       "PODGROUP": "pracl",
-      "TEMPLATEID": "straight-patch",
+      "TEMPLATEID": "straight-patch-co7",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
@@ -1913,7 +1913,7 @@
   "praccn_prd_prod": {
     "PROD": {
       "PODGROUP": "pracl",
-      "TEMPLATEID": "straight-patch",
+      "TEMPLATEID": "straight-patch-co7",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
@@ -1927,7 +1927,7 @@
   "pravmh_prd_prod": {
     "PROD": {
       "PODGROUP": "pracl",
-      "TEMPLATEID": "straight-patch",
+      "TEMPLATEID": "straight-patch-co7",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
