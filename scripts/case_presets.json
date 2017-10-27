@@ -1896,6 +1896,48 @@
       "CLUSTER_TYPE": "OPS"
     }
   },
+    "praapp_prd_prod": {
+    "PROD": {
+      "PODGROUP": "pracl",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "ops0-praapp(1|2)-1-(prd)"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "praapp",
+      "CLUSTER_TYPE":"PRA"
+    }
+  },
+  "praccn_prd_prod": {
+    "PROD": {
+      "PODGROUP": "pracl",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "ops0-praccn(1|2)-1-(prd)"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "praccn",
+      "CLUSTER_TYPE":"PRA"
+    }
+  },
+  "pravmh_prd_prod": {
+    "PROD": {
+      "PODGROUP": "pracl",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "ops0-pravmh(1|2)-1-(prd)"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "pravmh",
+      "CLUSTER_TYPE":"PRA"
+    }
+  },
   "irc_crd_prod": {
     "PROD": {
       "PODGROUP": "irccl",
