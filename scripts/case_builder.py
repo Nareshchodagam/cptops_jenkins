@@ -112,7 +112,7 @@ def cmd_builder(sets, r_class=False):
     #Custom parameters within the case_presets.json
     #These options are not within each predefined role_class.
     #So we test if values are present.
-    for key in ['CASETYPE', 'IMPL_PLAN' 'EXCLUDES','LIST_FILTER']:
+    for key in ['CASETYPE', 'IMPL_PLAN', 'EXCLUDES','LIST_FILTER']:
         if key in sets[role_class][role_status]:
             if key == 'EXCLUDES':
                 bld_cmd[str.lower(key)] = "hostlists/" + sets[role_class][role_status][key]
