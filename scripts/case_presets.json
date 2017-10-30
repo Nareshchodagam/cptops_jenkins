@@ -2342,7 +2342,7 @@
   "logbus_dev_prod": {
     "PROD": {
       "PODGROUP": "logbuscl",
-      "TEMPLATEID": "logbus",
+      "TEMPLATEID": "logbus_dev",
       "GROUPSIZE": 15,
       "TAGGROUPS": 0,
       "INFRA": "Secondary",
