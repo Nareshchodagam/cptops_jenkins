@@ -1896,7 +1896,7 @@
       "CLUSTER_TYPE": "OPS"
     }
   },
-    "praapp_prd_prod": {
+  "praapp_prd_prod": {
     "PROD": {
       "PODGROUP": "pracl",
       "TEMPLATEID": "straight-patch-co7",
@@ -1907,7 +1907,7 @@
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "praapp",
-      "CLUSTER_TYPE":"PRA"
+      "CLUSTER_TYPE": "PRA"
     }
   },
   "praccn_prd_prod": {
@@ -1921,7 +1921,7 @@
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "praccn",
-      "CLUSTER_TYPE":"PRA"
+      "CLUSTER_TYPE": "PRA"
     }
   },
   "pravmh_prd_prod": {
@@ -1935,7 +1935,7 @@
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "pravmh",
-      "CLUSTER_TYPE":"PRA"
+      "CLUSTER_TYPE": "PRA"
     }
   },
   "irc_crd_prod": {
@@ -2360,24 +2360,24 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-      "FILTER":[
+      "FILTER": [
         "(?!(sec0-vnscanam[12]-1-par))"
       ],
       "ROLE": "vnscanam",
       "CLUSTER_TYPE": "VULNSCAN"
     }
   },
-   "vnscanam_canary_prod":{
-    "PROD":{
-      "PODGROUP":"vulnscan",
-      "TEMPLATEID":"vnscanam",
-      "GROUPSIZE":1,
-      "TAGGROUPS":0,
-      "INFRA":"Supporting Infrastructure",
-      "FILTER":[
+  "vnscanam_canary_prod": {
+    "PROD": {
+      "PODGROUP": "vulnscan",
+      "TEMPLATEID": "vnscanam",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
         "sec0-vnscanam[12]-1-par"
       ],
-      "ROLE":"vnscanam",
+      "ROLE": "vnscanam",
       "CLUSTER_TYPE": "VULNSCAN"
     }
   },
@@ -2414,6 +2414,48 @@
       "INFRA": "Primary",
       "ROLE": "gateway",
       "CLUSTER_TYPE": "POD"
+    }
+  },
+  "dbextract1_prod": {
+    "PROD": {
+      "PODGROUP": "itedw_cl",
+      "TEMPLATEID": "it_edw",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Secondary",
+      "ROLE": "it_edw",
+      "FILTER": [
+        "^.*1-1"
+      ],
+      "CLUSTER_TYPE": "it_edw"
+    }
+  },
+  "dbextract2_prod": {
+    "PROD": {
+      "PODGROUP": "itedw_cl",
+      "TEMPLATEID": "it_edw",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Secondary",
+      "ROLE": "it_edw",
+      "FILTER": [
+        "^.*(2-1)-(?!ord)"
+      ],
+      "CLUSTER_TYPE": "it_edw"
+    }
+  },
+  "dbextract_canary_prod": {
+    "PROD": {
+      "PODGROUP": "itedw_cl",
+      "TEMPLATEID": "it_edw",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Secondary",
+      "ROLE": "it_edw",
+      "FILTER": [
+        "shared0-dbextract2-1-ord"
+      ],
+      "CLUSTER_TYPE": "it_edw"
     }
   }
 }
