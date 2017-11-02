@@ -2307,7 +2307,6 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "cmgtapi",
       "CASETYPE": "hostlist",
-      "CLUSTER_TYPE": "cmgtapi",
       "LIST_FILTER": "True"
     }
   },
