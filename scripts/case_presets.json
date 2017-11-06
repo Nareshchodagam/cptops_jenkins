@@ -2401,8 +2401,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Primary",
       "ROLE": "logbus",
-      "CASETYPE": "hostlist",
-      "CLUSTER_TYPE": "POD"
+      "CASETYPE": "hostlist"
     }
   },
   "gateway_prod": {
@@ -2413,7 +2412,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Primary",
       "ROLE": "gateway",
-      "CLUSTER_TYPE": "POD"
+      "CLUSTER_TYPE": "GATEWAY"
     }
   },
   "dbextract1_prod": {
