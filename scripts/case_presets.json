@@ -1259,6 +1259,17 @@
       "CLUSTER_TYPE": "HBASE"
     }
   },
+  "hbase_prod": {
+    "PROD": {
+      "PODGROUP": "hbase.pri",
+      "TEMPLATEID": "hbase.linux",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 20,
+      "INFRA": "Primary",
+      "ROLE": "mnds,dnds",
+      "CLUSTER_TYPE": "HBASE"
+    }
+  },
   "hbase_dr": {
     "DR": {
       "PODGROUP": "hbase.sec",
