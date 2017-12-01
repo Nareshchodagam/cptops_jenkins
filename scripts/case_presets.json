@@ -1080,8 +1080,9 @@
       "GROUPSIZE": 10,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "restoreffx",
-      "CLUSTER_TYPE": "DATA_RESTORE"
+      "ROLE": "ffx",
+      "CLUSTER_TYPE": "DATA_RESTORE",
+      "HO_STATUS": "ACTIVE,PROVISIONING,DECOM"
     }
   },
   "nbmedia_prod": {
@@ -1257,6 +1258,17 @@
       "TAGGROUPS": 0,
       "INFRA": "Primary",
       "ROLE": "mnds,dnds,gforce"
+    }
+  },
+  "gforce": {
+    "PROD": {
+      "PODGROUP": "gforce",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 10,
+      "TAGGROUPS": 0,
+      "INFRA": "Primary",
+      "ROLE": "mnds,dnds,gforce",
+      "HO_STATUS": "DECOM,PROVISIONING,IN_MAINTENANCE,ACTIVE"
     }
   },
   "hbase_sp_prod": {
