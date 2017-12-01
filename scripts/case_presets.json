@@ -1231,6 +1231,17 @@
       "ROLE": "mnds,dnds,gforce"
     }
   },
+  "gforce": {
+    "PROD": {
+      "PODGROUP": "gforce",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 10,
+      "TAGGROUPS": 0,
+      "INFRA": "Primary",
+      "ROLE": "mnds,dnds,gforce",
+      "HO_STATUS": "DECOM,PROVISIONING,IN_MAINTENANCE,ACTIVE"
+    }
+  },
   "hbase_sp_prod": {
     "PROD": {
       "PODGROUP": "hbase.clusters",
