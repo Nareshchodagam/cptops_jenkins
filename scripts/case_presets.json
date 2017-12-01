@@ -2506,5 +2506,16 @@
       "ROLE": "stgpm",
       "CLUSTER_TYPE": "OPSSTGMGT"
     }
+  },
+  "stgmgt_prod": {
+    "PROD": {
+      "PODGROUP": "stgmgt_prod",
+      "TEMPLATEID": "stgmgt",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "STANDBY'",
+      "ROLE": "stgmgt",
+      "CLUSTER_TYPE": "OPSSTGMGT"
+    }
   }
 }
