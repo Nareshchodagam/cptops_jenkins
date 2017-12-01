@@ -1081,7 +1081,8 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "restoreffx",
-      "CLUSTER_TYPE": "DATA_RESTORE"
+      "CLUSTER_TYPE": "DATA_RESTORE",
+      "HO_STATUS": "ACTIVE,PROVISIONING,DECOM"
     }
   },
   "nbmedia_prod": {
