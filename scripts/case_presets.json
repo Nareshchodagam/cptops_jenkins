@@ -2512,5 +2512,16 @@
       ],
       "CLUSTER_TYPE": "it_edw"
     }
+  },
+  "stgpm_prod": {
+    "PROD": {
+      "PODGROUP": "stgpm_prod",
+      "TEMPLATEID": "stgpm",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "PRIMARY'",
+      "ROLE": "stgpm",
+      "CLUSTER_TYPE": "OPSSTGMGT"
+    }
   }
 }
