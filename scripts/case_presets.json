@@ -27,6 +27,34 @@
       "CLUSTER_TYPE": "ARGUS"
     }
   },
+  "argusannotation_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "argusannotation",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!shared1-argusannotation2-5-prd)"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_annotation",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
+"argusannotation_canary_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "argusannotation",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "shared1-argusannotation2-5-prd"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_annotation",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
   "argus_writed_matrics_prod": {
     "PROD": {
       "PODGROUP": "arguscl",
