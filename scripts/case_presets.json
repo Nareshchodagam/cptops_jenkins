@@ -1670,6 +1670,23 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Primary",
+      "FILTER": [
+         ".*(nms[^3]-[1-2])"
+      ],
+      "ROLE": "smarts,nms",
+      "CLUSTER_TYPE": "SMARTS"
+    }
+  },
+    "smarts_nmsfwd_prod": {
+    "PROD": {
+      "PODGROUP": "smartscl",
+      "TEMPLATEID": "smarts-nmsfwd",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Primary",
+      "FILTER": [
+         ".*(nms3-[1-2])"
+      ],
       "ROLE": "smarts,nms",
       "CLUSTER_TYPE": "SMARTS"
     }
@@ -2357,7 +2374,6 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "cmgtapi",
       "CASETYPE": "hostlist",
-      "CLUSTER_TYPE": "cmgtapi",
       "LIST_FILTER": "True"
     }
   },
@@ -2505,6 +2521,28 @@
         "shared0-dbextract2-1-ord"
       ],
       "CLUSTER_TYPE": "it_edw"
+    }
+  },
+  "stgpm_prod": {
+    "PROD": {
+      "PODGROUP": "stgpm_prod",
+      "TEMPLATEID": "stgpm",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "PRIMARY'",
+      "ROLE": "stgpm",
+      "CLUSTER_TYPE": "OPSSTGMGT"
+    }
+  },
+  "stgmgt_prod": {
+    "PROD": {
+      "PODGROUP": "stgmgt_prod",
+      "TEMPLATEID": "stgmgt",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "STANDBY'",
+      "ROLE": "stgmgt",
+      "CLUSTER_TYPE": "OPSSTGMGT"
     }
   }
 }
