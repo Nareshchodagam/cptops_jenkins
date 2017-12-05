@@ -24,7 +24,8 @@ opt_dict = {'gsize': '-s',
             'no_host_validation': '--no_host_validation',
             'auto_close_case': '--auto_close_case',
             'nolinebacker': '--nolinebacker',
-            'hostpercent': '--hostpercent'}
+            'hostpercent': '--hostpercent',
+            'delpatched': '--delpatched'}
 
 req_sub = ['search(23|43)_prod',
            'search(21|22,41|42)_prod',
