@@ -61,6 +61,8 @@ def cmd_builder(sets, r_class=False):
                 options.hostpercent = 'None'
 
     bld_cmd['hostpercent'] = options.hostpercent
+    if options.delpatched:
+        bld_cmd['delpatched'] = options.delpatched
 
     if options.regex is None:
         if 'REGEX' in sets[role_class][role_status]:
@@ -273,6 +275,9 @@ if __name__ == "__main__":
                                                                                                          "execution")
     # Added as per W-3779869 to skip linebacker
     parser.add_argument("--nolinebacker", dest="nolinebacker", action="store_true", default=False, help="Don't use line backer")
+    # W-4531197 Adding logic to remove already patched host for Case.
+    parser.add_argument("--delpatched", dest="delpatched", action='store_true', help="command to remove patched host.")
+    #End
 
     parser.add_argument("--canary", dest="canary", action ="store_true", help="All canary cases")
     options = parser.parse_args()
