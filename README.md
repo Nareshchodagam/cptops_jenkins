@@ -70,7 +70,10 @@ Case builder can be run within the CPTIAB docker image. Use the instruction belo
 		  -f FILTER             Filter
 		  --host_validation     To check if remote hosts are already patched OR not accessible.
 		  --nolinebacker        To skip linebacker in load balancer operations.
-		  
+		  --delpatched          Command to remove already patched host of given bundle while case creation.
+		  --csv                 Read given CSV file and create cases as per the status, --hostatus is optional comma separated statuses Default is DECOM, --role is optional default take all roles.
+		  --role                provide a single or comma seperated role names, this option is optional with --csv. Default is ALL.                     
+
 # Canary cass creation in a single go
 
     python case_builder.py --canary --bundle 2017.04 --dowork all_updates|centos_migration <--host_validation>
