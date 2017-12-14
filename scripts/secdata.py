@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 #W-4546859 - Logic to create cases of hosts provide in CSV file basically a sheet given by security.
-# --csv <csv_file_path.csv>
+# --csv <csv_file_path.csv> --role <optional or comma reprated roles ex:- ffx,search,samcompute>
 
 import requests
 import json
@@ -14,13 +14,26 @@ import re
 import time
 
 class Secsheet(object):
+    """
+    # This instance reads a CSV file in "Cloud,Role,FQDN" format, basically a sheet provided by security team.
+    # Generates a directory under ~/git/cptops_case_gen/hostlist/security-data/<role_name>/
+    # Creates a file putting hosts under role directory with hosts statuses.
+    # Creates a consolidated file under ~/git/cptops_case_gen/hostlist/security-data/total_count.txt with example details of all roles below:-
+    # Ex:- pbsmatch                 -->    {'2017.11': 1, 'total_count': 1}
+    #      samcompute               -->    {'total_count': 311, 'PROVISIONING': 2, '2017.12': 54, 'ACTIVE': 95, '2017.09': 5, '2017.08': 155}
+    #      vc                       -->    {'total_count': 1, '2017.09': 1}
+    #      ffx                      -->    {'hostNotinDB': 11, 'PROVISIONING': 8, '2017.11': 1571, '2017.12': 2, 'IN_MAINTENANCE': 12, 'total_count': 2548, 'ACTIVE': 5, 'HW_PROVISIONING': 40, '2017.08': 875, 'DECOM': 15, '2017.09': 9}
+    # Creates cases on based on host status provided by user, based on that a satatus file will taken as a hostlist from the appropriate role Ex:- decom.txt.
+    """
 
     def get_json(self, filepath):
         """
+        # Takes a .json file and provides a dictionary(hash table).
 
         :param filepath:
         :return:
         """
+
         try:
             with open(filepath) as data_file:
                 data = json.load(data_file)
@@ -31,6 +44,10 @@ class Secsheet(object):
 
 
     def get_valid_version(self):
+        """
+        # return's  a valid version file as a hash table(dictionary).
+        :return:
+        """
         home = expanduser("~")
         filepath = "/git/cptops_validation_tools/includes/valid_versions.json"
         path = home + filepath
@@ -39,6 +56,7 @@ class Secsheet(object):
 
     def get_case_preset(self):
         """
+        # resturn's a cases preset file as a hash table.
 
         :param preset_file:
         :return:
@@ -50,6 +68,12 @@ class Secsheet(object):
 
 
     def pod_data(self):
+        """
+        # Returns a custom pod data to be used in future.
+        # Currently this is not used, reserved for future.
+
+        :return:
+        """
         preset = self.get_case_preset()
         presetdict = {}
 
@@ -63,6 +87,7 @@ class Secsheet(object):
 
     def read_csv_dict_out(self, file):
         """
+        # Read user provided security sheet and returns a hash table whare key is role and value is list of hosts relevent to that role.
 
         :param file:
         :return:
@@ -90,6 +115,8 @@ class Secsheet(object):
 
     def readAllHosts(self):
         """
+        # Download a ALL Host CSV file from database and returns a custom nested hash table ex:- {role:{host:{keys:values}}}
+
         :return:
         """
         rolelist = []
@@ -105,14 +132,14 @@ class Secsheet(object):
                     with open('all.csv', 'w') as cs:
                         cs.writelines(response.content.decode('utf-8'))
 
-            if (time.time() - (os.path.getmtime('all.csv')) > 300):
-                print("DB data is more than 5 min old, fething new one...\n")
+            if (time.time() - (os.path.getmtime('all.csv')) > 600):
+                print("DB data is more than 10 min old, fetching new one...\n")
                 response = requests.get(url, verify=False)
                 if response.status_code == 200:
                     with open('all.csv', 'w') as cs:
                         cs.writelines(response.content.decode('utf-8'))
             else:
-                print("DB data is not more than 5 min old, skipping...\n")
+                print("DB data is not more than 10 min old, skipping download...\n")
 
                 with open('all.csv', 'rU') as f:
                     resader = csv.reader(f)
@@ -153,6 +180,7 @@ class Secsheet(object):
 
     def host_filter(self, bundle, file, role=None):
         """
+        # returns a depth hash table ex:- {role:{host:{states:[hosts]}}}
 
         :param bundle:
         :param file:
@@ -222,6 +250,7 @@ class Secsheet(object):
 
     def total_count(self, data):
         """
+        # returns a hash table with total count.
 
         :param bundle:
         :param file:
@@ -244,6 +273,7 @@ class Secsheet(object):
 
     def save_to_file(self, bundle, file, role=None):
         """
+        # save data to file.
 
         :param bundle:
         :param file:
@@ -287,6 +317,8 @@ class Secsheet(object):
 
     def gen_plan(self, bundle, csv, status, role=None):
         """
+        # return the preset to generate the cases.
+
         :param bundle:
         :param csv:
         :param status:
