@@ -118,5 +118,10 @@ that information.
 
 			# python case_builder --dry-run --roleclass "search(23|43)_prod" --bundle 2016.09 --dowork centos_migration
 			
-			
+#Create cases from CSV file.
+    # python case_builder.py  --bundle 2017.11 --dowork all_updates --auto_close_case --csv ~/Downloads/all_hosts_sec.csv --role search,ffx,samcompute --hoststat decom,hwprovisioning
+    :: Note
+        --role is optional, if not provided it will scan all the roles from CSV.
+        --hoststat is optional, if not provided it will create cases for DECOM host/cluster only.
+        
 	
