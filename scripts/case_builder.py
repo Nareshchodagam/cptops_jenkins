@@ -4,17 +4,16 @@
 '''
     Jenkins Python script to create implementation plans and create cases.
 '''
-import json
-import subprocess
-from subprocess import PIPE, Popen
-import os
-import re
-import sys
-import logging
-import shlex
 import argparse
-import case_opts as co
+import json
+import logging
+import os
 import pprint
+import re
+import subprocess
+import sys
+
+import case_opts as co
 
 
 def json_imports():
@@ -280,6 +279,8 @@ if __name__ == "__main__":
     #End
 
     parser.add_argument("--canary", dest="canary", action ="store_true", help="All canary cases")
+    parser.add_argument("--csv", dest="csv", help="Read given CSV file and create cases as per the status, --hostatus is optional comma separated statuses Default is DECOM, --role is optional default take all roles")
+    parser.add_argument("--role", dest="role",help="provide a single or comma seperated role names, this option is optional with --csv. Default is ALL")
     options = parser.parse_args()
 
     initfile()  # function to clean existing cases.sh file
@@ -304,6 +305,40 @@ if __name__ == "__main__":
     if options.roleclass:
         cmd_builder(sets)
         dryrun()
+
+    #W-4546859 - Create cases of hosts provide in CSV file basically a sheet given by security.
+    if options.csv:
+        from secdata import Secsheet
+        sec = Secsheet()
+        if not options.hoststat:
+            print("Host state not provided, default is DECOM.")
+            options.hoststat = 'DECOM'
+        options.hoststat = options.hoststat.lower()
+        role = options.role
+        if options.hoststat != 'active' :
+            for state in options.hoststat.upper().split(','):
+                if not re.search(r'DECOM|HW_PROVISIONING|PRE_PRODUCTION|PROVISIONING', state):
+                    print("\nProvided iDB state not Found. state {0} is not the correct coice.\n".format(state))
+                    exit(1)
+            sets, data = sec.gen_plan(options.bundle, options.csv, options.hoststat, role)
+        elif options.hoststat == 'active':
+            print("\nUse Command to generate cases for active left over hosts")
+            print("python case_builder.py --roleclass <role> --bundle <bundle.name> --dowork all_updates --delpatched\n")
+            exit(0)
+        else:
+            print("--hoststat must be one or multiple comma seperated of , 'decom|active|hw_provisioning|pre_production|provisioning'")
+            sys.exit(1)
+        for rcl in sets.keys():
+            if re.search(r'app|cbatch|dapp', rcl):
+                options.hostpercent = "33"
+            options.roleclass = rcl
+            cmd_builder(sets)
+            dryrun()
+
+        print( "\nGenerating Cases for role %s with status %s." % ('ALL' if not role else role.upper(), options.hoststat))
+        print("\nScanned roles from CSV... {0}\n".format(data.keys()))
+    #END
+
     elif options.canary:
         options.search_role = 'canary'
         canary_cases = find_role(sets)
