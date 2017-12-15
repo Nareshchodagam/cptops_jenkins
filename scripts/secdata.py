@@ -138,41 +138,42 @@ class Secsheet(object):
                 if response.status_code == 200:
                     with open('all.csv', 'w') as cs:
                         cs.writelines(response.content.decode('utf-8'))
+
             else:
                 print("DB data is not more than 10 min old, skipping download...\n")
 
-                with open('all.csv', 'rU') as f:
-                    resader = csv.reader(f)
-                    for r in resader:
-                        rolelist.append(r[22])
+            with open('all.csv', 'rU') as f:
+                resader = csv.reader(f)
+                for r in resader:
+                    rolelist.append(r[22])
 
-                rolelist = list(set(rolelist))
-                rolelist = list(set(rolelist[1:]))
+            rolelist = list(set(rolelist))
+            rolelist = list(set(rolelist[1:]))
 
-                for d in rolelist:
-                    data[d] = []
+            for d in rolelist:
+                data[d] = []
 
-                with open('all.csv', 'rU') as fd1:
-                    reader = csv.reader(fd1)
-                    [(row, role, data.setdefault(role, []).append({row[0]: {'hostStatus': row[1],
-                                                                   'hostOs': row[2],
-                                                                   'hostKernel': row[3],
-                                                                   'hostRelease': row[4],
-                                                                   'hostRma': row[5],
-                                                                   'clusterName': row[9],
-                                                                   'clusterStatus': row[10],
-                                                                   'clusterDr': row[13],
-                                                                   'spName': row[14],
-                                                                   'dcName': row[15],
-                                                                   'dcProd': row[17],
-                                                                   'roleOnboarded': row[23]
-                                                                   }})) for row in reader for role in rolelist if role in row[22]]
+            with open('all.csv', 'rU') as fd1:
+                reader = csv.reader(fd1)
+                [(row, role, data.setdefault(role, []).append({row[0]: {'hostStatus': row[1],
+                                                               'hostOs': row[2],
+                                                               'hostKernel': row[3],
+                                                               'hostRelease': row[4],
+                                                               'hostRma': row[5],
+                                                               'clusterName': row[9],
+                                                               'clusterStatus': row[10],
+                                                               'clusterDr': row[13],
+                                                               'spName': row[14],
+                                                               'dcName': row[15],
+                                                               'dcProd': row[17],
+                                                               'roleOnboarded': row[23]
+                                                               }})) for row in reader for role in rolelist if role in row[22]]
 
-                for ro in data.keys():
-                    d = {}
-                    for hl in data.get(ro):
-                        d.update(hl)
-                    retdata.setdefault(ro, d)
+            for ro in data.keys():
+                d = {}
+                for hl in data.get(ro):
+                    d.update(hl)
+                retdata.setdefault(ro, d)
         except Exception as e:
             print(e)
         return retdata
