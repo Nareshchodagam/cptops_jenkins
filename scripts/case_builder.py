@@ -106,6 +106,8 @@ def cmd_builder(sets, r_class=False):
         bld_cmd['auto_close_case'] = options.auto_close_case
     if options.nolinebacker:
         bld_cmd['nolinebacker'] = options.nolinebacker
+    if options.csv:
+        bld_cmd['csv'] = options.csv
     #bld_cmd['clusteropstat'] = sets[role_class][role_status]['CL_STATUS']
     if 'HO_STATUS' in sets[role_class][role_status].keys():
 	bld_cmd['hostopstat'] = sets[role_class][role_status]['HO_STATUS']
@@ -136,6 +138,7 @@ def cmd_builder(sets, r_class=False):
     logging.debug("HOSTPERCENT = " + bld_cmd['hostpercent'])
     logging.debug("Contents of uploaded file %s" %  bld_cmd['podgroup'])
     #logging.debug("CL_STATUS = " + bld_cmd['clusteropstat'])
+
     if 'HO_STATUS' in sets[role_class][role_status].keys() or options.hoststat:
 	logging.debug("HO_STATUS = " + bld_cmd['hostopstat'])
     with open(bld_cmd['podgroup'], 'r') as fin:
@@ -279,7 +282,7 @@ if __name__ == "__main__":
     #End
 
     parser.add_argument("--canary", dest="canary", action ="store_true", help="All canary cases")
-    parser.add_argument("--csv", dest="csv", help="Read given CSV file and create cases as per the status, --hostatus is optional comma separated statuses Default is DECOM, --role is optional default take all roles")
+    parser.add_argument("--csv", dest="csv", help="Read given CSV file and create cases as per the status, --hoststat is optional comma separated status Default is DECOM, --role is optional default take all roles")
     parser.add_argument("--role", dest="role",help="provide a single or comma seperated role names, this option is optional with --csv. Default is ALL")
     options = parser.parse_args()
 
