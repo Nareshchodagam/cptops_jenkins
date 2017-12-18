@@ -1338,20 +1338,100 @@
       "CLUSTER_TYPE": "OPSNETMGT"
     }
   },
-  "sam_other_prod": {
+  "sam_caasminion_prod": {
+    "PROD": {
+      "PODGROUP": "samminion.pri",
+      "TEMPLATEID": "sam",
+      "GROUPSIZE": 4,
+      "TAGGROUPS": 0,
+      "FILTER": [ ".*(caasminion).*" ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "samcompute",
+      "CLUSTER_TYPE": "SAMMINION"
+    }
+  },
+  "sam_samreporter_prod": {
     "PROD": {
       "PODGROUP": "samminion.pri",
       "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": [
-        ".*(caasminion).*",
-        ".*(samminionreportcollector).*",
-        ".*(samminiongater).*"
-      ],
+      "FILTER": [ ".*(samminionreportcollector).*" ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "samcompute",
       "CLUSTER_TYPE": "SAMMINION"
+    }
+  },
+  "sam_samgater_prod": {
+    "PROD": {
+      "PODGROUP": "samminion.pri",
+      "TEMPLATEID": "sam",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "FILTER": [ ".*(samminiongater).*" ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "samcompute",
+      "CLUSTER_TYPE": "SAMMINION"
+    }
+  },
+  "sam_chatbot_prod": {
+      "PROD": {
+        "PODGROUP": "samminion.pri",
+        "TEMPLATEID": "sam",
+        "GROUPSIZE": 5,
+        "TAGGROUPS": 0,
+        "FILTER": [ ".*(samminionchatbotrt).*" ],
+        "INFRA": "Supporting Infrastructure",
+        "ROLE": "samcompute",
+        "CLUSTER_TYPE": "SAMMINION"
+    }
+  },
+  "sam_atlasdir_prod": {
+      "PROD": {
+        "PODGROUP": "samminion.pri",
+        "TEMPLATEID": "sam",
+        "GROUPSIZE": 1,
+        "TAGGROUPS": 0,
+        "FILTER": [ ".*(samminionatlasdir).*" ],
+        "INFRA": "Supporting Infrastructure",
+        "ROLE": "samcompute",
+        "CLUSTER_TYPE": "SAMMINION"
+    }
+  },
+  "sam_atlasfe_prod": {
+      "PROD": {
+        "PODGROUP": "samminion.pri",
+        "TEMPLATEID": "sam",
+        "GROUPSIZE": 1,
+        "TAGGROUPS": 0,
+        "FILTER": [ ".*(samminionatlasfe).*" ],
+        "INFRA": "Supporting Infrastructure",
+        "ROLE": "samcompute",
+        "CLUSTER_TYPE": "SAMMINION"
+    }
+  },
+  "sam_einstein_prod": {
+      "PROD": {
+        "PODGROUP": "samminion.pri",
+        "TEMPLATEID": "sam",
+        "GROUPSIZE": 1,
+        "TAGGROUPS": 0,
+        "FILTER": [ ".*(samminionmoderationeinstein).*" ],
+        "INFRA": "Supporting Infrastructure",
+        "ROLE": "samcompute",
+        "CLUSTER_TYPE": "SAMMINION"
+    }
+  },
+  "sam_ceph_prod": {
+      "PROD": {
+        "PODGROUP": "samminion.pri",
+        "TEMPLATEID": "sam",
+        "GROUPSIZE": 5,
+        "TAGGROUPS": 0,
+        "FILTER": [ ".*(samminionceph).*" ],
+        "INFRA": "Supporting Infrastructure",
+        "ROLE": "samcompute",
+        "CLUSTER_TYPE": "SAMMINION"
     }
   },
   "sam_compute_prod": {
@@ -2533,6 +2613,27 @@
       "INFRA": "PRIMARY'",
       "ROLE": "stgpm",
       "CLUSTER_TYPE": "OPSSTGMGT"
+    }
+  },
+  "strata_jenkins_prod": {
+    "PROD": {
+      "PODGROUP": "stratacl",
+      "TEMPLATEID": "strata_jenkins",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "PRIMARY'",
+      "ROLE": "stgpm",
+      "CLUSTER_TYPE": "OPSSTGMGT"
+    }
+  },
+  "netmonitor_prod": {
+    "PROD": {
+      "PODGROUP": "netmonitorcl",
+      "TEMPLATEID": "netmonitor",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "PRIMARY'",
+      "ROLE": "netmonitor"
     }
   },
   "stgmgt_prod": {
