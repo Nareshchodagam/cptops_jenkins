@@ -634,20 +634,6 @@
       "CLUSTER_TYPE": "AJNA"
     }
   },
-  "mmpal_canary_prod": {
-    "PROD": {
-      "PODGROUP": "mmpalcl.canary",
-      "TEMPLATEID": "mmpal",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "ops-mmpal1-1-chi"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "mmpal",
-      "CLUSTER_TYPE": "AJNA"
-    }
-  },
   "mandm_splunk_api_prod": {
     "PROD": {
       "PODGROUP": "splunk-apicl",
