@@ -2632,5 +2632,16 @@
       "ROLE": "stgmgt",
       "CLUSTER_TYPE": "OPSSTGMGT"
     }
+  },
+  "nwexp_prod": {
+    "PROD": {
+      "PODGROUP": "nwexp_prod",
+      "TEMPLATEID": "nwexp",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "nwexp",
+      "CLUSTER_TYPE": "NWEXP"
+    }
   }
 }
