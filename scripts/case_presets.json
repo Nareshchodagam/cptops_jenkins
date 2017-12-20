@@ -1980,17 +1980,6 @@
       "CLUSTER_TYPE": "OPS-STACK"
     }
   },
-  "stgpm_prod": {
-    "PROD": {
-      "PODGROUP": "stgpm",
-      "TEMPLATEID": "straight-patch",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "stgpm",
-      "CASETYPE": "hostlist"
-    }
-  },
   "mmmbus_canary_prod": {
     "PROD": {
       "PODGROUP": "ajna_canary_prodcl",
