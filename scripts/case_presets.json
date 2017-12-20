@@ -1579,6 +1579,28 @@
       "CLUSTER_TYPE": "RAZOR"
     }
   },
+  "sysmgt_gia_prod": {
+    "PROD": {
+      "PODGROUP": "sysmgt-gia",
+      "TEMPLATEID": "straight-patch-nag",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "sysmgt",
+      "CLUSTER_TYPE": "OPS"
+    }
+  },
+  "orch_gia_prod": {
+    "PROD": {
+      "PODGROUP": "orch-gia",
+      "TEMPLATEID": "straight-patch-splunk",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "orch",
+      "CLUSTER_TYPE": "GIGANTOR"
+    }
+  },
   "pbsgeo_prod": {
     "PROD": {
       "PODGROUP": "pbsgeo",
@@ -1828,6 +1850,33 @@
   },
   "log_hub_standby_prod": {
     "PROD": {
+      "PODGROUP": "hubcl",
+      "TEMPLATEID": "log_hub_standby",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "REGEX": "failoverstatus=STANDBY",
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "log_hub",
+      "CLUSTER_TYPE": "HUB"
+    }
+  },
+  "log_hub_dr": {
+    "DR": {
+      "PODGROUP": "hubcl",
+      "TEMPLATEID": "log_hub",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "REGEX": "failoverstatus=PRIMARY",
+      "FILTER": [
+        "(?!shared-hub3-1-was)"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "log_hub",
+      "CLUSTER_TYPE": "HUB"
+    }
+  },
+  "log_hub_standby_dr": {
+    "DR": {
       "PODGROUP": "hubcl",
       "TEMPLATEID": "log_hub_standby",
       "GROUPSIZE": 1,
