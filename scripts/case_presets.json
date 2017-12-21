@@ -2681,5 +2681,16 @@
       "ROLE": "nwexp",
       "CLUSTER_TYPE": "NWEXP"
     }
+  },
+  "dvasyslog_prod": {
+    "PROD": {
+      "PODGROUP": "dvasyslog_prod",
+      "TEMPLATEID": "dvasyslog",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "dvasyslog",
+      "CLUSTER_TYPE": "DVA_SYSLOG"
+    }
   }
 }
