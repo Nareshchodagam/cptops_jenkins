@@ -55,6 +55,34 @@
       "CLUSTER_TYPE": "ARGUS"
     }
   },
+  "argus_ajna_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "argusajna",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!shared1-argusajna2-5-prd)"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_ajna",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
+  "argus_ajna_canary_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "argusajna",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "shared1-argusajna2-5-prd"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_ajna",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
   "argus_writed_matrics_prod": {
     "PROD": {
       "PODGROUP": "arguscl",
