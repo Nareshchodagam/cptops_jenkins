@@ -2656,6 +2656,20 @@
       "CLUSTER_TYPE": "it_edw"
     }
   },
+   "stgpm_canary_prod": {
+    "PROD": {
+      "PODGROUP": "stgpm_prod",
+      "TEMPLATEID": "stgpm",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "ops0-stgpm1-1-phx"
+      ],
+      "ROLE": "stgpm",
+      "CLUSTER_TYPE": "OPSSTGMGT"
+    }
+  },
   "stgpm_prod": {
     "PROD": {
       "PODGROUP": "stgpm_prod",
@@ -2663,6 +2677,9 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "PRIMARY'",
+      "FILTER": [
+        "(?!(ops0-stgpm1-1-phx))"
+      ],
       "ROLE": "stgpm",
       "CLUSTER_TYPE": "OPSSTGMGT"
     }
@@ -2688,6 +2705,20 @@
       "ROLE": "netmonitor"
     }
   },
+  "stgmgt_canary_prod": {
+    "PROD": {
+      "PODGROUP": "stgmgt_prod",
+      "TEMPLATEID": "stgmgt",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "ops0-stgmgt1-1-phx"
+      ],
+      "ROLE": "stgmgt",
+      "CLUSTER_TYPE": "OPSSTGMGT"
+    }
+  },
   "stgmgt_prod": {
     "PROD": {
       "PODGROUP": "stgmgt_prod",
@@ -2695,6 +2726,9 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "STANDBY'",
+      "FILTER": [
+        "(?!(ops0-stgmgt1-1-phx))"
+      ],
       "ROLE": "stgmgt",
       "CLUSTER_TYPE": "OPSSTGMGT"
     }
