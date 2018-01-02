@@ -159,6 +159,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "lapp",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "liveagent"
     }
   },
@@ -170,6 +171,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "lapp",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "liveagent",
       "SUBJECT": "CS MAINT WINDOW",
       "IMPLPLAN": "lapp_cs"
@@ -306,6 +308,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Primary",
       "ROLE": "app",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -345,6 +348,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Secondary",
       "ROLE": "app",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -356,6 +360,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Primary",
       "ROLE": "cbatch,dapp",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -367,6 +372,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Secondary",
       "ROLE": "cbatch,dapp",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -392,6 +398,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Primary",
       "ROLE": "acs,computedocker",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "ACS"
     }
   },
@@ -403,6 +410,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Secondary",
       "ROLE": "acs,computedocker",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "ACS"
     }
   },
@@ -417,6 +425,7 @@
       ],
       "INFRA": "Primary",
       "ROLE": "search",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -432,6 +441,7 @@
       ],
       "INFRA": "Primary",
       "ROLE": "search",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -447,6 +457,7 @@
       ],
       "INFRA": "Primary",
       "ROLE": "search",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -461,6 +472,7 @@
       ],
       "INFRA": "Secondary",
       "ROLE": "search",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -476,6 +488,7 @@
       ],
       "INFRA": "Secondary",
       "ROLE": "search",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -491,6 +504,7 @@
       ],
       "INFRA": "Secondary",
       "ROLE": "search",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -867,6 +881,7 @@
       ],
       "REGEX": "failoverstatus=PRIMARY",
       "ROLE": "mgmt_hub",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -879,6 +894,7 @@
       "INFRA": "Primary",
       "REGEX": "failoverstatus=STANDBY",
       "ROLE": "mgmt_hub",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -891,6 +907,7 @@
       "INFRA": "Secondary",
       "REGEX": "failoverstatus=PRIMARY",
       "ROLE": "mgmt_hub",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -903,6 +920,7 @@
       "INFRA": "Secondary",
       "REGEX": "failoverstatus=STANDBY",
       "ROLE": "mgmt_hub",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -1133,6 +1151,7 @@
       ],
       "INFRA": "Primary",
       "ROLE": "mq",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -1144,6 +1163,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Secondary",
       "ROLE": "mq",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -1187,7 +1207,8 @@
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
       "INFRA": "Primary",
-      "ROLE": "sapp"
+      "ROLE": "sapp",
+      "CL_STATUS": "DECOM"
     }
   },
   "shared-apputil_prod": {
@@ -1321,6 +1342,7 @@
       "TAGGROUPS": 5,
       "INFRA": "Primary",
       "ROLE": "mnds,dnds",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "HBASE"
     }
   },
@@ -1332,6 +1354,7 @@
       "TAGGROUPS": 5,
       "INFRA": "Secondary",
       "ROLE": "mnds,dnds",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "HBASE"
     }
   },
@@ -1482,6 +1505,7 @@
       ],
       "INFRA": "Primary",
       "ROLE": "proxy",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -1493,6 +1517,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Secondary",
       "ROLE": "proxy",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -1704,6 +1729,7 @@
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "insights_iworker,insights_redis",
+      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "INSIGHTS"
     }
   },
