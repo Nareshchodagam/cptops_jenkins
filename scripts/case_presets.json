@@ -2692,8 +2692,7 @@
       "FILTER": [
         "ops0-stgpm1-1-phx"
       ],
-      "ROLE": "stgpm",
-      "CLUSTER_TYPE": "OPSSTGMGT"
+      "ROLE": "stgpm"
     }
   },
   "stgpm_prod": {
@@ -2741,8 +2740,7 @@
       "FILTER": [
         "ops0-stgmgt1-1-phx"
       ],
-      "ROLE": "stgmgt",
-      "CLUSTER_TYPE": "OPSSTGMGT"
+      "ROLE": "stgmgt"
     }
   },
   "stgmgt_prod": {
