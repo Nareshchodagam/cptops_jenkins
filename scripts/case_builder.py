@@ -52,14 +52,14 @@ def cmd_builder(sets, r_class=False):
         bld_cmd['impl_plan'] = "templates/"+sets[role_class][role_status]['IMPLPLAN']+".json"
     if bld_cmd['role'] == 'app':
         #Takes pool percentage to calculate host count per block
-        if options.hostpercent == 'None':
+        if not options.hostpercent:
             flag = raw_input("\n Do you want to give pool percentage[y|n] :" )
             if flag.lower() == 'y':
                 options.hostpercent = raw_input("\nPreset requires min pool percentage. eg 33 : ")
-            else:
-                options.hostpercent = 'None'
 
-    bld_cmd['hostpercent'] = options.hostpercent
+
+    if options.hostpercent:
+        bld_cmd['hostpercent'] = options.hostpercent
     if options.delpatched:
         bld_cmd['delpatched'] = options.delpatched
 
@@ -136,7 +136,6 @@ def cmd_builder(sets, r_class=False):
     logging.debug("REGEXFILTER = " + bld_cmd['regexfilter'])
     logging.debug("FILTER = " + bld_cmd['filter'])
     logging.debug("PATCHSET = " + bld_cmd['patchset'])
-    logging.debug("HOSTPERCENT = " + bld_cmd['hostpercent'])
     logging.debug("Contents of uploaded file %s" %  bld_cmd['podgroup'])
     #logging.debug("CL_STATUS = " + bld_cmd['clusteropstat'])
 
@@ -147,6 +146,8 @@ def cmd_builder(sets, r_class=False):
         print fin.read()
     case_builder(bld_cmd)
 
+    if options.hostpercent:
+        logging.debug("HOSTPERCENT = " + bld_cmd['hostpercent'])
 
 def initfile():
     with open('cases.sh', 'w') as f:
@@ -269,7 +270,7 @@ if __name__ == "__main__":
     parser.add_argument("--bundle", dest="bundle", default="None", help="Patch Bundle.")
     parser.add_argument("--subject", dest="subject", help="Subject.")
     parser.add_argument("--dowork", dest="dowork", help="Task to perform")
-    parser.add_argument("--hostpercent", dest="hostpercent",default="None", help="Host percentage for core app")
+    parser.add_argument("--hostpercent", dest="hostpercent", help="Host percentage for core app")
     parser.add_argument("--clusstat", dest="cluststat", help="Cluster Status.")
     parser.add_argument("--hoststat", dest="hoststat", help="Host Status.")
     parser.add_argument("-r", dest="regex", help="Regex Filter")
