@@ -1099,7 +1099,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "ops-monitor2-1-sfm"
+        "ops-monitor1-1-sfm"
       ],
       "ROLE": "monitor",
       "CASETYPE": "hostlist"
