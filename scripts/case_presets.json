@@ -1107,7 +1107,7 @@
   },
   "restoreffx_prod": {
     "PROD": {
-      "PODGROUP": "restoreffx",
+      "PODGROUP": "restore",
       "TEMPLATEID": "straight-patch",
       "GROUPSIZE": 10,
       "TAGGROUPS": 0,
@@ -1213,7 +1213,7 @@
   },
   "shared-apputil_prod": {
     "PROD": {
-      "PODGROUP": "restoreapp",
+      "PODGROUP": "restore",
       "TEMPLATEID": "shared-apputil",
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
@@ -1224,7 +1224,7 @@
   },
   "restoreapp_prod": {
     "PROD": {
-      "PODGROUP": "restoreapp",
+      "PODGROUP": "restore",
       "TEMPLATEID": "straight-patch",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -1313,7 +1313,7 @@
       "GROUPSIZE": 2,
       "TAGGROUPS": 5,
       "FILTER": [
-        "(?!hdaas.*)|(?!arg1hbsvc-*)"
+        "(?!(hdaas|arg1hbsvc)-*)"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds,dnds",
@@ -1327,7 +1327,7 @@
       "GROUPSIZE": 5,
       "TAGGROUPS": 5,
       "FILTER": [
-        "(hdaas-.*)|(arg1hbsvc-*)"
+        "(hdaas-*)|(arg1hbsvc-*)"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds,dnds",
@@ -2716,8 +2716,8 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "PRIMARY'",
-      "ROLE": "stgpm",
-      "CLUSTER_TYPE": "OPSSTGMGT"
+      "ROLE": "strata_jenkins_master",
+      "CLUSTER_TYPE": "DVACI"
     }
   },
   "netmonitor_prod": {
