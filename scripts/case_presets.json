@@ -322,7 +322,7 @@
         "gs0-app.*",
         "cs7-app.*",
         "cs46-app.*",
-        "eu4-app.*"
+        "eu4-app1-.*"
       ],
       "INFRA": "Primary",
       "ROLE": "app",
