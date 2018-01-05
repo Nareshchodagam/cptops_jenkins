@@ -331,7 +331,7 @@
   },
   "coreafw_app_reboot_prod": {
     "PROD": {
-      "PODGROUP": "coreapp.canary",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "coreapp-reboot",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
