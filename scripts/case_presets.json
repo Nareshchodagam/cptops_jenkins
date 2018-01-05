@@ -314,12 +314,15 @@
   },
   "coreafw_canary_prod": {
     "PROD": {
-      "PODGROUP": "coreapp.canary",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "coreapp-prod",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        ".*app1-.*"
+        "gs0-app.*",
+        "cs7-app.*",
+        "cs46-app.*",
+        "eu4-app1-.*"
       ],
       "INFRA": "Primary",
       "ROLE": "app",
@@ -328,7 +331,7 @@
   },
   "coreafw_app_reboot_prod": {
     "PROD": {
-      "PODGROUP": "coreapp.canary",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "coreapp-reboot",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -378,12 +381,15 @@
   },
   "coreafw_cbatch_dapp_canary_prod": {
     "PROD": {
-      "PODGROUP": "coreapp.canary",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "cbatch-dapp-prod",
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
       "FILTER": [
-        ".*[cbatch|dapp]1-.*"
+        "gs0-[cbatch|dapp].*",
+        "cs7-[cbatch|dapp].*",
+        "cs46-[cbatch|dapp].*",
+        "eu4-[cbatch|dapp].*"
       ],
       "INFRA": "Primary",
       "ROLE": "cbatch,dapp",
