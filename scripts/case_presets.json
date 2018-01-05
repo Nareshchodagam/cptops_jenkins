@@ -314,12 +314,15 @@
   },
   "coreafw_canary_prod": {
     "PROD": {
-      "PODGROUP": "coreapp.canary",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "coreapp-prod",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        ".*app1-.*"
+        "gs0-app2-.*",
+        "cs7-app2-.*",
+        "CS46-app2-.*",
+        "eu4-app2-.*"
       ],
       "INFRA": "Primary",
       "ROLE": "app",
@@ -333,7 +336,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "eu4-app2-.*"
+        "eu4-app1-.*"
       ],
       "INFRA": "Primary",
       "ROLE": "app",
