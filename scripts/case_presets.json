@@ -2684,7 +2684,7 @@
   },
    "stgpm_canary_prod": {
     "PROD": {
-      "PODGROUP": "stgpm_prod",
+      "PODGROUP": "stg_pm_and_mgt_prod",
       "TEMPLATEID": "stgpm",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -2697,7 +2697,7 @@
   },
   "stgpm_prod": {
     "PROD": {
-      "PODGROUP": "stgpm_prod",
+      "PODGROUP": "stg_pm_and_mgt_prod",
       "TEMPLATEID": "stgpm",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -2732,7 +2732,7 @@
   },
   "stgmgt_canary_prod": {
     "PROD": {
-      "PODGROUP": "stgmgt_prod",
+      "PODGROUP": "stg_pm_and_mgt_prod",
       "TEMPLATEID": "stgmgt",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -2745,7 +2745,7 @@
   },
   "stgmgt_prod": {
     "PROD": {
-      "PODGROUP": "stgmgt_prod",
+      "PODGROUP": "stg_pm_and_mgt_prod",
       "TEMPLATEID": "stgmgt",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
