@@ -319,10 +319,10 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "gs0-app2-.*",
-        "cs7-app2-.*",
-        "CS46-app2-.*",
-        "eu4-app2-.*"
+        "gs0-app.*",
+        "cs7-app.*",
+        "CS46-app.*",
+        "eu4-app.*"
       ],
       "INFRA": "Primary",
       "ROLE": "app",
@@ -336,7 +336,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "eu4-app1-.*"
+        "eu4-app2-.*"
       ],
       "INFRA": "Primary",
       "ROLE": "app",
