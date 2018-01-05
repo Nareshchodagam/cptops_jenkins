@@ -321,7 +321,7 @@
       "FILTER": [
         "gs0-app.*",
         "cs7-app.*",
-        "CS46-app.*",
+        "cs46-app.*",
         "eu4-app.*"
       ],
       "INFRA": "Primary",
@@ -381,12 +381,15 @@
   },
   "coreafw_cbatch_dapp_canary_prod": {
     "PROD": {
-      "PODGROUP": "coreapp.canary",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "cbatch-dapp-prod",
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
       "FILTER": [
-        ".*[cbatch|dapp]1-.*"
+        "gs0-[cbatch|dapp].*",
+        "cs7-[cbatch|dapp].*",
+        "cs46-[cbatch|dapp].*",
+        "eu4-[cbatch|dapp].*"
       ],
       "INFRA": "Primary",
       "ROLE": "cbatch,dapp",
