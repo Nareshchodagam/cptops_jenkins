@@ -42,4 +42,5 @@ req_sub = ['search(23|43)_prod',
            'monitor_canary_prod',
            'argus_writed_matrics_prod',
            'argus_writed_matrics_canary_prod',
-           'netmgt_prod']
+           'netmgt_prod',
+           'siteproxy_prod']
