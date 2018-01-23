@@ -2712,12 +2712,45 @@
   "strata_jenkins_prod": {
     "PROD": {
       "PODGROUP": "stratacl",
-      "TEMPLATEID": "strata_jenkins",
+      "TEMPLATEID": "straight-patch",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "PRIMARY'",
       "ROLE": "strata_jenkins_master",
       "CLUSTER_TYPE": "DVACI"
+    }
+  },
+  "dva_onboarding_prod": {
+    "PROD": {
+      "PODGROUP": "onboardingcl",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "PRIMARY'",
+      "ROLE": "dva_onboarding",
+      "CLUSTER_TYPE": "HSD_ONBOARDING"
+    }
+  },
+  "vault_czar_prod": {
+    "PROD": {
+      "PODGROUP": "vaultczarcl",
+      "TEMPLATEID": "vault_czar",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "PRIMARY'",
+      "ROLE": "secrets",
+      "CLUSTER_TYPE": "SECRETS"
+    }
+  },
+  "hadoop_prod": {
+    "PROD": {
+      "PODGROUP": "haddopcl",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 0,
+      "INFRA": "PRIMARY'",
+      "ROLE": "infinsighthaddop",
+      "CLUSTER_TYPE": "INFINSIGHTPRD"
     }
   },
   "netmonitor_prod": {
