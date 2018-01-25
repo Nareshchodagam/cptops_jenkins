@@ -251,6 +251,7 @@
       "TEMPLATEID": "nodeapp",
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
+      "FILTER": ["(?!.*-crd)"],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "nodeapp",
       "CLUSTER_TYPE": "NODEAPP"
@@ -258,10 +259,11 @@
   },
   "nodeapp_canary_prod": {
     "PROD": {
-      "PODGROUP": "nodeappcl.canary",
+      "PODGROUP": "nodeappcl",
       "TEMPLATEID": "nodeapp",
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
+      "FILTER": [".*-crd"],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "nodeapp",
       "CLUSTER_TYPE": "NODEAPP"
