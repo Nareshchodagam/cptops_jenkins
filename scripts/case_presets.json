@@ -1288,10 +1288,10 @@
       "CASETYPE": "hostlist"
     }
   },
-  "umps_gia": {
-    "GIA": {
+  "sshare_gia_prod": {
+    "PROD": {
       "PODGROUP": "chattercl_gia",
-      "TEMPLATEID": "umps.linux",
+      "TEMPLATEID": "straight-patch-nag",
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
