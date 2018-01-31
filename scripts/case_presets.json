@@ -422,6 +422,18 @@
       "CLUSTER_TYPE": "ACS"
     }
   },
+  "searchmgr_gia_prod": {
+    "PROD": {
+      "PODGROUP": "searchmgr_gia",
+      "TEMPLATEID": "straight-patch-nag",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "searchmgr",
+      "HO_STATUS": "ACTIVE,PRE_PRODUCTION",
+      "CLUSTER_TYPE": "SEARCHMGR"
+    }
+  },
   "search_prod": {
     "PROD": {
       "PODGROUP": "pod.pri",
