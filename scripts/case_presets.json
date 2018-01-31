@@ -1299,14 +1299,15 @@
       "CLUSTER_TYPE": "CHATTER"
     }
   },
-  "gforce_gia": {
-    "GIA": {
+ "gforce_gia_prod": {
+    "PROD": {
       "PODGROUP": "gforce_gia",
       "TEMPLATEID": "gforce.linux",
       "GROUPSIZE": 10,
       "TAGGROUPS": 0,
       "INFRA": "Primary",
-      "ROLE": "mnds,dnds,gforce"
+      "ROLE": "compute",
+      "HO_STATUS": "DECOM,PROVISIONING,IN_MAINTENANCE,ACTIVE"
     }
   },
   "gforce": {
