@@ -1277,15 +1277,26 @@
       "ROLE": "rdb,ppm"
     }
   },
-  "nbmedia_gia": {
-    "GIA": {
+  "nbmedia_gia_prod": {
+    "PROD": {
       "PODGROUP": "nbmedia_gia",
       "TEMPLATEID": "nbmedia",
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "nbmedia",
-      "CASETYPE": "hostlist"
+      "CLUSTER_TYPE": "NB-PRD"
+    }
+  },
+ "nbmaster_gia_prod": {
+    "PROD": {
+      "PODGROUP": "nbmedia_gia",
+      "TEMPLATEID": "nbmedia",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "nbmaster",
+      "CLUSTER_TYPE": "NB-PRD"
     }
   },
   "sshare_gia_prod": {
