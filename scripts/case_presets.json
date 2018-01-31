@@ -1260,7 +1260,7 @@
   "tools_gia": {
     "GIA": {
       "PODGROUP": "tools_gia",
-      "TEMPLATEID": "straight-patch",
+      "TEMPLATEID": "straight-patch-nag",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
@@ -1270,7 +1270,7 @@
   "ppm_gia": {
     "GIA": {
       "PODGROUP": "puppet_gia",
-      "TEMPLATEID": "straight-patch",
+      "TEMPLATEID": "straight-patch-nag",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
