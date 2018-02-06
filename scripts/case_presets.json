@@ -422,6 +422,18 @@
       "CLUSTER_TYPE": "ACS"
     }
   },
+  "searchmgr_gia_prod": {
+    "PROD": {
+      "PODGROUP": "searchmgr_gia",
+      "TEMPLATEID": "straight-patch-nag",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "searchmgr",
+      "HO_STATUS": "ACTIVE,PRE_PRODUCTION",
+      "CLUSTER_TYPE": "SEARCHMGR"
+    }
+  },
   "search_prod": {
     "PROD": {
       "PODGROUP": "pod.pri",
@@ -1248,7 +1260,7 @@
   "tools_gia": {
     "GIA": {
       "PODGROUP": "tools_gia",
-      "TEMPLATEID": "straight-patch",
+      "TEMPLATEID": "straight-patch-nag",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
@@ -1258,28 +1270,39 @@
   "ppm_gia": {
     "GIA": {
       "PODGROUP": "puppet_gia",
-      "TEMPLATEID": "straight-patch",
+      "TEMPLATEID": "straight-patch-nag",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "rdb,ppm"
     }
   },
-  "nbmedia_gia": {
-    "GIA": {
+  "nbmedia_gia_prod": {
+    "PROD": {
       "PODGROUP": "nbmedia_gia",
       "TEMPLATEID": "nbmedia",
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "nbmedia",
-      "CASETYPE": "hostlist"
+      "CLUSTER_TYPE": "NB-PRD"
     }
   },
-  "umps_gia": {
-    "GIA": {
+ "nbmaster_gia_prod": {
+    "PROD": {
+      "PODGROUP": "nbmedia_gia",
+      "TEMPLATEID": "nbmedia",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "nbmaster",
+      "CLUSTER_TYPE": "NB-PRD"
+    }
+  },
+  "sshare_gia_prod": {
+    "PROD": {
       "PODGROUP": "chattercl_gia",
-      "TEMPLATEID": "umps.linux",
+      "TEMPLATEID": "straight-patch-nag",
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
@@ -1287,14 +1310,15 @@
       "CLUSTER_TYPE": "CHATTER"
     }
   },
-  "gforce_gia": {
-    "GIA": {
+ "gforce_gia_prod": {
+    "PROD": {
       "PODGROUP": "gforce_gia",
       "TEMPLATEID": "gforce.linux",
       "GROUPSIZE": 10,
       "TAGGROUPS": 0,
       "INFRA": "Primary",
-      "ROLE": "mnds,dnds,gforce"
+      "ROLE": "compute",
+      "HO_STATUS": "DECOM,PROVISIONING,IN_MAINTENANCE,ACTIVE"
     }
   },
   "gforce": {
