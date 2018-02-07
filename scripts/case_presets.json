@@ -154,8 +154,8 @@
   "lapp_clusters_prod": {
     "PROD": {
       "PODGROUP": "la_clusters",
-      "TEMPLATEID": "la.kafka.linux",
-      "GROUPSIZE": 1,
+      "TEMPLATEID": "la.linux",
+      "GROUPSIZE": 4,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "lapp",
@@ -166,15 +166,13 @@
   "lapp_cs_clusters_prod": {
     "PROD": {
       "PODGROUP": "la_cs_clusters",
-      "TEMPLATEID": "la.kafka.linux202",
-      "GROUPSIZE": 2,
+      "TEMPLATEID": "lacs.linux",
+      "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "lapp",
       "CL_STATUS": "DECOM",
-      "CLUSTER_TYPE": "liveagent",
-      "SUBJECT": "CS MAINT WINDOW",
-      "IMPLPLAN": "lapp_cs"
+      "CLUSTER_TYPE": "liveagent"
     }
   },
   "mmmbus_sfz_prod": {
@@ -2126,8 +2124,8 @@
   "lapp_canary_prod": {
     "PROD": {
       "PODGROUP": "lacanary",
-      "TEMPLATEID": "la.kafka.linux",
-      "GROUPSIZE": 1,
+      "TEMPLATEID": "la.linux",
+      "GROUPSIZE": 4,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "lapp",
