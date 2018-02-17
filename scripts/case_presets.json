@@ -1252,7 +1252,8 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "artifactrepo"
+      "ROLE": "artifactrepo",
+      "CLUSTER_TYPE": "ARTIFACTREPO"
     }
   },
   "tools_gia": {
