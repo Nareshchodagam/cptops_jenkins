@@ -1137,7 +1137,21 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "nbmedia",
-      "CASETYPE": "hostlist"
+      "CL_STATUS": "DECOM",
+      "CLUSTER_TYPE": "NETBACKUP"
+
+    }
+  },
+  "nbmaster_prod": {
+    "PROD": {
+      "PODGROUP": "nbmaster",
+      "TEMPLATEID": "nbmedia",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "nbmaster",
+      "CL_STATUS": "DECOM",
+      "CLUSTER_TYPE": "NETBACKUP"
     }
   },
   "ffx_dr": {
