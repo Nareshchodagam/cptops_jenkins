@@ -2922,7 +2922,7 @@
     "PROD": {
       "PODGROUP": "ajna_mgmt",
       "TEMPLATEID": "ajna_clusters",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 3,
       "TAGGROUPS": 0,
       "HO_STATUS": "ACTIVE,PROVISIONING",
       "INFRA": "Supporting Infrastructure",
