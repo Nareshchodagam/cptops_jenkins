@@ -2253,7 +2253,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?!(ops0-polcore[12]-1-prd))"
+        "(?!(ops0-polcore[12]-[12]-prd))"
       ],
       "ROLE": "polcore",
       "CLUSTER_TYPE": "ILLUMIO"
@@ -2267,7 +2267,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "ops0-polcore[12]-1-prd"
+        "ops0-polcore[12]-[12]-prd"
       ],
       "ROLE": "polcore",
       "CLUSTER_TYPE": "ILLUMIO"
@@ -2281,7 +2281,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?!(ops0-poldata[12]-1-prd))"
+        "(?!(ops0-poldata[12]-[12]-prd))"
       ],
       "ROLE": "poldata",
       "CLUSTER_TYPE": "ILLUMIO"
@@ -2295,7 +2295,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "ops0-poldata[12]-1-prd"
+        "ops0-poldata[12]-[12]-prd"
       ],
       "ROLE": "poldata",
       "CLUSTER_TYPE": "ILLUMIO"
