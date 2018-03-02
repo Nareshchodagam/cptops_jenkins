@@ -2810,7 +2810,8 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "PRIMARY'",
-      "ROLE": "netmonitor"
+      "ROLE": "netmonitor",
+      "CLUSTER_TYPE": "NETMONITOR"
     }
   },
   "stgmgt_canary_prod": {
@@ -2884,13 +2885,28 @@
       "CLUSTER_TYPE": "DVA_ALARM_SERVICE"
     }
   },
-  "mom_prod": {
+   "health_prod": {
     "PROD": {
-      "PODGROUP": "momcl",
+      "PODGROUP": "healthcl",
       "TEMPLATEID": "straight-patch",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
+      "ROLE": "health",
+      "CLUSTER_TYPE": "HEALTH"
+    }
+  },
+  "mom_prod": {
+    "PROD": {
+      "PODGROUP": "momcl",
+      "TEMPLATEID": "mom",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "^.*mom1-",
+        "^.*mom2-"
+      ],
       "ROLE": "mom",
       "CLUSTER_TYPE": "MOM"
     }
@@ -2904,6 +2920,41 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "dvasyslog",
       "CLUSTER_TYPE": "DVA_SYSLOG"
+    }
+  },
+  "sysmgt_prod": {
+    "PROD": {
+      "PODGROUP": "sysmgtcl",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "sysmgt",
+      "CLUSTER_TYPE": "OPS"
+    }
+  },
+  "ajnamgmt_prod": {
+    "PROD": {
+      "PODGROUP": "ajna_mgmt",
+      "TEMPLATEID": "ajna_clusters",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 0,
+      "HO_STATUS": "ACTIVE,PROVISIONING",
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "ajna_mgmt,ajna_tracing,ajna_wrangler",
+      "CLUSTER_TYPE": "AJNA_MGMT"
+    }
+  },
+  "ajnareserve_prod": {
+    "PROD": {
+      "PODGROUP": "ajna_reserve",
+      "TEMPLATEID": "ajna_clusters",
+      "GROUPSIZE": 15,
+      "TAGGROUPS": 0,
+      "HO_STATUS": "ACTIVE,PROVISIONING",
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "ajna_broker,ajna_mirror",
+      "CLUSTER_TYPE": "AJNA_RESERVE"
     }
   }
 }
