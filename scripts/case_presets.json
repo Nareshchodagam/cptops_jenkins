@@ -396,12 +396,30 @@
       "CLUSTER_TYPE": "POD"
     }
   },
+  "acs_canary_prod": {
+    "PROD": {
+      "PODGROUP": "acs.pri",
+      "TEMPLATEID": "acs",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "cs80-acs.*"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "acs,computedocker",
+      "CL_STATUS": "DECOM",
+      "CLUSTER_TYPE": "ACS"
+    }
+  },
   "acs_prod": {
     "PROD": {
       "PODGROUP": "acs.pri",
       "TEMPLATEID": "acs",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!cs80-acs.*)"
+      ],
       "INFRA": "Primary",
       "ROLE": "acs,computedocker",
       "CL_STATUS": "DECOM",
