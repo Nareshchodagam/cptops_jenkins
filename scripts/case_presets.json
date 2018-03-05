@@ -396,7 +396,7 @@
       "CLUSTER_TYPE": "POD"
     }
   },
-  "acs_canary": {
+  "acs_canary_prod": {
     "PROD": {
       "PODGROUP": "acs.pri",
       "TEMPLATEID": "acs",
