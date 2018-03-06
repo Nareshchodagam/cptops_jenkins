@@ -1842,7 +1842,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!cfg-cfgapp1-1-crd)"
+        "(?!dev0cfg0-.*-prd)"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "cms",
@@ -1851,12 +1851,12 @@
   },
   "cfgapp_canary_prod": {
     "PROD": {
-      "PODGROUP": "cfgapp.canary",
+      "PODGROUP": "cfgapp",
       "TEMPLATEID": "cfgapp",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "cfg-cfgapp1-1-crd"
+        "dev0cfg0-.*-prd"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "cms",
@@ -1871,7 +1871,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Primary",
       "FILTER": [
-         ".*(nms[^3]-[1-2])"
+         ".*(nms[^3]-[1-2]-(?!sfm))"
       ],
       "ROLE": "smarts,nms",
       "CLUSTER_TYPE": "SMARTS"
@@ -1885,7 +1885,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Primary",
       "FILTER": [
-         ".*(nms3-[1-2])"
+         ".*(nms3-[1-2]-(?!sfm))"
       ],
       "ROLE": "smarts,nms",
       "CLUSTER_TYPE": "SMARTS"
@@ -1893,10 +1893,13 @@
   },
   "smarts_canary_prod": {
     "PROD": {
-      "PODGROUP": "smartscl.canary",
+      "PODGROUP": "smartscl",
       "TEMPLATEID": "smarts",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "FILTER": [
+         ".*-sfm"
+      ],
       "INFRA": "Primary",
       "ROLE": "smarts,nms",
       "CLUSTER_TYPE": "SMARTS"
