@@ -1842,7 +1842,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "?!(.*-prd)"
+        "(?!dev0cfg0-.*-prd)"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "cms",
@@ -1856,7 +1856,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        ".*-prd"
+        "dev0cfg0-.*-prd"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "cms",
