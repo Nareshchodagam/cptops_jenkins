@@ -2192,7 +2192,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "ops0-praccn(1|2).*
+        "ops0-praccn(1|2).*"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "praccn",
@@ -2206,7 +2206,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "ops0-pravmh(1|2).*
+        "ops0-pravmh(1|2).*"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "pravmh",
