@@ -642,7 +642,7 @@
   },
   "mmxcvr_canary_prod": {
     "PROD": {
-      "PODGROUP": "ajna_sfzcl.canary",
+      "PODGROUP": "ajna_prodcl",
       "TEMPLATEID": "mmxcvr",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -683,7 +683,7 @@
   },
   "mmrelay_canary_prod": {
     "PROD": {
-      "PODGROUP": "ajna_prodcl.canary",
+      "PODGROUP": "ajna_prodcl",
       "TEMPLATEID": "mmrelay",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -2145,7 +2145,7 @@
   },
   "mmmbus_canary_prod": {
     "PROD": {
-      "PODGROUP": "ajna_canary_prodcl",
+      "PODGROUP": "ajna_prodcl",
       "TEMPLATEID": "mmmbus",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
