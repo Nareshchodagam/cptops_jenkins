@@ -1842,7 +1842,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!cfg-cfgapp([12]-1|1-2)-prd)"
+        "?!(.*-prd)"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "cms",
@@ -1856,7 +1856,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "cfg-cfgapp([12]-1|1-2)-prd"
+        ".*-prd"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "cms",
