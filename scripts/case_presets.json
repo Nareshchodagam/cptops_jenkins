@@ -1842,7 +1842,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!cfg-cfgapp1-1-crd)"
+        "(?!cfg-cfgapp([12]-1|1-2|)-prd)"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "cms",
@@ -1851,12 +1851,12 @@
   },
   "cfgapp_canary_prod": {
     "PROD": {
-      "PODGROUP": "cfgapp.canary",
+      "PODGROUP": "cfgapp",
       "TEMPLATEID": "cfgapp",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "cfg-cfgapp1-1-crd"
+        "cfg-cfgapp([12]-1|1-2|)-prd"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "cms",
