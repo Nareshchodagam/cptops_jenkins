@@ -434,7 +434,7 @@
   },
   "search_prod": {
     "PROD": {
-      "PODGROUP": "pod.pri",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "search",
       "GROUPSIZE": 15,
       "TAGGROUPS": 0,
@@ -449,13 +449,12 @@
   },
   "search(23|43)_prod": {
     "PROD": {
-      "PODGROUP": "pod.pri",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "search",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "^.*search(23)-",
-        "^.*search(43)-"
+        "^.*search(23|43)-"
       ],
       "INFRA": "Primary",
       "ROLE": "search",
@@ -465,15 +464,14 @@
   },
   "search(21|22,41|42)_prod": {
     "PROD": {
-      "PODGROUP": "pod.pri",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "search",
       "GROUPSIZE": 15,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "^.*search(21|22)-",
-        "^.*search(41|42)-"
-      ],
       "INFRA": "Primary",
+      "FILTER": [
+        "^.*search(21|22|41|42)-"
+      ],
       "ROLE": "search",
       "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
@@ -481,7 +479,7 @@
   },
   "search_dr": {
     "DR": {
-      "PODGROUP": "pod.sec",
+      "PODGROUP": "afw.sec",
       "TEMPLATEID": "search",
       "GROUPSIZE": 15,
       "TAGGROUPS": 0,
@@ -496,9 +494,9 @@
   },
   "search(23|43)_dr": {
     "DR": {
-      "PODGROUP": "pod.sec",
+      "PODGROUP": "afw.sec",
       "TEMPLATEID": "search",
-      "GROUPSIZE": 15,
+      "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
         "^.*search(23)-",
@@ -512,13 +510,12 @@
   },
   "search(21|22,41|42)_dr": {
     "DR": {
-      "PODGROUP": "pod.sec",
+      "PODGROUP": "afw.sec",
       "TEMPLATEID": "search",
       "GROUPSIZE": 15,
       "TAGGROUPS": 0,
       "FILTER": [
-        "^.*search(21|22)-",
-        "^.*search(41|42)-"
+        "^.*search(21|22|41|42)-"
       ],
       "INFRA": "Secondary",
       "ROLE": "search",
@@ -1013,10 +1010,6 @@
       "TEMPLATEID": "searchzk",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "^shared0-searchzk4.*",
-        "^shared0-searchzk2.*"
-      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "searchzk",
       "CLUSTER_TYPE": "SEARCHZK"
@@ -1167,14 +1160,10 @@
   },
   "mq_prod": {
     "PROD": {
-      "PODGROUP": "pod.pri",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "mq.linux",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "^.*1-1",
-        "^.*(1-2|2-1)"
-      ],
       "INFRA": "Primary",
       "ROLE": "mq",
       "CL_STATUS": "DECOM",
@@ -1183,7 +1172,7 @@
   },
   "mq_dr": {
     "DR": {
-      "PODGROUP": "pod.sec",
+      "PODGROUP": "afw.sec",
       "TEMPLATEID": "mq.linux",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -2781,7 +2770,7 @@
       "CLUSTER_TYPE": "HSD_ONBOARDING"
     }
   },
-  "vault_czar_prod": {
+  "secrets_prod": {
     "PROD": {
       "PODGROUP": "vaultczarcl",
       "TEMPLATEID": "vault_czar",
@@ -2790,6 +2779,17 @@
       "INFRA": "PRIMARY'",
       "ROLE": "secrets",
       "CLUSTER_TYPE": "SECRETS"
+    }
+  },
+  "secrets_canary_prod": {
+    "PROD": {
+      "PODGROUP": "vaultczarcl",
+      "TEMPLATEID": "vault_czar",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [".*-(xrd|prd|sfm)"],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "secrets"
     }
   },
   "hadoop_prod": {
