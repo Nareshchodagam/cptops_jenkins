@@ -1711,7 +1711,7 @@
   },
   "insights_canary_prod": {
     "PROD": {
-      "PODGROUP": "insights.canary",
+      "PODGROUP": "insights.pri",
       "TEMPLATEID": "insights",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
