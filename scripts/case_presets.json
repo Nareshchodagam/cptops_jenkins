@@ -155,24 +155,12 @@
     "PROD": {
       "PODGROUP": "la_clusters",
       "TEMPLATEID": "la.linux",
-      "GROUPSIZE": 4,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "lapp",
       "CL_STATUS": "DECOM",
-      "CLUSTER_TYPE": "liveagent"
-    }
-  },
-  "lapp_cs_clusters_prod": {
-    "PROD": {
-      "PODGROUP": "la_cs_clusters",
-      "TEMPLATEID": "lacs.linux",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting_Infrastructure",
-      "ROLE": "lapp",
-      "CL_STATUS": "DECOM",
-      "CLUSTER_TYPE": "liveagent"
+      "CLUSTER_TYPE": "liveagent",
+      "HOSTPERCENT": 50
     }
   },
   "mmmbus_sfz_prod": {
