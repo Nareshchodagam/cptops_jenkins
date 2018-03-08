@@ -155,12 +155,13 @@
     "PROD": {
       "PODGROUP": "la_clusters",
       "TEMPLATEID": "la.linux",
+      "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "lapp",
       "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "liveagent",
-      "HOSTPERCENT": 50
+      "HOSTPERCENT": "50"
     }
   },
   "mmmbus_sfz_prod": {
