@@ -122,6 +122,8 @@ def array_builder(role, sets, r_class=False):
             options.cluststat
     bld_cmd['regexfilter'] = sets[role][role_status]['REGEX'] if sets[role][role_status].has_key('REGEX') else \
             options.regex
+    bld_cmd['hostpercent'] = sets[role][role_status]['HOSTPERCENT'] if sets[role][role_status].has_key('HOSTPERCENT') else \
+            options.hostpercent
 
     #Call special filter functions
     bld_cmd = spec_presets(sets, bld_cmd, role, role_status)
