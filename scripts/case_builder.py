@@ -57,11 +57,18 @@ def cmd_builder(sets, r_class=False):
             if flag.lower() == 'y':
                 options.hostpercent = raw_input("\nPreset requires min pool percentage. eg 33 : ")
 
-
     if options.hostpercent:
         bld_cmd['hostpercent'] = options.hostpercent
     if options.delpatched:
         bld_cmd['delpatched'] = options.delpatched
+    if options.cluststat:
+       bld_cmd['clusteropstat'] = options.cluststat
+    if options.hoststat:
+        bld_cmd['hostopstat'] = options.hoststat
+    if options.auto_close_case:
+        bld_cmd['auto_close_case'] = options.auto_close_case
+    if options.nolinebacker:
+        bld_cmd['nolinebacker'] = options.nolinebacker
 
     if options.regex is None:
         if 'REGEX' in sets[role_class][role_status]:
@@ -102,16 +109,14 @@ def cmd_builder(sets, r_class=False):
 
     if options.no_host_v:
         bld_cmd['no_host_validation'] = options.no_host_v
-    if options.auto_close_case:
-        bld_cmd['auto_close_case'] = options.auto_close_case
-    if options.nolinebacker:
-        bld_cmd['nolinebacker'] = options.nolinebacker
     if options.csv:
         bld_cmd['csv'] = options.csv
     if 'CL_STATUS' in sets[role_class][role_status].keys():
         bld_cmd['clusteropstat'] = sets[role_class][role_status]['CL_STATUS']
     if 'HO_STATUS' in sets[role_class][role_status].keys():
         bld_cmd['hostopstat'] = sets[role_class][role_status]['HO_STATUS']
+    if 'HOSTPERCENT' in sets[role_class][role_status].keys():
+        bld_cmd['hostpercent'] = sets[role_class][role_status]['HOSTPERCENT']
 
     #Custom parameters within the case_presets.json
     #These options are not within each predefined role_class.
@@ -122,10 +127,7 @@ def cmd_builder(sets, r_class=False):
                 bld_cmd[str.lower(key)] = "hostlists/" + sets[role_class][role_status][key]
             else:
                 bld_cmd[str.lower(key)] = sets[role_class][role_status][key]
-    if options.cluststat:
-       bld_cmd['clusteropstat'] = options.cluststat
-    if options.hoststat:
-        bld_cmd['hostopstat'] = options.hoststat
+
     logging.debug("TEMPLATEID = " + bld_cmd['template'])
     logging.debug("GROUPSIZE = " + str(bld_cmd['gsize']))
     logging.debug("TAGGROUPS = " + str(bld_cmd['tagsize']))
@@ -137,17 +139,20 @@ def cmd_builder(sets, r_class=False):
     logging.debug("FILTER = " + bld_cmd['filter'])
     logging.debug("PATCHSET = " + bld_cmd['patchset'])
     logging.debug("Contents of uploaded file %s" %  bld_cmd['podgroup'])
-    #logging.debug("CL_STATUS = " + bld_cmd['clusteropstat'])
+
+    if 'CL_STATUS' in sets[role_class][role_status].keys() or options.cluststat:
+        logging.debug("CL_STATUS = " + bld_cmd['clusteropstat'])
 
     if 'HO_STATUS' in sets[role_class][role_status].keys() or options.hoststat:
         logging.debug("HO_STATUS = " + bld_cmd['hostopstat'])
+
+    if 'HOSTPERCENT' in sets[role_class][role_status].keys() or options.hostpercent:
+        logging.debug("HOSTPERCENT = " + bld_cmd['hostpercent'])
 
     with open(bld_cmd['podgroup'], 'r') as fin:
         print fin.read()
     case_builder(bld_cmd)
 
-    if options.hostpercent:
-        logging.debug("HOSTPERCENT = " + bld_cmd['hostpercent'])
 
 def initfile():
     with open('cases.sh', 'w') as f:
@@ -321,7 +326,7 @@ if __name__ == "__main__":
             options.hoststat = 'DECOM'
         options.hoststat = options.hoststat.lower()
         role = options.role
-        if options.hoststat != 'active' :
+        if options.hoststat != 'active':
             for state in options.hoststat.upper().split(','):
                 if not re.search(r'DECOM|HW_PROVISIONING|PRE_PRODUCTION|PROVISIONING', state):
                     print("\nProvided iDB state not Found. state {0} is not the correct coice.\n".format(state))

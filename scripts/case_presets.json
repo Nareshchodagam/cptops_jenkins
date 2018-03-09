@@ -155,24 +155,13 @@
     "PROD": {
       "PODGROUP": "la_clusters",
       "TEMPLATEID": "la.linux",
-      "GROUPSIZE": 4,
+      "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "lapp",
       "CL_STATUS": "DECOM",
-      "CLUSTER_TYPE": "liveagent"
-    }
-  },
-  "lapp_cs_clusters_prod": {
-    "PROD": {
-      "PODGROUP": "la_cs_clusters",
-      "TEMPLATEID": "lacs.linux",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting_Infrastructure",
-      "ROLE": "lapp",
-      "CL_STATUS": "DECOM",
-      "CLUSTER_TYPE": "liveagent"
+      "CLUSTER_TYPE": "liveagent",
+      "HOSTPERCENT": "50"
     }
   },
   "mmmbus_sfz_prod": {
@@ -1711,40 +1700,12 @@
   },
   "insights_canary_prod": {
     "PROD": {
-      "PODGROUP": "insights.canary",
+      "PODGROUP": "insights.pri",
       "TEMPLATEID": "insights",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "^.*(redis(1|2)-1-|iworker(1|2)-1-)"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "insights_iworker,insights_redis",
-      "CLUSTER_TYPE": "INSIGHTS"
-    }
-  },
-  "insights_canary_chi_prod": {
-    "PROD": {
-      "PODGROUP": "insights.canary.chi",
-      "TEMPLATEID": "insights",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "^.*(redis(1|2)-1-|iworker(1-15|2-9)-)"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "insights_iworker,insights_redis",
-      "CLUSTER_TYPE": "INSIGHTS"
-    }
-  },
-  "insights_canary_was_prod": {
-    "PROD": {
-      "PODGROUP": "insights.canary.was",
-      "TEMPLATEID": "insights",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "^.*(redis(1|2)-1-|iworker(1-11|3-1)-)"
+        "((^.*((redis|iworker)[1,2]-1-(lon|wax|chx)))|insights1-(redis|iworker)[1,2]-1-dfw|insights4-(redis|iworker)[1,2]-1-chi)"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "insights_iworker,insights_redis",
@@ -1758,7 +1719,7 @@
       "GROUPSIZE": 20,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!.*(redis[1-2]-1-(chi|lon|dfw|was)|iworker((1-15|2-9)-chi|(1-11|3-1)-was|[1-2]-1-)))"
+        "(?!((^.*((redis|iworker)[1,2]-1-(lon|wax|chx)))|insights1-(redis|iworker)[1,2]-1-dfw|insights4-(redis|iworker)[1,2]-1-chi))"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "insights_iworker,insights_redis",
@@ -2963,6 +2924,18 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "ajna_broker,ajna_mirror",
       "CLUSTER_TYPE": "AJNA_RESERVE"
+    }
+  },
+  "funnel_prod": {
+    "PROD": {
+      "PODGROUP": "funnelcl",
+      "TEMPLATEID": "funnel",
+      "GROUPSIZE": 4,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "funnel",
+      "CLUSTER_TYPE": "FUNNEL",
+      "HOSTPERCENT": "33"
     }
   }
 }
