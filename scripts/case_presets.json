@@ -1356,7 +1356,7 @@
   "hbase_deepsea": {
     "PROD": {
       "PODGROUP": "hbase.clusters",
-      "TEMPLATEID": "hbase.linux",
+      "TEMPLATEID": "deepsea",
       "GROUPSIZE": 5,
       "TAGGROUPS": 5,
       "FILTER": [
