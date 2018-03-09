@@ -1353,10 +1353,10 @@
       "CLUSTER_TYPE": "HBASE"
     }
   },
-  "hbase_deepsea": {
+  "hbase_deepsea_prod": {
     "PROD": {
       "PODGROUP": "hbase.clusters",
-      "TEMPLATEID": "hbase.linux",
+      "TEMPLATEID": "deepsea",
       "GROUPSIZE": 5,
       "TAGGROUPS": 5,
       "FILTER": [
