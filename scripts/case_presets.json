@@ -1353,7 +1353,7 @@
       "CLUSTER_TYPE": "HBASE"
     }
   },
-  "hbase_deepsea": {
+  "hbase_deepsea_prod": {
     "PROD": {
       "PODGROUP": "hbase.clusters",
       "TEMPLATEID": "deepsea",
