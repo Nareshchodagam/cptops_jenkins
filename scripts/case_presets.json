@@ -1909,7 +1909,7 @@
   },
   "log_hub_canary_prod": {
     "PROD": {
-      "PODGROUP": "hubcl.canary",
+      "PODGROUP": "hubcl",
       "TEMPLATEID": "log_hub",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
