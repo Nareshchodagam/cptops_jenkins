@@ -1845,40 +1845,9 @@
   "lhub_prod": {
     "PROD": {
       "PODGROUP": "lhubcl",
-      "TEMPLATEID": "lhub",
-      "GROUPSIZE": 1,
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 15,
       "TAGGROUPS": 0,
-      "REGEX": "failoverstatus=PRIMARY",
-      "FILTER": [
-        "(?!shared-lhub14-1-sfz)"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "lhub",
-      "CLUSTER_TYPE": "HUB"
-    }
-  },
-  "lhub_standby_prod": {
-    "PROD": {
-      "PODGROUP": "lhubcl",
-      "TEMPLATEID": "lhub_standby",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "REGEX": "failoverstatus=STANDBY",
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "lhub",
-      "CLUSTER_TYPE": "HUB"
-    }
-  },
-  "lhub_canary_prod": {
-    "PROD": {
-      "PODGROUP": "lhubcl",
-      "TEMPLATEID": "lhub",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "REGEX": "failoverstatus=PRIMARY",
-      "FILTER": [
-        "shared-lhub14-1-sfz"
-      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "lhub",
       "CLUSTER_TYPE": "HUB"
