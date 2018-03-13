@@ -1845,40 +1845,9 @@
   "lhub_prod": {
     "PROD": {
       "PODGROUP": "lhubcl",
-      "TEMPLATEID": "lhub",
-      "GROUPSIZE": 1,
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 15,
       "TAGGROUPS": 0,
-      "REGEX": "failoverstatus=PRIMARY",
-      "FILTER": [
-        "(?!shared-lhub14-1-sfz)"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "lhub",
-      "CLUSTER_TYPE": "HUB"
-    }
-  },
-  "lhub_standby_prod": {
-    "PROD": {
-      "PODGROUP": "lhubcl",
-      "TEMPLATEID": "lhub_standby",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "REGEX": "failoverstatus=STANDBY",
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "lhub",
-      "CLUSTER_TYPE": "HUB"
-    }
-  },
-  "lhub_canary_prod": {
-    "PROD": {
-      "PODGROUP": "lhubcl",
-      "TEMPLATEID": "lhub",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "REGEX": "failoverstatus=PRIMARY",
-      "FILTER": [
-        "shared-lhub14-1-sfz"
-      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "lhub",
       "CLUSTER_TYPE": "HUB"
@@ -1940,7 +1909,7 @@
   },
   "log_hub_canary_prod": {
     "PROD": {
-      "PODGROUP": "hubcl.canary",
+      "PODGROUP": "hubcl",
       "TEMPLATEID": "log_hub",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -2471,11 +2440,10 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?!(ops0-vc[12]-1-prd)"
+        "(?!ops0-vc[1,2]-1-prd)"
       ],
       "ROLE": "vc",
-      "LIST_FILTER": "True",
-      "CASETYPE": "hostlist"
+      "CLUSTER_TYPE": "VC"
     }
   },
   "vc_canary_prod": {
@@ -2486,11 +2454,10 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "ops0-vc[12]-1-prd"
+        "ops0-vc[1,2]-1-prd"
       ],
       "ROLE": "vc",
-      "LIST_FILTER": "True",
-      "CASETYPE": "hostlist"
+      "CLUSTER_TYPE": "VC"
     }
   },
   "syslog_prod": {
