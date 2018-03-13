@@ -1589,7 +1589,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting_Infrastructure",
-      "ROLE": "trust",
+      "ROLE": "trust,trustadmin",
       "CLUSTER_TYPE": "TRUST"
     }
   },
@@ -1600,7 +1600,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting_Infrastructure",
-      "ROLE": "trust",
+      "ROLE": "trust,trustadmin",
       "CLUSTER_TYPE": "TRUST"
     }
   },
@@ -2742,7 +2742,7 @@
   "secrets_prod": {
     "PROD": {
       "PODGROUP": "vaultczarcl",
-      "TEMPLATEID": "vault_czar",
+      "TEMPLATEID": "secrets",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "PRIMARY'",
@@ -2752,8 +2752,8 @@
   },
   "secrets_canary_prod": {
     "PROD": {
-      "PODGROUP": "vaultczarcl",
-      "TEMPLATEID": "vault_czar",
+      "PODGROUP": "vaultczarcl.canary",
+      "TEMPLATEID": "secrets",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [".*-(xrd|prd|sfm)"],
