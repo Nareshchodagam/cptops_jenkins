@@ -43,4 +43,6 @@ req_sub = ['search(23|43)_prod',
            'argus_writed_matrics_prod',
            'argus_writed_matrics_canary_prod',
            'netmgt_prod',
-           'siteproxy_prod']
+           'siteproxy_prod',
+           'coreafw_canary_prod',
+           'coreafw_cbatch_dapp_canary_prod']

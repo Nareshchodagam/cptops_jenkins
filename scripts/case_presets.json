@@ -154,27 +154,14 @@
   "lapp_clusters_prod": {
     "PROD": {
       "PODGROUP": "la_clusters",
-      "TEMPLATEID": "la.kafka.linux",
+      "TEMPLATEID": "la.linux",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "lapp",
       "CL_STATUS": "DECOM",
-      "CLUSTER_TYPE": "liveagent"
-    }
-  },
-  "lapp_cs_clusters_prod": {
-    "PROD": {
-      "PODGROUP": "la_cs_clusters",
-      "TEMPLATEID": "la.kafka.linux202",
-      "GROUPSIZE": 2,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting_Infrastructure",
-      "ROLE": "lapp",
-      "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "liveagent",
-      "SUBJECT": "CS MAINT WINDOW",
-      "IMPLPLAN": "lapp_cs"
+      "HOSTPERCENT": "50"
     }
   },
   "mmmbus_sfz_prod": {
@@ -248,19 +235,8 @@
   "nodeapp_prod": {
     "PROD": {
       "PODGROUP": "nodeappcl",
-      "TEMPLATEID": "nodeapp",
-      "GROUPSIZE": 2,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "nodeapp",
-      "CLUSTER_TYPE": "NODEAPP"
-    }
-  },
-  "nodeapp_canary_prod": {
-    "PROD": {
-      "PODGROUP": "nodeappcl.canary",
-      "TEMPLATEID": "nodeapp",
-      "GROUPSIZE": 2,
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 10,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "nodeapp",
@@ -314,12 +290,15 @@
   },
   "coreafw_canary_prod": {
     "PROD": {
-      "PODGROUP": "coreapp.canary",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "coreapp-prod",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        ".*app1-.*"
+        "gs0-app.*",
+        "cs7-app.*",
+        "cs46-app.*",
+        "eu4-app1-.*"
       ],
       "INFRA": "Primary",
       "ROLE": "app",
@@ -328,7 +307,7 @@
   },
   "coreafw_app_reboot_prod": {
     "PROD": {
-      "PODGROUP": "coreapp.canary",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "coreapp-reboot",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -378,16 +357,34 @@
   },
   "coreafw_cbatch_dapp_canary_prod": {
     "PROD": {
-      "PODGROUP": "coreapp.canary",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "cbatch-dapp-prod",
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
       "FILTER": [
-        ".*[cbatch|dapp]1-.*"
+        "gs0-[cbatch|dapp].*",
+        "cs7-[cbatch|dapp].*",
+        "cs46-[cbatch|dapp].*",
+        "eu4-[cbatch|dapp].*"
       ],
       "INFRA": "Primary",
       "ROLE": "cbatch,dapp",
       "CLUSTER_TYPE": "POD"
+    }
+  },
+  "acs_canary_prod": {
+    "PROD": {
+      "PODGROUP": "acs.pri",
+      "TEMPLATEID": "acs",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "cs80-acs.*"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "acs,computedocker",
+      "CL_STATUS": "DECOM",
+      "CLUSTER_TYPE": "ACS"
     }
   },
   "acs_prod": {
@@ -396,6 +393,9 @@
       "TEMPLATEID": "acs",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!cs80-acs.*)"
+      ],
       "INFRA": "Primary",
       "ROLE": "acs,computedocker",
       "CL_STATUS": "DECOM",
@@ -414,9 +414,21 @@
       "CLUSTER_TYPE": "ACS"
     }
   },
+  "searchmgr_gia_prod": {
+    "PROD": {
+      "PODGROUP": "searchmgr_gia",
+      "TEMPLATEID": "straight-patch-nag",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "searchmgr",
+      "HO_STATUS": "ACTIVE,PRE_PRODUCTION",
+      "CLUSTER_TYPE": "SEARCHMGR"
+    }
+  },
   "search_prod": {
     "PROD": {
-      "PODGROUP": "pod.pri",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "search",
       "GROUPSIZE": 15,
       "TAGGROUPS": 0,
@@ -431,13 +443,12 @@
   },
   "search(23|43)_prod": {
     "PROD": {
-      "PODGROUP": "pod.pri",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "search",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "^.*search(23)-",
-        "^.*search(43)-"
+        "^.*search(23|43)-"
       ],
       "INFRA": "Primary",
       "ROLE": "search",
@@ -447,15 +458,14 @@
   },
   "search(21|22,41|42)_prod": {
     "PROD": {
-      "PODGROUP": "pod.pri",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "search",
       "GROUPSIZE": 15,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "^.*search(21|22)-",
-        "^.*search(41|42)-"
-      ],
       "INFRA": "Primary",
+      "FILTER": [
+        "^.*search(21|22|41|42)-"
+      ],
       "ROLE": "search",
       "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
@@ -463,7 +473,7 @@
   },
   "search_dr": {
     "DR": {
-      "PODGROUP": "pod.sec",
+      "PODGROUP": "afw.sec",
       "TEMPLATEID": "search",
       "GROUPSIZE": 15,
       "TAGGROUPS": 0,
@@ -478,9 +488,9 @@
   },
   "search(23|43)_dr": {
     "DR": {
-      "PODGROUP": "pod.sec",
+      "PODGROUP": "afw.sec",
       "TEMPLATEID": "search",
-      "GROUPSIZE": 15,
+      "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
         "^.*search(23)-",
@@ -494,13 +504,12 @@
   },
   "search(21|22,41|42)_dr": {
     "DR": {
-      "PODGROUP": "pod.sec",
+      "PODGROUP": "afw.sec",
       "TEMPLATEID": "search",
       "GROUPSIZE": 15,
       "TAGGROUPS": 0,
       "FILTER": [
-        "^.*search(21|22)-",
-        "^.*search(41|42)-"
+        "^.*search(21|22|41|42)-"
       ],
       "INFRA": "Secondary",
       "ROLE": "search",
@@ -525,12 +534,6 @@
       "TEMPLATEID": "mta.linux",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "ops-mta(1|2|30|31)-(3|4)",
-        "(ops4|ops1)-mta(1|2)-(1|2)",
-        "ops0-mta(1|2)-(1|2)-(frf|par|iad|ord|ukb)",
-        "ops0-mta(1|2)-(1|2|3|4|5|6|7|8)-(dfw|phx)"
-      ],
       "INFRA": "Primary",
       "ROLE": "mta",
       "CLUSTER_TYPE": "MTA"
@@ -612,7 +615,7 @@
   },
   "mmxcvr_canary_prod": {
     "PROD": {
-      "PODGROUP": "ajna_sfzcl.canary",
+      "PODGROUP": "ajna_prodcl",
       "TEMPLATEID": "mmxcvr",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -653,7 +656,7 @@
   },
   "mmrelay_canary_prod": {
     "PROD": {
-      "PODGROUP": "ajna_prodcl.canary",
+      "PODGROUP": "ajna_prodcl",
       "TEMPLATEID": "mmrelay",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -1001,10 +1004,6 @@
       "TEMPLATEID": "searchzk",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "^shared0-searchzk4.*",
-        "^shared0-searchzk2.*"
-      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "searchzk",
       "CLUSTER_TYPE": "SEARCHZK"
@@ -1125,7 +1124,21 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "nbmedia",
-      "CASETYPE": "hostlist"
+      "CL_STATUS": "DECOM",
+      "CLUSTER_TYPE": "NETBACKUP"
+
+    }
+  },
+  "nbmaster_prod": {
+    "PROD": {
+      "PODGROUP": "nbmaster",
+      "TEMPLATEID": "nbmedia",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "nbmaster",
+      "CL_STATUS": "DECOM",
+      "CLUSTER_TYPE": "NETBACKUP"
     }
   },
   "ffx_dr": {
@@ -1141,14 +1154,10 @@
   },
   "mq_prod": {
     "PROD": {
-      "PODGROUP": "pod.pri",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "mq.linux",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "^.*1-1",
-        "^.*(1-2|2-1)"
-      ],
       "INFRA": "Primary",
       "ROLE": "mq",
       "CL_STATUS": "DECOM",
@@ -1157,7 +1166,7 @@
   },
   "mq_dr": {
     "DR": {
-      "PODGROUP": "pod.sec",
+      "PODGROUP": "afw.sec",
       "TEMPLATEID": "mq.linux",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -1240,13 +1249,14 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "artifactrepo"
+      "ROLE": "artifactrepo",
+      "CLUSTER_TYPE": "ARTIFACTREPO"
     }
   },
   "tools_gia": {
     "GIA": {
       "PODGROUP": "tools_gia",
-      "TEMPLATEID": "straight-patch",
+      "TEMPLATEID": "straight-patch-nag",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
@@ -1256,28 +1266,39 @@
   "ppm_gia": {
     "GIA": {
       "PODGROUP": "puppet_gia",
-      "TEMPLATEID": "straight-patch",
+      "TEMPLATEID": "straight-patch-nag",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "rdb,ppm"
     }
   },
-  "nbmedia_gia": {
-    "GIA": {
+  "nbmedia_gia_prod": {
+    "PROD": {
       "PODGROUP": "nbmedia_gia",
       "TEMPLATEID": "nbmedia",
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "nbmedia",
-      "CASETYPE": "hostlist"
+      "CLUSTER_TYPE": "NB-PRD"
     }
   },
-  "umps_gia": {
-    "GIA": {
+ "nbmaster_gia_prod": {
+    "PROD": {
+      "PODGROUP": "nbmedia_gia",
+      "TEMPLATEID": "nbmedia",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "nbmaster",
+      "CLUSTER_TYPE": "NB-PRD"
+    }
+  },
+  "sshare_gia_prod": {
+    "PROD": {
       "PODGROUP": "chattercl_gia",
-      "TEMPLATEID": "umps.linux",
+      "TEMPLATEID": "straight-patch-nag",
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
@@ -1285,14 +1306,15 @@
       "CLUSTER_TYPE": "CHATTER"
     }
   },
-  "gforce_gia": {
-    "GIA": {
+ "gforce_gia_prod": {
+    "PROD": {
       "PODGROUP": "gforce_gia",
       "TEMPLATEID": "gforce.linux",
       "GROUPSIZE": 10,
       "TAGGROUPS": 0,
       "INFRA": "Primary",
-      "ROLE": "mnds,dnds,gforce"
+      "ROLE": "compute",
+      "HO_STATUS": "DECOM,PROVISIONING,IN_MAINTENANCE,ACTIVE"
     }
   },
   "gforce": {
@@ -1320,10 +1342,10 @@
       "CLUSTER_TYPE": "HBASE"
     }
   },
-  "hbase_deepsea": {
+  "hbase_deepsea_prod": {
     "PROD": {
       "PODGROUP": "hbase.clusters",
-      "TEMPLATEID": "hbase.linux",
+      "TEMPLATEID": "deepsea",
       "GROUPSIZE": 5,
       "TAGGROUPS": 5,
       "FILTER": [
@@ -1567,7 +1589,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting_Infrastructure",
-      "ROLE": "trust",
+      "ROLE": "trust,trustadmin",
       "CLUSTER_TYPE": "TRUST"
     }
   },
@@ -1578,7 +1600,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting_Infrastructure",
-      "ROLE": "trust",
+      "ROLE": "trust,trustadmin",
       "CLUSTER_TYPE": "TRUST"
     }
   },
@@ -1678,40 +1700,12 @@
   },
   "insights_canary_prod": {
     "PROD": {
-      "PODGROUP": "insights.canary",
+      "PODGROUP": "insights.pri",
       "TEMPLATEID": "insights",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "^.*(redis(1|2)-1-|iworker(1|2)-1-)"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "insights_iworker,insights_redis",
-      "CLUSTER_TYPE": "INSIGHTS"
-    }
-  },
-  "insights_canary_chi_prod": {
-    "PROD": {
-      "PODGROUP": "insights.canary.chi",
-      "TEMPLATEID": "insights",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "^.*(redis(1|2)-1-|iworker(1-15|2-9)-)"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "insights_iworker,insights_redis",
-      "CLUSTER_TYPE": "INSIGHTS"
-    }
-  },
-  "insights_canary_was_prod": {
-    "PROD": {
-      "PODGROUP": "insights.canary.was",
-      "TEMPLATEID": "insights",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "^.*(redis(1|2)-1-|iworker(1-11|3-1)-)"
+        "((^.*((redis|iworker)[1,2]-1-(lon|wax|chx)))|insights1-(redis|iworker)[1,2]-1-dfw|insights4-(redis|iworker)[1,2]-1-chi)"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "insights_iworker,insights_redis",
@@ -1725,7 +1719,7 @@
       "GROUPSIZE": 20,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!.*(redis[1-2]-1-(chi|lon|dfw|was)|iworker((1-15|2-9)-chi|(1-11|3-1)-was|[1-2]-1-)))"
+        "(?!((^.*((redis|iworker)[1,2]-1-(lon|wax|chx)))|insights1-(redis|iworker)[1,2]-1-dfw|insights4-(redis|iworker)[1,2]-1-chi))"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "insights_iworker,insights_redis",
@@ -1750,7 +1744,7 @@
   },
   "dustyhub_canary_prod": {
     "PROD": {
-      "PODGROUP": "dustyhub.canary",
+      "PODGROUP": "dustyhubcl",
       "TEMPLATEID": "dusty",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -1785,7 +1779,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!cfg-cfgapp1-1-crd)"
+        "(?!dev0cfg0-.*-prd)"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "cms",
@@ -1794,12 +1788,12 @@
   },
   "cfgapp_canary_prod": {
     "PROD": {
-      "PODGROUP": "cfgapp.canary",
+      "PODGROUP": "cfgapp",
       "TEMPLATEID": "cfgapp",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "cfg-cfgapp1-1-crd"
+        "dev0cfg0-.*-prd"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "cms",
@@ -1814,7 +1808,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Primary",
       "FILTER": [
-         ".*(nms[^3]-[1-2])"
+         ".*(nms[^3]-[1-2]-(?!sfm))"
       ],
       "ROLE": "smarts,nms",
       "CLUSTER_TYPE": "SMARTS"
@@ -1828,7 +1822,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Primary",
       "FILTER": [
-         ".*(nms3-[1-2])"
+         ".*(nms3-[1-2]-(?!sfm))"
       ],
       "ROLE": "smarts,nms",
       "CLUSTER_TYPE": "SMARTS"
@@ -1836,10 +1830,13 @@
   },
   "smarts_canary_prod": {
     "PROD": {
-      "PODGROUP": "smartscl.canary",
+      "PODGROUP": "smartscl",
       "TEMPLATEID": "smarts",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "FILTER": [
+         ".*-sfm"
+      ],
       "INFRA": "Primary",
       "ROLE": "smarts,nms",
       "CLUSTER_TYPE": "SMARTS"
@@ -1848,40 +1845,9 @@
   "lhub_prod": {
     "PROD": {
       "PODGROUP": "lhubcl",
-      "TEMPLATEID": "lhub",
-      "GROUPSIZE": 1,
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 15,
       "TAGGROUPS": 0,
-      "REGEX": "failoverstatus=PRIMARY",
-      "FILTER": [
-        "(?!shared-lhub14-1-sfz)"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "lhub",
-      "CLUSTER_TYPE": "HUB"
-    }
-  },
-  "lhub_standby_prod": {
-    "PROD": {
-      "PODGROUP": "lhubcl",
-      "TEMPLATEID": "lhub_standby",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "REGEX": "failoverstatus=STANDBY",
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "lhub",
-      "CLUSTER_TYPE": "HUB"
-    }
-  },
-  "lhub_canary_prod": {
-    "PROD": {
-      "PODGROUP": "lhubcl",
-      "TEMPLATEID": "lhub",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "REGEX": "failoverstatus=PRIMARY",
-      "FILTER": [
-        "shared-lhub14-1-sfz"
-      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "lhub",
       "CLUSTER_TYPE": "HUB"
@@ -1943,7 +1909,7 @@
   },
   "log_hub_canary_prod": {
     "PROD": {
-      "PODGROUP": "hubcl.canary",
+      "PODGROUP": "hubcl",
       "TEMPLATEID": "log_hub",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -2085,7 +2051,7 @@
   },
   "mmmbus_canary_prod": {
     "PROD": {
-      "PODGROUP": "ajna_canary_prodcl",
+      "PODGROUP": "ajna_prodcl",
       "TEMPLATEID": "mmmbus",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -2100,8 +2066,8 @@
   "lapp_canary_prod": {
     "PROD": {
       "PODGROUP": "lacanary",
-      "TEMPLATEID": "la.kafka.linux",
-      "GROUPSIZE": 1,
+      "TEMPLATEID": "la.linux",
+      "GROUPSIZE": 4,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "lapp",
@@ -2122,42 +2088,42 @@
       "CLUSTER_TYPE": "OPS"
     }
   },
-  "praapp_prd_prod": {
+  "praapp_prod": {
     "PROD": {
       "PODGROUP": "pracl",
       "TEMPLATEID": "straight-patch-co7",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "ops0-praapp(1|2)-1-(prd)"
+        "ops0-praapp(1|2).*"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "praapp",
       "CLUSTER_TYPE": "PRA"
     }
   },
-  "praccn_prd_prod": {
+  "praccn_prod": {
     "PROD": {
       "PODGROUP": "pracl",
       "TEMPLATEID": "straight-patch-co7",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "ops0-praccn(1|2)-1-(prd)"
+        "ops0-praccn(1|2).*"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "praccn",
       "CLUSTER_TYPE": "PRA"
     }
   },
-  "pravmh_prd_prod": {
+  "pravmh_prod": {
     "PROD": {
       "PODGROUP": "pracl",
       "TEMPLATEID": "straight-patch-co7",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "ops0-pravmh(1|2)-1-(prd)"
+        "ops0-pravmh(1|2).*"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "pravmh",
@@ -2214,7 +2180,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?!(ops0-polcore[12]-1-prd))"
+        "(?!(ops0-polcore[12]-[12]-prd))"
       ],
       "ROLE": "polcore",
       "CLUSTER_TYPE": "ILLUMIO"
@@ -2228,7 +2194,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "ops0-polcore[12]-1-prd"
+        "ops0-polcore[12]-[12]-prd"
       ],
       "ROLE": "polcore",
       "CLUSTER_TYPE": "ILLUMIO"
@@ -2242,7 +2208,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?!(ops0-poldata[12]-1-prd))"
+        "(?!(ops0-poldata[12]-[12]-prd))"
       ],
       "ROLE": "poldata",
       "CLUSTER_TYPE": "ILLUMIO"
@@ -2256,7 +2222,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "ops0-poldata[12]-1-prd"
+        "ops0-poldata[12]-[12]-prd"
       ],
       "ROLE": "poldata",
       "CLUSTER_TYPE": "ILLUMIO"
@@ -2474,11 +2440,10 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?!(ops0-vc[12]-1-prd)"
+        "(?!ops0-vc[1,2]-1-prd)"
       ],
       "ROLE": "vc",
-      "LIST_FILTER": "True",
-      "CASETYPE": "hostlist"
+      "CLUSTER_TYPE": "VC"
     }
   },
   "vc_canary_prod": {
@@ -2489,11 +2454,10 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "ops0-vc[12]-1-prd"
+        "ops0-vc[1,2]-1-prd"
       ],
       "ROLE": "vc",
-      "LIST_FILTER": "True",
-      "CASETYPE": "hostlist"
+      "CLUSTER_TYPE": "VC"
     }
   },
   "syslog_prod": {
@@ -2606,6 +2570,17 @@
       "CLUSTER_TYPE": "VULNSCAN"
     }
   },
+  "csm_prod": {
+    "PROD": {
+      "PODGROUP": "csm",
+      "TEMPLATEID": "straight-patch-co7",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "csm",
+      "CLUSTER_TYPE": "CSM"
+    }
+  },
   "logbus_dev_prod": {
     "PROD": {
       "PODGROUP": "logbuscl",
@@ -2712,12 +2687,56 @@
   "strata_jenkins_prod": {
     "PROD": {
       "PODGROUP": "stratacl",
-      "TEMPLATEID": "strata_jenkins",
+      "TEMPLATEID": "straight-patch",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "PRIMARY'",
       "ROLE": "strata_jenkins_master",
       "CLUSTER_TYPE": "DVACI"
+    }
+  },
+  "dva_onboarding_prod": {
+    "PROD": {
+      "PODGROUP": "onboardingcl",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "PRIMARY'",
+      "ROLE": "dva_onboarding",
+      "CLUSTER_TYPE": "HSD_ONBOARDING"
+    }
+  },
+  "secrets_prod": {
+    "PROD": {
+      "PODGROUP": "vaultczarcl",
+      "TEMPLATEID": "secrets",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "PRIMARY'",
+      "ROLE": "secrets",
+      "CLUSTER_TYPE": "SECRETS"
+    }
+  },
+  "secrets_canary_prod": {
+    "PROD": {
+      "PODGROUP": "vaultczarcl.canary",
+      "TEMPLATEID": "secrets",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [".*-(xrd|prd|sfm)"],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "secrets"
+    }
+  },
+  "hadoop_prod": {
+    "PROD": {
+      "PODGROUP": "haddopcl",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 0,
+      "INFRA": "PRIMARY'",
+      "ROLE": "infinsighthaddop",
+      "CLUSTER_TYPE": "INFINSIGHTPRD"
     }
   },
   "netmonitor_prod": {
@@ -2727,7 +2746,8 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "PRIMARY'",
-      "ROLE": "netmonitor"
+      "ROLE": "netmonitor",
+      "CLUSTER_TYPE": "NETMONITOR"
     }
   },
   "stgmgt_canary_prod": {
@@ -2768,6 +2788,65 @@
       "CLUSTER_TYPE": "NWEXP"
     }
   },
+  "dvamon_prod": {
+    "PROD": {
+      "PODGROUP": "dvamoncl",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "dvamon",
+      "CLUSTER_TYPE": "MFM"
+    }
+  },
+  "dvaexp_prod": {
+    "PROD": {
+      "PODGROUP": "dvamoncl",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "dvaexp",
+      "CLUSTER_TYPE": "MFM"
+    }
+  },
+  "dvaalarmservice_prod": {
+    "PROD": {
+      "PODGROUP": "dvaalarmcl",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "dvaALARMSERVICE",
+      "CLUSTER_TYPE": "DVA_ALARM_SERVICE"
+    }
+  },
+   "health_prod": {
+    "PROD": {
+      "PODGROUP": "healthcl",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "health",
+      "CLUSTER_TYPE": "HEALTH"
+    }
+  },
+  "mom_prod": {
+    "PROD": {
+      "PODGROUP": "momcl",
+      "TEMPLATEID": "mom",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "^.*mom1-",
+        "^.*mom2-"
+      ],
+      "ROLE": "mom",
+      "CLUSTER_TYPE": "MOM"
+    }
+  },
   "dvasyslog_prod": {
     "PROD": {
       "PODGROUP": "dvasyslog_prod",
@@ -2777,6 +2856,53 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "dvasyslog",
       "CLUSTER_TYPE": "DVA_SYSLOG"
+    }
+  },
+  "sysmgt_prod": {
+    "PROD": {
+      "PODGROUP": "sysmgtcl",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "sysmgt",
+      "CLUSTER_TYPE": "OPS"
+    }
+  },
+  "ajnamgmt_prod": {
+    "PROD": {
+      "PODGROUP": "ajna_mgmt",
+      "TEMPLATEID": "ajna_clusters",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 0,
+      "HO_STATUS": "ACTIVE,PROVISIONING",
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "ajna_mgmt,ajna_tracing,ajna_wrangler",
+      "CLUSTER_TYPE": "AJNA_MGMT"
+    }
+  },
+  "ajnareserve_prod": {
+    "PROD": {
+      "PODGROUP": "ajna_reserve",
+      "TEMPLATEID": "ajna_clusters",
+      "GROUPSIZE": 15,
+      "TAGGROUPS": 0,
+      "HO_STATUS": "ACTIVE,PROVISIONING",
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "ajna_broker,ajna_mirror",
+      "CLUSTER_TYPE": "AJNA_RESERVE"
+    }
+  },
+  "funnel_prod": {
+    "PROD": {
+      "PODGROUP": "funnelcl",
+      "TEMPLATEID": "funnel",
+      "GROUPSIZE": 4,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "funnel",
+      "CLUSTER_TYPE": "FUNNEL",
+      "HOSTPERCENT": "33"
     }
   }
 }
