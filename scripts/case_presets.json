@@ -2777,6 +2777,20 @@
       "CLUSTER_TYPE": "OPSSTGMGT"
     }
   },
+  "nwexp_canary_prod": {
+    "PROD": {
+      "PODGROUP": "nwexp_prod",
+      "TEMPLATEID": "nwexp",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+       "FILTER": [
+        "(stage0shared0-nwexp[1-2]-1-prd|test0shared0-nwexp1-1-prd)"
+      ],
+      "ROLE": "nwexp",
+      "CLUSTER_TYPE": "NWEXP"
+    }
+  },
   "nwexp_prod": {
     "PROD": {
       "PODGROUP": "nwexp_prod",
@@ -2784,6 +2798,9 @@
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?!(stage0shared0-nwexp[1-2]-1-prd|test0shared0-nwexp1-1-prd))"
+      ],
       "ROLE": "nwexp",
       "CLUSTER_TYPE": "NWEXP"
     }
@@ -2847,6 +2864,20 @@
       "CLUSTER_TYPE": "MOM"
     }
   },
+  "dvasyslog_canary_prod": {
+    "PROD": {
+      "PODGROUP": "dvasyslog_prod",
+      "TEMPLATEID": "dvasyslog",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+       "FILTER": [
+	"(stage0shared0-dvasyslog[1-2]-1-prd|test0shared0-dvasyslog1-1-prd)"
+      ],
+      "ROLE": "dvasyslog",
+      "CLUSTER_TYPE": "DVA_SYSLOG"
+    }
+  },
   "dvasyslog_prod": {
     "PROD": {
       "PODGROUP": "dvasyslog_prod",
@@ -2854,6 +2885,9 @@
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
+       "FILTER": [
+        "(?!(stage0shared0-dvasyslog[1-2]-1-prd|test0shared0-dvasyslog1-1-prd))"
+      ],
       "ROLE": "dvasyslog",
       "CLUSTER_TYPE": "DVA_SYSLOG"
     }
