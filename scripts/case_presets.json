@@ -1198,17 +1198,6 @@
       "CLUSTER_TYPE": "POD"
     }
   },
-  "web_auth_prod": {
-    "PROD": {
-      "PODGROUP": "pwebauth",
-      "TEMPLATEID": "web_auth.linux",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "\"Supporting Infrastructure\"",
-      "ROLE": "web_auth",
-      "CLUSTER_TYPE": "WEBAUTH"
-    }
-  },
   "sapp_prod": {
     "PROD": {
       "PODGROUP": "afw.pri",
