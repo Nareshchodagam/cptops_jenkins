@@ -1504,6 +1504,39 @@
       "CLUSTER_TYPE": "SAMCONTROL"
     }
   },
+  "sdproxy_prod": {
+    "PROD": {
+      "PODGROUP": "sdproxy",
+      "TEMPLATEID": "sdproxy",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Primary",
+      "ROLE": "sdproxy",
+      "CLUSTER_TYPE": "SDPROXY"
+    }
+  },
+  "servicedirectory_prod": {
+    "PROD": {
+      "PODGROUP": "servicedirectory",
+      "TEMPLATEID": "servicedirectory",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Primary",
+      "ROLE": "servicedirectory",
+      "CLUSTER_TYPE": "SVCDISCO"
+    }
+  },
+  "gdsdclient_prod": {
+    "PROD": {
+      "PODGROUP": "gdsdclient",
+      "TEMPLATEID": "straight-patch-nag",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Primary",
+      "ROLE": "gdsdclient",
+      "CLUSTER_TYPE": "GDSDCLIENT"
+    }
+  },
   "siteproxy_prod": {
     "PROD": {
       "PODGROUP": "pod.pri",
