@@ -41,7 +41,7 @@
       "CLUSTER_TYPE": "ARGUS"
     }
   },
-"argusannotation_canary_prod": {
+  "argusannotation_canary_prod": {
     "PROD": {
       "PODGROUP": "arguscl",
       "TEMPLATEID": "argusannotation",
@@ -1160,6 +1160,10 @@
       "TAGGROUPS": 0,
       "INFRA": "Primary",
       "ROLE": "mq",
+      "FILTER": [
+        "^.*1-1",
+        "^.*(1-2|2-1)"
+      ],
       "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
     }
@@ -1273,7 +1277,7 @@
       "CLUSTER_TYPE": "NB-PRD"
     }
   },
- "nbmaster_gia_prod": {
+  "nbmaster_gia_prod": {
     "PROD": {
       "PODGROUP": "nbmedia_gia",
       "TEMPLATEID": "nbmedia",
@@ -1295,7 +1299,7 @@
       "CLUSTER_TYPE": "CHATTER"
     }
   },
- "gforce_gia_prod": {
+  "gforce_gia_prod": {
     "PROD": {
       "PODGROUP": "gforce_gia",
       "TEMPLATEID": "gforce.linux",
@@ -1423,63 +1427,63 @@
     }
   },
   "sam_chatbot_prod": {
-      "PROD": {
-        "PODGROUP": "samminion.pri",
-        "TEMPLATEID": "sam",
-        "GROUPSIZE": 5,
-        "TAGGROUPS": 0,
-        "FILTER": [ ".*(samminionchatbotrt).*" ],
-        "INFRA": "Supporting Infrastructure",
-        "ROLE": "samcompute",
-        "CLUSTER_TYPE": "SAMMINION"
+    "PROD": {
+      "PODGROUP": "samminion.pri",
+      "TEMPLATEID": "sam",
+      "GROUPSIZE": 5,
+      "TAGGROUPS": 0,
+      "FILTER": [ ".*(samminionchatbotrt).*" ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "samcompute",
+      "CLUSTER_TYPE": "SAMMINION"
     }
   },
   "sam_atlasdir_prod": {
-      "PROD": {
-        "PODGROUP": "samminion.pri",
-        "TEMPLATEID": "sam",
-        "GROUPSIZE": 1,
-        "TAGGROUPS": 0,
-        "FILTER": [ ".*(samminionatlasdir).*" ],
-        "INFRA": "Supporting Infrastructure",
-        "ROLE": "samcompute",
-        "CLUSTER_TYPE": "SAMMINION"
+    "PROD": {
+      "PODGROUP": "samminion.pri",
+      "TEMPLATEID": "sam",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [ ".*(samminionatlasdir).*" ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "samcompute",
+      "CLUSTER_TYPE": "SAMMINION"
     }
   },
   "sam_atlasfe_prod": {
-      "PROD": {
-        "PODGROUP": "samminion.pri",
-        "TEMPLATEID": "sam",
-        "GROUPSIZE": 1,
-        "TAGGROUPS": 0,
-        "FILTER": [ ".*(samminionatlasfe).*" ],
-        "INFRA": "Supporting Infrastructure",
-        "ROLE": "samcompute",
-        "CLUSTER_TYPE": "SAMMINION"
+    "PROD": {
+      "PODGROUP": "samminion.pri",
+      "TEMPLATEID": "sam",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [ ".*(samminionatlasfe).*" ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "samcompute",
+      "CLUSTER_TYPE": "SAMMINION"
     }
   },
   "sam_einstein_prod": {
-      "PROD": {
-        "PODGROUP": "samminion.pri",
-        "TEMPLATEID": "sam",
-        "GROUPSIZE": 1,
-        "TAGGROUPS": 0,
-        "FILTER": [ ".*(samminionmoderationeinstein).*" ],
-        "INFRA": "Supporting Infrastructure",
-        "ROLE": "samcompute",
-        "CLUSTER_TYPE": "SAMMINION"
+    "PROD": {
+      "PODGROUP": "samminion.pri",
+      "TEMPLATEID": "sam",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [ ".*(samminionmoderationeinstein).*" ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "samcompute",
+      "CLUSTER_TYPE": "SAMMINION"
     }
   },
   "sam_ceph_prod": {
-      "PROD": {
-        "PODGROUP": "samminion.pri",
-        "TEMPLATEID": "sam",
-        "GROUPSIZE": 5,
-        "TAGGROUPS": 0,
-        "FILTER": [ ".*(samminionceph).*" ],
-        "INFRA": "Supporting Infrastructure",
-        "ROLE": "samcompute",
-        "CLUSTER_TYPE": "SAMMINION"
+    "PROD": {
+      "PODGROUP": "samminion.pri",
+      "TEMPLATEID": "sam",
+      "GROUPSIZE": 5,
+      "TAGGROUPS": 0,
+      "FILTER": [ ".*(samminionceph).*" ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "samcompute",
+      "CLUSTER_TYPE": "SAMMINION"
     }
   },
   "sam_compute_prod": {
@@ -1797,13 +1801,13 @@
       "TAGGROUPS": 0,
       "INFRA": "Primary",
       "FILTER": [
-         ".*(nms[^3]-[1-2]-(?!sfm))"
+        ".*(nms[^3]-[1-2]-(?!sfm))"
       ],
       "ROLE": "smarts,nms",
       "CLUSTER_TYPE": "SMARTS"
     }
   },
-    "smarts_nmsfwd_prod": {
+  "smarts_nmsfwd_prod": {
     "PROD": {
       "PODGROUP": "smartscl",
       "TEMPLATEID": "smarts-nmsfwd",
@@ -1811,7 +1815,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Primary",
       "FILTER": [
-         ".*(nms3-[1-2]-(?!sfm))"
+        ".*(nms3-[1-2]-(?!sfm))"
       ],
       "ROLE": "smarts,nms",
       "CLUSTER_TYPE": "SMARTS"
@@ -1824,7 +1828,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-         ".*-sfm"
+        ".*-sfm"
       ],
       "INFRA": "Primary",
       "ROLE": "smarts,nms",
@@ -2646,7 +2650,7 @@
       "CLUSTER_TYPE": "it_edw"
     }
   },
-   "stgpm_canary_prod": {
+  "stgpm_canary_prod": {
     "PROD": {
       "PODGROUP": "stg_pm_and_mgt_prod",
       "TEMPLATEID": "stgpm",
@@ -2773,7 +2777,7 @@
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-       "FILTER": [
+      "FILTER": [
         "(stage0shared0-nwexp[1-2]-1-prd|test0shared0-nwexp1-1-prd)"
       ],
       "ROLE": "nwexp",
@@ -2827,7 +2831,7 @@
       "CLUSTER_TYPE": "DVA_ALARM_SERVICE"
     }
   },
-   "health_prod": {
+  "health_prod": {
     "PROD": {
       "PODGROUP": "healthcl",
       "TEMPLATEID": "straight-patch",
@@ -2860,8 +2864,8 @@
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-       "FILTER": [
-	"(stage0shared0-dvasyslog[1-2]-1-prd|test0shared0-dvasyslog1-1-prd)"
+      "FILTER": [
+        "(stage0shared0-dvasyslog[1-2]-1-prd|test0shared0-dvasyslog1-1-prd)"
       ],
       "ROLE": "dvasyslog",
       "CLUSTER_TYPE": "DVA_SYSLOG"
@@ -2874,7 +2878,7 @@
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-       "FILTER": [
+      "FILTER": [
         "(?!(stage0shared0-dvasyslog[1-2]-1-prd|test0shared0-dvasyslog1-1-prd))"
       ],
       "ROLE": "dvasyslog",
