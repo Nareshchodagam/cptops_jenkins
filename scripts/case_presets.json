@@ -1339,8 +1339,8 @@
     "PROD": {
       "PODGROUP": "hbase.clusters",
       "TEMPLATEID": "deepsea",
-      "GROUPSIZE": 5,
-      "TAGGROUPS": 5,
+      "GROUPSIZE": 10,
+      "TAGGROUPS": 10,
       "FILTER": [
         "(hdaas-*)|(arg1hbsvc-*)"
       ],
