@@ -1126,7 +1126,6 @@
       "ROLE": "nbmedia",
       "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "NETBACKUP"
-
     }
   },
   "nbmaster_prod": {
@@ -1396,7 +1395,9 @@
       "TEMPLATEID": "sam",
       "GROUPSIZE": 4,
       "TAGGROUPS": 0,
-      "FILTER": [ ".*(caasminion).*" ],
+      "FILTER": [
+        ".*(caasminion).*"
+      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "samcompute",
       "CLUSTER_TYPE": "SAMMINION"
@@ -1408,7 +1409,9 @@
       "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": [ ".*(samminionreportcollector).*" ],
+      "FILTER": [
+        ".*(samminionreportcollector).*"
+      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "samcompute",
       "CLUSTER_TYPE": "SAMMINION"
@@ -1420,7 +1423,9 @@
       "TEMPLATEID": "sam",
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
-      "FILTER": [ ".*(samminiongater).*" ],
+      "FILTER": [
+        ".*(samminiongater).*"
+      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "samcompute",
       "CLUSTER_TYPE": "SAMMINION"
@@ -1432,7 +1437,9 @@
       "TEMPLATEID": "sam",
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
-      "FILTER": [ ".*(samminionchatbotrt).*" ],
+      "FILTER": [
+        ".*(samminionchatbotrt).*"
+      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "samcompute",
       "CLUSTER_TYPE": "SAMMINION"
@@ -1444,7 +1451,9 @@
       "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": [ ".*(samminionatlasdir).*" ],
+      "FILTER": [
+        ".*(samminionatlasdir).*"
+      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "samcompute",
       "CLUSTER_TYPE": "SAMMINION"
@@ -1456,7 +1465,9 @@
       "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": [ ".*(samminionatlasfe).*" ],
+      "FILTER": [
+        ".*(samminionatlasfe).*"
+      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "samcompute",
       "CLUSTER_TYPE": "SAMMINION"
@@ -1468,7 +1479,9 @@
       "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": [ ".*(samminionmoderationeinstein).*" ],
+      "FILTER": [
+        ".*(samminionmoderationeinstein).*"
+      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "samcompute",
       "CLUSTER_TYPE": "SAMMINION"
@@ -1480,7 +1493,9 @@
       "TEMPLATEID": "sam",
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
-      "FILTER": [ ".*(samminionceph).*" ],
+      "FILTER": [
+        ".*(samminionceph).*"
+      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "samcompute",
       "CLUSTER_TYPE": "SAMMINION"
@@ -2749,7 +2764,9 @@
       "TEMPLATEID": "secrets",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": [".*-(xrd|prd|sfm)"],
+      "FILTER": [
+        ".*-(xrd|prd|sfm)"
+      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "secrets"
     }
@@ -2963,6 +2980,28 @@
       "ROLE": "funnel",
       "CLUSTER_TYPE": "FUNNEL",
       "HOSTPERCENT": "33"
+    }
+  },
+  "searchmgr_prod": {
+    "PROD": {
+      "PODGROUP": "searchmgrcl",
+      "TEMPLATEID": "searchmgr",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "searchmgr",
+      "CLUSTER_TYPE": "SEARCHMGR"
+    }
+  },
+  "searchidx_prod": {
+    "PROD": {
+      "PODGROUP": "searchidxcl",
+      "TEMPLATEID": "searchidx",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "searchidx",
+      "CLUSTER_TYPE": "UNIVERSAL-SEARCH-SOLR"
     }
   }
 }
