@@ -2946,6 +2946,17 @@
       "CLUSTER_TYPE": "OPS"
     }
   },
+  "warden_prod": {
+    "PROD": {
+      "PODGROUP": "wardencl",
+      "TEMPLATEID": "warden",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "warden_prod_ws,warden_prod_mq,warden_prod_readd,warden_prod_alert,warden_prod_writed",
+      "CLUSTER_TYPE": "WARDEN"
+    }
+  },
   "ajnamgmt_prod": {
     "PROD": {
       "PODGROUP": "ajna_mgmt",
