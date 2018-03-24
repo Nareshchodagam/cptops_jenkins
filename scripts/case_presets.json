@@ -3014,5 +3014,38 @@
       "ROLE": "searchidx",
       "CLUSTER_TYPE": "UNIVERSAL-SEARCH-SOLR"
     }
+  },
+  "rdb_prod": {
+    "PROD": {
+      "PODGROUP": "puppetrdbcl",
+      "TEMPLATEID": "rdb",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "rdb",
+      "CLUSTER_TYPE": "PUPPETRDB"
+    }
+  },
+  "riakrdb_prod": {
+    "PROD": {
+      "PODGROUP": "puppetrdbcl",
+      "TEMPLATEID": "riakdb",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "riakdb",
+      "CLUSTER_TYPE": "PUPPETRDB"
+    }
+  },
+  "ginghamworker_prod": {
+    "PROD": {
+      "PODGROUP": "ginghamcl",
+      "TEMPLATEID": "ginghamworker",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "gingham_worker",
+      "CLUSTER_TYPE": "GINGHAM_WORKER"
+    }
   }
 }
