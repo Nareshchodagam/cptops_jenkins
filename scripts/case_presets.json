@@ -3026,7 +3026,7 @@
       "CLUSTER_TYPE": "PUPPETRDB"
     }
   },
-  "riakrdb_prod": {
+  "riakdb_prod": {
     "PROD": {
       "PODGROUP": "puppetrdbcl",
       "TEMPLATEID": "riakdb",
