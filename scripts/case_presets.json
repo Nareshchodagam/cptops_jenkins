@@ -414,18 +414,6 @@
       "CLUSTER_TYPE": "ACS"
     }
   },
-  "searchmgr_gia_prod": {
-    "PROD": {
-      "PODGROUP": "searchmgr_gia",
-      "TEMPLATEID": "straight-patch-nag",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "searchmgr",
-      "HO_STATUS": "ACTIVE,PRE_PRODUCTION",
-      "CLUSTER_TYPE": "SEARCHMGR"
-    }
-  },
   "search_prod": {
     "PROD": {
       "PODGROUP": "afw.pri",
@@ -1265,17 +1253,6 @@
       "ROLE": "rdb,ppm"
     }
   },
-  "nbmedia_gia_prod": {
-    "PROD": {
-      "PODGROUP": "nbmedia_gia",
-      "TEMPLATEID": "nbmedia",
-      "GROUPSIZE": 2,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "nbmedia",
-      "CLUSTER_TYPE": "NB-PRD"
-    }
-  },
   "nbmaster_gia_prod": {
     "PROD": {
       "PODGROUP": "nbmedia_gia",
@@ -1693,17 +1670,6 @@
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "hwmon",
       "CLUSTER_TYPE": "RAZOR"
-    }
-  },
-  "sysmgt_gia_prod": {
-    "PROD": {
-      "PODGROUP": "sysmgt-gia",
-      "TEMPLATEID": "straight-patch-nag",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting_Infrastructure",
-      "ROLE": "sysmgt",
-      "CLUSTER_TYPE": "OPS"
     }
   },
   "orch_gia_prod": {
