@@ -1500,6 +1500,18 @@
       "CLUSTER_TYPE": "SAMCONTROL"
     }
   },
+  "gater_prod": {
+    "PROD": {
+      "PODGROUP": "gatercl",
+      "TEMPLATEID": "gater",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": ["^shared0-gater.*"],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "compute",
+      "CLUSTER_TYPE": "GATER"
+    }
+  },
   "sdproxy_prod": {
     "PROD": {
       "PODGROUP": "sdproxy",
@@ -2093,34 +2105,6 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "irc",
       "CLUSTER_TYPE": "OPS"
-    }
-  },
-  "praapp_prod": {
-    "PROD": {
-      "PODGROUP": "pracl",
-      "TEMPLATEID": "straight-patch-co7",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "ops0-praapp(1|2).*"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "praapp",
-      "CLUSTER_TYPE": "PRA"
-    }
-  },
-  "praccn_prod": {
-    "PROD": {
-      "PODGROUP": "pracl",
-      "TEMPLATEID": "straight-patch-co7",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "ops0-praccn(1|2).*"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "praccn",
-      "CLUSTER_TYPE": "PRA"
     }
   },
   "pravmh_prod": {
@@ -2919,8 +2903,30 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "warden_prod_ws,warden_prod_mq,warden_prod_readd,warden_prod_alert,warden_prod_writed",
+      "ROLE": "warden_prod_ws,warden_prod_mq,warden_prod_readd,warden_prod_alert,warden_prod_writed,warden_prod_rdbms",
       "CLUSTER_TYPE": "WARDEN"
+    }
+  },
+  "pra_prod": {
+    "PROD": {
+      "PODGROUP": "pracl",
+      "TEMPLATEID": "straight-patch-co7",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "praccn,praapp",
+      "CLUSTER_TYPE": "PRA"
+    }
+  },
+  "sms_prod": {
+    "PROD": {
+      "PODGROUP": "smscl",
+      "TEMPLATEID": "sms",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "smsapi,smscanary,smszk",
+      "CLUSTER_TYPE": "SMS"
     }
   },
   "ajnamgmt_prod": {
