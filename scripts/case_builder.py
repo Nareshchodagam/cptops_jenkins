@@ -176,6 +176,8 @@ def case_builder(bld_cmd):
                 continue
             pod_cmd.append(co.opt_dict[opt])
             pod_cmd.append(str(bld_cmd[opt]))
+    if options.filtergia == True:
+        pod_cmd.append(str("--filter_gia"))
     for item in pod_cmd:
         cmd += str(item)
         cmd += " "
@@ -278,6 +280,7 @@ if __name__ == "__main__":
     parser.add_argument("--hostpercent", dest="hostpercent", help="Host percentage for core app")
     parser.add_argument("--clusstat", dest="cluststat", help="Cluster Status.")
     parser.add_argument("--hoststat", dest="hoststat", help="Host Status.")
+    parser.add_argument("--filter_gia", dest="filtergia", action="store_true", default="False", help="Filter GIA host")
     parser.add_argument("-r", dest="regex", help="Regex Filter")
     parser.add_argument("-f", dest="filter", help="Filter")
     parser.add_argument("--no_host_validation", dest="no_host_v", action="store_true", help="Flag to skip verify remote hosts")
