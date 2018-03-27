@@ -974,6 +974,28 @@
       "CLUSTER_TYPE": "HAMMER"
     }
   },
+  "hammer_hmrlog_prod": {
+    "PROD": {
+      "PODGROUP": "hmrlog.pri",
+      "TEMPLATEID": "hammer-patch",
+      "GROUPSIZE": 10,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "hmrlog",
+      "CLUSTER_TYPE": "HAMMER"
+    }
+  },
+  "hammer_hmrlog_dr": {
+    "DR": {
+      "PODGROUP": "hmrlog.sec",
+      "TEMPLATEID": "hammer-patch",
+      "GROUPSIZE": 10,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "hmrlog",
+      "CLUSTER_TYPE": "HAMMER"
+    }
+  },
   "ops-air_prod": {
     "PROD": {
       "PODGROUP": "aircl",
