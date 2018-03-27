@@ -1340,11 +1340,36 @@
       "GROUPSIZE": 10,
       "TAGGROUPS": 10,
       "FILTER": [
-        "(hdaas-*)|(arg1hbsvc-*)"
+        "(hdaas-*)"
       ],
       "INFRA": "Supporting_Infrastructure",
-      "ROLE": "mnds,dnds",
-      "CLUSTER_TYPE": "HBASE"
+      "ROLE": "mnds,dnds"
+    }
+  },
+  "hbase_argus_prod": {
+    "PROD": {
+      "PODGROUP": "hbase.clusters",
+      "TEMPLATEID": "hbaseargus",
+      "GROUPSIZE": 4,
+      "TAGGROUPS": 5,
+      "FILTER": [
+        "(arg1hbsvc-*)"
+      ],
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "mnds,dnds"
+    }
+  },
+  "hbasedch_prod": {
+    "PROD": {
+      "PODGROUP": "hbase.clusters",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 25,
+      "TAGGROUPS": 2,
+      "FILTER": [
+        "(dchbase0a-*)"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "mnds,dnds"
     }
   },
   "hbase_prod": {
