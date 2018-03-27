@@ -3041,5 +3041,18 @@
       "ROLE": "gingham_worker",
       "CLUSTER_TYPE": "GINGHAM_WORKER"
     }
+  },
+    "sdc_prod": {
+    "PROD": {
+      "COMMENT": "Service Discovery & Configuration",
+      "WORKITEM": "W-4679946",
+      "PODGROUP": "sdc",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "VMWare_Host,db,release",
+      "CASETYPE": "hostlist"
+    }
   }
 }
