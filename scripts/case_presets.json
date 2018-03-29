@@ -511,6 +511,9 @@
       "TEMPLATEID": "ffx",
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!(cs46|gs0)-ffx(1|2)-[2-6]-*)"
+      ],
       "INFRA": "Primary",
       "ROLE": "ffx",
       "CLUSTER_TYPE": "POD"
@@ -885,8 +888,7 @@
       "INFRA": "Primary",
       "REGEX": "failoverstatus=STANDBY",
       "ROLE": "mgmt_hub",
-      "CL_STATUS": "DECOM",
-      "CLUSTER_TYPE": "POD"
+      "CL_STATUS": "DECOM"
     }
   },
   "mgmt_hub_dr": {
@@ -926,8 +928,7 @@
         "cs23-hub1-1-was|cs24-hub1-1-was"
       ],
       "REGEX": "failoverstatus=PRIMARY",
-      "ROLE": "mgmt_hub",
-      "CLUSTER_TYPE": "POD"
+      "ROLE": "mgmt_hub"
     }
   },
   "hammer_htgapp_prod": {
@@ -1040,12 +1041,11 @@
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
       "FILTER": [
-        "^.*(1|2)-[2-6]|cs46*"
+        "(cs46|gs0)-ffx(1|2)-[2-6]-*"
       ],
       "INFRA": "Primary",
       "EXCLUDES": "ffxexclude",
-      "ROLE": "ffx",
-      "CLUSTER_TYPE": "POD"
+      "ROLE": "ffx"
     }
   },
   "ffx_canary_dr": {
@@ -1055,12 +1055,11 @@
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
       "FILTER": [
-        "^.*(1|2)-[2-6]|cs46*"
+        "(cs46|gs0)-ffx(1|2)-[2-6]-*"
       ],
       "EXCLUDES": "ffxexclude",
       "INFRA": "Secondary",
-      "ROLE": "ffx",
-      "CLUSTER_TYPE": "POD"
+      "ROLE": "ffx"
     }
   },
   "monitor_standby_prod": {
@@ -1156,6 +1155,9 @@
       "TEMPLATEID": "ffx",
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!(cs46|gs0)-ffx(1|2)-[2-6]-*)"
+      ],
       "INFRA": "Secondary",
       "ROLE": "ffx",
       "CLUSTER_TYPE": "POD"
