@@ -1515,7 +1515,7 @@
     "PROD": {
       "PODGROUP": "samminion.pri",
       "TEMPLATEID": "sam",
-      "GROUPSIZE": 5,
+      "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
         ".*(samminionceph).*"
