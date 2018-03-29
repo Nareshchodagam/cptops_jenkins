@@ -917,7 +917,7 @@
   },
   "mgmt_hub_canary_dr": {
     "DR": {
-      "PODGROUP": "mgmt_hub.canary",
+      "PODGROUP": "pod.sec",
       "TEMPLATEID": "mgmt_hub",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -1035,7 +1035,7 @@
   },
   "ffx_canary_prod": {
     "PROD": {
-      "PODGROUP": "ffx.canary",
+      "PODGROUP": "pod.pri",
       "TEMPLATEID": "ffx",
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
@@ -1050,7 +1050,7 @@
   },
   "ffx_canary_dr": {
     "DR": {
-      "PODGROUP": "ffx.canary.sec",
+      "PODGROUP": "pod.sec",
       "TEMPLATEID": "ffx",
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
@@ -2750,6 +2750,9 @@
       "TEMPLATEID": "secrets",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+       "FILTER": [
+        "(?!(.*-(xrd|prd|sfm)))"
+      ],
       "INFRA": "PRIMARY'",
       "ROLE": "secrets",
       "CLUSTER_TYPE": "SECRETS"
@@ -2757,7 +2760,7 @@
   },
   "secrets_canary_prod": {
     "PROD": {
-      "PODGROUP": "vaultczarcl.canary",
+      "PODGROUP": "vaultczarcl",
       "TEMPLATEID": "secrets",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
