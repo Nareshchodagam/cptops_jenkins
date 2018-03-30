@@ -1627,7 +1627,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "blitz1-proxy1-(1|2)-(sfm|crd)"
+        "blitz1-proxy1-(1|2)-sfm"
       ],
       "INFRA": "Primary",
       "ROLE": "proxy",
