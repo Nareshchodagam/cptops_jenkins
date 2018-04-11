@@ -164,6 +164,18 @@
       "HOSTPERCENT": "50"
     }
   },
+  "lapp_gia_prod": {
+    "PROD": {
+      "PODGROUP": "la_clusters",
+      "TEMPLATEID": "lapp.gia",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "lapp",
+      "CLUSTER_TYPE": "liveagent",
+      "HOSTPERCENT": "50"
+    }
+  },
   "mmmbus_sfz_prod": {
     "PROD": {
       "PODGROUP": "ajna_prodcl",
