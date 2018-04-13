@@ -235,7 +235,7 @@
   "nodeapp_prod": {
     "PROD": {
       "PODGROUP": "nodeappcl",
-      "TEMPLATEID": "straight-patch",
+      "TEMPLATEID": "straight-patch-Goc++",
       "GROUPSIZE": 10,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
