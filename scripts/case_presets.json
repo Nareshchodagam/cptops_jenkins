@@ -2547,9 +2547,11 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "ops0-cmgtapi[1|2]-1-crz"
+      ],
       "ROLE": "cmgtapi",
-      "CASETYPE": "hostlist",
-      "LIST_FILTER": "True"
+      "CLUSTER_TYPE": "CMGTAPI"
     }
   },
   "cmgtapi_prd_prod": {
