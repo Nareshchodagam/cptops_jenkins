@@ -300,7 +300,8 @@
       "INFRA": "Primary",
       "ROLE": "app",
       "CL_STATUS": "DECOM",
-      "CLUSTER_TYPE": "POD"
+      "CLUSTER_TYPE": "POD",
+      "HOSTPERCENT": "33"
     }
   },
   "coreafw_canary_prod": {
@@ -314,7 +315,8 @@
       ],
       "INFRA": "Primary",
       "ROLE": "app",
-      "CLUSTER_TYPE": "POD"
+      "CLUSTER_TYPE": "POD",
+      "HOSTPERCENT": "33"
     }
   },
   "coreafw_app_reboot_prod": {
@@ -328,7 +330,8 @@
       ],
       "INFRA": "Primary",
       "ROLE": "app",
-      "CLUSTER_TYPE": "POD"
+      "CLUSTER_TYPE": "POD",
+      "HOSTPERCENT": "33"
     }
   },
   "coreafw_dr": {
@@ -340,7 +343,8 @@
       "INFRA": "Secondary",
       "ROLE": "app",
       "CL_STATUS": "DECOM",
-      "CLUSTER_TYPE": "POD"
+      "CLUSTER_TYPE": "POD",
+      "HOSTPERCENT": "33"
     }
   },
   "coreafw-cbatch-dapp_prod": {
@@ -2861,7 +2865,8 @@
         "(?!(stage0shared0-nwexp[1-2]-1-prd|test0shared0-nwexp1-1-prd))"
       ],
       "ROLE": "nwexp",
-      "CLUSTER_TYPE": "NWEXP"
+      "CLUSTER_TYPE": "NWEXP",
+      "HOSTPERCENT": "30"
     }
   },
   "dvamon_prod": {
@@ -2948,7 +2953,8 @@
         "(?!(stage0shared0-dvasyslog[1-2]-1-prd|test0shared0-dvasyslog1-1-prd))"
       ],
       "ROLE": "dvasyslog",
-      "CLUSTER_TYPE": "DVA_SYSLOG"
+      "CLUSTER_TYPE": "DVA_SYSLOG",
+      "HOSTPERCENT": "30"
     }
   },
   "sysmgt_prod": {

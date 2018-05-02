@@ -50,12 +50,6 @@ def cmd_builder(sets, r_class=False):
     bld_cmd['template'] = options.template if options.template != None else sets[role_class][role_status]['TEMPLATEID']
     if 'IMPLPLAN' in sets[role_class][role_status].keys():
         bld_cmd['impl_plan'] = "templates/"+sets[role_class][role_status]['IMPLPLAN']+".json"
-    if bld_cmd['role'] == 'app':
-        #Takes pool percentage to calculate host count per block
-        if not options.hostpercent:
-            flag = raw_input("\n Do you want to give pool percentage[y|n] :" )
-            if flag.lower() == 'y':
-                options.hostpercent = raw_input("\nPreset requires min pool percentage. eg 33 : ")
 
     if options.hostpercent:
         bld_cmd['hostpercent'] = options.hostpercent
@@ -277,7 +271,7 @@ if __name__ == "__main__":
     parser.add_argument("--bundle", dest="bundle", default="None", help="Patch Bundle.")
     parser.add_argument("--subject", dest="subject", help="Subject.")
     parser.add_argument("--dowork", dest="dowork", help="Task to perform")
-    parser.add_argument("--hostpercent", dest="hostpercent", help="Host percentage for core app")
+    parser.add_argument("--hostpercent", dest="hostpercent", help="Host percentage")
     parser.add_argument("--clusstat", dest="cluststat", help="Cluster Status.")
     parser.add_argument("--hoststat", dest="hoststat", help="Host Status.")
     parser.add_argument("--filter_gia", dest="filtergia", action="store_true", default="False", help="Filter GIA host")
