@@ -2504,7 +2504,7 @@
   },
   "vc_canary_prod": {
     "PROD": {
-      "PODGROUP": "vc.canary",
+      "PODGROUP": "vc",
       "TEMPLATEID": "vc",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
