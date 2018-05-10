@@ -2496,7 +2496,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?!ops0-vc[1,2]-1-prd)"
+        "(?!ops0-vc[12]-1-prd)"
       ],
       "ROLE": "vc",
       "CLUSTER_TYPE": "VC"
@@ -2504,13 +2504,13 @@
   },
   "vc_canary_prod": {
     "PROD": {
-      "PODGROUP": "vc.canary",
+      "PODGROUP": "vc",
       "TEMPLATEID": "vc",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "ops0-vc[1,2]-1-prd"
+        "ops0-vc[12]-1-prd"
       ],
       "ROLE": "vc",
       "CLUSTER_TYPE": "VC"
