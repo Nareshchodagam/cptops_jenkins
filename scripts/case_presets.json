@@ -2441,13 +2441,12 @@
         "(?!(ops[01234]-appauth[12]-[12]-prd)"
       ],
       "ROLE": "appauth",
-      "LIST_FILTER": "True",
-      "CASETYPE": "hostlist"
+      "CLUSTER_TYPE": "APPAUTH"
     }
   },
   "appauth_canary_prod": {
     "PROD": {
-      "PODGROUP": "appauth.canary",
+      "PODGROUP": "appauth",
       "TEMPLATEID": "appauth",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -2456,8 +2455,7 @@
         "ops[01234]-appauth[12]-[12]-prd"
       ],
       "ROLE": "appauth",
-      "LIST_FILTER": "True",
-      "CASETYPE": "hostlist"
+      "CLUSTER_TYPE": "APPAUTH"
     }
   },
   "grok_prod": {
