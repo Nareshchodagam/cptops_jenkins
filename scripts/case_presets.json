@@ -3092,8 +3092,24 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?!(.*-(xrd|prd)))"
+      ],
       "ROLE": "gingham_worker",
       "CLUSTER_TYPE": "GINGHAM_WORKER"
+    }
+  },
+  "ginghamworker_canary_prod": {
+    "PROD": {
+      "PODGROUP": "ginghamcl",
+      "TEMPLATEID": "ginghamworker",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        ".*-(xrd|prd)"
+      ],
+      "ROLE": "gingham_worker"
     }
   },
     "sdc_prod": {
