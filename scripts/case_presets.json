@@ -3112,6 +3112,18 @@
       "ROLE": "gingham_worker"
     }
   },
+
+  "deepsealego_prod": {
+    "PROD": {
+      "PODGROUP": "deepsealego",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "deepsea_lego",
+      "CLUSTER_TYPE": "DEEPSEA_LEGO"
+    }
+  },
     "sdc_prod": {
     "PROD": {
       "COMMENT": "Service Discovery & Configuration",
