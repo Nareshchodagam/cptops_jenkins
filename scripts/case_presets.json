@@ -819,7 +819,21 @@
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!shared1-logsearch1-1-frf)"
+        "(?!shared1-logsearch1-1-frf|.*-prd)"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "mandm-splunk-switch",
+      "CLUSTER_TYPE": "SPLUNK-IDX"
+    }
+  },
+"mandm_splunk_switch_prd_prod": {
+    "PROD": {
+      "PODGROUP": "splunk-prod-idxcl",
+      "TEMPLATEID": "mandm-splunk-switch_prd",
+      "GROUPSIZE": 5,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(.*-prd)"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mandm-splunk-switch",
