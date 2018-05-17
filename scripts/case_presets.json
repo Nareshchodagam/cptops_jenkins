@@ -3124,6 +3124,16 @@
       "CLUSTER_TYPE": "DEEPSEA_LEGO"
     }
   },
+  "vnscan_prod": {
+    "PROD": {
+      "PODGROUP": "vulnscan",
+      "TEMPLATEID": "vnscan",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "vnscan"
+    }
+  },
     "sdc_prod": {
     "PROD": {
       "COMMENT": "Service Discovery & Configuration",
