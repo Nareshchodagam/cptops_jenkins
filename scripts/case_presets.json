@@ -3126,7 +3126,6 @@
       "ROLE": "gingham_worker"
     }
   },
-
   "deepsealego_prod": {
     "PROD": {
       "PODGROUP": "deepsealego",
@@ -3146,6 +3145,103 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "vnscan"
+    }
+  },
+  "dbaas-sdbs_prod": {
+    "PROD": {
+      "PODGROUP": "dbaascl",
+      "TEMPLATEID": "dbaas_sdbs",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "sdbs"
+    }
+  },
+  "flowsnake_prod": {
+    "PROD": {
+      "PODGROUP": "flowsnakecl",
+      "TEMPLATEID": "flowsnake",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 10,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "samcompute,samkubeapi",
+      "CLUSTER_TYPE": "FLOWSNAKE"
+    }
+  },
+  "dbaas-broker_prod": {
+    "PROD": {
+      "PODGROUP": "dbaascl",
+      "TEMPLATEID": "dbaas_broker",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "minionapp"
+    }
+  },
+  "sndci-slaves_prod": {
+    "PROD": {
+      "PODGROUP": "sndcicl",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 10,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "snd_ci_slave",
+      "CLUSTER_TYPE": "SNDCI"
+    }
+  },
+  "sndci-master_prod": {
+    "PROD": {
+      "PODGROUP": "sndcicl",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "snd_ci_master",
+      "CLUSTER_TYPE": "SNDCI"
+    }
+  },
+  "tools_prod": {
+    "PROD": {
+      "PODGROUP": "toolscl",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "tools",
+      "CLUSTER_TYPE": "RAZOR"
+    }
+  },
+  "auth_prod": {
+    "PROD": {
+      "PODGROUP": "authcl",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "auth",
+      "CLUSTER_TYPE": "AUTH"
+    }
+  },
+  "edgeacc_prod": {
+    "PROD": {
+      "PODGROUP": "edgeacc_cl",
+      "TEMPLATEID": "edge_acc",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "edge_accd",
+      "CLUSTER_TYPE": "EDGE_ACCD"
+    }
+  },
+  "edgeipvs_prod": {
+    "PROD": {
+      "PODGROUP": "edgeipvscl",
+      "TEMPLATEID": "straight-patch",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "edge_ipvs",
+      "CLUSTER_TYPE": "EDGE_IPVS"
     }
   },
     "sdc_prod": {
