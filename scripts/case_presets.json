@@ -1059,12 +1059,8 @@
       "TEMPLATEID": "searchzk",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "(^perfeng0-searchzk2.*|^perfeng0-searchzk4.*)"
-      ],
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "searchzk",
-      "CLUSTER_TYPE": "SEARCHZK"
+      "ROLE": "searchzk"
     }
   },
   "ffx_canary_prod": {
