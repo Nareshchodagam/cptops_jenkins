@@ -2890,7 +2890,7 @@
   "dvamon_prod": {
     "PROD": {
       "PODGROUP": "dvamoncl",
-      "TEMPLATEID": "straight-patch",
+      "TEMPLATEID": "straight-patch-Goc++",
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
@@ -2901,7 +2901,7 @@
   "dvaexp_prod": {
     "PROD": {
       "PODGROUP": "dvamoncl",
-      "TEMPLATEID": "straight-patch",
+      "TEMPLATEID": "straight-patch-Goc++",
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
