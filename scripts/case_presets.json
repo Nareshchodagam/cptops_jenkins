@@ -1733,6 +1733,9 @@
       "TEMPLATEID": "release",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "FILTER": [
+        "ops|ops0-release*"
+      ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "release",
       "CLUSTER_TYPE": "RELEASE"
