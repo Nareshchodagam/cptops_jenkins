@@ -3247,6 +3247,77 @@
       "CLUSTER_TYPE": "EDGE_IPVS"
     }
   },
+  "smscps_prod": {
+    "PROD": {
+      "PODGROUP": "smscl",
+      "TEMPLATEID": "smscps",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "smscps"
+    }
+  },
+  "smsproxy_prod": {
+    "PROD": {
+      "PODGROUP": "smscl",
+      "TEMPLATEID": "smsproxy",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "smsproxy"
+    }
+  },
+  "smscanary_prod": {
+    "PROD": {
+      "PODGROUP": "smscl",
+      "TEMPLATEID": "smscanary",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "smscanary"
+    }
+  },
+  "smsapi_prod": {
+    "PROD": {
+      "PODGROUP": "smscl",
+      "TEMPLATEID": "smsapi",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "smsapi"
+    }
+  },
+  "smszk_prod": {
+    "PROD": {
+      "PODGROUP": "smscl",
+      "TEMPLATEID": "smszk",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "smszk"
+    }
+  },
+  "smsreplicator_prod": {
+    "PROD": {
+      "PODGROUP": "smscl",
+      "TEMPLATEID": "smsreplicator",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "smsreplicator"
+    }
+  },
+  "aqueduct_prod": {
+    "PROD": {
+      "PODGROUP": "aqueductcl",
+      "TEMPLATEID": "aqueduct",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "aqueduct",
+      "CLUSTER_TYPE": "EMP_AQUEDUCT"
+    }
+  },
     "sdc_prod": {
     "PROD": {
       "COMMENT": "Service Discovery & Configuration",
