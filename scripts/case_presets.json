@@ -3000,18 +3000,29 @@
       "CLUSTER_TYPE": "WARDEN"
     }
   },
-  "pra_prod": {
+  "praccn_prod": {
     "PROD": {
       "PODGROUP": "pracl",
       "TEMPLATEID": "straight-patch-co7",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "praccn,praapp",
+      "ROLE": "praccn",
       "CLUSTER_TYPE": "PRA"
     }
   },
-  "sms_prod": {
+ "praapp_prod": {
+    "PROD": {
+      "PODGROUP": "pracl",
+      "TEMPLATEID": "straight-patch-co7",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "praapp",
+      "CLUSTER_TYPE": "PRA"
+    }
+  },
+ "sms_prod": {
     "PROD": {
       "PODGROUP": "smscl",
       "TEMPLATEID": "sms",
