@@ -161,9 +161,6 @@
       "ROLE": "lapp",
       "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "liveagent",
-      "FILTER": [
-        "(?!gla3-lapp1-[1-8]-(dfw|phx))"
-      ],
       "HOSTPERCENT": "50"
     }
   },
@@ -2167,20 +2164,6 @@
       "CLUSTER_TYPE": "POD"
     }
   },
-  "lapp_canary_prod": {
-    "PROD": {
-      "PODGROUP": "la_clusters",
-      "TEMPLATEID": "la.linux",
-      "GROUPSIZE": 4,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "lapp",
-      "FILTER": [
-        "gla3-lapp(1)-[1-8]-(dfw|phx)"
-      ],
-      "CLUSTER_TYPE": "liveagent"
-    }
-  },
   "irc_prod": {
     "PROD": {
       "PODGROUP": "irccl",
@@ -2599,23 +2582,6 @@
       "TEMPLATEID": "lapp_scrtkafka",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "FILTER": [
-        "(?!(gla3-scrtkafka.*))"
-      ],
-      "ROLE": "scrtkafka",
-      "CLUSTER_TYPE": "scrtkafka"
-    }
-  },
-  "lapp_scrtkafka_canary_prod": {
-    "PROD": {
-      "PODGROUP": "lapp_scrtkafka_clusters",
-      "TEMPLATEID": "lapp_scrtkafka",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "gla3-scrtkafka.*"
-      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "scrtkafka",
       "CLUSTER_TYPE": "scrtkafka"
