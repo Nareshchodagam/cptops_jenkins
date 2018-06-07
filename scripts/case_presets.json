@@ -2664,7 +2664,7 @@
     "PROD": {
       "PODGROUP": "logbuscl",
       "TEMPLATEID": "logbus_dev",
-      "GROUPSIZE": 15,
+      "GROUPSIZE": 30,
       "TAGGROUPS": 0,
       "INFRA": "Secondary",
       "EXCLUDES": "logbus_prod",
@@ -2676,7 +2676,7 @@
     "PROD": {
       "PODGROUP": "logbus_prod",
       "TEMPLATEID": "logbus",
-      "GROUPSIZE": 10,
+      "GROUPSIZE": 30,
       "TAGGROUPS": 0,
       "INFRA": "Primary",
       "ROLE": "logbus",
@@ -2807,6 +2807,21 @@
       "TAGGROUPS": 0,
       "FILTER": [
         ".*-(xrd|prd|sfm)"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "secrets"
+    }
+  },
+  "secrets2_canary_prod": {
+    "PROD": {
+      "PODGROUP": "secrets_canary",
+      "TEMPLATEID": "secrets",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "infrasec1-.*(prd|sfm|xrd)",
+        "infrasec2-.*(prd|sfm|xrd)",
+        "infrasec3-.*(prd|sfm|xrd)"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "secrets"
@@ -3038,7 +3053,7 @@
     "PROD": {
       "PODGROUP": "ajna_reserve",
       "TEMPLATEID": "ajna_clusters",
-      "GROUPSIZE": 15,
+      "GROUPSIZE": 50,
       "TAGGROUPS": 0,
       "HO_STATUS": "ACTIVE,PROVISIONING",
       "INFRA": "Supporting Infrastructure",
@@ -3311,7 +3326,7 @@
     "PROD": {
       "PODGROUP": "aqueductcl",
       "TEMPLATEID": "aqueduct",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 7,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "aqueduct",
