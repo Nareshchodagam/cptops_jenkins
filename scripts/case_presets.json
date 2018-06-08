@@ -2444,7 +2444,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?!(ops[01234]-appauth[12]-[12]-prd)"
+        "(?!(ops[01234]-appauth[12]-[12]-prd))"
       ],
       "ROLE": "appauth",
       "CLUSTER_TYPE": "APPAUTH"
