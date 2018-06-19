@@ -25,6 +25,7 @@ opt_dict = {'gsize': '-s',
             'nolinebacker': '--nolinebacker',
             'hostpercent': '--hostpercent',
             'delpatched': '--delpatched',
+	    'skip_bundle': '--skip_bundle',
             'csv': '--csv'}
 
 req_sub = ['search(23|43)_prod',
