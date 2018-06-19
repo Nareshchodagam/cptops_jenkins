@@ -96,6 +96,8 @@ def cmd_builder(sets, r_class=False):
             options.subject = ""
     bld_cmd['subject'] = options.subject
     bld_cmd['dowork'] = options.dowork
+    if options.skip_bundle:
+	bld_cmd['skip_bundle'] = options.skip_bundle
     # This change will help user to choose the way he/she wants to create case.
 
     if 'prsn' in bld_cmd['role'] or 'chan' in bld_cmd['role']: # To make sure we are not using host_validation during UMPS case creation
@@ -269,6 +271,7 @@ if __name__ == "__main__":
     parser.add_argument("--groupsize", dest="groupsize", help="Groupsize.")
     parser.add_argument("--taggroups", dest="taggroups", help="Taggroups.")
     parser.add_argument("--bundle", dest="bundle", default="None", help="Patch Bundle.")
+    parser.add_argument("--skip_bundle", dest="skip_bundle", default="None", help="Skip Bundle.")
     parser.add_argument("--subject", dest="subject", help="Subject.")
     parser.add_argument("--dowork", dest="dowork", help="Task to perform")
     parser.add_argument("--hostpercent", dest="hostpercent", help="Host percentage")
