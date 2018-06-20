@@ -1624,6 +1624,17 @@
       "CLUSTER_TYPE": "GDSDCLIENT"
     }
   },
+  "deploydata_prod": {
+    "PROD": {
+      "PODGROUP": "deploydata",
+      "TEMPLATEID": "deploydata",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Primary",
+      "ROLE": "deploydata",
+      "CLUSTER_TYPE": "DEPLOYDATA"
+    }
+  },
   "siteproxy_prod": {
     "PROD": {
       "PODGROUP": "pod.pri",
