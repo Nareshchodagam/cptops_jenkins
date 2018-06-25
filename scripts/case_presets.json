@@ -311,7 +311,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-	"(((gs0|cs7|cs46)-app.*)|(eu4-app1-.*))"
+    "(((gs0|cs7|cs46)-app.*)|(eu4-app1-.*))"
       ],
       "INFRA": "Primary",
       "ROLE": "app",
@@ -381,7 +381,7 @@
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
       "FILTER": [
-	"(gs0|cs7|cs46|eu4)-(cbatch|dapp).*"
+    "(gs0|cs7|cs46|eu4)-(cbatch|dapp).*"
       ],
       "INFRA": "Primary",
       "ROLE": "cbatch,dapp",
@@ -3440,6 +3440,54 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "VMWare_Host,db,release",
       "CASETYPE": "hostlist"
+    }
+  },
+  "syntheticsagent_legacy_prod": {
+    "PROD": {
+      "COMMENT": "Kaiju",
+      "WORKITEM": "W-4243192",
+      "PODGROUP": "syntheticsagentcl",
+      "TEMPLATEID": "syntheticsagent_legacy",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "shared0-syntheticsagent1-1-prd"
+      ],
+      "ROLE": "synthetics_agent",
+      "CLUSTER_TYPE": "DVA_SYNTHETICS_AGENT"
+    }
+  },
+  "syntheticsagent_prod": {
+    "PROD": {
+      "COMMENT": "Kaiju",
+      "WORKITEM": "W-4243192",
+      "PODGROUP": "syntheticsagentcl",
+      "TEMPLATEID": "syntheticsagent",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "((shared0-syntheticsagent(1-[3,4])|.*2-3)-prd)"
+      ],
+      "ROLE": "synthetics_agent",
+      "CLUSTER_TYPE": "DVA_SYNTHETICS_AGENT"
+    }
+  },
+  "syntheticsagent_notLive_prod": {
+    "PROD": {
+      "COMMENT": "Kaiju",
+      "WORKITEM": "W-4243192",
+      "PODGROUP": "syntheticsagentcl",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 10,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?!(shared0-syntheticsagent(1-[1,3,4], 2-3)-prd))"
+      ],
+      "ROLE": "synthetics_agent",
+      "CLUSTER_TYPE": "DVA_SYNTHETICS_AGENT"
     }
   }
 }
