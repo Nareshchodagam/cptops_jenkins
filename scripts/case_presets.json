@@ -3487,6 +3487,7 @@
         "(?!((shared0-syntheticsagent(1-[1,3,4])|.*2-3)-prd))"
       ],
       "ROLE": "synthetics_agent",
+      "HO_STATUS": "ACTIVE,PRE_PRODUCTION",
       "CLUSTER_TYPE": "DVA_SYNTHETICS_AGENT"
     }
   }
