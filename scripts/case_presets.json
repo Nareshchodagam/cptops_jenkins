@@ -1358,7 +1358,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-	"((.*-(yhu|chx|chi|syd|sfm|ukb|dfw|sjl|lon|par|iad))(?!(hdaas|arg1hbsvc)-*|dchbase0a-*))"
+	"((.*-(yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad))(?!(hdaas|arg1hbsvc)-*|dchbase0a-*))"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds"
@@ -1371,7 +1371,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "((.*-(yul|wax|was|cdu|crd|hnd|phx|asg|frf|ord))(?!(hdaas|arg1hbsvc)-*|dchbase0a-*))"
+        "((.*-(yul|wax|was|cdu|crd|hnd|phx|frf|ord))(?!(hdaas|arg1hbsvc)-*|dchbase0a-*))"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds"
@@ -1424,7 +1424,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(^dchbase0a.*-(yhu|chx|chi|syd|sfm|ukb|dfw|sjl|lon|par|iad))"
+        "(^dchbase0a.*-(yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad))"
       ],
       "INFRA": "Primary",
       "ROLE": "mnds"
@@ -1437,7 +1437,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(^dchbase0a.*-(yul|wax|was|cdu|crd|hnd|phx|asg|frf|ord))"
+        "(^dchbase0a.*-(yul|wax|was|cdu|crd|hnd|phx|frf|ord))"
       ],
       "INFRA": "Primary",
       "ROLE": "mnds"
@@ -1463,7 +1463,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        ".*-(yhu|chx|chi|syd|sfm|ukb|dfw|sjl|lon|par|iad)"
+        ".*-(yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad)"
       ],
       "INFRA": "Primary",
       "ROLE": "mnds",
@@ -1477,7 +1477,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        ".*-(yul|wax|was|cdu|crd|hnd|phx|asg|frf|ord)"
+        ".*-(yul|wax|was|cdu|crd|hnd|phx|frf|ord)"
       ],
       "INFRA": "Primary",
       "ROLE": "mnds",
@@ -1503,7 +1503,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        ".*-(yhu|chx|chi|syd|sfm|ukb|dfw|sjl|lon|par|iad)"
+        ".*-(yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad)"
       ],
       "INFRA": "Secondary",
       "ROLE": "mnds",
@@ -1517,7 +1517,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        ".*-(yul|wax|was|cdu|crd|hnd|phx|asg|frf|ord)"
+        ".*-(yul|wax|was|cdu|crd|hnd|phx|frf|ord)"
       ],
       "INFRA": "Secondary",
       "ROLE": "mnds",
