@@ -24,6 +24,7 @@ opt_dict = {'gsize': '-s',
             'auto_close_case': '--auto_close_case',
             'nolinebacker': '--nolinebacker',
             'hostpercent': '--hostpercent',
+            'casesubject': '--casesubject',
             'delpatched': '--delpatched',
 	    'skip_bundle': '--skip_bundle',
             'csv': '--csv'}
