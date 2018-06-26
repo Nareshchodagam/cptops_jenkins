@@ -12,6 +12,8 @@ import pprint
 import re
 import subprocess
 import sys
+from functools import partial
+from operator import attrgetter
 
 import case_opts as co
 
@@ -63,6 +65,8 @@ def cmd_builder(sets, r_class=False):
         bld_cmd['auto_close_case'] = options.auto_close_case
     if options.nolinebacker:
         bld_cmd['nolinebacker'] = options.nolinebacker
+    if options.casesubject:
+        bld_cmd['casesubject'] = options.casesubject
 
     if options.regex is None:
         if 'REGEX' in sets[role_class][role_status]:
@@ -257,6 +261,27 @@ def dryrun():
                 logging.debug(str(fail) + " failed to generate implementation plans.")
             sys.exit(1)
 
+def readFile(jsonFile):
+    """
+    Reads and json file and return a dict object.
+    :param JsonFile: json file
+    :return: dict object
+    """
+    with open(jsonFile, 'r') as fd:
+        res = json.load(fd)
+    return res
+
+def bundleName(fn, file, bundle):
+    """
+    :param fn: read a json file
+    :param file: json file
+    :param bundle: bundle name
+    :return: bundle name from povided json file and bundle name provided by user.
+    """
+    bundle = attrgetter('lower')(bundle)()
+    bundleData = fn(file)
+    sub = max(bundleData.get('CENTOS').get('6').keys())
+    return sub, bundle
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Case Builder Program    ')
@@ -270,7 +295,7 @@ if __name__ == "__main__":
     parser.add_argument("--podgroup", dest="podgroup", help="Hostlist file for role.")
     parser.add_argument("--groupsize", dest="groupsize", help="Groupsize.")
     parser.add_argument("--taggroups", dest="taggroups", help="Taggroups.")
-    parser.add_argument("--bundle", dest="bundle", default="None", help="Patch Bundle.")
+    parser.add_argument("--bundle", dest="bundle", default=None, help="Patch Bundle.")
     parser.add_argument("--skip_bundle", dest="skip_bundle", default="None", help="Skip Bundle.")
     parser.add_argument("--subject", dest="subject", help="Subject.")
     parser.add_argument("--dowork", dest="dowork", help="Task to perform")
@@ -287,6 +312,8 @@ if __name__ == "__main__":
     parser.add_argument("--nolinebacker", dest="nolinebacker", action="store_true", default=False, help="Don't use line backer")
     # W-4531197 Adding logic to remove already patched host for Case.
     parser.add_argument("--delpatched", dest="delpatched", action='store_true', help="command to remove patched host.")
+    parser.add_argument("--casesubject", dest="casesubject", help="Initial case subject to use")
+
     #End
 
     parser.add_argument("--canary", dest="canary", action ="store_true", help="All canary cases")
@@ -297,6 +324,15 @@ if __name__ == "__main__":
     initfile()  # function to clean existing cases.sh file
     logging.basicConfig(level=logging.DEBUG)
     sets = json_imports()
+    if options.delpatched and not options.bundle:
+        print("\n\n'--delpatched' should be called with '--bundle' option only, instead use '--skip_bundle' option.\n\n")
+        exit(1)
+
+    if not options.bundle:
+        verFile = os.path.join(os.environ["HOME"], "git/cptops_validation_tools/includes/valid_versions.json")
+        bundleOut = partial(bundleName, file=verFile, bundle='current')
+        options.casesubject, options.bundle = bundleOut(readFile)
+
     if options.full_list and options.roleclass:
         pp = pprint.PrettyPrinter(indent=2)
         pp.pprint("Presets contents for %s" % (options.roleclass))
