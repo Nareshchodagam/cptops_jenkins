@@ -100,7 +100,7 @@ def cmd_builder(sets, r_class=False):
             options.subject = ""
     bld_cmd['subject'] = options.subject
     bld_cmd['dowork'] = options.dowork
-    if options.skip_bundle:
+    if options.skip_bundle != "None":
 	bld_cmd['skip_bundle'] = options.skip_bundle
     # This change will help user to choose the way he/she wants to create case.
 
