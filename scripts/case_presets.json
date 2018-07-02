@@ -3552,5 +3552,16 @@
       "ROLE": "synthetics_master",
       "CLUSTER_TYPE": "DVA_SYNTHETICS_MASTER"
     }
+  },
+  "rps_test_prod": {
+    "PROD": {
+      "PODGROUP": "rpstestcl",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 20,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "rps",
+      "CLUSTER_TYPE": "RPS_TEST"
+    }
   }
 }
