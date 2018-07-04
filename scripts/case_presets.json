@@ -3504,5 +3504,64 @@
       "HO_STATUS": "ACTIVE,PRE_PRODUCTION",
       "CLUSTER_TYPE": "DVA_SYNTHETICS_AGENT"
     }
+  },
+  "syntheticsmaster_prod": {
+    "PROD": {
+      "COMMENT": "Kaiju",
+      "WORKITEM": "W-4243192",
+      "PODGROUP": "syntheticsmastercl",
+      "TEMPLATEID": "syntheticsmaster",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "((shared0-syntheticsmaster1-2|.*2-1)-prd)"
+      ],
+      "ROLE": "synthetics_master",
+      "CLUSTER_TYPE": "DVA_SYNTHETICS_MASTER"
+    }
+  },
+  "syntheticsmaster_legacy_prod": {
+    "PROD": {
+      "COMMENT": "Kaiju",
+      "WORKITEM": "W-4243192",
+      "PODGROUP": "syntheticsmastercl",
+      "TEMPLATEID": "syntheticsmaster_legacy",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "shared0-syntheticsmaster1-1-prd"
+      ],
+      "ROLE": "synthetics_master",
+      "CLUSTER_TYPE": "DVA_SYNTHETICS_MASTER"
+    }
+  },
+  "syntheticsmaster_1_prod": {
+    "PROD": {
+      "COMMENT": "Kaiju",
+      "WORKITEM": "W-4243192",
+      "PODGROUP": "syntheticsmastercl",
+      "TEMPLATEID": "syntheticsmaster_1",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "shared0-syntheticsmaster2-2-prd"
+      ],
+      "ROLE": "synthetics_master",
+      "CLUSTER_TYPE": "DVA_SYNTHETICS_MASTER"
+    }
+  },
+  "rps_test_prod": {
+    "PROD": {
+      "PODGROUP": "rpstestcl",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 20,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "rps",
+      "CLUSTER_TYPE": "RPS_TEST"
+    }
   }
 }
