@@ -964,7 +964,7 @@
   "hammer_htgapp_prod": {
     "PROD": {
       "PODGROUP": "hammer.pri",
-      "TEMPLATEID": "straight-patch-nag",
+      "TEMPLATEID": "straight-patch-Goc++",
       "GROUPSIZE": 10,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
@@ -975,7 +975,7 @@
   "hammer_htgapp_dr": {
     "DR": {
       "PODGROUP": "hammer.sec",
-      "TEMPLATEID": "straight-patch-nag",
+      "TEMPLATEID": "straight-patch-Goc++",
       "GROUPSIZE": 10,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
