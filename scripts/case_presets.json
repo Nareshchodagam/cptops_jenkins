@@ -901,6 +901,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mandm-splunk-ajna",
+      "HO_STATUS": "ACTIVE,PROVISIONING",
       "CLUSTER_TYPE": "SPLUNK-AJNA"
     }
   },
