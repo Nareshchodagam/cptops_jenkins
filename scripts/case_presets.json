@@ -893,6 +893,18 @@
       "CLUSTER_TYPE": "SPLUNK-SWITCH"
     }
   },
+  "mandm_splunk_ajna_prod": {
+    "PROD": {
+      "PODGROUP": "splunk-ajna-prdcl",
+      "TEMPLATEID": "mandm-splunk-ajna.PRD",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "mandm-splunk-ajna",
+      "HO_STATUS": "ACTIVE,PROVISIONING",
+      "CLUSTER_TYPE": "SPLUNK-AJNA"
+    }
+  },
   "mgmt_hub_prod": {
     "PROD": {
       "PODGROUP": "pod.pri",
