@@ -1391,6 +1391,19 @@
       "CLUSTER_TYPE": "HBASE"
     }
   },
+  "hbase_canary_prod": {
+    "PROD": {
+      "PODGROUP": "hbase.clusters",
+      "TEMPLATEID": "hbase.linux",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 5,
+      "FILTER": [
+        "stg.*hdaas.*-prd"
+      ],
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "mnds,dnds"
+    }
+  },
   "hbase_deepsea_prod": {
     "PROD": {
       "PODGROUP": "hbase.clusters",
