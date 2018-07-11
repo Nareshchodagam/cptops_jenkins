@@ -976,7 +976,7 @@
   "hammer_htgapp_prod": {
     "PROD": {
       "PODGROUP": "hammer.pri",
-      "TEMPLATEID": "straight-patch-nag",
+      "TEMPLATEID": "straight-patch-Goc++",
       "GROUPSIZE": 10,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
@@ -987,7 +987,7 @@
   "hammer_htgapp_dr": {
     "DR": {
       "PODGROUP": "hammer.sec",
-      "TEMPLATEID": "straight-patch-nag",
+      "TEMPLATEID": "straight-patch-Goc++",
       "GROUPSIZE": 10,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
@@ -1401,6 +1401,19 @@
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "dnds",
       "CLUSTER_TYPE": "HBASE"
+    }
+  },
+  "hbase_canary_prod": {
+    "PROD": {
+      "PODGROUP": "hbase.clusters",
+      "TEMPLATEID": "hbase.linux",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 5,
+      "FILTER": [
+        "stg.*hdaas.*-prd"
+      ],
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "mnds,dnds"
     }
   },
   "hbase_deepsea_prod": {
