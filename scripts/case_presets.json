@@ -3211,7 +3211,7 @@
   "searchmgr_prod": {
     "PROD": {
       "PODGROUP": "searchmgrcl",
-      "TEMPLATEID": "searchmgr",
+      "TEMPLATEID": "straight-patch-Goc++",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
