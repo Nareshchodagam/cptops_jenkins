@@ -2295,10 +2295,6 @@
       "TEMPLATEID": "piperepo",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "^.*1-1",
-        "^.*2-1"
-      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "piperepo",
       "CLUSTER_TYPE": "OPS-STACK"
@@ -2871,6 +2867,17 @@
       "CLUSTER_TYPE": "SECRETS"
     }
   },
+  "secrets_jenkins_prod": {
+    "PROD": {
+      "PODGROUP": "secjenkins",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "PRIMARY'",
+      "ROLE": "secretsjenkins",
+      "CLUSTER_TYPE": "SECRETS_CI"
+    }
+  },
   "secrets_canary_prod": {
     "PROD": {
       "PODGROUP": "vaultczarcl",
@@ -3405,15 +3412,55 @@
       "ROLE": "smsreplicator"
     }
   },
-  "aqueduct_prod": {
+    "smsreplicator_prod": {
     "PROD": {
-      "PODGROUP": "aqueductcl",
-      "TEMPLATEID": "aqueduct",
-      "GROUPSIZE": 7,
+      "PODGROUP": "smscl",
+      "TEMPLATEID": "smsreplicator",
+      "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "aqueduct",
-      "CLUSTER_TYPE": "EMP_AQUEDUCT"
+      "ROLE": "smsreplicator"
+    }
+  },
+  "sfstore_dr": {
+    "DR": {
+      "PODGROUP": "afw.sec",
+      "TEMPLATEID": "sfstore",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "sfstore"
+    }
+  },
+  "sfstore_prod": {
+    "PROD": {
+      "PODGROUP": "afw.pri",
+      "TEMPLATEID": "sfstore",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "sfstore"
+    }
+  },
+  "sfstore_ice_prod": {
+    "PROD": {
+      "PODGROUP": "icesfstore",
+      "TEMPLATEID": "sfstore",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "sfstore"
+    }
+  },
+  "sfstore_other_prod": {
+    "PROD": {
+      "PODGROUP": "sfstothercl",
+      "TEMPLATEID": "sfstore",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "sfstore",
+      "CLUSTER_TYPE": "SFSTORE"
     }
   },
     "sdc_prod": {
