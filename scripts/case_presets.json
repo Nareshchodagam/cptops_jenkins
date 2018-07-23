@@ -3596,5 +3596,16 @@
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "gnds"
     }
+  },
+  "mmrelay_srtools_prod": {
+    "PROD": {
+      "PODGROUP": "srtools",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 20,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "mmrelay",
+      "CLUSTER_TYPE": "SRTOOLS"
+    }
   }
 }
