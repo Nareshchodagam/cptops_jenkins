@@ -295,7 +295,7 @@
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!(((gs0|cs7|cs46)-app.*)|(eu4-app1-.*)))"
+        "(?!(gs0-app.*))"
       ],
       "INFRA": "Primary",
       "ROLE": "app",
@@ -311,7 +311,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-    "(((gs0|cs7|cs46)-app.*)|(eu4-app1-.*))"
+        "(gs0-app.*)"
       ],
       "INFRA": "Primary",
       "ROLE": "app",
@@ -3582,6 +3582,30 @@
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "rps",
       "CLUSTER_TYPE": "RPS_TEST"
+    }
+  },
+  "hbase_deepsea_canary_prod": {
+    "PROD": {
+      "PODGROUP": "hbase.clusters",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 10,
+      "TAGGROUPS": 1,
+      "FILTER": [
+        "(stg.*hdaas-gnds.*-prd)"
+      ],
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "gnds"
+    }
+  },
+  "mmrelay_srtools_prod": {
+    "PROD": {
+      "PODGROUP": "srtools",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 20,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "mmrelay",
+      "CLUSTER_TYPE": "SRTOOLS"
     }
   }
 }
