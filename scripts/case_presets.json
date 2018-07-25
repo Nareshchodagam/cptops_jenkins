@@ -1369,7 +1369,8 @@
 	"((.*-(yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad))(?!(hdaas|arg1hbsvc)-*|dchbase0a-*))"
       ],
       "INFRA": "Supporting_Infrastructure",
-      "ROLE": "mnds"
+      "ROLE": "mnds",
+      "CL_STATUS": "DECOM"
     }
   },
   "hbase_sp_mnds_2_prod": {
@@ -1382,7 +1383,8 @@
         "((.*-(yul|wax|was|cdu|crd|hnd|phx|frf|ord))(?!(hdaas|arg1hbsvc)-*|dchbase0a-*))"
       ],
       "INFRA": "Supporting_Infrastructure",
-      "ROLE": "mnds"
+      "ROLE": "mnds",
+      "CL_STATUS": "DECOM"
     }
   },
   "hbase_sp_prod": {
@@ -1396,7 +1398,8 @@
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "dnds",
-      "CLUSTER_TYPE": "HBASE"
+      "CLUSTER_TYPE": "HBASE",
+      "CL_STATUS": "DECOM"
     }
   },
   "hbase_canary_prod": {
@@ -1409,7 +1412,8 @@
         "stg.*hdaas.*-prd"
       ],
       "INFRA": "Supporting_Infrastructure",
-      "ROLE": "mnds,dnds"
+      "ROLE": "mnds,dnds",
+      "CL_STATUS": "DECOM"
     }
   },
   "hbase_deepsea_prod": {
@@ -1422,7 +1426,8 @@
         "(hdaas-*)"
       ],
       "INFRA": "Supporting_Infrastructure",
-      "ROLE": "dnds"
+      "ROLE": "dnds",
+      "CL_STATUS": "DECOM"
     }
   },
   "hbase_argus_prod": {
@@ -1435,7 +1440,8 @@
         "(arg1hbsvc-*)"
       ],
       "INFRA": "Supporting_Infrastructure",
-      "ROLE": "mnds,dnds"
+      "ROLE": "mnds,dnds",
+      "CL_STATUS": "DECOM"
     }
   },
   "hbasedch__mnds_1_prod": {
@@ -1448,7 +1454,8 @@
         "(^dchbase0a.*-(yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad))"
       ],
       "INFRA": "Primary",
-      "ROLE": "mnds"
+      "ROLE": "mnds",
+      "CL_STATUS": "DECOM"
     }
   },
   "hbasedch__mnds_2_prod": {
@@ -1461,8 +1468,8 @@
         "(^dchbase0a.*-(yul|wax|was|cdu|crd|hnd|phx|frf|ord))"
       ],
       "INFRA": "Primary",
-      "ROLE": "mnds"
-    }
+      "ROLE": "mnds",
+    },"CL_STATUS": "DECOM"
   },
   "hbasedch_prod": {
     "PROD": {
@@ -1474,7 +1481,8 @@
         "(dchbase0a-*)"
       ],
       "INFRA": "Primary",
-      "ROLE": "dnds"
+      "ROLE": "dnds",
+      "CL_STATUS": "DECOM"
     }
   },
   "hbase_mnds_1_prod": {
@@ -1514,7 +1522,8 @@
       "INFRA": "Primary",
       "ROLE": "dnds",
       "CL_STATUS": "DECOM",
-      "CLUSTER_TYPE": "HBASE"
+      "CLUSTER_TYPE": "HBASE",
+      "CL_STATUS": "DECOM"
     }
   },
   "hbase_mnds_1_dr": {
