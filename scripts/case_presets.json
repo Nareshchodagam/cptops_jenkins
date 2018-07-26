@@ -1469,7 +1469,8 @@
       ],
       "INFRA": "Primary",
       "ROLE": "mnds",
-    },"CL_STATUS": "DECOM"
+    "CL_STATUS": "DECOM"
+	}
   },
   "hbasedch_prod": {
     "PROD": {
