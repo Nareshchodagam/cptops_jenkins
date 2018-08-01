@@ -176,20 +176,6 @@
       "HOSTPERCENT": "50"
     }
   },
-  "mmmbus_sfz_prod": {
-    "PROD": {
-      "PODGROUP": "ajna_prodcl",
-      "TEMPLATEID": "mmmbus_SFZ",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "ops[0-9]?-((?!mmmbus11-[1-5])(mmmbus\\d+-\\d+-sfz))"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "mmmbus",
-      "CLUSTER_TYPE": "AJNA"
-    }
-  },
   "mmmbus_funnel_sfz_prod": {
     "PROD": {
       "PODGROUP": "ajna_prodcl",
@@ -201,34 +187,6 @@
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mmmbus",
-      "CLUSTER_TYPE": "AJNA"
-    }
-  },
-  "mmmbus_prod": {
-    "PROD": {
-      "PODGROUP": "ajna_prodcl",
-      "TEMPLATEID": "mmmbus",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "ops[0-9]?-(?!mmmbus1-1-asg)(?!mmmbus\\d+-\\d+-sfz).*"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "mmmbus",
-      "CLUSTER_TYPE": "AJNA"
-    }
-  },
-  "mmdcs_prod": {
-    "PROD": {
-      "PODGROUP": "ajna_prodcl",
-      "TEMPLATEID": "mmdcs",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!ops-mmdcs1-1-asg)"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "mmdcs",
       "CLUSTER_TYPE": "AJNA"
     }
   },
@@ -2308,20 +2266,6 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "piperepo",
       "CLUSTER_TYPE": "OPS-STACK"
-    }
-  },
-  "mmmbus_canary_prod": {
-    "PROD": {
-      "PODGROUP": "ajna_prodcl",
-      "TEMPLATEID": "mmmbus",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "FILTER": [
-        "ops-mmmbus1-1-asg"
-      ],
-      "ROLE": "mmmbus",
-      "CLUSTER_TYPE": "POD"
     }
   },
   "irc_prod": {
