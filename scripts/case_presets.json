@@ -1103,7 +1103,7 @@
   "monitor_standby_prod": {
     "PROD": {
       "PODGROUP": "monitor.sec",
-      "TEMPLATEID": "monitor_standby",
+      "TEMPLATEID": "monitor",
       "GROUPSIZE": 4,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
