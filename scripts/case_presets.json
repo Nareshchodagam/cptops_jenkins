@@ -213,6 +213,17 @@
       "CLUSTER_TYPE": "NODEAPP"
     }
   },
+  "aqueduct_prod": {
+    "PROD": {
+      "PODGROUP": "aqueductcl",
+      "TEMPLATEID": "aqueduct",
+      "GROUPSIZE": 7,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "aqueduct",
+      "CLUSTER_TYPE": "EMP_AQUEDUCT"
+    }
+  },
   "ns_prod": {
     "PROD": {
       "PODGROUP": "nscl",
