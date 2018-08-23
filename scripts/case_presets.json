@@ -2352,20 +2352,6 @@
       "CLUSTER_TYPE": "ILLUMIO"
     }
   },
-  "polcore_canary_prod": {
-    "PROD": {
-      "PODGROUP": "illumio",
-      "TEMPLATEID": "polcore",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "FILTER": [
-        "ops0-polcore[12]-[12]-prd"
-      ],
-      "ROLE": "polcore",
-      "CLUSTER_TYPE": "ILLUMIO"
-    }
-  },
   "poldata_prod": {
     "PROD": {
       "PODGROUP": "illumio",
@@ -2375,20 +2361,6 @@
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
         "(?!(ops0-poldata[12]-[12]-prd))"
-      ],
-      "ROLE": "poldata",
-      "CLUSTER_TYPE": "ILLUMIO"
-    }
-  },
-  "poldata_canary_prod": {
-    "PROD": {
-      "PODGROUP": "illumio",
-      "TEMPLATEID": "poldata",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "FILTER": [
-        "ops0-poldata[12]-[12]-prd"
       ],
       "ROLE": "poldata",
       "CLUSTER_TYPE": "ILLUMIO"
@@ -2652,20 +2624,6 @@
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
         "(?!(sec0-vnscanam[12]-1-par))"
-      ],
-      "ROLE": "vnscanam",
-      "CLUSTER_TYPE": "VULNSCAN"
-    }
-  },
-  "vnscanam_canary_prod": {
-    "PROD": {
-      "PODGROUP": "vulnscan",
-      "TEMPLATEID": "vnscanam",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "FILTER": [
-        "sec0-vnscanam[12]-1-par"
       ],
       "ROLE": "vnscanam",
       "CLUSTER_TYPE": "VULNSCAN"
