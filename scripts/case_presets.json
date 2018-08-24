@@ -1378,7 +1378,7 @@
     "PROD": {
       "PODGROUP": "hbase.clusters",
       "TEMPLATEID": "deepsea",
-      "GROUPSIZE": 10,
+      "GROUPSIZE": 20,
       "TAGGROUPS": 10,
       "FILTER": [
         "(hdaas-*)"
