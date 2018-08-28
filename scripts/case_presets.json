@@ -1713,7 +1713,7 @@
   "gdsdclient_prod": {
     "PROD": {
       "PODGROUP": "gdsdclient",
-      "TEMPLATEID": "straight-patch-nag",
+      "TEMPLATEID": "straight-patch-Goc++",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Primary",
