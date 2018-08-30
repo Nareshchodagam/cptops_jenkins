@@ -1691,7 +1691,7 @@
   "sdproxy_prod": {
     "PROD": {
       "PODGROUP": "sdproxy",
-      "TEMPLATEID": "sdproxy",
+      "TEMPLATEID": "straight-patch-Goc++",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Primary",
@@ -2746,7 +2746,7 @@
   "strata_jenkins_prod": {
     "PROD": {
       "PODGROUP": "stratacl",
-      "TEMPLATEID": "straight-patch",
+      "TEMPLATEID": "straight-patch-Goc++",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "PRIMARY'",
