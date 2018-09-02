@@ -536,7 +536,7 @@
     "PROD": {
       "PODGROUP": "ajna_prodcl",
       "TEMPLATEID": "ajna_broker",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 100,
       "TAGGROUPS": 0,
       "FILTER": [
         "(?!(ajna0-broker1-1-frf|ajna0-broker1-1-prd))"
