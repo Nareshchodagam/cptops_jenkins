@@ -1589,6 +1589,18 @@
       "CLUSTER_TYPE": "SAMCONTROL"
     }
   },
+  "sam-slb_prod": {
+    "PROD": {
+      "PODGROUP": "samcontrol.pri",
+      "TEMPLATEID": "sam",
+      "GROUPSIZE": 1,
+      "FILTER": [".*(slb).*"],
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "samcompute,samkubeapi",
+      "CLUSTER_TYPE": "SAMCONTROL"
+    }
+  },
   "sam_caasminion_prod": {
     "PROD": {
       "PODGROUP": "samminion.pri",
@@ -3472,6 +3484,28 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mmrelay",
       "CLUSTER_TYPE": "SRTOOLS"
+    }
+  },
+  "rackbot_prod": {
+    "PROD": {
+      "PODGROUP": "rackbot",
+      "TEMPLATEID": "rackbot",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "rackbot,rbossdb",
+      "CLUSTER_TYPE": "OPS"
+    }
+  },
+    "rackbot-dev_prod": {
+    "PROD": {
+      "PODGROUP": "rackbotdev",
+      "TEMPLATEID": "rackbot",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "rackbot,rbossdb",
+      "CLUSTER_TYPE": "ENG"
     }
   }
 }

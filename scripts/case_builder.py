@@ -178,6 +178,8 @@ def case_builder(bld_cmd):
             pod_cmd.append(str(bld_cmd[opt]))
     if options.filtergia == True:
         pod_cmd.append(str("--filter_gia"))
+    if options.bpv2 == True:
+        pod_cmd.append(str("--bpv2"))
     for item in pod_cmd:
         cmd += str(item)
         cmd += " "
@@ -308,6 +310,7 @@ if __name__ == "__main__":
     parser.add_argument("--no_host_validation", dest="no_host_v", action="store_true", help="Flag to skip verify remote hosts")
     parser.add_argument("--auto_close_case", dest="auto_close_case", action="store_true", default=True, help="To close the cases during "
                                                                                                          "execution")
+    parser.add_argument("-x", "--bpv2", dest="bpv2", action="store_true", default="False", help="Create cases with Build-Plan_v2")
     # Added as per W-3779869 to skip linebacker
     parser.add_argument("--nolinebacker", dest="nolinebacker", action="store_true", default=False, help="Don't use line backer")
     # W-4531197 Adding logic to remove already patched host for Case.
