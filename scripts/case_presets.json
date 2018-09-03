@@ -273,21 +273,6 @@
       "HOSTPERCENT": "33"
     }
   },
-  "coreafw_canary_prod": {
-    "PROD": {
-      "PODGROUP": "afw.pri",
-      "TEMPLATEID": "coreapp-prod",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "(gs0-app.*)"
-      ],
-      "INFRA": "Primary",
-      "ROLE": "app",
-      "CLUSTER_TYPE": "POD",
-      "HOSTPERCENT": "33"
-    }
-  },
   "coreafw_app_reboot_prod": {
     "PROD": {
       "PODGROUP": "afw.pri",
