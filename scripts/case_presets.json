@@ -3314,7 +3314,7 @@
     "PROD": {
       "PODGROUP": "afw.pri",
       "TEMPLATEID": "sfstore",
-      "GROUPSIZE": 2,
+      "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "sfstore"
@@ -3324,7 +3324,7 @@
     "PROD": {
       "PODGROUP": "icesfstore",
       "TEMPLATEID": "sfstore",
-      "GROUPSIZE": 2,
+      "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "sfstore"
@@ -3334,7 +3334,7 @@
     "PROD": {
       "PODGROUP": "sfstothercl",
       "TEMPLATEID": "sfstore",
-      "GROUPSIZE": 2,
+      "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "sfstore",
