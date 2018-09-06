@@ -1008,18 +1008,6 @@
       "CLUSTER_TYPE": "HAMMER"
     }
   },
-  "ops-air_prod": {
-    "PROD": {
-      "PODGROUP": "aircl",
-      "TEMPLATEID": "air",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "air",
-      "CLUSTER_TYPE": "AIR"
-    }
-  },
   "searchzk_prod": {
     "PROD": {
       "PODGROUP": "searchzkcl",
