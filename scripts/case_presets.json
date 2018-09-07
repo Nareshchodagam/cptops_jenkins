@@ -993,18 +993,6 @@
       "CLUSTER_TYPE": "HAMMER"
     }
   },
-  "ops-air_prod": {
-    "PROD": {
-      "PODGROUP": "aircl",
-      "TEMPLATEID": "air",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "air",
-      "CLUSTER_TYPE": "AIR"
-    }
-  },
   "searchzk_prod": {
     "PROD": {
       "PODGROUP": "searchzkcl",
@@ -2579,17 +2567,6 @@
       ],
       "ROLE": "vnscanam",
       "CLUSTER_TYPE": "VULNSCAN"
-    }
-  },
-  "csm_prod": {
-    "PROD": {
-      "PODGROUP": "csm",
-      "TEMPLATEID": "straight-patch-co7",
-      "GROUPSIZE": 2,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "csm",
-      "CLUSTER_TYPE": "CSM"
     }
   },
   "logbus_dev_prod": {
