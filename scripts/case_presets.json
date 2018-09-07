@@ -1308,7 +1308,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-	    "(^hbase.*-(yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad))"
+	    "(^hbase.*-(cdg|yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad))"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds",
@@ -1322,7 +1322,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(^hbase.*-(yul|wax|was|cdu|crd|hnd|phx|frf|ord))"
+        "(^hbase.*-(fra|yul|wax|was|cdu|crd|hnd|phx|frf|ord))"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds",
