@@ -1107,7 +1107,7 @@
   },
   "nbmedia_prod": {
     "PROD": {
-      "PODGROUP": "nbmedia",
+      "PODGROUP": "nbmaster",
       "TEMPLATEID": "nbmedia",
       "GROUPSIZE": 10,
       "TAGGROUPS": 0,
