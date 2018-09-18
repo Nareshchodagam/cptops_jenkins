@@ -3121,7 +3121,7 @@
   "dbaas-sdbs_prod": {
     "PROD": {
       "PODGROUP": "dbaascl",
-      "TEMPLATEID": "dbaas_sdbs",
+      "TEMPLATEID": "sdb",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
@@ -3288,7 +3288,7 @@
     "DR": {
       "PODGROUP": "afw.sec",
       "TEMPLATEID": "sfstore",
-      "GROUPSIZE": 2,
+      "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "sfstore"
