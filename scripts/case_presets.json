@@ -2986,7 +2986,7 @@
       "TAGGROUPS": 0,
       "HO_STATUS": "ACTIVE,PROVISIONING",
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "ajna_mgmt,ajna_tracing,ajna_wrangler",
+      "ROLE": "ajna_mgmt,ajna_wrangler",
       "CLUSTER_TYPE": "AJNA_MGMT"
     }
   },
@@ -3000,6 +3000,18 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "ajna_broker,ajna_mirror",
       "CLUSTER_TYPE": "AJNA_RESERVE"
+    }
+  },
+  "ajnatracing_prod": {
+    "PROD": {
+      "PODGROUP": "ajna_tracing",
+      "TEMPLATEID": "ajna_clusters",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 0,
+      "HO_STATUS": "ACTIVE,PROVISIONING",
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "ajna_tracing",
+      "CLUSTER_TYPE": "AJNA_TRACING"
     }
   },
   "funnel_prod": {
