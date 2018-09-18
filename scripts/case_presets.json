@@ -335,7 +335,7 @@
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
       "FILTER": [
-    "(gs0|cs7|cs46|eu4)-(cbatch|dapp).*"
+        "(gs0|cs7|cs46|eu4)-(cbatch|dapp).*"
       ],
       "INFRA": "Primary",
       "ROLE": "cbatch,dapp",
@@ -777,7 +777,7 @@
       "CLUSTER_TYPE": "SPLUNK-IDX"
     }
   },
-"mandm_splunk_switch_prd_prod": {
+  "mandm_splunk_switch_prd_prod": {
     "PROD": {
       "PODGROUP": "splunk-prod-idxcl",
       "TEMPLATEID": "mandm-splunk-switch_prd",
@@ -1411,8 +1411,8 @@
       ],
       "INFRA": "Primary",
       "ROLE": "mnds",
-    "CL_STATUS": "DECOM"
-	}
+      "CL_STATUS": "DECOM"
+    }
   },
   "hbasedch_prod": {
     "PROD": {
@@ -1532,30 +1532,36 @@
       "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": ["^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"],
+      "FILTER": [
+        "^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"
+      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "samcompute,samkubeapi",
       "CLUSTER_TYPE": "SAMMINION"
     }
   },
-   "sam_prd_prod": {
+  "sam_prd_prod": {
     "PROD": {
       "PODGROUP": "samminion.pri",
       "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": ["^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"],
+      "FILTER": [
+        "^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"
+      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "samcompute,samkubeapi",
       "CLUSTER_TYPE": "SAMMINION"
     }
   },
-   "sam2_prod": {
+  "sam2_prod": {
     "PROD": {
       "PODGROUP": "samcontrol.pri",
       "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
-      "FILTER": ["^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"],
+      "FILTER": [
+        "^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"
+      ],
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "samcompute,samkubeapi",
@@ -1567,7 +1573,9 @@
       "PODGROUP": "samcontrol.pri",
       "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
-      "FILTER": [".*(slb).*"],
+      "FILTER": [
+        ".*(slb).*"
+      ],
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "samcompute,samkubeapi",
@@ -1622,7 +1630,9 @@
       "TEMPLATEID": "gater",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": ["^shared0-gater.*"],
+      "FILTER": [
+        "^shared0-gater.*"
+      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "compute",
       "CLUSTER_TYPE": "GATER"
@@ -1675,7 +1685,7 @@
       "CLUSTER_TYPE": "DEPLOYDATA"
     }
   },
-   "deploydata_canary_prod": {
+  "deploydata_canary_prod": {
     "PROD": {
       "PODGROUP": "deploydata.canary",
       "TEMPLATEID": "deploydata",
@@ -2700,7 +2710,7 @@
       "TEMPLATEID": "secrets",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-       "FILTER": [
+      "FILTER": [
         "(?!(.*-(xrd|prd|sfm)))"
       ],
       "INFRA": "PRIMARY'",
@@ -2946,7 +2956,7 @@
       "CLUSTER_TYPE": "PRA"
     }
   },
- "praapp_prod": {
+  "praapp_prod": {
     "PROD": {
       "PODGROUP": "pracl",
       "TEMPLATEID": "straight-patch-co7",
@@ -2957,7 +2967,7 @@
       "CLUSTER_TYPE": "PRA"
     }
   },
- "sms_prod": {
+  "sms_prod": {
     "PROD": {
       "PODGROUP": "smscl",
       "TEMPLATEID": "sms",
@@ -3252,7 +3262,7 @@
       "ROLE": "smsreplicator"
     }
   },
-    "smsreplicator_prod": {
+  "smsreplicator_prod": {
     "PROD": {
       "PODGROUP": "smscl",
       "TEMPLATEID": "smsreplicator",
@@ -3303,7 +3313,7 @@
       "CLUSTER_TYPE": "SFSTORE"
     }
   },
-    "sdc_prod": {
+  "sdc_prod": {
     "PROD": {
       "COMMENT": "Service Discovery & Configuration",
       "WORKITEM": "W-4679946",
@@ -3459,7 +3469,7 @@
       "CLUSTER_TYPE": "OPS"
     }
   },
-    "rackbot-dev_prod": {
+  "rackbot-dev_prod": {
     "PROD": {
       "PODGROUP": "rackbotdev",
       "TEMPLATEID": "rackbot",
@@ -3468,6 +3478,30 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "rackbot,rbossdb",
       "CLUSTER_TYPE": "ENG"
+    }
+  },
+  "delphi_primary_prod": {
+    "PROD": {
+      "PODGROUP": "delphicl",
+      "TEMPLATEID": "delphi-primary",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "REGEX": "failoverstatus=PRIMARY",
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "dust_delphi",
+      "CLUSTER_TYPE": "DUST_DELPHI"
+    }
+  },
+  "delphi_standby_prod": {
+    "PROD": {
+      "PODGROUP": "delphicl",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "REGEX": "failoverstatus=STANDBY",
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "dust_delphi",
+      "CLUSTER_TYPE": "DUST_DELPHI"
     }
   }
 }
