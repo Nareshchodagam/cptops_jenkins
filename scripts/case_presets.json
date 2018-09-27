@@ -3515,5 +3515,16 @@
       "ROLE": "dust_delphi",
       "CLUSTER_TYPE": "DUST_DELPHI"
     }
+  },
+    "nsm_prod": {
+    "PROD": {
+      "PODGROUP": "nsmcl",
+      "TEMPLATEID": "nsm",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "nsm",
+      "CLUSTER_TYPE": "NSM"
+    }
   }
 }
