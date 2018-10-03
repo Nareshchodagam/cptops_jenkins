@@ -3492,6 +3492,17 @@
       "CLUSTER_TYPE": "ENG"
     }
   },
+  "icesplunk_prod": {
+    "PROD": {
+      "PODGROUP": "icesplunkcl",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 10,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "icesplunk,splunkdply,splunkfwd",
+      "CLUSTER_TYPE": "SPLUNKFWD"
+    }
+  },
   "delphi_primary_prod": {
     "PROD": {
       "PODGROUP": "delphicl",
