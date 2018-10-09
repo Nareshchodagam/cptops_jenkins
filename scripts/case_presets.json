@@ -1574,7 +1574,7 @@
   "sam_prod": {
     "PROD": {
       "PODGROUP": "samminion.pri",
-      "TEMPLATEID": "flowsnake",
+      "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
@@ -1588,7 +1588,7 @@
   "sam_prd_prod": {
     "PROD": {
       "PODGROUP": "samminion.pri",
-      "TEMPLATEID": "flowsnake",
+      "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
@@ -1602,7 +1602,7 @@
   "sam2_prod": {
     "PROD": {
       "PODGROUP": "samcontrol.pri",
-      "TEMPLATEID": "flowsnake",
+      "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
       "FILTER": [
         "^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"
@@ -1616,7 +1616,7 @@
   "sam-slb_prod": {
     "PROD": {
       "PODGROUP": "samminion.pri",
-      "TEMPLATEID": "flowsnake",
+      "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
       "FILTER": [
         ".*(slb).*"
@@ -1630,7 +1630,7 @@
   "sam_caasminion_prod": {
     "PROD": {
       "PODGROUP": "samminion.pri",
-      "TEMPLATEID": "flowsnake",
+      "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
@@ -1644,7 +1644,7 @@
   "sam_ceph_prod": {
     "PROD": {
       "PODGROUP": "samminion.pri",
-      "TEMPLATEID": "flowsnake",
+      "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
