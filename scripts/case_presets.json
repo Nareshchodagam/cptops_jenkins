@@ -273,21 +273,6 @@
       "HOSTPERCENT": "33"
     }
   },
-  "coreafw_canary_prod": {
-    "PROD": {
-      "PODGROUP": "afw.pri",
-      "TEMPLATEID": "coreapp-prod",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "(gs0-app.*)"
-      ],
-      "INFRA": "Primary",
-      "ROLE": "app",
-      "CLUSTER_TYPE": "POD",
-      "HOSTPERCENT": "33"
-    }
-  },
   "coreafw_app_reboot_prod": {
     "PROD": {
       "PODGROUP": "afw.pri",
@@ -350,7 +335,7 @@
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
       "FILTER": [
-    "(gs0|cs7|cs46|eu4)-(cbatch|dapp).*"
+        "(gs0|cs7|cs46|eu4)-(cbatch|dapp).*"
       ],
       "INFRA": "Primary",
       "ROLE": "cbatch,dapp",
@@ -792,7 +777,7 @@
       "CLUSTER_TYPE": "SPLUNK-IDX"
     }
   },
-"mandm_splunk_switch_prd_prod": {
+  "mandm_splunk_switch_prd_prod": {
     "PROD": {
       "PODGROUP": "splunk-prod-idxcl",
       "TEMPLATEID": "mandm-splunk-switch_prd",
@@ -1008,18 +993,6 @@
       "CLUSTER_TYPE": "HAMMER"
     }
   },
-  "ops-air_prod": {
-    "PROD": {
-      "PODGROUP": "aircl",
-      "TEMPLATEID": "air",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "air",
-      "CLUSTER_TYPE": "AIR"
-    }
-  },
   "searchzk_prod": {
     "PROD": {
       "PODGROUP": "searchzkcl",
@@ -1134,7 +1107,7 @@
   },
   "nbmedia_prod": {
     "PROD": {
-      "PODGROUP": "nbmedia",
+      "PODGROUP": "nbmaster",
       "TEMPLATEID": "nbmedia",
       "GROUPSIZE": 10,
       "TAGGROUPS": 0,
@@ -1335,7 +1308,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-	    "(^hbase.*-(yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad))"
+	    "(^hbase.*-(cdg|yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad))"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds",
@@ -1349,7 +1322,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(^hbase.*-(yul|wax|was|cdu|crd|hnd|phx|frf|ord))"
+        "(^hbase.*-(fra|yul|wax|was|cdu|crd|hnd|phx|frf|ord))"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds",
@@ -1438,8 +1411,8 @@
       ],
       "INFRA": "Primary",
       "ROLE": "mnds",
-    "CL_STATUS": "DECOM"
-	}
+      "CL_STATUS": "DECOM"
+    }
   },
   "hbasedch_prod": {
     "PROD": {
@@ -1559,30 +1532,36 @@
       "TEMPLATEID": "flowsnake",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": ["^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"],
+      "FILTER": [
+        "^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"
+      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "samcompute,samkubeapi",
       "CLUSTER_TYPE": "SAMMINION"
     }
   },
-   "sam_prd_prod": {
+  "sam_prd_prod": {
     "PROD": {
       "PODGROUP": "samminion.pri",
       "TEMPLATEID": "flowsnake",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": ["^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"],
+      "FILTER": [
+        "^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"
+      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "samcompute,samkubeapi",
       "CLUSTER_TYPE": "SAMMINION"
     }
   },
-   "sam2_prod": {
+  "sam2_prod": {
     "PROD": {
       "PODGROUP": "samcontrol.pri",
       "TEMPLATEID": "flowsnake",
       "GROUPSIZE": 1,
-      "FILTER": ["^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"],
+      "FILTER": [
+        "^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"
+      ],
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "samcompute,samkubeapi",
@@ -1594,7 +1573,9 @@
       "PODGROUP": "samminion.pri",
       "TEMPLATEID": "flowsnake",
       "GROUPSIZE": 1,
-      "FILTER": [".*(slb).*"],
+      "FILTER": [
+        ".*(slb).*"
+      ],
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "samcompute,samkubeapi",
@@ -1649,7 +1630,9 @@
       "TEMPLATEID": "gater",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": ["^shared0-gater.*"],
+      "FILTER": [
+        "^shared0-gater.*"
+      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "compute",
       "CLUSTER_TYPE": "GATER"
@@ -1702,7 +1685,7 @@
       "CLUSTER_TYPE": "DEPLOYDATA"
     }
   },
-   "deploydata_canary_prod": {
+  "deploydata_canary_prod": {
     "PROD": {
       "PODGROUP": "deploydata.canary",
       "TEMPLATEID": "deploydata",
@@ -2596,17 +2579,6 @@
       "CLUSTER_TYPE": "VULNSCAN"
     }
   },
-  "csm_prod": {
-    "PROD": {
-      "PODGROUP": "csm",
-      "TEMPLATEID": "straight-patch-co7",
-      "GROUPSIZE": 2,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "csm",
-      "CLUSTER_TYPE": "CSM"
-    }
-  },
   "logbus_dev_prod": {
     "PROD": {
       "PODGROUP": "logbuscl",
@@ -2738,7 +2710,7 @@
       "TEMPLATEID": "secrets",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-       "FILTER": [
+      "FILTER": [
         "(?!(.*-(xrd|prd|sfm)))"
       ],
       "INFRA": "PRIMARY'",
@@ -2984,7 +2956,7 @@
       "CLUSTER_TYPE": "PRA"
     }
   },
- "praapp_prod": {
+  "praapp_prod": {
     "PROD": {
       "PODGROUP": "pracl",
       "TEMPLATEID": "straight-patch-co7",
@@ -2995,7 +2967,7 @@
       "CLUSTER_TYPE": "PRA"
     }
   },
- "sms_prod": {
+  "sms_prod": {
     "PROD": {
       "PODGROUP": "smscl",
       "TEMPLATEID": "sms",
@@ -3014,7 +2986,7 @@
       "TAGGROUPS": 0,
       "HO_STATUS": "ACTIVE,PROVISIONING",
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "ajna_mgmt,ajna_tracing,ajna_wrangler",
+      "ROLE": "ajna_mgmt,ajna_wrangler",
       "CLUSTER_TYPE": "AJNA_MGMT"
     }
   },
@@ -3028,6 +3000,18 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "ajna_broker,ajna_mirror",
       "CLUSTER_TYPE": "AJNA_RESERVE"
+    }
+  },
+  "ajnatracing_prod": {
+    "PROD": {
+      "PODGROUP": "ajna_tracing",
+      "TEMPLATEID": "ajna_clusters",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 0,
+      "HO_STATUS": "ACTIVE,PROVISIONING",
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "ajna_tracing",
+      "CLUSTER_TYPE": "AJNA_TRACING"
     }
   },
   "funnel_prod": {
@@ -3137,7 +3121,7 @@
   "dbaas-sdbs_prod": {
     "PROD": {
       "PODGROUP": "dbaascl",
-      "TEMPLATEID": "dbaas_sdbs",
+      "TEMPLATEID": "sdb",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
@@ -3290,7 +3274,7 @@
       "ROLE": "smsreplicator"
     }
   },
-    "smsreplicator_prod": {
+  "smsreplicator_prod": {
     "PROD": {
       "PODGROUP": "smscl",
       "TEMPLATEID": "smsreplicator",
@@ -3304,7 +3288,7 @@
     "DR": {
       "PODGROUP": "afw.sec",
       "TEMPLATEID": "sfstore",
-      "GROUPSIZE": 2,
+      "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "sfstore"
@@ -3314,7 +3298,7 @@
     "PROD": {
       "PODGROUP": "afw.pri",
       "TEMPLATEID": "sfstore",
-      "GROUPSIZE": 2,
+      "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "sfstore"
@@ -3324,7 +3308,7 @@
     "PROD": {
       "PODGROUP": "icesfstore",
       "TEMPLATEID": "sfstore",
-      "GROUPSIZE": 2,
+      "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "sfstore"
@@ -3334,14 +3318,14 @@
     "PROD": {
       "PODGROUP": "sfstothercl",
       "TEMPLATEID": "sfstore",
-      "GROUPSIZE": 2,
+      "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "sfstore",
       "CLUSTER_TYPE": "SFSTORE"
     }
   },
-    "sdc_prod": {
+  "sdc_prod": {
     "PROD": {
       "COMMENT": "Service Discovery & Configuration",
       "WORKITEM": "W-4679946",
@@ -3497,7 +3481,7 @@
       "CLUSTER_TYPE": "OPS"
     }
   },
-    "rackbot-dev_prod": {
+  "rackbot-dev_prod": {
     "PROD": {
       "PODGROUP": "rackbotdev",
       "TEMPLATEID": "rackbot",
@@ -3506,6 +3490,52 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "rackbot,rbossdb",
       "CLUSTER_TYPE": "ENG"
+    }
+  },
+  "icesplunk_prod": {
+    "PROD": {
+      "PODGROUP": "icesplunkcl",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 10,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "icesplunk,splunkdply,splunkfwd",
+      "CLUSTER_TYPE": "SPLUNKFWD"
+    }
+  },
+  "delphi_primary_prod": {
+    "PROD": {
+      "PODGROUP": "delphicl",
+      "TEMPLATEID": "delphi-primary",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "REGEX": "failoverstatus=PRIMARY",
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "dust_delphi",
+      "CLUSTER_TYPE": "DUST_DELPHI"
+    }
+  },
+  "delphi_standby_prod": {
+    "PROD": {
+      "PODGROUP": "delphicl",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "REGEX": "failoverstatus=STANDBY",
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "dust_delphi",
+      "CLUSTER_TYPE": "DUST_DELPHI"
+    }
+  },
+    "nsm_prod": {
+    "PROD": {
+      "PODGROUP": "nsmcl",
+      "TEMPLATEID": "nsm",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "nsm",
+      "CLUSTER_TYPE": "NSM"
     }
   }
 }
