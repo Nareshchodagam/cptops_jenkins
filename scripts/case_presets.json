@@ -2551,7 +2551,7 @@
         "ops0-cmgtapi1-1-prd|ops0-cmgtapi2-1-prd"
       ],
       "ROLE": "cmgtapi",
-      "CLUSTER_TYPE": "ENG"
+      "CLUSTER_TYPE": "CMGTAPI"
     }
   },
   "lapp_scrtkafka_prod": {
