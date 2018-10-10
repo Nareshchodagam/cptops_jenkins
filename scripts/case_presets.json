@@ -2409,20 +2409,6 @@
       "CLUSTER_TYPE": "PKI"
     }
   },
-  "pkica_canary_prod": {
-    "PROD": {
-      "PODGROUP": "pki",
-      "TEMPLATEID": "pkica",
-      "GROUPSIZE": 2,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "FILTER": [
-        "ops0-pkica[12]-[12]-prd"
-      ],
-      "ROLE": "pkica",
-      "CLUSTER_TYPE": "PKI"
-    }
-  },
   "pkicontroller_prod": {
     "PROD": {
       "PODGROUP": "pki",
@@ -2432,20 +2418,6 @@
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
         "(?!(ops0-pkicontroller[12]-[12]-prd))"
-      ],
-      "ROLE": "pkicontroller",
-      "CLUSTER_TYPE": "PKI"
-    }
-  },
-  "pkicontroller_canary_prod": {
-    "PROD": {
-      "PODGROUP": "pki",
-      "TEMPLATEID": "pkicontroller",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "FILTER": [
-        "ops0-pkicontroller[12]-[12]-prd"
       ],
       "ROLE": "pkicontroller",
       "CLUSTER_TYPE": "PKI"
