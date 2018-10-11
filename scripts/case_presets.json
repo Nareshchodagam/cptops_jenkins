@@ -1308,7 +1308,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-	    "(^hbase.*-(cdg|yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad))"
+	    "(^hbase.*-(cdg|yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad|ia2))"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds",
@@ -1322,7 +1322,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(^hbase.*-(fra|yul|wax|was|cdu|crd|hnd|phx|frf|ord))"
+        "(^hbase.*-(fra|yul|wax|was|cdu|crd|hnd|phx|frf|ord|ph2))"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds",
@@ -1340,6 +1340,51 @@
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "dnds",
+      "CLUSTER_TYPE": "HBASE",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase_ambari_prod": {
+    "PROD": {
+      "PODGROUP": "hbase_ambari.clusters",
+      "TEMPLATEID": "hbase_ambari",
+      "GROUPSIZE": 8,
+      "TAGGROUPS": 5,
+      "FILTER": [
+        "(^hbase-*)"
+      ],
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "dnds",
+      "CLUSTER_TYPE": "HBASE",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase_ambari_mnds_1_prod": {
+    "PROD": {
+      "PODGROUP": "hbase_ambari.clusters",
+      "TEMPLATEID": "hbase_ambari",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(^hbase.*-(cdg|yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad|ia2))"
+      ],
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "mnds",
+      "CLUSTER_TYPE": "HBASE",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase_ambari_mnds_2_prod": {
+    "PROD": {
+      "PODGROUP": "hbase_ambari.clusters",
+      "TEMPLATEID": "hbase_ambari",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(^hbase.*-(fra|yul|wax|was|cdu|crd|hnd|phx|frf|ord|ph2))"
+      ],
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "mnds",
       "CLUSTER_TYPE": "HBASE",
       "CL_STATUS": "DECOM"
     }
@@ -1393,7 +1438,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(^dchbase0a.*-(yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad))"
+        "(^dchbase0a.*-(yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad|ia2))"
       ],
       "INFRA": "Primary",
       "ROLE": "mnds",
@@ -1407,7 +1452,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(^dchbase0a.*-(yul|wax|was|cdu|crd|hnd|phx|frf|ord))"
+        "(^dchbase0a.*-(yul|wax|was|cdu|crd|hnd|phx|frf|ord|ph2))"
       ],
       "INFRA": "Primary",
       "ROLE": "mnds",
@@ -1435,7 +1480,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        ".*-(yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad)"
+        ".*-(yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad|ia2)"
       ],
       "INFRA": "Primary",
       "ROLE": "mnds",
@@ -1449,7 +1494,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        ".*-(yul|wax|was|cdu|crd|hnd|phx|frf|ord)"
+        ".*-(yul|wax|was|cdu|crd|hnd|phx|frf|ord|ph2)"
       ],
       "INFRA": "Primary",
       "ROLE": "mnds",
@@ -1476,7 +1521,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        ".*-(yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad)"
+        ".*-(yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad|ia2)"
       ],
       "INFRA": "Secondary",
       "ROLE": "mnds",
@@ -1490,7 +1535,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        ".*-(yul|wax|was|cdu|crd|hnd|phx|frf|ord)"
+        ".*-(yul|wax|was|cdu|crd|hnd|phx|frf|ord|ph2)"
       ],
       "INFRA": "Secondary",
       "ROLE": "mnds",
@@ -1570,7 +1615,7 @@
   },
   "sam-slb_prod": {
     "PROD": {
-      "PODGROUP": "samcontrol.pri",
+      "PODGROUP": "samminion.pri",
       "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
       "FILTER": [
