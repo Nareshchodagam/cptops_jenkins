@@ -97,18 +97,7 @@
       "CLUSTER_TYPE": "ARGUS"
     }
   },
-  "umps_prod": {
-    "PROD": {
-      "PODGROUP": "chattercl",
-      "TEMPLATEID": "umps.linux",
-      "GROUPSIZE": 20,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "prsn,chan,msg,dstore",
-      "HO_STATUS": "ACTIVE,IN_MAINTENANCE",
-      "CLUSTER_TYPE": "CHATTER"
-    }
-  },
+
   "argus_writed_matrics_canary_prod": {
     "PROD": {
       "PODGROUP": "arguscl",
@@ -1068,17 +1057,7 @@
       "LIST_FILTER": "True"
     }
   },
-  "safenet_prod": {
-    "PROD": {
-      "PODGROUP": "safenet",
-      "TEMPLATEID": "straight-patch",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "safenet",
-      "CASETYPE": "hostlist"
-    }
-  },
+
   "monitor_canary_prod": {
     "PROD": {
       "PODGROUP": "monitor.canary",
@@ -1268,17 +1247,6 @@
       "CLUSTER_TYPE": "NB-PRD"
     }
   },
-  "sshare_gia_prod": {
-    "PROD": {
-      "PODGROUP": "chattercl_gia",
-      "TEMPLATEID": "straight-patch-nag",
-      "GROUPSIZE": 5,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "sshare",
-      "CLUSTER_TYPE": "CHATTER"
-    }
-  },
   "gforce_gia_prod": {
     "PROD": {
       "PODGROUP": "gforce_gia",
@@ -1287,17 +1255,6 @@
       "TAGGROUPS": 0,
       "INFRA": "Primary",
       "ROLE": "compute",
-      "HO_STATUS": "DECOM,PROVISIONING,IN_MAINTENANCE,ACTIVE"
-    }
-  },
-  "gforce": {
-    "PROD": {
-      "PODGROUP": "gforce",
-      "TEMPLATEID": "straight-patch",
-      "GROUPSIZE": 10,
-      "TAGGROUPS": 0,
-      "INFRA": "Primary",
-      "ROLE": "mnds,dnds,gforce",
       "HO_STATUS": "DECOM,PROVISIONING,IN_MAINTENANCE,ACTIVE"
     }
   },
@@ -2058,17 +2015,6 @@
       "INFRA": "Primary",
       "ROLE": "smarts,nms",
       "CLUSTER_TYPE": "SMARTS"
-    }
-  },
-  "lhub_prod": {
-    "PROD": {
-      "PODGROUP": "lhubcl",
-      "TEMPLATEID": "straight-patch",
-      "GROUPSIZE": 15,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "lhub",
-      "CLUSTER_TYPE": "HUB"
     }
   },
   "log_hub_prod": {
