@@ -2225,8 +2225,8 @@
   "pravmh_prod": {
     "PROD": {
       "PODGROUP": "pracl",
-      "TEMPLATEID": "straight-patch-co7",
-      "GROUPSIZE": 1,
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 5,
       "TAGGROUPS": 0,
       "FILTER": [
         "ops0-pravmh(1|2).*"
@@ -2910,8 +2910,8 @@
   "praccn_prod": {
     "PROD": {
       "PODGROUP": "pracl",
-      "TEMPLATEID": "straight-patch-co7",
-      "GROUPSIZE": 1,
+      "TEMPLATEID": "praccn_prod",
+      "GROUPSIZE": 2,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "praccn",
@@ -2921,7 +2921,7 @@
   "praapp_prod": {
     "PROD": {
       "PODGROUP": "pracl",
-      "TEMPLATEID": "straight-patch-co7",
+      "TEMPLATEID": "praapp_prod",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
