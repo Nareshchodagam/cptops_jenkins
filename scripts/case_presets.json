@@ -1580,8 +1580,7 @@
       ],
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "samcompute,samkubeapi",
-      "CLUSTER_TYPE": "SAMCONTROL"
+      "ROLE": "samcompute,samkubeapi"
     }
   },
   "sam_caasminion_prod": {
