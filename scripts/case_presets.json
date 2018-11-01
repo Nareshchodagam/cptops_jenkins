@@ -1430,6 +1430,51 @@
       "CL_STATUS": "DECOM"
     }
   },
+  "hbase_sayonara_prod": {
+    "PROD": {
+      "PODGROUP": "hbase_sayonara.clusters",
+      "TEMPLATEID": "hbase.sayonara",
+      "GROUPSIZE": 8,
+      "TAGGROUPS": 5,
+      "FILTER": [
+        "(sayonara*)"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "dnds",
+      "CLUSTER_TYPE": "HBASE",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase_sayonara_mnds1_prod": {
+    "PROD": {
+      "PODGROUP": "hbase_sayonara.clusters",
+      "TEMPLATEID": "hbase.sayonara",
+      "GROUPSIZE": 8,
+      "TAGGROUPS": 5,
+      "FILTER": [
+        "(sayonara*)"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "mnds",
+      "CLUSTER_TYPE": "HBASE",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase_sayonara_mnds2_prod": {
+    "PROD": {
+      "PODGROUP": "hbase_sayonara.clusters",
+      "TEMPLATEID": "hbase.sayonara",
+      "GROUPSIZE": 8,
+      "TAGGROUPS": 5,
+      "FILTER": [
+        "(sayonara*)"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "mnds",
+      "CLUSTER_TYPE": "HBASE",
+      "CL_STATUS": "DECOM"
+    }
+  },
   "hbase_mnds_1_prod": {
     "PROD": {
       "PODGROUP": "hbase.pri",
