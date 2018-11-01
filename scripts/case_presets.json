@@ -1754,7 +1754,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "public-proxy(1|2)-1-crd|public-proxy(3|4)-1-sfm"
+        "public-proxy(1|2)-1-crd|public0-proxy2-(1|2)-prd"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "publicproxy",
