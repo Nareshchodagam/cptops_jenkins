@@ -252,9 +252,6 @@
       "TEMPLATEID": "coreapp-prod",
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!(gs0-app.*))"
-      ],
       "INFRA": "Primary",
       "ROLE": "app",
       "CL_STATUS": "DECOM",
