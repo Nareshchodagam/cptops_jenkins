@@ -1431,7 +1431,7 @@
     "PROD": {
       "PODGROUP": "hbase_sayonara.clusters",
       "TEMPLATEID": "hbase.sayonara",
-      "GROUPSIZE": 8,
+      "GROUPSIZE": 1,
       "TAGGROUPS": 5,
       "FILTER": [
         "(sayonara*)"
@@ -1446,7 +1446,7 @@
     "PROD": {
       "PODGROUP": "hbase_sayonara.clusters",
       "TEMPLATEID": "hbase.sayonara",
-      "GROUPSIZE": 8,
+      "GROUPSIZE": 1,
       "TAGGROUPS": 5,
       "FILTER": [
         "(sayonara*)"
@@ -1461,7 +1461,7 @@
     "PROD": {
       "PODGROUP": "hbase_sayonara.clusters",
       "TEMPLATEID": "hbase.sayonara",
-      "GROUPSIZE": 8,
+      "GROUPSIZE": 1,
       "TAGGROUPS": 5,
       "FILTER": [
         "(sayonara*)"
