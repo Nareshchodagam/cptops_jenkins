@@ -1028,19 +1028,6 @@
       "ROLE": "ffx"
     }
   },
-  "monitor_standby_prod": {
-    "PROD": {
-      "PODGROUP": "monitor.sec",
-      "TEMPLATEID": "monitor",
-      "GROUPSIZE": 4,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "monitor",
-      "CASETYPE": "hostlist",
-      "CLUSTER_TYPE": "monitor",
-      "LIST_FILTER": "True"
-    }
-  },
   "monitor_primary_prod": {
     "PROD": {
       "PODGROUP": "monitor.pri",
@@ -1049,12 +1036,10 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "monitor",
-      "CASETYPE": "hostlist",
       "CLUSTER_TYPE": "monitor",
       "LIST_FILTER": "True"
     }
   },
-
   "monitor_canary_prod": {
     "PROD": {
       "PODGROUP": "monitor.canary",
@@ -1804,28 +1789,6 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "publicproxy",
       "CLUSTER_TYPE": "PUBLICPROXY"
-    }
-  },
-  "public-trust_prod": {
-    "PROD": {
-      "PODGROUP": "public-trust",
-      "TEMPLATEID": "public-trust",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting_Infrastructure",
-      "ROLE": "trust,trustadmin",
-      "CLUSTER_TYPE": "TRUST"
-    }
-  },
-  "public-trust_dr": {
-    "DR": {
-      "PODGROUP": "public-trust.sec",
-      "TEMPLATEID": "public-trust",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting_Infrastructure",
-      "ROLE": "trust,trustadmin",
-      "CLUSTER_TYPE": "TRUST"
     }
   },
   "rps_prod": {
