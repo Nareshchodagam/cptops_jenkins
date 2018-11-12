@@ -1283,6 +1283,76 @@
       "CL_STATUS": "DECOM"
     }
   },
+  "hbase_internal_prod": {
+    "PROD": {
+      "PODGROUP": "hbase_internal.clusters",
+      "TEMPLATEID": "hbase.linux",
+      "INFRA": "Supporting_Infrastructure",
+      "GROUPSIZE": 8,
+      "TAGGROUPS": 0,
+      "HOSTPERCENT": "10",
+      "ROLE": "dnds",
+      "CLUSTER_TYPE": "HBASE",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase_internal_mnds_prod": {
+    "PROD": {
+      "PODGROUP": "hbase_internal.clusters",
+      "TEMPLATEID": "hbase.linux",
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "mnds",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase_internal_dch_prod": {
+    "PROD": {
+      "PODGROUP": "dchbase_internal.clusters",
+      "TEMPLATEID": "hbase.dchbase",
+      "GROUPSIZE": 8,
+      "TAGGROUPS": 0,
+      "HOSTPERCENT": "10",
+      "FILTER": [
+        "(?!(dev[7,8]hdaas.*))"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "dnds",
+      "CLUSTER_TYPE": "HBASE",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase_internal_dch_mnds_prod": {
+    "PROD": {
+      "PODGROUP": "dchbase_internal.clusters",
+      "TEMPLATEID": "hbase.dchbase",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!(dev[7,8]hdaas.*))"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "mnds",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase_internal_ambari_prod": {
+    "PROD": {
+      "PODGROUP": "hbase_ambari.clusters",
+      "TEMPLATEID": "hbase_ambari",
+      "GROUPSIZE": 8,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(^isthbase02-.*crd)"
+      ],
+      "HOSTPERCENT": "10",
+      "INFRA": "Primary",
+      "ROLE": "dnds",
+      "CLUSTER_TYPE": "HBASE",
+      "CL_STATUS": "DECOM"
+    }
+  },
   "hbase_ambari_prod": {
     "PROD": {
       "PODGROUP": "hbase_ambari.clusters",
@@ -1320,7 +1390,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(^hbase.*-(fra|yul|wax|was|cdu|crd|hnd|phx|frf|ord|ph2))"
+        "(^hbase.*-(fra|yul|wax|was|cdu|crd|hnd|phx|frf|ord|ph2)|^isthbase02.*-crd)"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds",
