@@ -165,6 +165,17 @@
       "HOSTPERCENT": "50"
     }
   },
+  "ddiagg_prod": {
+    "PROD": {
+      "PODGROUP": "ddiaggcl",
+      "TEMPLATEID": "ddiagg",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "ddiagg",
+      "CLUSTER_TYPE": "OPSNS"
+    }
+  },
   "mmmbus_funnel_sfz_prod": {
     "PROD": {
       "PODGROUP": "ajna_prodcl",
