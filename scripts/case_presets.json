@@ -863,9 +863,6 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Primary",
-      "FILTER": [
-        "(?!(cs23-hub1-1-was|cs24-hub1-1-was))"
-      ],
       "REGEX": "failoverstatus=PRIMARY",
       "ROLE": "mgmt_hub",
       "CL_STATUS": "DECOM",
@@ -890,6 +887,9 @@
       "TEMPLATEID": "mgmt_hub",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!(na44-hub1-1-dfw|gs0-hub1-1-dfw))"
+      ],
       "INFRA": "Secondary",
       "REGEX": "failoverstatus=PRIMARY",
       "ROLE": "mgmt_hub",
@@ -918,7 +918,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Primary",
       "FILTER": [
-        "cs23-hub1-1-was|cs24-hub1-1-was"
+        "na44-hub1-1-dfw|gs0-hub1-1-dfw"
       ],
       "REGEX": "failoverstatus=PRIMARY",
       "ROLE": "mgmt_hub"
@@ -2110,7 +2110,7 @@
       "TAGGROUPS": 0,
       "REGEX": "failoverstatus=PRIMARY",
       "FILTER": [
-        "(?!shared-hub3-1-was)"
+        "(?!shared0-hub2-1-was)"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "log_hub",
@@ -2137,7 +2137,7 @@
       "TAGGROUPS": 0,
       "REGEX": "failoverstatus=PRIMARY",
       "FILTER": [
-        "(?!shared-hub3-1-was)"
+        "(?!shared0-hub2-1-was)"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "log_hub",
@@ -2164,10 +2164,10 @@
       "TAGGROUPS": 0,
       "REGEX": "failoverstatus=PRIMARY",
       "INFRA": "Supporting Infrastructure",
-      "FILTER": [
-        "shared-hub3-1-was"
-      ],
       "ROLE": "log_hub",
+      "FILTER": [
+        "shared0-hub2-1-was"
+      ],
       "CLUSTER_TYPE": "HUB"
     }
   },
