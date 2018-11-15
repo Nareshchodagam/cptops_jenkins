@@ -1318,6 +1318,22 @@
       "CL_STATUS": "DECOM"
     }
   },
+  "hbase_dch_canary_prod": {
+    "PROD": {
+      "PODGROUP": "dchbase_internal.clusters",
+      "TEMPLATEID": "hbase.dchbase",
+      "GROUPSIZE": 8,
+      "TAGGROUPS": 0,
+      "HOSTPERCENT": "10",
+      "FILTER": [
+        "dev[7,8]hdaas.*"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "dnds",
+      "CLUSTER_TYPE": "HBASE",
+      "CL_STATUS": "DECOM"
+    }
+  },
   "hbase_internal_dch_prod": {
     "PROD": {
       "PODGROUP": "dchbase_internal.clusters",
@@ -1331,6 +1347,20 @@
       "INFRA": "Primary",
       "ROLE": "dnds",
       "CLUSTER_TYPE": "HBASE",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase_dch_mnds_canary_prod": {
+    "PROD": {
+      "PODGROUP": "dchbase_internal.clusters",
+      "TEMPLATEID": "hbase.dchbase",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "dev[7,8]hdaas.*"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "mnds",
       "CL_STATUS": "DECOM"
     }
   },
