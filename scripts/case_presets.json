@@ -2292,10 +2292,10 @@
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!(.*argusws2-5-))"
+        "(?!(.*argusws2-5-)|(.*arguswsdev2-2-))"
       ],
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "argus_ws",
+      "ROLE": "argus_ws,argus_dev_ws",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
@@ -2306,10 +2306,10 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        ".*(argusws2-5-)"
+	"(.*(argusws2-5-)|.*(arguswsdev2-2-))"
       ],
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "argus_ws",
+      "ROLE": "argus_ws,argus_dev_ws",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
