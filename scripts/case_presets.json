@@ -2229,6 +2229,34 @@
       "CLUSTER_TYPE": "ARGUS"
     }
   },
+  "argusui_dev_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "argusui",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!(.*argusuidev2-1-))"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_dev_ui",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
+  "argusui_dev_canary_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "argusui",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        ".*(argusuidev2-1-)"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_dev_ui",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
   "argus_alert_prod": {
     "PROD": {
       "PODGROUP": "arguscl",
