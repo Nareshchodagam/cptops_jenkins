@@ -6,10 +6,10 @@
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!shared1-argusmq2-5-prd)"
+        "(?!(shared1-argusmq2-5-prd)|(shared2-argusmqdev1-3-prd))"
       ],
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "argus_mq",
+      "ROLE": "argus_mq,argus_dev_mq",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
@@ -20,7 +20,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "shared1-argusmq2-5-prd"
+        "shared1-argusmq2-5-prd|shared2-argusmqdev1-3-prd"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "argus_mq",
