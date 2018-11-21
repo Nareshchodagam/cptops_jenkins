@@ -2511,7 +2511,7 @@
       "FILTER": [
         "(?!shared1-arguscache1-2-prd)"
       ],
-      "ROLE": "argus_cache",
+      "ROLE": "argus_cache,argus_dev_ajna",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
