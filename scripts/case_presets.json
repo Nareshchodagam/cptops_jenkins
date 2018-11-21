@@ -62,7 +62,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!shared1-argusajna2-5-prd)"
+        "(?!(shared1-argusajna2-5-prd)|(shared2-argusajnadev1-2-prd))"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "argus_ajna",
@@ -76,7 +76,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "shared1-argusajna2-5-prd"
+        "shared1-argusajna2-5-prd|shared2-argusajnadev1-2-prd"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "argus_ajna",
