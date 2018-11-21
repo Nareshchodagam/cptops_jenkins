@@ -2483,7 +2483,7 @@
       "FILTER": [
         "(?!shared1-argusmqzk2-1-prd)"
       ],
-      "ROLE": "argus_mq_zk",
+      "ROLE": "argus_mq_zk,argus_dev_mq_zk",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
