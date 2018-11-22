@@ -1442,7 +1442,7 @@
   "hbase_canary_prod": {
     "PROD": {
       "PODGROUP": "hbase.clusters",
-      "TEMPLATEID": "hbase.linux",
+      "TEMPLATEID": "hbase.canary",
       "GROUPSIZE": 2,
       "TAGGROUPS": 5,
       "FILTER": [
