@@ -1523,6 +1523,20 @@
       "CL_STATUS": "DECOM"
     }
   },
+  "dchbaseqnds_prod": {
+    "PROD": {
+      "PODGROUP": "hbase.clusters",
+      "TEMPLATEID": "dchbase.qnds",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(dchbase0a-*)"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "qnds",
+      "CL_STATUS": "DECOM"
+    }
+  },
   "hbase_sayonara_prod": {
     "PROD": {
       "PODGROUP": "hbase_sayonara.clusters",
