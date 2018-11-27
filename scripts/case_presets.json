@@ -37,7 +37,7 @@
         "(?!shared1-argusannotation2-5-prd)"
       ],
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "argus_annotation",
+      "ROLE": "argus_annotation,argus_dev_annotation",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
@@ -2236,10 +2236,10 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!shared1-argusalert1-2-prd)"
+	"(?!(shared1-argusalert1-2-prd)|(shared2-argusalertdev2-2-prd))"
       ],
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "argus_alert",
+      "ROLE": "argus_alert,argus_dev_alert",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
@@ -2250,10 +2250,10 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "shared1-argusalert1-2-prd"
+	"shared1-argusalert1-2-prd|shared2-argusalertdev2-2-prd"
       ],
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "argus_alert",
+      "ROLE": "argus_alert,argus_dev_alert",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
