@@ -3661,5 +3661,42 @@
       "ROLE": "nsm",
       "CLUSTER_TYPE": "NSM"
     }
+  },
+    "bks_master_prod": {
+    "PROD": {
+      "PODGROUP": "bksmcl",
+      "TEMPLATEID": "bksmaster",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "^.*bksmstr[0-9]-2",
+        "^.*bksmstr[0-9]-1"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "bksmstr",
+      "CLUSTER_TYPE": "BKSMSTR"
+    }
+  },
+    "bks_api_prod": {
+    "PROD": {
+      "PODGROUP": "bksacl",
+      "TEMPLATEID": "bksapi",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "bksapi",
+      "CLUSTER_TYPE": "BKSAPI"
+    }
+  },
+    "bks_rpt_prod": {
+    "PROD": {
+      "PODGROUP": "bksrcl",
+      "TEMPLATEID": "bksrpt",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "bksrpt",
+      "CLUSTER_TYPE": "BKSRPT"
+    }
   }
 }
