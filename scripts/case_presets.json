@@ -3063,6 +3063,24 @@
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
       "HO_STATUS": "ACTIVE,PROVISIONING",
+      "FILTER": [
+        "(?!(ajna0-mgmt1-1-frf|ajna0-mgmt1-1-prd|ajna0-wrangler1-1-frf|ajna0-wrangler1-1-prd|ajna0-wranglertest1-1-prd|ajna0-mgmttest1-1-prd))"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "ajna_mgmt,ajna_wrangler",
+      "CLUSTER_TYPE": "AJNA_MGMT"
+    }
+  },
+  "ajnamgmt_canary_prod": {
+    "PROD": {
+      "PODGROUP": "ajna_canary_mgmt",
+      "TEMPLATEID": "ajna_clusters",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "HO_STATUS": "ACTIVE,PROVISIONING",
+      "FILTER": [
+        "ajna0-mgmt1-1-frf|ajna0-mgmt1-1-prd|ajna0-wrangler1-1-frf|ajna0-wrangler1-1-prd|ajna0-wranglertest1-1-prd|ajna0-mgmttest1-1-prd"
+      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "ajna_mgmt,ajna_wrangler",
       "CLUSTER_TYPE": "AJNA_MGMT"
