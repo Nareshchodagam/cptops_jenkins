@@ -2338,6 +2338,20 @@
       "CLUSTER_TYPE": "OPS"
     }
   },
+    "pravmh_canary_prod": {
+    "PROD": {
+      "PODGROUP": "pracl",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "ops0-pravmh(1|2).*-prd"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "pravmh",
+      "CLUSTER_TYPE": "PRA"
+    }
+  },
   "pravmh_prod": {
     "PROD": {
       "PODGROUP": "pracl",
@@ -3021,6 +3035,20 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "warden_prod_ws,warden_prod_mq,warden_prod_readd,warden_prod_alert,warden_prod_writed,warden_prod_rdbms",
       "CLUSTER_TYPE": "WARDEN"
+    }
+  },
+   "praccn_canary_prod": {
+    "PROD": {
+      "PODGROUP": "pracl",
+      "TEMPLATEID": "praccn_prod",
+      "GROUPSIZE": 1,
+      "FILTER": [
+        ".*-(prd)"
+      ],
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "praccn",
+      "CLUSTER_TYPE": "PRA"
     }
   },
   "praccn_prod": {
