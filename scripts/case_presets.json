@@ -37,7 +37,7 @@
         "(?!shared1-argusannotation2-5-prd)"
       ],
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "argus_annotation",
+      "ROLE": "argus_annotation,argus_dev_annotation",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
