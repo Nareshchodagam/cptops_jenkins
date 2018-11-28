@@ -50,6 +50,12 @@ def cmd_builder(sets, r_class=False):
     bld_cmd['infra'] = sets[role_class][role_status]['INFRA']
     bld_cmd['role'] = sets[role_class][role_status]['ROLE']
     bld_cmd['template'] = options.template if options.template != None else sets[role_class][role_status]['TEMPLATEID']
+
+    try:
+        bld_cmd['patching'] = sets[role_class][role_status]['PATCHING']
+    except KeyError:
+        bld_cmd['patching'] = "majorset"
+
     if 'IMPLPLAN' in sets[role_class][role_status].keys():
         bld_cmd['impl_plan'] = "templates/"+sets[role_class][role_status]['IMPLPLAN']+".json"
 

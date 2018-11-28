@@ -1685,6 +1685,7 @@
       "PODGROUP": "samminion.pri",
       "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
+      "PATCHING": "byrack",
       "TAGGROUPS": 0,
       "FILTER": [
         "^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"
@@ -1699,6 +1700,7 @@
       "PODGROUP": "samminion.pri",
       "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
+      "PATCHING": "byrack",
       "TAGGROUPS": 0,
       "FILTER": [
         "^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"
@@ -1713,6 +1715,7 @@
       "PODGROUP": "samcontrol.pri",
       "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
+      "PATCHING": "byrack",
       "FILTER": [
         "^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"
       ],
@@ -1727,6 +1730,7 @@
       "PODGROUP": "samminion.pri",
       "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
+      "PATCHING": "byrack",
       "FILTER": [
         ".*(slb).*"
       ],
@@ -1740,6 +1744,7 @@
       "PODGROUP": "samminion.pri",
       "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
+      "PATCHING": "byrack",
       "TAGGROUPS": 0,
       "FILTER": [
         ".*(caasminion).*"
@@ -1754,6 +1759,7 @@
       "PODGROUP": "samminion.pri",
       "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
+      "PATCHING": "byrack",
       "TAGGROUPS": 0,
       "FILTER": [
         ".*(samminionceph).*"
@@ -1768,6 +1774,7 @@
       "PODGROUP": "flowsnakecl",
       "TEMPLATEID": "flowsnake",
       "GROUPSIZE": 1,
+      "PATCHING": "byrack",
       "TAGGROUPS": 0,
       "FILTER": [
         ".*(flowsnake).*"
@@ -3152,6 +3159,7 @@
       "PODGROUP": "ajna_mgmt",
       "TEMPLATEID": "ajna_clusters",
       "GROUPSIZE": 3,
+      "PATCHING": "minorset",
       "TAGGROUPS": 0,
       "HO_STATUS": "ACTIVE,PROVISIONING",
       "FILTER": [
@@ -3167,6 +3175,7 @@
       "PODGROUP": "ajna_canary_mgmt",
       "TEMPLATEID": "ajna_clusters",
       "GROUPSIZE": 1,
+      "PATCHING": "minorset",
       "TAGGROUPS": 0,
       "HO_STATUS": "ACTIVE,PROVISIONING",
       "FILTER": [
@@ -3194,6 +3203,7 @@
       "PODGROUP": "ajna_tracing",
       "TEMPLATEID": "ajna_clusters",
       "GROUPSIZE": 3,
+      "PATCHING": "minorset",
       "TAGGROUPS": 0,
       "HO_STATUS": "ACTIVE,PROVISIONING",
       "INFRA": "Supporting Infrastructure",
