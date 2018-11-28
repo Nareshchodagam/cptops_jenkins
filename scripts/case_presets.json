@@ -2340,7 +2340,7 @@
   },
   "irc_prod": {
     "PROD": {
-      "PODGROUP": "irccl",
+      "PODGROUP": "opscl",
       "TEMPLATEID": "irc",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -2348,8 +2348,7 @@
         "ops-irc(1|2)-(1|2)-(sfm)"
       ],
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "irc",
-      "CLUSTER_TYPE": "OPS"
+      "ROLE": "irc"
     }
   },
     "pravmh_canary_prod": {
@@ -2382,7 +2381,7 @@
   },
   "irc_crd_prod": {
     "PROD": {
-      "PODGROUP": "irccl",
+      "PODGROUP": "opscl",
       "TEMPLATEID": "irc",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -2390,8 +2389,7 @@
         "ops-irc(1|2)-(1|2)-(crd)"
       ],
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "irc",
-      "CLUSTER_TYPE": "OPS"
+      "ROLE": "irc"
     }
   },
   "ajna_mirror_prod": {
@@ -3031,13 +3029,64 @@
   },
   "sysmgt_prod": {
     "PROD": {
-      "PODGROUP": "sysmgtcl",
+      "PODGROUP": "opscl",
       "TEMPLATEID": "straight-patch-Goc++",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "sysmgt",
-      "CLUSTER_TYPE": "OPS"
+      "ROLE": "sysmgt"
+    }
+  },
+  "rtinst_prod": {
+    "PROD": {
+      "PODGROUP": "opscl",
+      "TEMPLATEID": "rtinst",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "rtinst"
+    }
+  },
+  "gro_prod": {
+    "PROD": {
+      "PODGROUP": "grocl",
+      "TEMPLATEID": "gro",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "gro",
+      "CLUSTER_TYPE": "GRO"
+    }
+  },
+  "gro-rad_prod": {
+    "PROD": {
+      "PODGROUP": "grocl",
+      "TEMPLATEID": "gro_rad",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "rad_qa"
+    }
+  },
+  "gro-jenkins_prod": {
+    "PROD": {
+      "PODGROUP": "grocl",
+      "TEMPLATEID": "gro_jenkins",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "groauto"
+    }
+  },
+  "netlog_prod": {
+    "PROD": {
+      "PODGROUP": "netlogcl",
+      "TEMPLATEID": "netlog",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "netlog",
+      "CLUSTER_TYPE": "NETLOG"
     }
   },
   "warden_prod": {
@@ -3610,7 +3659,7 @@
   },
   "rackbot_prod": {
     "PROD": {
-      "PODGROUP": "rackbot",
+      "PODGROUP": "opscl",
       "TEMPLATEID": "rackbot",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
