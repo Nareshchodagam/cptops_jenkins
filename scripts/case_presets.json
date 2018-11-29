@@ -1322,9 +1322,9 @@
     "PROD": {
       "PODGROUP": "dchbase_internal.clusters",
       "TEMPLATEID": "hbase.dchbase",
-      "GROUPSIZE": 8,
+      "GROUPSIZE": 2,
       "TAGGROUPS": 0,
-      "HOSTPERCENT": "10",
+      "PATCHING": "byrack",
       "FILTER": [
         "dev[7,8]hdaas.*"
       ],
