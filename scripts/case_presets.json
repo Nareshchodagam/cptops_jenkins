@@ -1712,7 +1712,7 @@
   },
   "sam2_prod": {
     "PROD": {
-      "PODGROUP": "samcontrol.pri",
+      "PODGROUP": "sam.pri",
       "TEMPLATEID": "sam",
       "GROUPSIZE": 1,
       "PATCHING": "byrack",
@@ -1723,6 +1723,21 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "samcompute,samkubeapi",
       "CLUSTER_TYPE": "SAMCONTROL"
+    }
+  },
+  "sam3_prod": {
+    "PROD": {
+      "PODGROUP": "samcontrol.pri",
+      "TEMPLATEID": "sam",
+      "GROUPSIZE": 1,
+      "PATCHING": "byrack",
+      "FILTER": [
+        "^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"
+      ],
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "samcompute,samkubeapi",
+      "CLUSTER_TYPE": "SAM"
     }
   },
   "sam-slb_prod": {
