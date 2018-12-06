@@ -1988,7 +1988,7 @@
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "hwmon",
-      "CLUSTER_TYPE": "RAZOR"
+      "CLUSTER_TYPE": "HWMON"
     }
   },
   "orch_gia_prod": {
