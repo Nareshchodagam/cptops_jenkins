@@ -1257,8 +1257,23 @@
       "TEMPLATEID": "hbase.linux",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "FILTER": [
-	    "(^hbase.*-(cdg|yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad|ia2))"
+	    "(^hbase.*-(cdg|chx|chi|sfm|ukb|dfw|lon|par|iad|ia2))"
+      ],
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "mnds",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase_sp_mnds_1_pcl_prod": {
+    "PROD": {
+      "PODGROUP": "hbase.clusters",
+      "TEMPLATEID": "hbase.linux",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+            "(^hbase.*-(yhu|syd))"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds",
@@ -1271,8 +1286,23 @@
       "TEMPLATEID": "hbase.linux",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "FILTER": [
-        "(^hbase.*-(fra|yul|wax|was|cdu|crd|hnd|phx|frf|ord|ph2))"
+        "(^hbase.*-(fra|wax|was|crd|hnd|phx|frf|ord|ph2))"
+      ],
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "mnds",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase_sp_mnds_2_pcl_prod": {
+    "PROD": {
+      "PODGROUP": "hbase.clusters",
+      "TEMPLATEID": "hbase.linux",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(^hbase.*-(yul|cdu))"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds",
@@ -1285,8 +1315,24 @@
       "TEMPLATEID": "hbase.linux",
       "GROUPSIZE": 8,
       "TAGGROUPS": 5,
+      "PATCHING": "byrack",
       "FILTER": [
-        "(^hbase-*)"
+        "(^hbase-.*(?<!(yul|yhu|syd|cdu))$)"
+      ],
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "dnds",
+      "CLUSTER_TYPE": "HBASE",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase_sp_pcl_prod": {
+    "PROD": {
+      "PODGROUP": "hbase.clusters",
+      "TEMPLATEID": "hbase.linux",
+      "GROUPSIZE": 8,
+      "TAGGROUPS": 5,
+      "FILTER": [
+        "(^hbase-.*(yul|yhu|syd|cdu)$)"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "dnds",
@@ -1301,6 +1347,7 @@
       "INFRA": "Supporting_Infrastructure",
       "GROUPSIZE": 8,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "HOSTPERCENT": "10",
       "ROLE": "dnds",
       "CLUSTER_TYPE": "HBASE",
@@ -1315,6 +1362,7 @@
       "ROLE": "mnds",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "CL_STATUS": "DECOM"
     }
   },
@@ -1338,9 +1386,9 @@
     "PROD": {
       "PODGROUP": "dchbase_internal.clusters",
       "TEMPLATEID": "hbase.dchbase",
-      "GROUPSIZE": 8,
+      "GROUPSIZE": 2,
       "TAGGROUPS": 0,
-      "HOSTPERCENT": "10",
+      "PATCHING": "byrack",
       "FILTER": [
         "(?!(dev[7,8]hdaas.*))"
       ],
@@ -1356,6 +1404,7 @@
       "TEMPLATEID": "hbase.dchbase",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "FILTER": [
         "dev[7,8]hdaas.*"
       ],
@@ -1370,6 +1419,7 @@
       "TEMPLATEID": "hbase.dchbase",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "FILTER": [
         "(?!(dev[7,8]hdaas.*))"
       ],
@@ -1384,6 +1434,7 @@
       "TEMPLATEID": "hbase_ambari",
       "GROUPSIZE": 8,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "FILTER": [
         "(^isthbase02-.*crd)"
       ],
@@ -1400,8 +1451,24 @@
       "TEMPLATEID": "hbase_ambari",
       "GROUPSIZE": 8,
       "TAGGROUPS": 5,
+      "PATCHING": "byrack",
       "FILTER": [
-        "(^hbase-*)"
+        "(^hbase-.*(?<!(yul|yhu|syd|cdu))$)"
+      ],
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "dnds",
+      "CLUSTER_TYPE": "HBASE",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase_ambari_pcl_prod": {
+    "PROD": {
+      "PODGROUP": "hbase_ambari.clusters",
+      "TEMPLATEID": "hbase_ambari",
+      "GROUPSIZE": 8,
+      "TAGGROUPS": 5,
+      "FILTER": [
+        "(^hbase-.*(yul|yhu|syd|cdu)$)"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "dnds",
@@ -1415,8 +1482,24 @@
       "TEMPLATEID": "hbase_ambari",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "FILTER": [
-        "(^hbase.*-(cdg|yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad|ia2))"
+        "(^hbase.*-(cdg|chx|chi|sfm|ukb|dfw|lon|par|iad|ia2))"
+      ],
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "mnds",
+      "CLUSTER_TYPE": "HBASE",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase_ambari_mnds_1_pcl_prod": {
+    "PROD": {
+      "PODGROUP": "hbase_ambari.clusters",
+      "TEMPLATEID": "hbase_ambari",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(^hbase.*-(yhu|syd))"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds",
@@ -1430,8 +1513,24 @@
       "TEMPLATEID": "hbase_ambari",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "FILTER": [
-        "(^hbase.*-(fra|yul|wax|was|cdu|crd|hnd|phx|frf|ord|ph2)|^isthbase02.*-crd)"
+        "(^hbase.*-(fra|wax|was|crd|hnd|phx|frf|ord|ph2)|^isthbase02.*-crd)"
+      ],
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "mnds",
+      "CLUSTER_TYPE": "HBASE",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase_ambari_mnds_2_pcl_prod": {
+    "PROD": {
+      "PODGROUP": "hbase_ambari.clusters",
+      "TEMPLATEID": "hbase_ambari",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(^hbase.*-(yul|cdu)|^isthbase02.*-crd)"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds",
@@ -1445,6 +1544,7 @@
       "TEMPLATEID": "hbase.canary",
       "GROUPSIZE": 2,
       "TAGGROUPS": 5,
+      "PATCHING": "byrack",
       "FILTER": [
         "stg.*hdaas.*-prd"
       ],
@@ -1481,28 +1581,58 @@
       "CL_STATUS": "DECOM"
     }
   },
-  "hbasedch__mnds_1_prod": {
+  "hbasedch_mnds_1_prod": {
     "PROD": {
       "PODGROUP": "hbase.clusters",
       "TEMPLATEID": "hbase.dchbase",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "FILTER": [
-        "(^dchbase0a.*-(yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad|ia2))"
+        "(^dchbase0a.*-(chx|chi|sfm|ukb|dfw|lon|par|iad|ia2))"
       ],
       "INFRA": "Primary",
       "ROLE": "mnds",
       "CL_STATUS": "DECOM"
     }
   },
-  "hbasedch__mnds_2_prod": {
+  "hbasedch_mnds_1_pcl_prod": {
     "PROD": {
       "PODGROUP": "hbase.clusters",
       "TEMPLATEID": "hbase.dchbase",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(^dchbase0a.*-(yul|wax|was|cdu|crd|hnd|phx|frf|ord|ph2))"
+        "(^dchbase0a.*-(yhu|syd))"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "mnds",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbasedch_mnds_2_prod": {
+    "PROD": {
+      "PODGROUP": "hbase.clusters",
+      "TEMPLATEID": "hbase.dchbase",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "PATCHING": "byrack",
+      "FILTER": [
+        "(^dchbase0a.*-(wax|was|crd|hnd|phx|frf|ord|ph2))"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "mnds",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbasedch_mnds_2_pcl_prod": {
+    "PROD": {
+      "PODGROUP": "hbase.clusters",
+      "TEMPLATEID": "hbase.dchbase",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(^dchbase0a.*-(yul|cdu))"
       ],
       "INFRA": "Primary",
       "ROLE": "mnds",
@@ -1515,8 +1645,23 @@
       "TEMPLATEID": "hbase.dchbase",
       "GROUPSIZE": 8,
       "TAGGROUPS": 5,
+      "PATCHING": "byrack",
       "FILTER": [
-        "(dchbase0a-*)"
+        "(dchbase0a-.*(?<!(yul|yhu|syd|cdu))$)"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "dnds",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbasedch_pcl_prod": {
+    "PROD": {
+      "PODGROUP": "hbase.clusters",
+      "TEMPLATEID": "hbase.dchbase",
+      "GROUPSIZE": 8,
+      "TAGGROUPS": 5,
+      "FILTER": [
+        "(dchbase0a-.*(yul|yhu|syd|cdu)$)"
       ],
       "INFRA": "Primary",
       "ROLE": "dnds",
@@ -1588,8 +1733,23 @@
       "TEMPLATEID": "hbase.linux",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "FILTER": [
-        ".*-(yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad|ia2)"
+        ".*-(chx|chi|sfm|ukb|dfw|lon|par|iad|ia2)"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "mnds",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase_mnds_1_pcl_prod": {
+    "PROD": {
+      "PODGROUP": "hbase.pri",
+      "TEMPLATEID": "hbase.linux",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        ".*-(yhu|syd)"
       ],
       "INFRA": "Primary",
       "ROLE": "mnds",
@@ -1602,8 +1762,23 @@
       "TEMPLATEID": "hbase.linux",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "FILTER": [
-        ".*-(yul|wax|was|cdu|crd|hnd|phx|frf|ord|ph2)"
+        ".*-(wax|was|crd|hnd|phx|frf|ord|ph2)"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "mnds",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase_mnds_2_pcl_prod": {
+    "PROD": {
+      "PODGROUP": "hbase.pri",
+      "TEMPLATEID": "hbase.linux",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        ".*-(yul|cdu)"
       ],
       "INFRA": "Primary",
       "ROLE": "mnds",
@@ -1616,6 +1791,26 @@
       "TEMPLATEID": "hbase.linux",
       "GROUPSIZE": 3,
       "TAGGROUPS": 5,
+      "PATCHING": "byrack",
+      "FILTER": [
+        ".*(?<!(yul|yhu|syd|cdu))$"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "dnds",
+      "CL_STATUS": "DECOM",
+      "CLUSTER_TYPE": "HBASE",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase_pcl_prod": {
+    "PROD": {
+      "PODGROUP": "hbase.pri",
+      "TEMPLATEID": "hbase.linux",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 5,
+      "FILTER": [
+        ".*-(yul|yhu|syd|cdu)"
+      ],
       "INFRA": "Primary",
       "ROLE": "dnds",
       "CL_STATUS": "DECOM",
@@ -1629,8 +1824,23 @@
       "TEMPLATEID": "hbase.linux",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "FILTER": [
-        ".*-(yhu|chx|chi|syd|sfm|ukb|dfw|lon|par|iad|ia2)"
+        ".*-(chx|chi|sfm|ukb|dfw|lon|par|iad|ia2)"
+      ],
+      "INFRA": "Secondary",
+      "ROLE": "mnds",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase_mnds_1_pcl_dr": {
+    "DR": {
+      "PODGROUP": "hbase.sec",
+      "TEMPLATEID": "hbase.linux",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        ".*-(yhu|syd)"
       ],
       "INFRA": "Secondary",
       "ROLE": "mnds",
@@ -1643,8 +1853,23 @@
       "TEMPLATEID": "hbase.linux",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "FILTER": [
-        ".*-(yul|wax|was|cdu|crd|hnd|phx|frf|ord|ph2)"
+        ".*-(wax|was|crd|hnd|phx|frf|ord|ph2)"
+      ],
+      "INFRA": "Secondary",
+      "ROLE": "mnds",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase_mnds_2_pcl_dr": {
+    "DR": {
+      "PODGROUP": "hbase.sec",
+      "TEMPLATEID": "hbase.linux",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        ".*-(yul|cdu)"
       ],
       "INFRA": "Secondary",
       "ROLE": "mnds",
@@ -1657,6 +1882,25 @@
       "TEMPLATEID": "hbase.linux",
       "GROUPSIZE": 3,
       "TAGGROUPS": 5,
+      "PATCHING": "byrack",
+      "FILTER": [
+        ".*(?<!(yul|yhu|syd|cdu))$"
+      ],
+      "INFRA": "Secondary",
+      "ROLE": "dnds",
+      "CL_STATUS": "DECOM",
+      "CLUSTER_TYPE": "HBASE"
+    }
+  },
+  "hbase_pcl_dr": {
+    "DR": {
+      "PODGROUP": "hbase.sec",
+      "TEMPLATEID": "hbase.linux",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 5,
+      "FILTER": [
+        ".*-(yul|yhu|syd|cdu)"
+      ],
       "INFRA": "Secondary",
       "ROLE": "dnds",
       "CL_STATUS": "DECOM",
