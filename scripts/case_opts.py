@@ -28,6 +28,7 @@ opt_dict = {'gsize': '-s',
             'delpatched': '--delpatched',
 	        'skip_bundle': '--skip_bundle',
             'bpv2': '--bpv2',
+            'os': '--os',
             'csv': '--csv'}
 
 req_sub = ['search(23|43)_prod',
