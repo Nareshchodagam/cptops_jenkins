@@ -346,7 +346,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "cs80-acs.*"
+        "(cs80|cs49)-acs.*"
       ],
       "INFRA": "Primary",
       "ROLE": "acs,computedocker",
@@ -1059,7 +1059,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "ops-monitor1-1-sfm"
+        "ops-monitor1-1-sfm|test0ops0-monitor2-1-prd"
       ],
       "ROLE": "monitor",
       "CASETYPE": "hostlist"
