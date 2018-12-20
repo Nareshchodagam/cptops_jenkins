@@ -559,40 +559,9 @@
   "mmxcvr_prod": {
     "PROD": {
       "PODGROUP": "ajna_prodcl",
-      "TEMPLATEID": "mmxcvr",
+      "TEMPLATEID": "straight-patch-Goc++",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!ops-mmxcvr16-2-sfz)"
-      ],
-      "REGEX": "failoverstatus=PRIMARY",
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "mmxcvr",
-      "CLUSTER_TYPE": "AJNA"
-    }
-  },
-  "mmxcvr_canary_prod": {
-    "PROD": {
-      "PODGROUP": "ajna_prodcl",
-      "TEMPLATEID": "mmxcvr",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "REGEX": "failoverstatus=PRIMARY",
-      "FILTER": [
-        "ops-mmxcvr16-2-sfz"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "mmxcvr",
-      "CLUSTER_TYPE": "AJNA"
-    }
-  },
-  "mmxcvr_standby_prod": {
-    "PROD": {
-      "PODGROUP": "ajna_prodcl",
-      "TEMPLATEID": "mmxcvr_standby",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "REGEX": "failoverstatus=STANDBY",
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mmxcvr",
       "CLUSTER_TYPE": "AJNA"
