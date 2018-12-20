@@ -1286,7 +1286,7 @@
       "TAGGROUPS": 5,
       "PATCHING": "byrack",
       "FILTER": [
-        "(^hbase-.*(?<!(yul|yhu|syd|cdu))$)"
+        "(^hbase.*(?<!(yul|yhu|syd|cdu))$)"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "dnds",
@@ -1301,7 +1301,7 @@
       "GROUPSIZE": 8,
       "TAGGROUPS": 5,
       "FILTER": [
-        "(^hbase-.*(yul|yhu|syd|cdu)$)"
+        "(^hbase.*(yul|yhu|syd|cdu)$)"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "dnds",
