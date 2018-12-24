@@ -339,6 +339,20 @@
       "CLUSTER_TYPE": "POD"
     }
   },
+  "coreafw_app_ice_prod": {
+    "PROD": {
+      "PODGROUP": "afwice.pri",
+      "TEMPLATEID": "coreapp-prod",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "dbl20ice.*"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "app",
+      "CLUSTER_TYPE": "POD",
+    }
+  },
   "acs_canary_prod": {
     "PROD": {
       "PODGROUP": "acs.pri",
@@ -390,7 +404,7 @@
 	"INFRA": "Primary",
 	"ROLE": "acs,computedocker",
 	"FILTER": [
-	  "dbl20ice1.*"
+	  "dbl20ice.*"
 	],
 	"CL_STATUS": "ACTIVE",
 	"CLUSTER_TYPE": "POD"
@@ -499,6 +513,20 @@
       "INFRA": "Primary",
       "ROLE": "ffx",
       "CLUSTER_TYPE": "POD"
+    }
+  },
+  "ffx_ice_prod": {
+    "PROD": {
+        "PODGROUP": "ffxice.pri",
+        "TEMPLATEID": "ffx",
+        "GROUPSIZE": 1,
+        "TAGGROUPS": 0,
+        "INFRA": "Primary",
+        "ROLE": "ffx",
+        "FILTER": [
+          "dbl20ice.*"
+        ],
+        "CLUSTER_TYPE": "POD"
     }
   },
   "mta_prod": {
@@ -1189,7 +1217,7 @@
 	"INFRA": "Primary",
 	"ROLE": "mq",
 	"FILTER": [
-	  "dbl20ice1.*"
+	  "dbl20ice.*"
 	],
 	"CL_STATUS": "ACTIVE",
 	"CLUSTER_TYPE": "POD"
