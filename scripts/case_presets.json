@@ -381,6 +381,21 @@
       "CLUSTER_TYPE": "ACS"
     }
   },
+  "acs_ice_prod": {
+    "PROD": {
+	"PODGROUP": "acsice.pri",
+	"TEMPLATEID": "acs",
+	"GROUPSIZE": 1,
+	"TAGGROUPS": 0,
+	"INFRA": "Primary",
+	"ROLE": "acs,computedocker",
+	"FILTER": [
+	  "dbl20ice1.*"
+	],
+	"CL_STATUS": "ACTIVE",
+	"CLUSTER_TYPE": "POD"
+    }
+  },
   "search_prod": {
     "PROD": {
       "PODGROUP": "afw.pri",
@@ -559,9 +574,40 @@
   "mmxcvr_prod": {
     "PROD": {
       "PODGROUP": "ajna_prodcl",
-      "TEMPLATEID": "straight-patch-Goc++",
+      "TEMPLATEID": "mmxcvr",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!ops-mmxcvr16-2-sfz)"
+      ],
+      "REGEX": "failoverstatus=PRIMARY",
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "mmxcvr",
+      "CLUSTER_TYPE": "AJNA"
+    }
+  },
+  "mmxcvr_canary_prod": {
+    "PROD": {
+      "PODGROUP": "ajna_prodcl",
+      "TEMPLATEID": "mmxcvr",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "REGEX": "failoverstatus=PRIMARY",
+      "FILTER": [
+        "ops-mmxcvr16-2-sfz"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "mmxcvr",
+      "CLUSTER_TYPE": "AJNA"
+    }
+  },
+  "mmxcvr_standby_prod": {
+    "PROD": {
+      "PODGROUP": "ajna_prodcl",
+      "TEMPLATEID": "mmxcvr_standby",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "REGEX": "failoverstatus=STANDBY",
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mmxcvr",
       "CLUSTER_TYPE": "AJNA"
@@ -1134,6 +1180,21 @@
       "CLUSTER_TYPE": "POD"
     }
   },
+  "mq_ice_prod": {
+    "PROD": {
+	"PODGROUP": "mqice.pri",
+	"TEMPLATEID": "mq.linux",
+	"GROUPSIZE": 1,
+	"TAGGROUPS": 0,
+	"INFRA": "Primary",
+	"ROLE": "mq",
+	"FILTER": [
+	  "dbl20ice1.*"
+	],
+	"CL_STATUS": "ACTIVE",
+	"CLUSTER_TYPE": "POD"
+     }
+  },
   "sapp_prod": {
     "PROD": {
       "PODGROUP": "afw.pri",
@@ -1286,7 +1347,7 @@
       "TAGGROUPS": 5,
       "PATCHING": "byrack",
       "FILTER": [
-        "(^hbase.*(?<!(yul|yhu|syd|cdu))$)"
+        "(^hbase-.*(?<!(yul|yhu|syd|cdu))$)"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "dnds",
@@ -1301,7 +1362,7 @@
       "GROUPSIZE": 8,
       "TAGGROUPS": 5,
       "FILTER": [
-        "(^hbase.*(yul|yhu|syd|cdu)$)"
+        "(^hbase-.*(yul|yhu|syd|cdu)$)"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "dnds",
