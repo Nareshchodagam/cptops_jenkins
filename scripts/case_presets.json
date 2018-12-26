@@ -350,7 +350,7 @@
       ],
       "INFRA": "Primary",
       "ROLE": "app",
-      "CLUSTER_TYPE": "POD",
+      "CLUSTER_TYPE": "POD"
     }
   },
   "acs_canary_prod": {
