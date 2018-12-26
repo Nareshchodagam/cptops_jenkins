@@ -339,9 +339,9 @@
       "CLUSTER_TYPE": "POD"
     }
   },
-  "coreafw_app_ice_prod": {
+  "app_ice_prod": {
     "PROD": {
-      "PODGROUP": "afwice.pri",
+      "PODGROUP": "appice.pri",
       "TEMPLATEID": "coreapp-prod",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
