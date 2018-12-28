@@ -50,11 +50,19 @@ def cmd_builder(sets, r_class=False):
     bld_cmd['infra'] = sets[role_class][role_status]['INFRA']
     bld_cmd['role'] = sets[role_class][role_status]['ROLE']
     bld_cmd['template'] = options.template if options.template != None else sets[role_class][role_status]['TEMPLATEID']
+
+    try:
+        bld_cmd['patching'] = sets[role_class][role_status]['PATCHING']
+    except KeyError:
+        bld_cmd['patching'] = "majorset"
+
     if 'IMPLPLAN' in sets[role_class][role_status].keys():
         bld_cmd['impl_plan'] = "templates/"+sets[role_class][role_status]['IMPLPLAN']+".json"
 
     if options.hostpercent:
         bld_cmd['hostpercent'] = options.hostpercent
+    if options.os:
+        bld_cmd['os'] = options.os
     if options.delpatched:
         bld_cmd['delpatched'] = options.delpatched
     if options.cluststat:
@@ -67,6 +75,7 @@ def cmd_builder(sets, r_class=False):
         bld_cmd['nolinebacker'] = options.nolinebacker
     if options.casesubject:
         bld_cmd['casesubject'] = options.casesubject
+
 
     if options.regex is None:
         if 'REGEX' in sets[role_class][role_status]:
@@ -317,6 +326,9 @@ if __name__ == "__main__":
     parser.add_argument("--delpatched", dest="delpatched", action='store_true', help="command to remove patched host.")
     parser.add_argument("--casesubject", dest="casesubject", help="Initial case subject to use")
 
+    #Added to filter C6 and C7 hosts while cases creation using build_Plan v1
+    parser.add_argument("--os", dest="os", help="command to filter hosts based on major set, Valid Options are 6 and 7")
+
     #End
 
     parser.add_argument("--canary", dest="canary", action ="store_true", help="All canary cases")
@@ -327,6 +339,12 @@ if __name__ == "__main__":
     initfile()  # function to clean existing cases.sh file
     logging.basicConfig(level=logging.DEBUG)
     sets = json_imports()
+
+    if options.os:
+        if options.os != "6" and options.os != "7":
+            print("\n--os valid options are 6 and 7, provided {0}\n".format(options.os))
+            sys.exit(1)
+
     if options.delpatched and not options.bundle:
         print("\n\n'--delpatched' should be called with '--bundle' option only, instead use '--skip_bundle' option.\n\n")
         exit(1)
