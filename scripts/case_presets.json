@@ -1596,21 +1596,36 @@
       "CL_STATUS": "DECOM"
     }
   },
-  "hbase_canary_prod": {
+  "hbase_mnds_canary_prod": {
     "PROD": {
       "PODGROUP": "hbase.clusters",
       "TEMPLATEID": "hbase.canary",
-      "GROUPSIZE": 2,
+      "GROUPSIZE": 1,
       "TAGGROUPS": 5,
       "PATCHING": "byrack",
       "FILTER": [
         "stg.*hdaas.*-prd"
       ],
       "INFRA": "Supporting_Infrastructure",
-      "ROLE": "mnds,dnds",
+      "ROLE": "mnds",
       "CL_STATUS": "DECOM"
     }
   },
+  "hbase_dnds_canary_prod": {
+     "PROD": {
+       "PODGROUP": "hbase.clusters",
+       "TEMPLATEID": "hbase.canary",
+       "GROUPSIZE": 2,
+       "TAGGROUPS": 5,
+       "PATCHING": "byrack",
+       "FILTER": [
+         "stg.*hdaas.*-prd"
+       ],
+       "INFRA": "Supporting_Infrastructure",
+       "ROLE": "dnds",
+       "CL_STATUS": "DECOM"
+     }
+   },
   "hbase_deepsea_prod": {
     "PROD": {
       "PODGROUP": "hbase.clusters",
@@ -1625,7 +1640,21 @@
       "CL_STATUS": "DECOM"
     }
   },
-  "hbase_argus_prod": {
+  "hbase_mnds_argus_prod": {
+    "PROD": {
+      "PODGROUP": "hbase.clusters",
+      "TEMPLATEID": "hbaseargus",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 5,
+      "FILTER": [
+        "(arg1hbsvc-*)"
+      ],
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "mnds",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase__dnds_argus_prod": {
     "PROD": {
       "PODGROUP": "hbase.clusters",
       "TEMPLATEID": "hbaseargus",
@@ -1633,11 +1662,11 @@
       "TAGGROUPS": 5,
       "FILTER": [
         "(arg1hbsvc-*)"
-      ],
+      ],   
       "INFRA": "Supporting_Infrastructure",
-      "ROLE": "mnds,dnds",
+      "ROLE": "dnds",
       "CL_STATUS": "DECOM"
-    }
+    }    
   },
   "hbasedch_mnds_1_prod": {
     "PROD": {
