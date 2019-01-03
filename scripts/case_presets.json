@@ -4066,6 +4066,17 @@
       "CLUSTER_TYPE": "NSM"
     }
   },
+  "puppet_prod": {
+    "PROD": {
+      "PODGROUP": "puppetcl",
+      "TEMPLATEID": "puppet",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "puppet,ppm",
+      "CLUSTER_TYPE": "PUPPETMASTER"
+    }
+  },
     "bks_master_prod": {
     "PROD": {
       "PODGROUP": "bksmcl",
