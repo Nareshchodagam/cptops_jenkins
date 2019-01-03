@@ -3177,9 +3177,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "infrasec1-.*(prd|sfm|xrd)",
-        "infrasec2-.*(prd|sfm|xrd)",
-        "infrasec3-.*(prd|sfm|xrd)"
+        "infrasec[1-3]-.*(prd|sfm|xrd)",
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "secrets"
@@ -3503,7 +3501,7 @@
   },
   "ajnamgmt_canary_prod": {
     "PROD": {
-      "PODGROUP": "ajna_canary_mgmt",
+      "PODGROUP": "ajna_mgmt",
       "TEMPLATEID": "ajna_clusters",
       "GROUPSIZE": 1,
       "PATCHING": "minorset",
