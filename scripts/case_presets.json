@@ -1596,21 +1596,36 @@
       "CL_STATUS": "DECOM"
     }
   },
-  "hbase_canary_prod": {
+  "hbase_mnds_canary_prod": {
     "PROD": {
       "PODGROUP": "hbase.clusters",
       "TEMPLATEID": "hbase.canary",
-      "GROUPSIZE": 2,
+      "GROUPSIZE": 1,
       "TAGGROUPS": 5,
       "PATCHING": "byrack",
       "FILTER": [
         "stg.*hdaas.*-prd"
       ],
       "INFRA": "Supporting_Infrastructure",
-      "ROLE": "mnds,dnds",
+      "ROLE": "mnds",
       "CL_STATUS": "DECOM"
     }
   },
+  "hbase_dnds_canary_prod": {
+     "PROD": {
+       "PODGROUP": "hbase.clusters",
+       "TEMPLATEID": "hbase.canary",
+       "GROUPSIZE": 2,
+       "TAGGROUPS": 5,
+       "PATCHING": "byrack",
+       "FILTER": [
+         "stg.*hdaas.*-prd"
+       ],
+       "INFRA": "Supporting_Infrastructure",
+       "ROLE": "dnds",
+       "CL_STATUS": "DECOM"
+     }
+   },
   "hbase_deepsea_prod": {
     "PROD": {
       "PODGROUP": "hbase.clusters",
@@ -1625,7 +1640,21 @@
       "CL_STATUS": "DECOM"
     }
   },
-  "hbase_argus_prod": {
+  "hbase_mnds_argus_prod": {
+    "PROD": {
+      "PODGROUP": "hbase.clusters",
+      "TEMPLATEID": "hbaseargus",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 5,
+      "FILTER": [
+        "(arg1hbsvc-*)"
+      ],
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "mnds",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "hbase__dnds_argus_prod": {
     "PROD": {
       "PODGROUP": "hbase.clusters",
       "TEMPLATEID": "hbaseargus",
@@ -1633,11 +1662,11 @@
       "TAGGROUPS": 5,
       "FILTER": [
         "(arg1hbsvc-*)"
-      ],
+      ],   
       "INFRA": "Supporting_Infrastructure",
-      "ROLE": "mnds,dnds",
+      "ROLE": "dnds",
       "CL_STATUS": "DECOM"
-    }
+    }    
   },
   "hbasedch_mnds_1_prod": {
     "PROD": {
@@ -3177,9 +3206,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "infrasec1-.*(prd|sfm|xrd)",
-        "infrasec2-.*(prd|sfm|xrd)",
-        "infrasec3-.*(prd|sfm|xrd)"
+        "infrasec[1-3]-.*(prd|sfm|xrd)",
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "secrets"
@@ -3503,7 +3530,7 @@
   },
   "ajnamgmt_canary_prod": {
     "PROD": {
-      "PODGROUP": "ajna_canary_mgmt",
+      "PODGROUP": "ajna_mgmt",
       "TEMPLATEID": "ajna_clusters",
       "GROUPSIZE": 1,
       "PATCHING": "minorset",
