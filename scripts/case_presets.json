@@ -3206,7 +3206,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "infrasec[1-3]-.*(prd|sfm|xrd)",
+        "infrasec[1-3]-.*(prd|sfm|xrd)"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "secrets"
