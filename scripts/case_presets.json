@@ -1774,9 +1774,9 @@
       "PODGROUP": "hbase_sayonara.clusters",
       "TEMPLATEID": "hbase.sayonara",
       "GROUPSIZE": 1,
-      "TAGGROUPS": 5,
+      "TAGGROUPS": 0,
       "FILTER": [
-        "(sayonara*)"
+        "(.*sayonara.*|^dbaas0.*)"
       ],
       "INFRA": "Primary",
       "ROLE": "dnds",
@@ -1784,14 +1784,14 @@
       "CL_STATUS": "DECOM"
     }
   },
-  "hbase_sayonara_mnds1_prod": {
+  "hbase_sayonara_mnds_prod": {
     "PROD": {
       "PODGROUP": "hbase_sayonara.clusters",
       "TEMPLATEID": "hbase.sayonara",
       "GROUPSIZE": 1,
-      "TAGGROUPS": 5,
+      "TAGGROUPS": 0,
       "FILTER": [
-        "(sayonara*)"
+	"(?!(ice1sayonara2a-mnds1-1-prd$))(.*sayonara.*|^dbaas0.*)"
       ],
       "INFRA": "Primary",
       "ROLE": "mnds",
@@ -1799,18 +1799,17 @@
       "CL_STATUS": "DECOM"
     }
   },
-  "hbase_sayonara_mnds2_prod": {
+  "hbase_sayonara_canary_prod": {
     "PROD": {
       "PODGROUP": "hbase_sayonara.clusters",
       "TEMPLATEID": "hbase.sayonara",
       "GROUPSIZE": 1,
-      "TAGGROUPS": 5,
+      "TAGGROUPS": 0,
       "FILTER": [
-        "(sayonara*)"
+        "ice1sayonara2a-mnds1-1-prd"
       ],
       "INFRA": "Primary",
       "ROLE": "mnds",
-      "CLUSTER_TYPE": "HBASE",
       "CL_STATUS": "DECOM"
     }
   },
