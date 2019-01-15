@@ -4140,5 +4140,16 @@
       "ROLE": "bksrpt",
       "CLUSTER_TYPE": "BKSRPT"
     }
+  },
+    "captainzk_prod": {
+    "PROD": {
+      "PODGROUP": "captain",
+      "TEMPLATEID": "captainzk",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "captainzk",
+      "CLUSTER_TYPE": "CAPTAIN"
+    }
   }
 }
