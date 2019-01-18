@@ -1317,7 +1317,7 @@
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
-	    "(^hbase.*-(cdg|chx|chi|sfm|ukb|dfw|lon|par|iad|ia2))"
+	    "(^hbase.*-(cdg|chx|chi|sfm|ukb|dfw|lon|par|iad|ia2|lo2))"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds",
@@ -1346,7 +1346,7 @@
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
-        "(^hbase.*-(fra|wax|was|crd|hnd|phx|frf|ord|ph2))"
+        "(^hbase.*-(fra|wax|was|crd|hnd|phx|frf|ord|ph2|lo3))"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds",
@@ -1542,7 +1542,7 @@
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
-        "(^hbase.*-(cdg|chx|chi|sfm|ukb|dfw|lon|par|iad|ia2))"
+        "(^hbase.*-(cdg|chx|chi|sfm|ukb|dfw|lon|par|iad|ia2|lo2))"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds",
@@ -1573,7 +1573,7 @@
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
-        "(^hbase.*-(fra|wax|was|crd|hnd|phx|frf|ord|ph2)|^isthbase02.*-crd)"
+        "(^hbase.*-(fra|wax|was|crd|hnd|phx|frf|ord|ph2|lo3)|^isthbase02.*-crd)"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds",
