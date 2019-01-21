@@ -1427,7 +1427,7 @@
   "hbase_dch_canary_prod": {
     "PROD": {
       "PODGROUP": "dchbase_internal.clusters",
-      "TEMPLATEID": "hbase.dchbase",
+      "TEMPLATEID": "hbase.dchbase.canary",
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
