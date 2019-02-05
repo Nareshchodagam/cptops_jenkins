@@ -3141,7 +3141,7 @@
   "strata_jenkins_prod": {
     "PROD": {
       "PODGROUP": "stratacl",
-      "TEMPLATEID": "straight-patch-Goc++",
+      "TEMPLATEID": "strata_jenkins",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "PRIMARY'",
