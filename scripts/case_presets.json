@@ -564,7 +564,7 @@
       "GROUPSIZE": 100,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!(ajna0-broker1-1-frf|ajna0-broker1-1-prd))"
+        "(?!(ajna0-broker1-1-frf|ajna0-broker1-1-prd|ajna0-broker1-1-fra))"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "ajna_broker",
@@ -579,7 +579,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "ajna0-broker1-1-frf|ajna0-broker1-1-prd"
+        "ajna0-broker1-1-frf|ajna0-broker1-1-prd|ajna0-broker1-1-fra"
       ],
       "ROLE": "ajna_broker",
       "CLUSTER_TYPE": "AJNA"
@@ -2236,7 +2236,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "blitz1-proxy1-(1|2)-sfm"
+        "blitz1-proxy1-(1|2)-sfm|stmfdna44ice1-proxy[1|2]-1-prd"
       ],
       "INFRA": "Primary",
       "ROLE": "proxy",
@@ -2630,7 +2630,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!(ajna0-zk1-1-frf|ajna0-zk1-1-prd))"
+        "(?!(ajna0-zk1-1-frf|ajna0-zk1-1-prd|ajna0-zk1-1-fra))"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "ajna_zk",
@@ -2644,7 +2644,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "ajna0-zk1-1-frf|ajna0-zk1-1-prd"
+        "ajna0-zk1-1-frf|ajna0-zk1-1-prd|ajna0-zk1-1-fra"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "ajna_zk",
@@ -2751,7 +2751,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!(ajna0-mirror1-1-frf|ajna0-mirror1-1-prd))"
+        "(?!(ajna0-mirror1-1-frf|ajna0-mirror1-1-prd|ajna0-mirror1-1-fra))"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "ajna_mirror",
@@ -2765,7 +2765,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "ajna0-mirror1-1-frf|ajna0-mirror1-1-prd"
+        "ajna0-mirror1-1-frf|ajna0-mirror1-1-prd|ajna0-mirror1-1-fra"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "ajna_mirror",
@@ -3520,7 +3520,7 @@
       "TAGGROUPS": 0,
       "HO_STATUS": "ACTIVE,PROVISIONING",
       "FILTER": [
-        "(?!(ajna0-mgmt1-1-frf|ajna0-mgmt1-1-prd|ajna0-wrangler1-1-frf|ajna0-wrangler1-1-prd|ajna0-wranglertest1-1-prd|ajna0-mgmttest1-1-prd))"
+        "(?!(ajna0-mgmt1-1-frf|ajna0-mgmt1-1-prd|ajna0-wrangler1-1-frf|ajna0-wrangler1-1-prd|ajna0-wranglertest1-1-prd|ajna0-mgmttest1-1-prd|ajna0-mgmt1-1-fra|ajna0-wrangler1-1-fra))"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "ajna_mgmt,ajna_wrangler",
@@ -3536,7 +3536,7 @@
       "TAGGROUPS": 0,
       "HO_STATUS": "ACTIVE,PROVISIONING",
       "FILTER": [
-        "ajna0-mgmt1-1-frf|ajna0-mgmt1-1-prd|ajna0-wrangler1-1-frf|ajna0-wrangler1-1-prd|ajna0-wranglertest1-1-prd|ajna0-mgmttest1-1-prd"
+        "ajna0-mgmt1-1-frf|ajna0-mgmt1-1-prd|ajna0-wrangler1-1-frf|ajna0-wrangler1-1-prd|ajna0-wranglertest1-1-prd|ajna0-mgmttest1-1-prd|ajna0-mgmt1-1-fra|ajna0-wrangler1-1-fra"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "ajna_mgmt,ajna_wrangler",
