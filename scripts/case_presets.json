@@ -3684,12 +3684,24 @@
   },
   "sdb_prod": {
     "PROD": {
-      "PODGROUP": "sdbcl",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "sdb",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "sdb"
+      "ROLE": "sdb",
+      "CLUSTER_TYPE": "POD"
+    }
+  },
+  "sdb_dr_prod": {
+    "PROD": {
+      "PODGROUP": "afw.sec",
+      "TEMPLATEID": "sdb",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "sdb",
+      "CLUSTER_TYPE": "POD"
     }
   },
   "dbaas-broker_prod": {
