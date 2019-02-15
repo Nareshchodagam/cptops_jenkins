@@ -3356,7 +3356,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(stage0shared0-dvasyslog[1-2]-1-prd|test0shared0-dvasyslog1-1-prd)"
+        "(stage0shared0-dvasyslog[1-2]-1-prd|test0shared0-dvasyslog1-1-prd|shared0-dvasyslog1-5-prd)"
       ],
       "ROLE": "dvasyslog",
       "CLUSTER_TYPE": "DVA_SYSLOG"
@@ -3370,7 +3370,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?!(stage0shared0-dvasyslog[1-2]-1-prd|test0shared0-dvasyslog1-1-prd))"
+        "(?!(stage0shared0-dvasyslog[1-2]-1-prd|test0shared0-dvasyslog1-1-prd|shared0-dvasyslog1-5-prd))"
       ],
       "ROLE": "dvasyslog",
       "CLUSTER_TYPE": "DVA_SYSLOG",
