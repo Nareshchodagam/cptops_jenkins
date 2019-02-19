@@ -2361,10 +2361,24 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "((^.*((redis|iworker)[1,2]-1-(lon|wax|chx)))|insights1-(redis|iworker)[1,2]-1-dfw|insights4-(redis|iworker)[1,2]-1-chi)"
+        "((^.*((iworker)[1,2]-1-(lon|wax|chx)))|insights1-(iworker)[1,2]-1-dfw|insights4-(iworker)[1,2]-1-chi)"
       ],
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "insights_iworker,insights_redis",
+      "ROLE": "insights_iworker",
+      "CLUSTER_TYPE": "INSIGHTS"
+    }
+  },
+"insights_redis_canary_prod": {
+    "PROD": {
+      "PODGROUP": "insights.pri",
+      "TEMPLATEID": "insights-redis",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "((^.*((redis)[1,2]-1-(lon|wax|chx)))|insights1-(redis)[1,2]-1-dfw|insights4-(redis)[1,2]-1-chi)"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "insights_redis",
       "CLUSTER_TYPE": "INSIGHTS"
     }
   },
@@ -2375,10 +2389,25 @@
       "GROUPSIZE": 20,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!((^.*((redis|iworker)[1,2]-1-(lon|wax|chx)))|insights1-(redis|iworker)[1,2]-1-dfw|insights4-(redis|iworker)[1,2]-1-chi))"
+        "(?!((^.*((iworker)[1,2]-1-(lon|wax|chx)))|insights1-(iworker)[1,2]-1-dfw|insights4-(iworker)[1,2]-1-chi))"
       ],
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "insights_iworker,insights_redis",
+      "ROLE": "insights_iworker",
+      "CL_STATUS": "DECOM",
+      "CLUSTER_TYPE": "INSIGHTS"
+    }
+  },
+"insights_redis_prod": {
+
+    "PROD": {
+      "PODGROUP": "insights.pri",
+      "TEMPLATEID": "insights-redis",
+      "GROUPSIZE": 20,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!((^.*((redis)[1,2]-1-(lon|wax|chx)))|insights1-(redis)[1,2]-1-dfw|insights4-(redis)[1,2]-1-chi))"      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "insights_redis",
       "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "INSIGHTS"
     }
