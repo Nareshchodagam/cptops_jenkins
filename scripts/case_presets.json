@@ -2397,7 +2397,8 @@
       "CLUSTER_TYPE": "INSIGHTS"
     }
   },
-"insights_redis_erod": {
+"insights_redis_prod": {
+
     "PROD": {
       "PODGROUP": "insights.pri",
       "TEMPLATEID": "insights-redis",
