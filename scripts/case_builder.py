@@ -291,7 +291,16 @@ def bundleName(fn, file, bundle):
     """
     bundle = attrgetter('lower')(bundle)()
     bundleData = fn(file)
-    sub = max(bundleData.get('CENTOS').get('6').keys())
+    osVers = bundleData.get('CENTOS').keys()
+    #sub = max(bundleData.get('CENTOS').get('6').keys())
+    osSix = bundleData.get('CENTOS').get('6')
+    osSixCurrent = osSix['current']['sfdc-release']
+    osSeven = bundleData.get('CENTOS').get('7')
+    osSevenCurrent = osSeven['current']['sfdc-release']
+    if osSixCurrent != osSevenCurrent:
+        sub = osSixCurrent+"/"+osSevenCurrent
+    else:
+        sub = osSixCurrent
     return sub, bundle
 
 if __name__ == "__main__":
