@@ -267,7 +267,7 @@
       "ROLE": "app",
       "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD",
-      "HOSTPERCENT": "33"
+      "HOSTPERCENT": "20"
     }
   },
   "coreafw_app_reboot_prod": {
@@ -282,7 +282,7 @@
       "INFRA": "Primary",
       "ROLE": "app",
       "CLUSTER_TYPE": "POD",
-      "HOSTPERCENT": "33"
+      "HOSTPERCENT": "20"
     }
   },
   "coreafw_dr": {
@@ -295,7 +295,7 @@
       "ROLE": "app",
       "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD",
-      "HOSTPERCENT": "33"
+      "HOSTPERCENT": "20"
     }
   },
   "coreafw-cbatch-dapp_prod": {
