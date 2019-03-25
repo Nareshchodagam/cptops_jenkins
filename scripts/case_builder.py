@@ -287,12 +287,14 @@ def bundleName(fn, file, bundle):
     :param fn: read a json file
     :param file: json file
     :param bundle: bundle name
-    :return: bundle name from povided json file and bundle name provided by user.
+    :return: bundle name from provided json file and bundle name provided by user.
     """
     bundle = attrgetter('lower')(bundle)()
     bundleData = fn(file)
     osVers = bundleData.get('CENTOS').keys()
-    #sub = max(bundleData.get('CENTOS').get('6').keys())
+    sub = max(bundleData.get('CENTOS').get('6').keys())
+    #keeping for future use
+    '''
     osSix = bundleData.get('CENTOS').get('6')
     osSixCurrent = osSix['current']['sfdc-release']
     osSeven = bundleData.get('CENTOS').get('7')
@@ -301,6 +303,8 @@ def bundleName(fn, file, bundle):
         sub = osSixCurrent+"/"+osSevenCurrent
     else:
         sub = osSixCurrent
+    '''
+    sub = str(sub).capitalize()
     return sub, bundle
 
 if __name__ == "__main__":
