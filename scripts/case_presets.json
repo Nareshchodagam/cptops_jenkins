@@ -1689,6 +1689,7 @@
       "TEMPLATEID": "hbase.dchbase",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "FILTER": [
         "(^dchbase0a.*-(yhu|syd))"
       ],
@@ -1718,6 +1719,7 @@
       "TEMPLATEID": "hbase.dchbase",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "FILTER": [
         "(^dchbase0a.*-(yul|cdu))"
       ],
@@ -1747,6 +1749,7 @@
       "TEMPLATEID": "hbase.dchbase",
       "GROUPSIZE": 8,
       "TAGGROUPS": 5,
+      "PATCHING": "byrack",
       "FILTER": [
         "(dchbase0a-.*(yul|yhu|syd|cdu)$)"
       ],
@@ -1761,6 +1764,7 @@
       "TEMPLATEID": "dchbase.qnds",
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "FILTER": [
         "(dchbase0a-*)"
       ],
@@ -1775,6 +1779,7 @@
       "TEMPLATEID": "hbase.sayonara",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "FILTER": [
         "(.*sayonara.*|^dbaas0.*)"
       ],
