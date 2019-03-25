@@ -293,6 +293,7 @@ def bundleName(fn, file, bundle):
     bundleData = fn(file)
     osVers = bundleData.get('CENTOS').keys()
     sub = max(bundleData.get('CENTOS').get('6').keys())
+    #keeping for future use
     '''
     osSix = bundleData.get('CENTOS').get('6')
     osSixCurrent = osSix['current']['sfdc-release']
