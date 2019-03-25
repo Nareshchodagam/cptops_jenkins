@@ -354,10 +354,6 @@ if __name__ == "__main__":
             print("\n--os valid options are 6 and 7, provided {0}\n".format(options.os))
             sys.exit(1)
 
-    if options.delpatched and not options.bundle:
-        print("\n\n'--delpatched' should be called with '--bundle' option only, instead use '--skip_bundle' option.\n\n")
-        exit(1)
-
     if not options.bundle:
         verFile = os.path.join(os.environ["HOME"], "git/cptops_validation_tools/includes/valid_versions.json")
         bundleOut = partial(bundleName, file=verFile, bundle='current')
