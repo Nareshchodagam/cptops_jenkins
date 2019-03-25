@@ -267,7 +267,7 @@
       "ROLE": "app",
       "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD",
-      "HOSTPERCENT": "33"
+      "HOSTPERCENT": "20"
     }
   },
   "coreafw_app_reboot_prod": {
@@ -282,7 +282,7 @@
       "INFRA": "Primary",
       "ROLE": "app",
       "CLUSTER_TYPE": "POD",
-      "HOSTPERCENT": "33"
+      "HOSTPERCENT": "20"
     }
   },
   "coreafw_dr": {
@@ -295,7 +295,7 @@
       "ROLE": "app",
       "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD",
-      "HOSTPERCENT": "33"
+      "HOSTPERCENT": "20"
     }
   },
   "coreafw-cbatch-dapp_prod": {
@@ -1313,7 +1313,7 @@
     "PROD": {
       "PODGROUP": "hbase.clusters",
       "TEMPLATEID": "hbase.linux",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
@@ -1342,7 +1342,7 @@
     "PROD": {
       "PODGROUP": "hbase.clusters",
       "TEMPLATEID": "hbase.linux",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
@@ -1418,7 +1418,7 @@
       "TEMPLATEID": "hbase.linux",
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "CL_STATUS": "DECOM"
@@ -1460,7 +1460,7 @@
     "PROD": {
       "PODGROUP": "dchbase_internal.clusters",
       "TEMPLATEID": "hbase.dchbase",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
@@ -1475,7 +1475,7 @@
     "PROD": {
       "PODGROUP": "dchbase_internal.clusters",
       "TEMPLATEID": "hbase.dchbase",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
@@ -1538,7 +1538,7 @@
     "PROD": {
       "PODGROUP": "hbase_ambari.clusters",
       "TEMPLATEID": "hbase_ambari",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
@@ -1569,7 +1569,7 @@
     "PROD": {
       "PODGROUP": "hbase_ambari.clusters",
       "TEMPLATEID": "hbase_ambari",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
@@ -1600,7 +1600,7 @@
     "PROD": {
       "PODGROUP": "hbase.clusters",
       "TEMPLATEID": "hbase.canary",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "TAGGROUPS": 5,
       "PATCHING": "byrack",
       "FILTER": [
@@ -1672,7 +1672,7 @@
     "PROD": {
       "PODGROUP": "hbase.clusters",
       "TEMPLATEID": "hbase.dchbase",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
@@ -1689,6 +1689,7 @@
       "TEMPLATEID": "hbase.dchbase",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "FILTER": [
         "(^dchbase0a.*-(yhu|syd))"
       ],
@@ -1701,7 +1702,7 @@
     "PROD": {
       "PODGROUP": "hbase.clusters",
       "TEMPLATEID": "hbase.dchbase",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
@@ -1718,6 +1719,7 @@
       "TEMPLATEID": "hbase.dchbase",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "FILTER": [
         "(^dchbase0a.*-(yul|cdu))"
       ],
@@ -1747,6 +1749,7 @@
       "TEMPLATEID": "hbase.dchbase",
       "GROUPSIZE": 8,
       "TAGGROUPS": 5,
+      "PATCHING": "byrack",
       "FILTER": [
         "(dchbase0a-.*(yul|yhu|syd|cdu)$)"
       ],
@@ -1761,6 +1764,7 @@
       "TEMPLATEID": "dchbase.qnds",
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "FILTER": [
         "(dchbase0a-*)"
       ],
@@ -1775,6 +1779,7 @@
       "TEMPLATEID": "hbase.sayonara",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "PATCHING": "byrack",
       "FILTER": [
         "(.*sayonara.*|^dbaas0.*)"
       ],
@@ -1817,7 +1822,7 @@
     "PROD": {
       "PODGROUP": "hbase.pri",
       "TEMPLATEID": "hbase.linux",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
@@ -1846,7 +1851,7 @@
     "PROD": {
       "PODGROUP": "hbase.pri",
       "TEMPLATEID": "hbase.linux",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
@@ -1908,7 +1913,7 @@
     "DR": {
       "PODGROUP": "hbase.sec",
       "TEMPLATEID": "hbase.linux",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
@@ -1937,7 +1942,7 @@
     "DR": {
       "PODGROUP": "hbase.sec",
       "TEMPLATEID": "hbase.linux",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
@@ -2014,7 +2019,7 @@
     "PROD": {
       "PODGROUP": "samminion.pri",
       "TEMPLATEID": "sam",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "PATCHING": "byrack",
       "TAGGROUPS": 0,
       "FILTER": [
@@ -2029,7 +2034,7 @@
     "PROD": {
       "PODGROUP": "samminion.pri",
       "TEMPLATEID": "sam",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "PATCHING": "byrack",
       "TAGGROUPS": 0,
       "FILTER": [
@@ -2044,7 +2049,7 @@
     "PROD": {
       "PODGROUP": "sam.pri",
       "TEMPLATEID": "sam",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "PATCHING": "byrack",
       "FILTER": [
         "^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"
@@ -2059,7 +2064,7 @@
     "PROD": {
       "PODGROUP": "samcontrol.pri",
       "TEMPLATEID": "sam",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "PATCHING": "byrack",
       "FILTER": [
         "^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"
@@ -2074,7 +2079,7 @@
     "PROD": {
       "PODGROUP": "samminion.pri",
       "TEMPLATEID": "sam",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "PATCHING": "byrack",
       "FILTER": [
         ".*(slb).*"
@@ -2088,7 +2093,7 @@
     "PROD": {
       "PODGROUP": "samminion.pri",
       "TEMPLATEID": "sam",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "PATCHING": "byrack",
       "TAGGROUPS": 0,
       "FILTER": [
@@ -2103,7 +2108,7 @@
     "PROD": {
       "PODGROUP": "samminion.pri",
       "TEMPLATEID": "sam",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "PATCHING": "byrack",
       "TAGGROUPS": 0,
       "FILTER": [
@@ -2118,7 +2123,7 @@
     "PROD": {
       "PODGROUP": "flowsnakecl",
       "TEMPLATEID": "flowsnake",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 0,
       "PATCHING": "byrack",
       "TAGGROUPS": 0,
       "FILTER": [
@@ -3713,12 +3718,24 @@
   },
   "sdb_prod": {
     "PROD": {
-      "PODGROUP": "sdbcl",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "sdb",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "sdb"
+      "ROLE": "sdb",
+      "CLUSTER_TYPE": "POD"
+    }
+  },
+  "sdb_dr_prod": {
+    "PROD": {
+      "PODGROUP": "afw.sec",
+      "TEMPLATEID": "sdb",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "sdb",
+      "CLUSTER_TYPE": "POD"
     }
   },
   "dbaas-broker_prod": {
