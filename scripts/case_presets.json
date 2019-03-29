@@ -2162,7 +2162,7 @@
   "servicedirectory_prod": {
     "PROD": {
       "PODGROUP": "servicedirectory",
-      "TEMPLATEID": "servicedirectory",
+      "TEMPLATEID": "straight-patch-Goc++",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Primary",
