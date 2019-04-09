@@ -3352,7 +3352,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "dvaALARMSERVICE",
+      "ROLE": "dvaalarmservice",
       "CLUSTER_TYPE": "DVA_ALARM_SERVICE"
     }
   },
