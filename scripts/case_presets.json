@@ -1324,6 +1324,32 @@
       "CL_STATUS": "DECOM"
     }
   },
+  "rnds_prod": {
+    "PROD": {
+      "PODGROUP": "hbase.clusters",
+      "TEMPLATEID": "cnds-rnds",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "PATCHING": "byrack",
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "rnds",
+      "CLUSTER_TYPE": "HBASE",
+      "CL_STATUS": "DECOM"
+    }
+  },
+  "cnds_prod": {
+    "PROD": {
+      "PODGROUP": "hbase.clusters",
+      "TEMPLATEID": "cnds-rnds",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "PATCHING": "byrack",
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "cnds",
+      "CLUSTER_TYPE": "HBASE",
+      "CL_STATUS": "DECOM"
+    }
+  },
   "hbase_sp_mnds_1_pcl_prod": {
     "PROD": {
       "PODGROUP": "hbase.clusters",
