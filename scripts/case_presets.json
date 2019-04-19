@@ -522,7 +522,7 @@
   },
   "ffx_prod": {
     "PROD": {
-      "PODGROUP": "pod.pri",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "ffx",
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
@@ -1165,7 +1165,7 @@
   },
   "ffx_dr": {
     "DR": {
-      "PODGROUP": "pod.sec",
+      "PODGROUP": "afw.sec",
       "TEMPLATEID": "ffx",
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
@@ -2253,7 +2253,7 @@
   },
   "siteproxy_prod": {
     "PROD": {
-      "PODGROUP": "pod.pri",
+      "PODGROUP": "afw.pri",
       "TEMPLATEID": "siteproxy.linux",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
