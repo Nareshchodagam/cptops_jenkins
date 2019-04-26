@@ -231,6 +231,9 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?!(ops0-ns[1234]-1-prd))"
+      ],
       "ROLE": "ns",
       "CLUSTER_TYPE": "OPSNS"
     }
@@ -3043,6 +3046,9 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?(ops0-vc[12]-1-prd))"
+      ],
       "ROLE": "vc",
       "CLUSTER_TYPE": "VC"
     }
@@ -3748,6 +3754,9 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?!(sec0-vnscan[12]-1-prd))"
+      ],
       "ROLE": "vnscan"
     }
   },
@@ -4179,6 +4188,9 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?!(trust0-nsm[12]-[0-9]+-prd))"
+      ],
       "ROLE": "nsm",
       "CLUSTER_TYPE": "NSM"
     }
@@ -4240,6 +4252,215 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "captainzk",
       "CLUSTER_TYPE": "CAPTAIN"
+    }
+  },
+  "secds_prod": {
+    "PROD": {
+      "PODGROUP": "secds",
+      "TEMPLATEID": "secds",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?!(ops0-secds[12]-[12]-xrd))"
+      ],
+      "ROLE": "secds",
+      "CLUSTER_TYPE": "SECDS"
+    }
+  },
+  "seciamsvc_prod": {
+    "PROD": {
+      "PODGROUP": "secds",
+      "TEMPLATEID": "seciamsvc",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?!(ops0-seciamsvc[12]-[12]-xrd))"
+      ],
+      "ROLE": "seciamsvc",
+      "CLUSTER_TYPE": "SECDS"
+    }
+  },
+  "polcore_canary_prod": {
+    "PROD": {
+      "PODGROUP": "illumio",
+      "TEMPLATEID": "polcore",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?(*-polcore[12]-[12]-prd))"
+      ],
+      "ROLE": "polcore",
+      "CLUSTER_TYPE": "ILLUMIO"
+    }
+  },
+  "poldata_canary_prod": {
+    "PROD": {
+      "PODGROUP": "illumio",
+      "TEMPLATEID": "poldata",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?(*-poldata[12]-[12]-prd))"
+      ],
+      "ROLE": "poldata",
+      "CLUSTER_TYPE": "ILLUMIO"
+    }
+  },
+  "pkica_canary_prod": {
+    "PROD": {
+      "PODGROUP": "pki",
+      "TEMPLATEID": "pkica",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?(ops0-pkica[12]-[12]-prd))"
+      ],
+      "ROLE": "pkica",
+      "CLUSTER_TYPE": "PKI"
+    }
+  },
+  "pkicontroller_canary_prod": {
+    "PROD": {
+      "PODGROUP": "pki",
+      "TEMPLATEID": "pkicontroller",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?(ops0-pkicontroller[12]-[12]-prd))"
+      ],
+      "ROLE": "pkicontroller",
+      "CLUSTER_TYPE": "PKI"
+    }
+  },
+  "netbot_canary_prod": {
+    "PROD": {
+      "PODGROUP": "netbot",
+      "TEMPLATEID": "netbot",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?(ops0-netbot[12]-[12]-prd))"
+      ],
+      "ROLE": "netbot",
+      "CLUSTER_TYPE": "OPSNETBOT"
+    }
+  },
+  "appauth_canary_prod": {
+    "PROD": {
+      "PODGROUP": "appauth",
+      "TEMPLATEID": "appauth",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?(ops[1234]-appauth[12]-[12]-prd))"
+      ],
+      "ROLE": "appauth",
+      "CLUSTER_TYPE": "APPAUTH"
+    }
+  },
+  "vnscanam_canary_prod": {
+    "PROD": {
+      "PODGROUP": "vulnscan",
+      "TEMPLATEID": "vnscanam",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?(sec0-vnscanam[12]-1-prd))"
+      ],
+      "ROLE": "vnscanam",
+      "CLUSTER_TYPE": "VULNSCAN"
+    }
+  },
+  "vnscan_canary_prod": {
+    "PROD": {
+      "PODGROUP": "vulnscan",
+      "TEMPLATEID": "vnscan",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?(sec0-vnscan[12]-1-prd))"
+      ],
+      "ROLE": "vnscan"
+    }
+  },
+  "vc_canary_prod": {
+    "PROD": {
+      "PODGROUP": "vc",
+      "TEMPLATEID": "vc",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?(ops0-syslog[12]-1-prd))"
+      ],
+      "ROLE": "vc",
+      "CLUSTER_TYPE": "VC"
+    }
+  },
+  "secmgt_prod": {
+    "PROD": {
+      "PODGROUP": "secmgt",
+      "TEMPLATEID": "secmgt",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?(*-secmgt[12]-1-prd))"
+      ],
+      "ROLE": "secmgt",
+      "CLUSTER_TYPE": "SECMGT"
+    }
+  },
+  "secmgt_canary_prod": {
+    "PROD": {
+      "PODGROUP": "secmgt",
+      "TEMPLATEID": "secmgt",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?(ops0-secmgt[12]-1-prd))"
+      ],
+      "ROLE": "secmgt",
+      "CLUSTER_TYPE": "SECMGT"
+    }
+  },
+  "ns_canary_prod": {
+    "PROD": {
+      "PODGROUP": "nscl",
+      "TEMPLATEID": "ns",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?(ops0-ns[1234]-1-prd))"
+      ],
+      "ROLE": "ns",
+      "CLUSTER_TYPE": "OPSNS"
+    }
+  },
+    "nsm_canary_prod": {
+    "PROD": {
+      "PODGROUP": "nsmcl",
+      "TEMPLATEID": "nsm",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?(trust0-nsm[12]-[0-9]+-prd))"
+      ],
+      "ROLE": "nsm",
+      "CLUSTER_TYPE": "NSM"
     }
   }
 }
