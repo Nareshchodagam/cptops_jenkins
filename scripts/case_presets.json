@@ -4462,5 +4462,33 @@
       "ROLE": "nsm",
       "CLUSTER_TYPE": "NSM"
     }
+  },
+  "samsecurity_prod": {
+    "PROD": {
+      "PODGROUP": "samsecurity",
+      "TEMPLATEID": "samsecurity",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?(*-samsecurity[12]-1-xrd))"
+      ],
+      "ROLE": "samsecurity",
+      "CLUSTER_TYPE": "SAMSECURITY"
+    }
+  },
+  "samsecurity_canary_prod": {
+    "PROD": {
+      "PODGROUP": "samsecurity",
+      "TEMPLATEID": "samsecurity",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?(ops0-samsecurity[12]-1-xrd))"
+      ],
+      "ROLE": "samsecurity",
+      "CLUSTER_TYPE": "SAMSECURITY"
+    }
   }
 }
