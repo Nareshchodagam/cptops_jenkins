@@ -122,7 +122,7 @@ class Secsheet(object):
         rolelist = []
         data = {}
         retdata = {}
-        url = "https://ops0-cpt1-2-prd.eng.sfdc.net:9876/api/v1/csv/all-hosts"
+        url = "https://ops0-cpt1-1-xrd.eng.sfdc.net:9876/api/v1/csv/all-hosts"
 
         try:
             if not os.path.isfile('all.csv'):
