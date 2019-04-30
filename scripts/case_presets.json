@@ -153,18 +153,6 @@
       "HOSTPERCENT": "50"
     }
   },
-  "lapp_gia_prod": {
-    "PROD": {
-      "PODGROUP": "la_clusters",
-      "TEMPLATEID": "lapp.gia",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "lapp",
-      "CLUSTER_TYPE": "liveagent",
-      "HOSTPERCENT": "50"
-    }
-  },
   "ddiagg_prod": {
     "PROD": {
       "PODGROUP": "ddiaggcl",
@@ -1937,8 +1925,7 @@
       "INFRA": "Primary",
       "ROLE": "dnds",
       "CL_STATUS": "DECOM",
-      "CLUSTER_TYPE": "HBASE",
-      "CL_STATUS": "DECOM"
+      "CLUSTER_TYPE": "HBASE"
     }
   },
   "hbase_pcl_prod": {
@@ -1953,9 +1940,7 @@
       "INFRA": "Primary",
       "ROLE": "dnds",
       "CL_STATUS": "DECOM",
-      "CLUSTER_TYPE": "HBASE",
-      "CL_STATUS": "DECOM"
-    }
+      "CLUSTER_TYPE": "HBASE"    }
   },
   "hbase_mnds_1_dr": {
     "DR": {
@@ -3916,16 +3901,6 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "smszk"
-    }
-  },
-  "smsreplicator_prod": {
-    "PROD": {
-      "PODGROUP": "smscl",
-      "TEMPLATEID": "smsreplicator",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "smsreplicator"
     }
   },
   "smsreplicator_prod": {
