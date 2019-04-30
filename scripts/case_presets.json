@@ -4471,7 +4471,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?(*-samsecurity[12]-1-xrd))"
+        "(?!(samsecurity[12]-1-xrd))"
       ],
       "ROLE": "samsecurity",
       "CLUSTER_TYPE": "SAMSECURITY"
