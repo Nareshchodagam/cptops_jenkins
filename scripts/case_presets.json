@@ -4203,7 +4203,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "puppet,ppm",
-      "CLUSTER_TYPE": "PUPPETMASTER"
+      "CLUSTER_TYPE": "PUPPETMASTER,puppet-kingdomlevel"
     }
   },
     "bks_master_prod": {
