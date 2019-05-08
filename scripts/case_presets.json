@@ -4446,7 +4446,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?(*-samsecurity[12]-1-xrd))"
+        "(?!(samsecurity[12]-1-xrd))"
       ],
       "ROLE": "samsecurity",
       "CLUSTER_TYPE": "SAMSECURITY"
@@ -4464,6 +4464,17 @@
       ],
       "ROLE": "samsecurity",
       "CLUSTER_TYPE": "SAMSECURITY"
+    }
+  },
+  "airdev_prod": {
+    "PROD": {
+      "PODGROUP": "airdev",
+      "TEMPLATEID": "airdev",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "airdev",
+      "CLUSTER_TYPE": "AIRDEV"
     }
   }
 }
