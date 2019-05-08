@@ -2063,21 +2063,6 @@
       "CLUSTER_TYPE": "SAMMINION"
     }
   },
-  "sam_prd_prod": {
-    "PROD": {
-      "PODGROUP": "samminion.pri",
-      "TEMPLATEID": "sam",
-      "GROUPSIZE": 0,
-      "PATCHING": "byrack",
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "samcompute,samkubeapi",
-      "CLUSTER_TYPE": "SAMMINION"
-    }
-  },
   "sam2_prod": {
     "PROD": {
       "PODGROUP": "sam.pri",
@@ -4226,6 +4211,17 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "captainzk",
+      "CLUSTER_TYPE": "CAPTAIN"
+    }
+  },
+  "captainmgt_prod": {
+    "PROD": {
+      "PODGROUP": "captain",
+      "TEMPLATEID": "captainmgt",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "captainmgt",
       "CLUSTER_TYPE": "CAPTAIN"
     }
   },
