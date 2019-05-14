@@ -2309,11 +2309,11 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "ops-hwmon1-1-crd"
+        "ops-hwmon[12]-[12]-crd"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "hwmon",
-      "CLUSTER_TYPE": "IOPS-LAB"
+      "CLUSTER_TYPE": "HWMON"
     }
   },
   "hwmon_prod": {
