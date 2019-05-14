@@ -782,21 +782,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mandm-splunk-idxr",
-      "CLUSTER_TYPE": "SPLUNK-IDX"
-    }
-  },
-  "mandm_splunk_idxr_ops_crz_prod": {
-    "PROD": {
-      "PODGROUP": "splunk-idx-ops_crzcl",
-      "TEMPLATEID": "mandm-splunk-idxr",
-      "GROUPSIZE": 5,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!shared-logsearch100-4-crz)"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "mandm-splunk-idxr",
-      "CLUSTER_TYPE": "SPLUNK-IDX-OPS"
+      "CLUSTER_TYPE": "SPLUNK-IDX,SPLUNK-IDX-OPS,SPLUNK-MADEIRA,SPLUNK-MADEIRA-TEST,SPLUNK-TBD"
     }
   },
   "mandm_splunk_idxr_ops_canary_crz_prod": {
