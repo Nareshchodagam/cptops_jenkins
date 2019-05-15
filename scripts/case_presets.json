@@ -3630,7 +3630,17 @@
   },
   "dbaas-sdbs_prod": {
     "PROD": {
-      "PODGROUP": "dbaascl",
+      "PODGROUP": "dbaascl.pri",
+      "TEMPLATEID": "sdb",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "sdbs"
+    }
+  },
+  "dbaas-sdbs_dr": {
+    "PROD": {
+      "PODGROUP": "dbaascl.sec",
       "TEMPLATEID": "sdb",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -3662,7 +3672,18 @@
   },
   "dbaas-broker_prod": {
     "PROD": {
-      "PODGROUP": "dbaascl",
+      "PODGROUP": "dbaascl.pri",
+      "TEMPLATEID": "dbaas_broker",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "minionapp",
+      "CLUSTER_TYPE": "DBAAS0,DBAAS1"
+    }
+  },
+  "dbaas-broker_dr": {
+    "PROD": {
+      "PODGROUP": "dbaascl.sec",
       "TEMPLATEID": "dbaas_broker",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
