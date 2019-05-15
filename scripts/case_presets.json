@@ -3639,7 +3639,7 @@
     }
   },
   "dbaas-sdbs_dr": {
-    "PROD": {
+    "DR": {
       "PODGROUP": "dbaascl.sec",
       "TEMPLATEID": "sdb",
       "GROUPSIZE": 1,
@@ -3660,7 +3660,7 @@
     }
   },
   "sdb_dr_prod": {
-    "PROD": {
+    "DR": {
       "PODGROUP": "afw.sec",
       "TEMPLATEID": "sdb",
       "GROUPSIZE": 1,
@@ -3682,7 +3682,7 @@
     }
   },
   "dbaas-broker_dr": {
-    "PROD": {
+    "DR": {
       "PODGROUP": "dbaascl.sec",
       "TEMPLATEID": "dbaas_broker",
       "GROUPSIZE": 1,
