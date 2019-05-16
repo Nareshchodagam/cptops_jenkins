@@ -701,7 +701,7 @@
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mandm-splunk-api",
-      "CLUSTER_TYPE": "SPLUNK-API"
+      "CLUSTER_TYPE": "SPLUNK-API,SPLUNK-TBD"
     }
   },
   "mandm_splunk_api_canary_prod": {
@@ -757,7 +757,7 @@
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mandm-splunk-web",
-      "CLUSTER_TYPE": "SPLUNK-WEB"
+      "CLUSTER_TYPE": "SPLUNK-WEB,SPLUNK-TBD"
     }
   },
   "mandm_splunk_web_canary_prod": {
@@ -825,20 +825,6 @@
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mandm-splunk-switch",
       "CLUSTER_TYPE": "SPLUNK-IDX"
-    }
-  },
-  "mandm_splunk_switch_canary_prod": {
-    "PROD": {
-      "PODGROUP": "splunk-prod-idxcl",
-      "TEMPLATEID": "mandm-splunk-switch",
-      "GROUPSIZE": 5,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "shared1-logsearch1-1-frf"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "mandm-splunk-switch",
-      "CLUSTER_TYPE": "SPLUNK-IDX-ASG"
     }
   },
   "mandm_splunk_switch_sfz_prod": {
@@ -1015,7 +1001,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "hmrlog",
-      "CLUSTER_TYPE": "HAMMER"
+      "CLUSTER_TYPE": "HAMMER,HMRLOG"
     }
   },
   "hammer_hmrlog_dr": {
@@ -1026,7 +1012,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "hmrlog",
-      "CLUSTER_TYPE": "HAMMER"
+      "CLUSTER_TYPE": "HAMMER,HMRLOG"
     }
   },
   "searchzk_prod": {
@@ -1086,7 +1072,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "monitor",
-      "CLUSTER_TYPE": "monitor",
+      "CLUSTER_TYPE": "monitor,POD",
       "LIST_FILTER": "True"
     }
   },
@@ -2036,91 +2022,17 @@
   },
   "sam_prod": {
     "PROD": {
-      "PODGROUP": "samminion.pri",
-      "TEMPLATEID": "sam",
-      "GROUPSIZE": 0,
-      "PATCHING": "byrack",
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "samcompute,samkubeapi",
-      "CLUSTER_TYPE": "SAMMINION"
-    }
-  },
-  "sam2_prod": {
-    "PROD": {
       "PODGROUP": "sam.pri",
       "TEMPLATEID": "sam",
       "GROUPSIZE": 0,
       "PATCHING": "byrack",
-      "FILTER": [
-        "^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"
-      ],
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "samcompute,samkubeapi",
-      "CLUSTER_TYPE": "SAMCONTROL"
-    }
-  },
-  "sam3_prod": {
-    "PROD": {
-      "PODGROUP": "samcontrol.pri",
-      "TEMPLATEID": "sam",
-      "GROUPSIZE": 0,
-      "PATCHING": "byrack",
-      "FILTER": [
-        "^(?!shared0-.*(flowsnake|ceph|slb|caas).*-.*)"
-      ],
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "samcompute,samkubeapi",
-      "CLUSTER_TYPE": "SAM"
-    }
-  },
-  "sam-slb_prod": {
-    "PROD": {
-      "PODGROUP": "samminion.pri",
-      "TEMPLATEID": "sam",
-      "GROUPSIZE": 0,
-      "PATCHING": "byrack",
-      "FILTER": [
-        ".*(slb).*"
-      ],
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "samcompute,samkubeapi"
-    }
-  },
-  "sam_caasminion_prod": {
-    "PROD": {
-      "PODGROUP": "samminion.pri",
-      "TEMPLATEID": "sam",
-      "GROUPSIZE": 0,
-      "PATCHING": "byrack",
       "TAGGROUPS": 0,
       "FILTER": [
-        ".*(caasminion).*"
+        "^(?!shared0-.*(flowsnake).*-.*)"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "samcompute,samkubeapi",
-      "CLUSTER_TYPE": "SAMMINION"
-    }
-  },
-  "sam_ceph_prod": {
-    "PROD": {
-      "PODGROUP": "samminion.pri",
-      "TEMPLATEID": "sam",
-      "GROUPSIZE": 0,
-      "PATCHING": "byrack",
-      "TAGGROUPS": 0,
-      "FILTER": [
-        ".*(samminionceph).*"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "samcompute",
-      "CLUSTER_TYPE": "SAMMINION"
+      "CLUSTER_TYPE": "SAMMINION,SAM,SAMCONTROL,SDC,SDNCONTROL"
     }
   },
   "sam_flowsnake_prod": {
@@ -3176,7 +3088,7 @@
         "(?!(ops0-stgpm1-1-phx))"
       ],
       "ROLE": "stgpm",
-      "CLUSTER_TYPE": "OPSSTGMGT"
+      "CLUSTER_TYPE": "OPSSTGMGT,OPSSTGPM,NETBACKUP"
     }
   },
   "strata_jenkins_prod": {
@@ -3259,8 +3171,8 @@
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
       "INFRA": "PRIMARY'",
-      "ROLE": "infinsighthaddop",
-      "CLUSTER_TYPE": "INFINSIGHTPRD"
+      "ROLE": "infinsighthadoop",
+      "CLUSTER_TYPE": "INFINSIGHTPRD,INFINSIGHT"
     }
   },
   "netmonitor_prod": {
@@ -3298,7 +3210,7 @@
         "(?!(ops0-stgmgt1-1-phx))"
       ],
       "ROLE": "stgmgt",
-      "CLUSTER_TYPE": "OPSSTGMGT"
+      "CLUSTER_TYPE": "OPSSTGMGT,STORAGEMGT"
     }
   },
   "nwexp_canary_prod": {
@@ -3718,7 +3630,17 @@
   },
   "dbaas-sdbs_prod": {
     "PROD": {
-      "PODGROUP": "dbaascl",
+      "PODGROUP": "dbaascl.pri",
+      "TEMPLATEID": "sdb",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "sdbs"
+    }
+  },
+  "dbaas-sdbs_dr": {
+    "DR": {
+      "PODGROUP": "dbaascl.sec",
       "TEMPLATEID": "sdb",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
@@ -3738,7 +3660,7 @@
     }
   },
   "sdb_dr_prod": {
-    "PROD": {
+    "DR": {
       "PODGROUP": "afw.sec",
       "TEMPLATEID": "sdb",
       "GROUPSIZE": 1,
@@ -3750,12 +3672,24 @@
   },
   "dbaas-broker_prod": {
     "PROD": {
-      "PODGROUP": "dbaascl",
+      "PODGROUP": "dbaascl.pri",
       "TEMPLATEID": "dbaas_broker",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "minionapp"
+      "ROLE": "minionapp",
+      "CLUSTER_TYPE": "DBAAS0,DBAAS1"
+    }
+  },
+  "dbaas-broker_dr": {
+    "DR": {
+      "PODGROUP": "dbaascl.sec",
+      "TEMPLATEID": "dbaas_broker",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "minionapp",
+      "CLUSTER_TYPE": "DBAAS0,DBAAS1"
     }
   },
   "sndci-slaves_prod": {
@@ -4078,18 +4012,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "rackbot,rbossdb",
-      "CLUSTER_TYPE": "OPS"
-    }
-  },
-  "rackbot-dev_prod": {
-    "PROD": {
-      "PODGROUP": "rackbotdev",
-      "TEMPLATEID": "rackbot",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "rackbot,rbossdb",
-      "CLUSTER_TYPE": "ENG"
+      "CLUSTER_TYPE": "OPS,ENG"
     }
   },
   "icesplunk_prod": {
