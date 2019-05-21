@@ -2024,8 +2024,7 @@
     "PROD": {
       "PODGROUP": "sam.pri",
       "TEMPLATEID": "sam",
-      "GROUPSIZE": 0,
-      "PATCHING": "byrack",
+      "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
         "^(?!shared0-.*(flowsnake).*-.*)"
