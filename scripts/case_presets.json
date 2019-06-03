@@ -2421,13 +2421,12 @@
     "PROD": {
       "PODGROUP": "dustyhubcl",
       "TEMPLATEID": "dusty",
-      "GROUPSIZE": 1,
+      "GROUPSIZE": 50,
       "TAGGROUPS": 0,
       "FILTER": [
         "(?!shared-dhub1-1-chi)"
       ],
       "INFRA": "Supporting Infrastructure",
-      "REGEX": "failoverstatus=PRIMARY",
       "ROLE": "dusty",
       "CLUSTER_TYPE": "DUSTYHUB"
     }
@@ -2443,21 +2442,6 @@
       ],
       "INFRA": "Supporting Infrastructure",
       "REGEX": "failoverstatus=PRIMARY",
-      "ROLE": "dusty",
-      "CLUSTER_TYPE": "DUSTYHUB"
-    }
-  },
-  "dustyhub_standby_prod": {
-    "PROD": {
-      "PODGROUP": "dustyhubcl",
-      "TEMPLATEID": "dusty_standby",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!shared-dhub1-1-chi)"
-      ],
-      "INFRA": "Secondary",
-      "REGEX": "failoverstatus=STANDBY",
       "ROLE": "dusty",
       "CLUSTER_TYPE": "DUSTYHUB"
     }
