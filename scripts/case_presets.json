@@ -1064,18 +1064,6 @@
       "ROLE": "ffx"
     }
   },
-  "monitor_primary_prod": {
-    "PROD": {
-      "PODGROUP": "monitor.pri",
-      "TEMPLATEID": "monitor",
-      "GROUPSIZE": 3,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "monitor",
-      "CLUSTER_TYPE": "monitor,POD",
-      "LIST_FILTER": "True"
-    }
-  },
   "monitor_canary_prod": {
     "PROD": {
       "PODGROUP": "monitor.canary",
