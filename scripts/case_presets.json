@@ -2608,7 +2608,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "piperepo",
-      "CLUSTER_TYPE": "OPS-STACK"
+      "CLUSTER_TYPE": "OPS-STACK,PIPEREPO"
     }
   },
   "irc_prod": {
