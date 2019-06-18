@@ -4141,7 +4141,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?(*-polcore[12]-[12]-prd))"
+        "((*-polcore[12]-[12]-prd))"
       ],
       "ROLE": "polcore",
       "CLUSTER_TYPE": "ILLUMIO"
@@ -4155,7 +4155,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?(*-poldata[12]-[12]-prd))"
+        "((*-poldata[12]-[12]-prd))"
       ],
       "ROLE": "poldata",
       "CLUSTER_TYPE": "ILLUMIO"
@@ -4169,7 +4169,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?(ops0-pkica[12]-[12]-prd))"
+        "((ops0-pkica[12]-[12]-prd))"
       ],
       "ROLE": "pkica",
       "CLUSTER_TYPE": "PKI"
@@ -4183,7 +4183,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?(ops0-pkicontroller[12]-[12]-prd))"
+        "((ops0-pkicontroller[12]-[12]-prd))"
       ],
       "ROLE": "pkicontroller",
       "CLUSTER_TYPE": "PKI"
@@ -4197,7 +4197,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?(ops0-netbot[12]-[12]-prd))"
+        "((ops0-netbot[12]-[12]-prd))"
       ],
       "ROLE": "netbot",
       "CLUSTER_TYPE": "OPSNETBOT"
@@ -4211,7 +4211,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?(ops[1234]-appauth[12]-[12]-prd))"
+        "((ops[1234]-appauth[12]-[12]-prd))"
       ],
       "ROLE": "appauth",
       "CLUSTER_TYPE": "APPAUTH"
@@ -4225,7 +4225,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?(sec0-vnscanam[12]-1-prd))"
+        "((sec0-vnscanam[12]-1-prd))"
       ],
       "ROLE": "vnscanam",
       "CLUSTER_TYPE": "VULNSCAN"
@@ -4239,7 +4239,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?(sec0-vnscan[12]-1-prd))"
+        "((sec0-vnscan[12]-1-prd))"
       ],
       "ROLE": "vnscan"
     }
@@ -4252,7 +4252,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?(ops0-syslog[12]-1-prd))"
+        "((ops0-syslog[12]-1-prd))"
       ],
       "ROLE": "vc",
       "CLUSTER_TYPE": "VC"
@@ -4266,7 +4266,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?(*-secmgt[12]-1-prd))"
+        "((*-secmgt[12]-1-prd))"
       ],
       "ROLE": "secmgt",
       "CLUSTER_TYPE": "SECMGT"
@@ -4280,7 +4280,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?(ops0-secmgt[12]-1-prd))"
+        "((ops0-secmgt[12]-1-prd))"
       ],
       "ROLE": "secmgt",
       "CLUSTER_TYPE": "SECMGT"
@@ -4294,7 +4294,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?(ops0-ns[1234]-1-prd))"
+        "((ops0-ns[1234]-1-prd))"
       ],
       "ROLE": "ns",
       "CLUSTER_TYPE": "OPSNS"
@@ -4308,7 +4308,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?(trust0-nsm[12]-[0-9]+-prd))"
+        "((trust0-nsm[12]-[0-9]+-prd))"
       ],
       "ROLE": "nsm",
       "CLUSTER_TYPE": "NSM"
@@ -4336,7 +4336,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "(?(ops0-samsecurity[12]-1-xrd))"
+        "((ops0-samsecurity[12]-1-xrd))"
       ],
       "ROLE": "samsecurity",
       "CLUSTER_TYPE": "SAMSECURITY"
