@@ -1218,7 +1218,7 @@
   "restoreapp_prod": {
     "PROD": {
       "PODGROUP": "restore",
-      "TEMPLATEID": "straight-patch",
+      "TEMPLATEID": "shared-apputil",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
