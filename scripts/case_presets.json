@@ -1136,10 +1136,6 @@
       "TAGGROUPS": 0,
       "INFRA": "Primary",
       "ROLE": "mq",
-      "FILTER": [
-        "^.*1-1",
-        "^.*(1-2|2-1)"
-      ],
       "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
     }
