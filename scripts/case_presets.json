@@ -3626,7 +3626,7 @@
       "CLUSTER_TYPE": "POD"
     }
   },
-  "sdb_dr_prod": {
+  "sdb_dr": {
     "DR": {
       "PODGROUP": "afw.sec",
       "TEMPLATEID": "sdb",
