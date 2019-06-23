@@ -2140,7 +2140,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "blitz1-proxy1-(1|2)-sfm|stmfdna44ice1-proxy[1|2]-1-prd"
+        "cs994-proxy[1,2]-1-ord|stmfdna44ice1-proxy[1|2]-1-prd"
       ],
       "INFRA": "Primary",
       "ROLE": "proxy",
