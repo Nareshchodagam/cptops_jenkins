@@ -94,6 +94,8 @@ def cmd_builder(sets, r_class=False):
                 filter = raw_input("Please select filter from above: ")
         else:
             filter = ""
+    else:
+        filter = options.filter
     bld_cmd['filter'] = filter
     bld_cmd['regexfilter'] = options.regex
 
