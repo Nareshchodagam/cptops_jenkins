@@ -4348,5 +4348,16 @@
       "ROLE": "airdev",
       "CLUSTER_TYPE": "AIRDEV"
     }
+  },
+  "netevents_prod": {
+    "PROD": {
+      "PODGROUP": "netevents",
+      "TEMPLATEID": "netevents",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "netevents",
+      "CLUSTER_TYPE": "NETEVENTS"
+    }
   }
 }
