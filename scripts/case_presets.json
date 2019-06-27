@@ -3739,7 +3739,7 @@
 "sms_canary_prod": {
     "PROD": {
       "PODGROUP": "smscl",
-      "TEMPLATEID": "sms",
+      "TEMPLATEID": "smscanary",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
