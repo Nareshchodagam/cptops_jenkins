@@ -3420,17 +3420,6 @@
       "CLUSTER_TYPE": "PRA"
     }
   },
-  "sms_prod": {
-    "PROD": {
-      "PODGROUP": "smscl",
-      "TEMPLATEID": "sms",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "smsapi,smscanary,smszk",
-      "CLUSTER_TYPE": "SMS"
-    }
-  },
   "ajnamgmt_prod": {
     "PROD": {
       "PODGROUP": "ajna_mgmt",
@@ -3725,64 +3714,37 @@
       "CLUSTER_TYPE": "EDGE_IPVS"
     }
   },
-  "smscps_prod": {
+ "sms_prod": {
     "PROD": {
       "PODGROUP": "smscl",
-      "TEMPLATEID": "smscps",
+      "TEMPLATEID": "sms",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "smscps"
+      "ROLE": "smsapi,smsproxy,smsreplicator,smscps",
+      "CLUSTER_TYPE": "SMS"
     }
   },
-  "smsproxy_prod": {
-    "PROD": {
-      "PODGROUP": "smscl",
-      "TEMPLATEID": "smsproxy",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "smsproxy"
-    }
-  },
-  "smscanary_prod": {
-    "PROD": {
-      "PODGROUP": "smscl",
-      "TEMPLATEID": "smscanary",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "smscanary"
-    }
-  },
-  "smsapi_prod": {
-    "PROD": {
-      "PODGROUP": "smscl",
-      "TEMPLATEID": "smsapi",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "smsapi"
-    }
-  },
-  "smszk_prod": {
+"smszk_prod": {
     "PROD": {
       "PODGROUP": "smscl",
       "TEMPLATEID": "smszk",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "smszk"
+      "ROLE": "smszk",
+      "CLUSTER_TYPE": "SMS"
     }
   },
-  "smsreplicator_prod": {
+"sms_canary_prod": {
     "PROD": {
       "PODGROUP": "smscl",
-      "TEMPLATEID": "smsreplicator",
+      "TEMPLATEID": "smscanary",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "smsreplicator"
+      "ROLE": "smscanary",
+      "CLUSTER_TYPE": "SMS"
     }
   },
   "sfstore_dr": {
