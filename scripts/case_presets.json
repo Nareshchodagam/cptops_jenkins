@@ -3736,7 +3736,7 @@
       "CLUSTER_TYPE": "SMS"
     }
   },
-"sms_canary_prod": {
+"smscanary_prod": {
     "PROD": {
       "PODGROUP": "smscl",
       "TEMPLATEID": "smscanary",
