@@ -1323,7 +1323,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-            "(^hbase.*-(yhu|syd))"
+            "(^hbase.*-(yhu|syd|hio))"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds",
@@ -1352,7 +1352,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(^hbase.*-(yul|cdu))"
+        "(^hbase.*-(yul|cdu|ttd))"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "mnds",
@@ -1382,7 +1382,7 @@
       "GROUPSIZE": 8,
       "TAGGROUPS": 5,
       "FILTER": [
-        "(^hbase.*(yul|yhu|syd|cdu)$)"
+        "(^hbase.*(yul|yhu|syd|cdu|ttd|hio)$)"
       ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "dnds",
@@ -1891,7 +1891,7 @@
       "GROUPSIZE": 3,
       "TAGGROUPS": 5,
       "FILTER": [
-        ".*-(yul|yhu|syd|cdu)"
+        ".*-(yul|yhu|syd|cdu|hio|ttd)"
       ],
       "INFRA": "Primary",
       "ROLE": "dnds",
@@ -1979,7 +1979,7 @@
       "GROUPSIZE": 3,
       "TAGGROUPS": 5,
       "FILTER": [
-        ".*-(yul|yhu|syd|cdu)"
+        ".*-(yul|yhu|syd|cdu|hio|ttd)"
       ],
       "INFRA": "Secondary",
       "ROLE": "dnds",
