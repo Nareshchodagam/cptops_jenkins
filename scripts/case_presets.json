@@ -2011,11 +2011,25 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "^(?!shared0-.*(flowsnake).*-.*)"
+        "^(?!shared0-.*(flowsnake|slbminion).*-.*)"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "samcompute,samkubeapi",
       "CLUSTER_TYPE": "SAMMINION,SAM,SAMCONTROL,SDC,SDNCONTROL"
+    }
+  },
+  "sam_slb_prod": {
+    "PROD": {
+      "PODGROUP": "sam.pri",
+      "TEMPLATEID": "sam_slb",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+	".*(slbminion).*"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "samcompute,samkubeapi",
+      "CLUSTER_TYPE": "SAMMINION,SAM"
     }
   },
   "sam_flowsnake_prod": {
