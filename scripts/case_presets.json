@@ -4325,6 +4325,17 @@
       "CLUSTER_TYPE": "AIRDEV"
     }
   },
+  "cnc_prod": {
+    "PROD": {
+      "PODGROUP": "cnccl",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 10,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "cnc",
+      "CLUSTER_TYPE": "cnc"
+    }
+  },
   "netevents_prod": {
     "PROD": {
       "PODGROUP": "netevents",
