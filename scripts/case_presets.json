@@ -1064,6 +1064,20 @@
       "ROLE": "ffx"
     }
   },
+  "monitor_prod": {
+    "PROD": {
+      "PODGROUP": "monitor.pri",
+      "TEMPLATEID": "monitor",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "FILTER": [
+        "(?!(ops-monitor1-1-sfm|test0ops0-monitor2-1-prd))"
+      ],
+      "ROLE": "monitor",
+      "CLUSTER_TYPE": "MONITOR"
+    }
+  },
   "monitor_canary_prod": {
     "PROD": {
       "PODGROUP": "monitor.canary",
@@ -1074,8 +1088,7 @@
       "FILTER": [
         "ops-monitor1-1-sfm|test0ops0-monitor2-1-prd"
       ],
-      "ROLE": "monitor",
-      "CASETYPE": "hostlist"
+      "ROLE": "monitor"
     }
   },
   "restoreffx_prod": {
