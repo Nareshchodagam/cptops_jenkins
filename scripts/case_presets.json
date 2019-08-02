@@ -1742,7 +1742,7 @@
       "TAGGROUPS": 5,
       "PATCHING": "byrack",
       "FILTER": [
-        "(dchbase0-.*(?<!(yul|yhu|syd|cdu))$)"
+        "(dchbase0.*-.*(?<!(yul|yhu|syd|cdu))$)"
       ],
       "INFRA": "Primary",
       "ROLE": "dnds",
@@ -1757,7 +1757,7 @@
       "TAGGROUPS": 5,
       "PATCHING": "byrack",
       "FILTER": [
-        "(dchbase0-.*(yul|yhu|syd|cdu)$)"
+        "(dchbase0.*-.*(yul|yhu|syd|cdu)$)"
       ],
       "INFRA": "Primary",
       "ROLE": "dnds",
@@ -1772,7 +1772,7 @@
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
-        "(dchbase0-*)"
+        "(dchbase0.*-.*)"
       ],
       "INFRA": "Primary",
       "ROLE": "qnds",
