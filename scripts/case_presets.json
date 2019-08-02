@@ -1071,6 +1071,7 @@
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
+      "CL_STATUS": "DECOM",
       "FILTER": [
         "(?!(ops-monitor1-1-sfm|test0ops0-monitor2-1-prd))"
       ],
@@ -1681,7 +1682,7 @@
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
-        "(^dchbase0a.*-(chx|chi|sfm|ukb|dfw|lon|par|iad|ia2))"
+        "(^dchbase0.*-(chx|chi|sfm|ukb|dfw|lon|par|iad|ia2))"
       ],
       "INFRA": "Primary",
       "ROLE": "mnds",
@@ -1696,7 +1697,7 @@
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
-        "(^dchbase0a.*-(yhu|syd))"
+        "(^dchbase0.*-(yhu|syd))"
       ],
       "INFRA": "Primary",
       "ROLE": "mnds",
@@ -1711,7 +1712,7 @@
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
-        "(^dchbase0a.*-(wax|was|crd|hnd|phx|frf|ord|ph2))"
+        "(^dchbase0.*-(wax|was|crd|hnd|phx|frf|ord|ph2))"
       ],
       "INFRA": "Primary",
       "ROLE": "mnds",
@@ -1726,7 +1727,7 @@
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
-        "(^dchbase0a.*-(yul|cdu))"
+        "(^dchbase0.*-(yul|cdu))"
       ],
       "INFRA": "Primary",
       "ROLE": "mnds",
@@ -1741,7 +1742,7 @@
       "TAGGROUPS": 5,
       "PATCHING": "byrack",
       "FILTER": [
-        "(dchbase0a-.*(?<!(yul|yhu|syd|cdu))$)"
+        "(dchbase0-.*(?<!(yul|yhu|syd|cdu))$)"
       ],
       "INFRA": "Primary",
       "ROLE": "dnds",
@@ -1756,7 +1757,7 @@
       "TAGGROUPS": 5,
       "PATCHING": "byrack",
       "FILTER": [
-        "(dchbase0a-.*(yul|yhu|syd|cdu)$)"
+        "(dchbase0-.*(yul|yhu|syd|cdu)$)"
       ],
       "INFRA": "Primary",
       "ROLE": "dnds",
@@ -1771,7 +1772,7 @@
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
-        "(dchbase0a-*)"
+        "(dchbase0-*)"
       ],
       "INFRA": "Primary",
       "ROLE": "qnds",
