@@ -1668,11 +1668,11 @@
       "TAGGROUPS": 5,
       "FILTER": [
         "(arg1hbsvc-*)"
-      ],   
+      ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "dnds",
       "CL_STATUS": "DECOM"
-    }    
+    }
   },
   "hbasedch_mnds_1_prod": {
     "PROD": {
@@ -3851,9 +3851,9 @@
       "WORKITEM": "W-4243192",
       "PODGROUP": "syntheticsagentcl",
       "TEMPLATEID": "syntheticsagent",
-      "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
+      "GROUPSIZE": 1,
       "FILTER": [
         "((shared0-syntheticsagent(1-[3,4])|.*2-3)-prd)"
       ],
@@ -4314,20 +4314,6 @@
       "CLUSTER_TYPE": "SAMSECURITY"
     }
   },
-  "samsecurity_canary_prod": {
-    "PROD": {
-      "PODGROUP": "samsecurity",
-      "TEMPLATEID": "samsecurity",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "FILTER": [
-        "((ops0-samsecurity[12]-1-xrd))"
-      ],
-      "ROLE": "samsecurity",
-      "CLUSTER_TYPE": "SAMSECURITY"
-    }
-  },
   "airdev_prod": {
     "PROD": {
       "PODGROUP": "airdev",
@@ -4350,6 +4336,28 @@
       "CLUSTER_TYPE": "cnc"
     }
   },
+  "reimage_app_prod": {
+    "PROD": {
+      "PODGROUP": "reimage_app-prod",
+      "TEMPLATEID": "ce7-migration-prod",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "app",
+      "HOSTPERCENT": "20"
+    }
+  },
+  "reimage_app_dr": {
+    "DR": {
+      "PODGROUP": "reimage_app-dr",
+      "TEMPLATEID": "ce7-migration-dr",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "app",
+      "HOSTPERCENT": "30"
+    }
+  },
   "netevents_prod": {
     "PROD": {
       "PODGROUP": "netevents",
@@ -4362,3 +4370,4 @@
     }
   }
 }
+
