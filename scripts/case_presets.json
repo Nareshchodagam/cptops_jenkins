@@ -4339,7 +4339,7 @@
   "reimage_app_prod": {
     "PROD": {
       "PODGROUP": "reimage_app-prod",
-      "TEMPLATEID": "ce7-migration-prod",
+      "TEMPLATEID": "migration-app-prod",
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
@@ -4350,7 +4350,7 @@
   "reimage_app_dr": {
     "DR": {
       "PODGROUP": "reimage_app-dr",
-      "TEMPLATEID": "ce7-migration-dr",
+      "TEMPLATEID": "migration-app-dr",
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
