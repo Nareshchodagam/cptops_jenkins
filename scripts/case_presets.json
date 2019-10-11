@@ -3939,15 +3939,15 @@
   },
   "hbase_deepsea_canary_prod": {
     "PROD": {
-      "PODGROUP": "hbase.clusters",
+      "PODGROUP": "deepsea.canary",
       "TEMPLATEID": "straight-patch-Goc++",
       "GROUPSIZE": 10,
       "TAGGROUPS": 1,
       "FILTER": [
-        "(stg.*hdaas-gnds.*-prd)"
+        "sbox1hdaas-gnds2-1-prd|sbox1hdaas-gnds3-1-prd|sbox1hdaas-dnds1-2-prd|sbox1hdaas-dnds1-3-prd|sbox1hdaas-dnds1-5-prd|sbox1hdaas-dnds1-6-prd"
       ],
       "INFRA": "Supporting_Infrastructure",
-      "ROLE": "gnds"
+      "ROLE": "gnds,dnds"
     }
   },
   "mmrelay_srtools_prod": {
