@@ -1651,6 +1651,7 @@
       "PODGROUP": "hbase.clusters",
       "TEMPLATEID": "hbaseargus",
       "GROUPSIZE": 1,
+      "PATCHING": "byrack",
       "TAGGROUPS": 5,
       "FILTER": [
         "(arg1hbsvc-*)"
@@ -1665,6 +1666,7 @@
       "PODGROUP": "hbase.clusters",
       "TEMPLATEID": "hbaseargus",
       "GROUPSIZE": 4,
+      "PATCHING": "byrack",
       "TAGGROUPS": 5,
       "FILTER": [
         "(arg1hbsvc-*)"
