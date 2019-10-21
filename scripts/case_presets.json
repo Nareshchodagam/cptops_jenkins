@@ -3298,6 +3298,17 @@
       "CLUSTER_TYPE": "MOM"
     }
   },
+  "momui_prod": {
+    "PROD": {
+      "PODGROUP": "momuicl",
+      "TEMPLATEID": "momui",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "momui",
+      "CLUSTER_TYPE": "MOMUI"
+    }
+  },
   "dvasyslog_canary_prod": {
     "PROD": {
       "PODGROUP": "dvasyslog_prod",
