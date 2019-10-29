@@ -1650,6 +1650,7 @@
       "TEMPLATEID": "deepsea",
       "GROUPSIZE": 20,
       "TAGGROUPS": 10,
+      "PATCHING": "byrack",
       "FILTER": [
         "(hdaas-*)"
       ],
@@ -3617,6 +3618,7 @@
     "PROD": {
       "PODGROUP": "deepsealego",
       "TEMPLATEID": "straight-patch-Goc++",
+      "PATCHING": "byrack",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
@@ -3967,6 +3969,7 @@
       "PODGROUP": "deepsea.canary",
       "TEMPLATEID": "straight-patch-Goc++",
       "GROUPSIZE": 10,
+      "PATCHING": "byrack",
       "TAGGROUPS": 1,
       "FILTER": [
         "sbox1hdaas-gnds2-1-prd|sbox1hdaas-gnds3-1-prd|sbox1hdaas-dnds1-2-prd|sbox1hdaas-dnds1-3-prd|sbox1hdaas-dnds1-5-prd|sbox1hdaas-dnds1-6-prd"
