@@ -3223,33 +3223,16 @@
       "CLUSTER_TYPE": "OPSSTGMGT,STORAGEMGT"
     }
   },
-  "nwexp_canary_prod": {
-    "PROD": {
-      "PODGROUP": "nwexp_prod",
-      "TEMPLATEID": "nwexp",
-      "GROUPSIZE": 3,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "FILTER": [
-        "(stage0shared0-nwexp[1-2]-1-prd|test0shared0-nwexp1-1-prd)"
-      ],
-      "ROLE": "nwexp",
-      "CLUSTER_TYPE": "NWEXP"
-    }
-  },
   "nwexp_prod": {
     "PROD": {
       "PODGROUP": "nwexp_prod",
-      "TEMPLATEID": "nwexp",
+      "TEMPLATEID": "straight-patch-Goc++",
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-      "FILTER": [
-        "(?!(stage0shared0-nwexp[1-2]-1-prd|test0shared0-nwexp1-1-prd))"
-      ],
       "ROLE": "nwexp",
       "CLUSTER_TYPE": "NWEXP",
-      "HOSTPERCENT": "30"
+      "HOSTPERCENT": "100"
     }
   },
   "dvamon_prod": {
