@@ -4379,6 +4379,28 @@
       "ROLE": "netevents",
       "CLUSTER_TYPE": "NETEVENTS"
     }
+  },
+  "reimage_search_prod": {
+    "PROD": {
+      "PODGROUP": "reimage_search-prod",
+      "TEMPLATEID": "migration-search-prod",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "search",
+      "HOSTPERCENT": "20"
+    }
+  },
+  "reimage_search_dr": {
+    "DR": {
+      "PODGROUP": "reimage_search-dr",
+      "TEMPLATEID": "migration-search-dr",
+      "GROUPSIZE": 3,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "search",
+      "HOSTPERCENT": "30"
+    }
   }
 }
 
