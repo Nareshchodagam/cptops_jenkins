@@ -6,10 +6,10 @@
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!(shared1-argusmq2-5-prd)|(shared2-argusmqdev1-3-prd))"
+        "(?!(shared1-argusmq2-5-prd))"
       ],
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "argus_mq,argus_dev_mq",
+      "ROLE": "argus_mq",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
@@ -20,10 +20,25 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "shared1-argusmq2-5-prd|shared2-argusmqdev1-3-prd"
+        "shared1-argusmq2-5-prd"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "argus_mq",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
+  "argus_dev_mq_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        ".*argusmqdev"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_dev_mq",
+      "HOSTPERCENT": "50",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
@@ -37,7 +52,7 @@
         "(?!shared1-argusannotation2-5-prd)"
       ],
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "argus_annotation,argus_dev_annotation",
+      "ROLE": "argus_annotation",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
@@ -55,6 +70,21 @@
       "CLUSTER_TYPE": "ARGUS"
     }
   },
+  "argus_dev_annotation_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        ".*argusannotationdev"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_dev_annotation",
+      "HOSTPERCENT": "50",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
   "argus_ajna_prod": {
     "PROD": {
       "PODGROUP": "arguscl",
@@ -62,7 +92,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!(shared1-argusajna2-5-prd)|(shared2-argusajnadev1-2-prd))"
+        "(?!(shared1-argusajna2-5-prd))"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "argus_ajna",
@@ -76,10 +106,25 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "shared1-argusajna2-5-prd|shared2-argusajnadev1-2-prd"
+        "shared1-argusajna2-5-prd"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "argus_ajna",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
+  "argus_ajna_dev_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        ".*argusajnadev"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_dev_ajna",
+      "HOSTPERCENT": "50",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
@@ -112,6 +157,36 @@
       "CLUSTER_TYPE": "ARGUS"
     }
   },
+  "argus_dev_writed_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        ".*argustsdbwdev"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_dev_writed",
+      "HOSTPERCENT": "50",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
+  "argus_dev_metrics_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        ".*argusmetricsdev"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_dev_metrics",
+      "HOSTPERCENT": "50",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
   "argusreadd_prod": {
     "PROD": {
       "PODGROUP": "arguscl",
@@ -137,6 +212,21 @@
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "argus_readd",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
+  "argus_dev_readd_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        ".*argustsdbrdev"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_dev_readd",
+      "HOSTPERCENT": "50",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
@@ -2534,10 +2624,10 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!(.*argusuidev2-1-))|(.*(argusui1-[1-2]))"
+        "(?!(.*(argusui2-1-))"
       ],
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "argus_ui,argus_dev_ui",
+      "ROLE": "argus_ui",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
@@ -2548,10 +2638,24 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-	"(.*(argusui2-1-)|.*(argusuidev2-1-))"
+	"(.*(argusui2-1-))"
       ],
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "argus_ui,argus_dev_ui",
+      "ROLE": "argus_ui",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
+  "argus_dev_ui_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "argusui",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        ".*argusuidev.*"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_dev_ui",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
@@ -2562,10 +2666,10 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-	"(?!(shared1-argusalert1-2-prd)|(shared2-argusalertdev2-2-prd))"
+	"(?!(shared1-argusalert1-2-prd))"
       ],
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "argus_alert,argus_dev_alert",
+      "ROLE": "argus_alert",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
@@ -2576,10 +2680,25 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-	"shared1-argusalert1-2-prd|shared2-argusalertdev2-2-prd"
+	"shared1-argusalert1-2-prd"
       ],
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "argus_alert,argus_dev_alert",
+      "ROLE": "argus_alert",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
+  "argus_dev_alert_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        ".*argusalertdev"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_dev_alert",
+      "HOSTPERCENT": "50",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
@@ -2618,10 +2737,10 @@
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!(.*argusws2-5-)|(.*arguswsdev2-2-))"
+        "(?!(.*argusws2-5-))"
       ],
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "argus_ws,argus_dev_ws",
+      "ROLE": "argus_ws",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
@@ -2632,10 +2751,25 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-	"(.*(argusws2-5-)|.*(arguswsdev2-2-))"
+	"(.*(argusws2-5-))"
       ],
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "argus_ws,argus_dev_ws",
+      "ROLE": "argus_ws",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
+  "argusws_dev_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        ".*arguswsdev"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_dev_ws",
+      "HOSTPERCENT": "50",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
@@ -2793,7 +2927,7 @@
       "FILTER": [
         "(?!shared1-argusmqzk2-1-prd)"
       ],
-      "ROLE": "argus_mq_zk,argus_dev_mq_zk",
+      "ROLE": "argus_mq_zk",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
@@ -2811,6 +2945,21 @@
       "CLUSTER_TYPE": "ARGUS"
     }
   },
+  "argus_dev_mq_zk_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        ".*argusmqzkdev"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_dev_mq_zk",
+      "HOSTPERCENT": "50",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
   "argus_cache_prod": {
     "PROD": {
       "PODGROUP": "arguscl",
@@ -2821,7 +2970,7 @@
       "FILTER": [
         "(?!shared1-arguscache1-2-prd)"
       ],
-      "ROLE": "argus_cache,argus_dev_ajna",
+      "ROLE": "argus_cache",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
@@ -2836,6 +2985,21 @@
         "shared1-arguscache1-2-prd"
       ],
       "ROLE": "argus_cache",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
+  "argus_dev_cache_prod": {
+    "PROD": {
+      "PODGROUP": "arguscl",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        ".*arguscachedev"
+      ],
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_dev_cache",
+      "HOSTPERCENT": "50",
       "CLUSTER_TYPE": "ARGUS"
     }
   },
