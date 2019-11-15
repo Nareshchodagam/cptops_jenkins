@@ -82,20 +82,30 @@ def cmd_builder(sets, r_class=False):
             options.regex = sets[role_class][role_status]['REGEX']
         else:
             options.regex = ""
-    if options.filter is None:
-        if 'FILTER' in sets[role_class][role_status]:
-            length = len(sets[role_class][role_status]['FILTER'])
-            #if len(sets[role_class][role_status]['FILTER']) == 1 or len(sets[role_class][role_status]['FILTER']) == 2:
-            if length == 1:
-                filter = ",".join(sets[role_class][role_status]['FILTER'][0:length])
-            else:
-                for role_filter in sets[role_class][role_status]['FILTER']:
-                    print role_filter
-                filter = raw_input("Please select filter from above: ")
+
+    if 'FILTER' in sets[role_class][role_status]:
+        length = len(sets[role_class][role_status]['FILTER'])
+        #if len(sets[role_class][role_status]['FILTER']) == 1 or len(sets[role_class][role_status]['FILTER']) == 2:
+        if length == 1:
+            filter = ",".join(sets[role_class][role_status]['FILTER'][0:length])
         else:
-            filter = ""
+            for role_filter in sets[role_class][role_status]['FILTER']:
+                print role_filter
+            filter = raw_input("Please select filter from above: ")
     else:
-        filter = options.filter
+        filter = ""
+    if options.filter:
+        if filter:
+            temp_filter = []
+            filter_parts = options.filter.split("|")
+            for fp in filter_parts:
+                matched = re.match(filter, fp)
+                if matched:
+                    temp_filter.append(fp)
+            filter = "|".join(temp_filter)
+        else:
+            filter = options.filter
+
     bld_cmd['filter'] = filter
     bld_cmd['regexfilter'] = options.regex
 
