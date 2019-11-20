@@ -101,8 +101,9 @@ def cmd_builder(sets, r_class=False):
 
     if options.subject == None:
         if options.roleclass in co.req_sub:
-            if not options.subject:
-                options.subject = raw_input("\nPreset %s requires custom subject.\nPlease add subject line: " % options.roleclass)
+            if not options.custom_subject:
+                options.subject = ""
+                options.custom_subject = raw_input("\nPreset %s requires custom subject.\nPlease add subject line: " % options.roleclass)
         elif options.canary:
             options.subject = "CANARY"
         elif 'SUBJECT' in sets[role_class][role_status].keys():
@@ -110,6 +111,7 @@ def cmd_builder(sets, r_class=False):
         else:
             options.subject = ""
     bld_cmd['subject'] = options.subject
+    bld_cmd['custom_subject'] = options.custom_subject
     bld_cmd['dowork'] = options.dowork
     if options.skip_bundle:
 	bld_cmd['skip_bundle'] = options.skip_bundle
@@ -366,6 +368,7 @@ if __name__ == "__main__":
     # W-4531197 Adding logic to remove already patched host for Case.
     parser.add_argument("--delpatched", dest="delpatched", action='store_true', help="command to remove patched host.")
     parser.add_argument("--casesubject", dest="casesubject", help="Initial case subject to use")
+    parser.add_argument("--custom_subject", dest="custom_subject",default="", help="to add custom subject")
 
     #Added to filter C6 and C7 hosts while cases creation using build_Plan v1
     parser.add_argument("--os", dest="os", help="command to filter hosts based on major set, Valid Options are 6 and 7")
