@@ -4154,7 +4154,7 @@
       "GROUPSIZE": 10,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "icesplunk,splunkdply,splunkfwd",
+      "ROLE": "ice-splunk-idxr,icesplunk,splunkdply,splunkfwd",
       "CLUSTER_TYPE": "SPLUNKFWD"
     }
   },
