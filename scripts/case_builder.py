@@ -14,6 +14,7 @@ import subprocess
 import sys
 from functools import partial
 from operator import attrgetter
+from concurrent.futures import ThreadPoolExecutor
 
 import case_opts as co
 
@@ -243,11 +244,25 @@ def case_executor():
     gus cases. Gus_cases.py requires proxy setting while build_plan.py
     does not require proxy setting. Hence the loop.
     '''
+    def run_command(command):
+        pods = re.compile(r'--inst\s([A-Za-z0-99,]*)')
+        pods_match = None
+        logging.debug(command)
+        retcode = os.system(command)
+        logging.debug(retcode)
+        if retcode != 0:
+            if "gus_cases_vault.py" in command:
+                pods_match = pods.findall(command)
+                return pods_match
+        return pods_match
+
     case_file = os.getcwd() + '/cases.sh'
     cmd_type = re.compile(r'^(python\s[a-z_.]*)')
-    pods = re.compile(r'--inst\s([A-Za-z0-99,]*)')
     os.chdir(os.environ["HOME"] + '/git/cptops_case_gen')
     failed_plans = []
+    buildplan_lines = []
+    guscasevault_lines = []
+
 
     if os.path.isfile(case_file):
         with open(case_file, 'r') as cases:
@@ -255,21 +270,26 @@ def case_executor():
                 if not line.startswith("#"):
                     ln_check = cmd_type.match(line)
                     if ln_check.group() == "python gus_cases_vault.py":
-                        #os.environ['https_proxy'] = "http://public-proxy1-0-sfm.data.sfdc.net:8080/"
-                        logging.debug(line)
-                        retcode = os.system(line)
-                        logging.debug(retcode)
-                        if retcode != 0:
-                            pods_match = pods.findall(line)
-                            logging.debug(pods_match)
-                            failed_plans.append(pods_match)
+                        guscasevault_lines.append(line)
                     else:
-                        #os.environ['https_proxy'] = ""
-                        logging.debug(line)
-                        retcode = os.system(line)
-                        logging.debug(retcode)
-                        if retcode != 0:
-                          logging.debug(line)
+                        buildplan_lines.append(line)
+        with ThreadPoolExecutor(max_workers=20) as executor:
+            failed_pods = executor.map(run_command, buildplan_lines) 
+        with ThreadPoolExecutor(max_workers=20) as executor:
+            failed_pods = executor.map(run_command, guscasevault_lines) 
+
+       # pool = ThreadPool(50)
+       # failed_pods = pool.map(run_command, buildplan_lines)
+       # pool.close()
+       # pool.join()
+       # pool = ThreadPool(50)
+       # failed_pods = pool.map(run_command, guscasevault_lines)
+       # pool.close()
+       # pool.join()
+        for p in failed_pods:
+            if p != None:
+                logging.debug(p)
+                failed_plans.append(p)
     else:
         logging.debug("cases.sh file not found!")
         logging.debug(case_file)
@@ -423,6 +443,7 @@ if __name__ == "__main__":
     if options.roleclass:
         cmd_builder(sets)
         dryrun()
+        
 
     #W-4546859 - Create cases of hosts provide in CSV file basically a sheet given by security.
     if options.csv:
