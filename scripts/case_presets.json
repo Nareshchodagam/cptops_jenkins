@@ -2330,29 +2330,12 @@
       "CLUSTER_TYPE": "RELEASE"
     }
   },
-  "hwmon_crd_prod": {
-    "PROD": {
-      "PODGROUP": "hwmon.crd",
-      "TEMPLATEID": "hwmon",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "ops-hwmon[12]-[12]-crd"
-      ],
-      "INFRA": "Supporting_Infrastructure",
-      "ROLE": "hwmon",
-      "CLUSTER_TYPE": "HWMON"
-    }
-  },
   "hwmon_prod": {
     "PROD": {
       "PODGROUP": "hwmon",
       "TEMPLATEID": "hwmon",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "ops0-hwmon(1|2)"
-      ],
       "INFRA": "Supporting_Infrastructure",
       "ROLE": "hwmon",
       "CLUSTER_TYPE": "HWMON"
@@ -4147,7 +4130,7 @@
       "CLUSTER_TYPE": "OPS,ENG"
     }
   },
-  "icesplunk_prod": {
+    "icesplunk_prod": {
     "PROD": {
       "PODGROUP": "icesplunkcl",
       "TEMPLATEID": "straight-patch-Goc++",
