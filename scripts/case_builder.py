@@ -273,9 +273,9 @@ def case_executor():
                         guscasevault_lines.append(line)
                     else:
                         buildplan_lines.append(line)
-        with ThreadPoolExecutor(max_workers=20) as executor:
+        with ThreadPoolExecutor(max_workers=2) as executor:
             failed_pods = executor.map(run_command, buildplan_lines) 
-        with ThreadPoolExecutor(max_workers=20) as executor:
+        with ThreadPoolExecutor(max_workers=2) as executor:
             failed_pods = executor.map(run_command, guscasevault_lines) 
 
        # pool = ThreadPool(50)
