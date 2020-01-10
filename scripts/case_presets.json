@@ -1343,6 +1343,21 @@
       "CLUSTER_TYPE": "POD"
     }
   },
+  "mq_caps_prod": {
+    "PROD": {
+      "PODGROUP": "afw.pri",
+      "TEMPLATEID": "mq_caps.linux",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!(.*-(prd|xrd|crd|yhu|yul|syd|cdu|crz|chi|was|lon)))"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "mq",
+      "CL_STATUS": "DECOM",
+      "CLUSTER_TYPE": "POD"
+    }
+  },
   "mq_canary_prod": {
     "PROD": {
       "PODGROUP": "gs0.canary",
