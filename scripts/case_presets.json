@@ -586,6 +586,36 @@
       "CLUSTER_TYPE": "POD"
     }
   },
+  "search(23|43)_caps_prod": {
+    "PROD": {
+      "PODGROUP": "afw.pri",
+      "TEMPLATEID": "search_caps",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "^.*search(23|43)-.*(?<!(xrd|crd|prd|yhu|yul|syd|cdu|chi|was|lon))$"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "search",
+      "CL_STATUS": "DECOM",
+      "CLUSTER_TYPE": "POD"
+    }
+  },
+  "search(21|22,41|42)_caps_prod": {
+    "PROD": {
+      "PODGROUP": "afw.pri",
+      "TEMPLATEID": "search_caps",
+      "GROUPSIZE": 15,
+      "TAGGROUPS": 0,
+      "INFRA": "Primary",
+      "FILTER": [
+        "^.*search(21|22|41|42)-.*(?<!(xrd|crd|prd|yhu|yul|syd|cdu|chi|was|lon))$"
+      ],
+      "ROLE": "search",
+      "CL_STATUS": "DECOM",
+      "CLUSTER_TYPE": "POD"
+    }
+  },
   "search_dr": {
     "DR": {
       "PODGROUP": "afw.sec",
@@ -640,6 +670,20 @@
       "TAGGROUPS": 0,
       "FILTER": [
         "(?!(cs46|gs0)-ffx(1|2)-[2-6]-*)"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "ffx",
+      "CLUSTER_TYPE": "POD"
+    }
+  },
+  "ffx_caps_prod": {
+    "PROD": {
+      "PODGROUP": "afw.pri",
+      "TEMPLATEID": "ffx_caps",
+      "GROUPSIZE": 5,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!(.*-(prd|xrd|crd|yhu|yul|syd|cdu|crz|chi|was|lon)))"
       ],
       "INFRA": "Primary",
       "ROLE": "ffx",
