@@ -441,6 +441,21 @@
       "CLUSTER_TYPE": "POD"
     }
   },
+  "coreafw-cbatch-dapp_caps_prod": {
+    "PROD": {
+      "PODGROUP": "afw.pri",
+      "TEMPLATEID": "cbatch-dapp-caps-prod",
+      "GROUPSIZE": 2,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!(.*-(prd|xrd|crd|yhu|yul|syd|cdu|crz|chi|was|lon)))"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "cbatch,dapp",
+      "CL_STATUS": "DECOM",
+      "CLUSTER_TYPE": "POD"
+    }
+  },
   "coreafw_cbatch_dapp_canary_prod": {
     "PROD": {
       "PODGROUP": "afw.pri",
