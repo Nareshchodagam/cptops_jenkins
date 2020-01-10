@@ -1319,6 +1319,20 @@
       "CLUSTER_TYPE": "POD"
     }
   },
+  "ffx_caps_dr": {
+    "DR": {
+      "PODGROUP": "afw.sec",
+      "TEMPLATEID": "ffx_caps",
+      "GROUPSIZE": 5,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!(.*-(prd|xrd|crd|yhu|yul|syd|cdu|crz|chi|was|lon)))"
+      ],
+      "INFRA": "Secondary",
+      "ROLE": "ffx",
+      "CLUSTER_TYPE": "POD"
+    }
+  },
   "mq_prod": {
     "PROD": {
       "PODGROUP": "afw.pri",
