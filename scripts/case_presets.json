@@ -676,6 +676,20 @@
       "CLUSTER_TYPE": "POD"
     }
   },
+  "ffx_caps_prod": {
+    "PROD": {
+      "PODGROUP": "afw.pri",
+      "TEMPLATEID": "ffx_caps",
+      "GROUPSIZE": 5,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!(.*-(prd|xrd|crd|yhu|yul|syd|cdu|crz|chi|was|lon)))"
+      ],
+      "INFRA": "Primary",
+      "ROLE": "ffx",
+      "CLUSTER_TYPE": "POD"
+    }
+  },
   "ffx_ice_prod": {
     "PROD": {
         "PODGROUP": "ffxice.pri",
