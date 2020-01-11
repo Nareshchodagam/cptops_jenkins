@@ -1357,6 +1357,21 @@
       "CLUSTER_TYPE": "POD"
     }
   },
+  "mq_caps_dr": {
+    "DR": {
+      "PODGROUP": "afw.sec",
+      "TEMPLATEID": "mq_caps.linux",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!(.*-(prd|xrd|crd|yhu|yul|syd|cdu|crz|chi|was|lon)))"
+      ],
+      "INFRA": "Secondary",
+      "ROLE": "mq",
+      "CL_STATUS": "DECOM",
+      "CLUSTER_TYPE": "POD"
+    }
+  },
   "mq_caps_prod": {
     "PROD": {
       "PODGROUP": "afw.pri",
