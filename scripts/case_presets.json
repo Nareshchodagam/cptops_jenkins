@@ -230,6 +230,18 @@
       "CLUSTER_TYPE": "ARGUS"
     }
   },
+  "argus_xrd_prod": {
+    "PROD": {
+      "PODGROUP": "argusxrdcl",
+      "TEMPLATEID": "straight-patch-Goc++",
+      "GROUPSIZE": 10,
+      "TAGGROUPS": 0,
+      "PATCHING": "all",
+      "INFRA": "Supporting Infrastructure",
+      "ROLE": "argus_metrics,argus_writed,argus_cache,argus_ws,argus_ajna",
+      "CLUSTER_TYPE": "ARGUS"
+    }
+  },
   "lapp_clusters_prod": {
     "PROD": {
       "PODGROUP": "la_clusters",
