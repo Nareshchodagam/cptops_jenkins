@@ -2483,6 +2483,17 @@
       "CLUSTER_TYPE": "GIGANTOR"
     }
   },
+  "orch_prod": {
+    "PROD": {
+      "PODGROUP": "orchcl",
+      "TEMPLATEID": "straight-patch-splunk",
+      "GROUPSIZE": 1,
+      "TAGGROUPS": 0,
+      "INFRA": "Supporting_Infrastructure",
+      "ROLE": "orch",
+      "CLUSTER_TYPE": "GIGANTOR"
+    }
+  },
   "pbsgeo_prod": {
     "PROD": {
       "PODGROUP": "pbsgeo",
