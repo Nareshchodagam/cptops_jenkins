@@ -2068,7 +2068,7 @@
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
-        ".*-(chx|chi|sfm|ukb|dfw|lon|par|iad|ia2)"
+        ".*-(chx|chi|sfm|ukb|dfw|lon|par|iad|ia2|ia4)"
       ],
       "INFRA": "Primary",
       "ROLE": "mnds",
@@ -2097,7 +2097,7 @@
       "TAGGROUPS": 0,
       "PATCHING": "byrack",
       "FILTER": [
-        ".*-(wax|was|crd|hnd|phx|frf|ord|ph2)"
+        ".*-(wax|was|crd|hnd|phx|frf|ord|ph2|ia5)"
       ],
       "INFRA": "Primary",
       "ROLE": "mnds",
