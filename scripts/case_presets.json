@@ -4280,7 +4280,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "ROLE": "ice-splunk-idxr,icesplunk,splunkdply,splunkfwd",
-      "CLUSTER_TYPE": "SPLUNKFWD"
+      "CLUSTER_TYPE": "SPLUNKFWD,SPLUNK-INDEXER"
     }
   },
   "delphi_primary_prod": {
