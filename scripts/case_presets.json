@@ -356,43 +356,9 @@
       "TEMPLATEID": "coreapp-prod",
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!(cs46|gs0|cs49|na44|eu17)-(app).*)"
-      ],
       "INFRA": "Primary",
       "ROLE": "app",
       "CL_STATUS": "DECOM",
-      "CLUSTER_TYPE": "POD",
-      "HOSTPERCENT": "20"
-    }
-  },
-  "coreafw_canary_prod": {
-    "PROD": {
-      "PODGROUP": "afw.pri",
-      "TEMPLATEID": "coreapp-prod",
-      "GROUPSIZE": 3,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "(cs46|gs0|cs49|na44|eu17)-(app).*"
-      ],
-      "INFRA": "Primary",
-      "ROLE": "app",
-      "CL_STATUS": "DECOM",
-      "CLUSTER_TYPE": "POD",
-      "HOSTPERCENT": "20"
-    }
-  },
-  "coreafw_app_reboot_prod": {
-    "PROD": {
-      "PODGROUP": "afw.pri",
-      "TEMPLATEID": "coreapp-reboot",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "eu4-app2-.*"
-      ],
-      "INFRA": "Primary",
-      "ROLE": "app",
       "CLUSTER_TYPE": "POD",
       "HOSTPERCENT": "20"
     }
@@ -416,9 +382,6 @@
       "TEMPLATEID": "coreapp_caps-prod",
       "GROUPSIZE": 3,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!(.*-(prd|xrd|crd|yhu|yul|syd|cdu|crz|chi|was|lon)))"
-      ],
       "INFRA": "Primary",
       "ROLE": "app",
       "CL_STATUS": "DECOM",
@@ -432,9 +395,6 @@
       "TEMPLATEID": "cbatch-dapp-prod",
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!(gs0|cs7|cs46|eu4)-(cbatch|dapp).*)"
-      ],
       "INFRA": "Primary",
       "ROLE": "cbatch,dapp",
       "CL_STATUS": "DECOM",
@@ -459,26 +419,9 @@
       "TEMPLATEID": "cbatch-dapp-caps-prod",
       "GROUPSIZE": 2,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!(.*-(prd|xrd|crd|yhu|yul|syd|cdu|crz|chi|was|lon)))"
-      ],
       "INFRA": "Primary",
       "ROLE": "cbatch,dapp",
       "CL_STATUS": "DECOM",
-      "CLUSTER_TYPE": "POD"
-    }
-  },
-  "coreafw_cbatch_dapp_canary_prod": {
-    "PROD": {
-      "PODGROUP": "afw.pri",
-      "TEMPLATEID": "cbatch-dapp-prod",
-      "GROUPSIZE": 2,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "(gs0|cs7|cs46|eu4)-(cbatch|dapp).*"
-      ],
-      "INFRA": "Primary",
-      "ROLE": "cbatch,dapp",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -496,30 +439,12 @@
       "CLUSTER_TYPE": "POD"
     }
   },
-  "acs_canary_prod": {
-    "PROD": {
-      "PODGROUP": "acs.pri",
-      "TEMPLATEID": "acs",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "(cs80|cs49)-acs.*"
-      ],
-      "INFRA": "Primary",
-      "ROLE": "acs,computedocker",
-      "CL_STATUS": "DECOM",
-      "CLUSTER_TYPE": "ACS"
-    }
-  },
   "acs_prod": {
     "PROD": {
       "PODGROUP": "acs.pri",
       "TEMPLATEID": "acs",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!cs80-acs.*)"
-      ],
       "INFRA": "Primary",
       "ROLE": "acs,computedocker",
       "CL_STATUS": "DECOM",
@@ -680,23 +605,6 @@
       "TEMPLATEID": "ffx",
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!(cs46|gs0)-ffx(1|2)-[2-6]-*)"
-      ],
-      "INFRA": "Primary",
-      "ROLE": "ffx",
-      "CLUSTER_TYPE": "POD"
-    }
-  },
-  "ffx_caps_prod": {
-    "PROD": {
-      "PODGROUP": "afw.pri",
-      "TEMPLATEID": "ffx_caps",
-      "GROUPSIZE": 5,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!(.*-(prd|xrd|crd|yhu|yul|syd|cdu|crz|chi|was|lon)))"
-      ],
       "INFRA": "Primary",
       "ROLE": "ffx",
       "CLUSTER_TYPE": "POD"
@@ -751,24 +659,7 @@
       "TEMPLATEID": "ajna_broker",
       "GROUPSIZE": 100,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!(ajna0-broker1-1-frf|ajna0-broker1-1-prd|ajna0-broker1-1-fra))"
-      ],
       "INFRA": "Supporting Infrastructure",
-      "ROLE": "ajna_broker",
-      "CLUSTER_TYPE": "AJNA"
-    }
-  },
-  "ajna_broker_canary_prod": {
-    "PROD": {
-      "PODGROUP": "ajna_canary_prodcl",
-      "TEMPLATEID": "ajna_broker",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "FILTER": [
-        "ajna0-broker1-1-frf|ajna0-broker1-1-prd|ajna0-broker1-1-fra"
-      ],
       "ROLE": "ajna_broker",
       "CLUSTER_TYPE": "AJNA"
     }
@@ -835,23 +726,6 @@
       "TEMPLATEID": "mmrelay",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!ops0-mmrelay1-1-frf)"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "mmrelay",
-      "CLUSTER_TYPE": "AJNA"
-    }
-  },
-  "mmrelay_canary_prod": {
-    "PROD": {
-      "PODGROUP": "ajna_prodcl",
-      "TEMPLATEID": "mmrelay",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "ops0-mmrelay1-1-frf"
-      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "mmrelay",
       "CLUSTER_TYPE": "AJNA"
@@ -1102,9 +976,6 @@
       "TEMPLATEID": "mgmt_hub",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!(na44-hub1-1-dfw|gs0-hub1-1-dfw))"
-      ],
       "INFRA": "Secondary",
       "REGEX": "failoverstatus=PRIMARY",
       "ROLE": "mgmt_hub",
@@ -1123,20 +994,6 @@
       "ROLE": "mgmt_hub",
       "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "POD"
-    }
-  },
-  "mgmt_hub_canary_dr": {
-    "DR": {
-      "PODGROUP": "pod.sec",
-      "TEMPLATEID": "mgmt_hub",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Primary",
-      "FILTER": [
-        "na44-hub1-1-dfw|gs0-hub1-1-dfw"
-      ],
-      "REGEX": "failoverstatus=PRIMARY",
-      "ROLE": "mgmt_hub"
     }
   },
   "hammer_htgapp_prod": {
@@ -1226,34 +1083,6 @@
       "ROLE": "searchzk"
     }
   },
-  "ffx_canary_prod": {
-    "PROD": {
-      "PODGROUP": "pod.pri",
-      "TEMPLATEID": "ffx",
-      "GROUPSIZE": 5,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "(cs46|gs0)-ffx(1|2)-[2-6]-*"
-      ],
-      "INFRA": "Primary",
-      "EXCLUDES": "ffxexclude",
-      "ROLE": "ffx"
-    }
-  },
-  "ffx_canary_dr": {
-    "DR": {
-      "PODGROUP": "pod.sec",
-      "TEMPLATEID": "ffx",
-      "GROUPSIZE": 5,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "(cs46|gs0)-ffx(1|2)-[2-6]-*"
-      ],
-      "EXCLUDES": "ffxexclude",
-      "INFRA": "Secondary",
-      "ROLE": "ffx"
-    }
-  },
   "monitor_prod": {
     "PROD": {
       "PODGROUP": "monitor.pri",
@@ -1267,19 +1096,6 @@
       ],
       "ROLE": "monitor",
       "CLUSTER_TYPE": "MONITOR"
-    }
-  },
-  "monitor_canary_prod": {
-    "PROD": {
-      "PODGROUP": "monitor.canary",
-      "TEMPLATEID": "monitor",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "FILTER": [
-        "ops-monitor1-1-sfm|test0ops0-monitor2-1-prd"
-      ],
-      "ROLE": "monitor"
     }
   },
   "restoreffx_prod": {
@@ -1338,9 +1154,6 @@
       "TEMPLATEID": "ffx_caps",
       "GROUPSIZE": 5,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!(.*-(prd|xrd|crd|yhu|yul|syd|cdu|crz|chi|was|lon)))"
-      ],
       "INFRA": "Secondary",
       "ROLE": "ffx",
       "CLUSTER_TYPE": "POD"
@@ -1397,28 +1210,6 @@
       "INFRA": "Primary",
       "ROLE": "mq",
       "CL_STATUS": "DECOM",
-      "CLUSTER_TYPE": "POD"
-    }
-  },
-  "mq_canary_prod": {
-    "PROD": {
-      "PODGROUP": "gs0.canary",
-      "TEMPLATEID": "mq.linux",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Primary",
-      "ROLE": "mq",
-      "CLUSTER_TYPE": "POD"
-    }
-  },
-  "mq_canary_dr": {
-    "DR": {
-      "PODGROUP": "gs0.canary.sec",
-      "TEMPLATEID": "mq.linux",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Secondary",
-      "ROLE": "mq",
       "CLUSTER_TYPE": "POD"
     }
   },
@@ -2423,20 +2214,6 @@
       "CLUSTER_TYPE": "PUBLICPROXY"
     }
   },
-  "publicproxy_canary_prod": {
-    "PROD": {
-      "PODGROUP": "pproxy.canary",
-      "TEMPLATEID": "public-proxy",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "public-proxy(1|2)-1-crd|public0-proxy2-(1|2)-prd"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "publicproxy",
-      "CLUSTER_TYPE": "PUBLICPROXY"
-    }
-  },
   "rps_prod": {
     "PROD": {
       "PODGROUP": "rpscl",
@@ -2517,58 +2294,25 @@
       "CLUSTER_TYPE": "PBSMATCH"
     }
   },
-  "insights_canary_prod": {
-    "PROD": {
-      "PODGROUP": "insights.pri",
-      "TEMPLATEID": "insights",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "((^.*((iworker)[1,2]-1-(lon|wax|chx)))|insights1-(iworker)[1,2]-1-dfw|insights4-(iworker)[1,2]-1-chi)"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "insights_iworker",
-      "CLUSTER_TYPE": "INSIGHTS"
-    }
-  },
-"insights_redis_canary_prod": {
-    "PROD": {
-      "PODGROUP": "insights.pri",
-      "TEMPLATEID": "insights-redis",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "((^.*((redis)[1,2]-1-(lon|wax|chx)))|insights1-(redis)[1,2]-1-dfw|insights4-(redis)[1,2]-1-chi)"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "insights_redis",
-      "CLUSTER_TYPE": "INSIGHTS"
-    }
-  },
   "insights_prod": {
     "PROD": {
       "PODGROUP": "insights.pri",
       "TEMPLATEID": "insights",
       "GROUPSIZE": 20,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!((^.*((iworker)[1,2]-1-(lon|wax|chx)))|insights1-(iworker)[1,2]-1-dfw|insights4-(iworker)[1,2]-1-chi))"
-      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "insights_iworker",
       "CL_STATUS": "DECOM",
       "CLUSTER_TYPE": "INSIGHTS"
     }
   },
-"insights_redis_prod": {
+  "insights_redis_prod": {
 
     "PROD": {
       "PODGROUP": "insights.pri",
       "TEMPLATEID": "insights-redis",
       "GROUPSIZE": 20,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!((^.*((redis)[1,2]-1-(lon|wax|chx)))|insights1-(redis)[1,2]-1-dfw|insights4-(redis)[1,2]-1-chi))"      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "insights_redis",
       "CL_STATUS": "DECOM",
@@ -2610,23 +2354,6 @@
       "TEMPLATEID": "cfgapp",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!dev0cfg0-.*-prd)"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "cms",
-      "CLUSTER_TYPE": "CMS"
-    }
-  },
-  "cfgapp_canary_prod": {
-    "PROD": {
-      "PODGROUP": "cfgapp",
-      "TEMPLATEID": "cfgapp",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "dev0cfg0-.*-prd"
-      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "cms",
       "CLUSTER_TYPE": "CMS"
@@ -2834,23 +2561,6 @@
       "TEMPLATEID": "ajna_zk",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!(ajna0-zk1-1-frf|ajna0-zk1-1-prd|ajna0-zk1-1-fra))"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "ajna_zk",
-      "CLUSTER_TYPE": "AJNA"
-    }
-  },
-  "ajna_zk_canary_prod": {
-    "PROD": {
-      "PODGROUP": "ajna_prodcl_canary",
-      "TEMPLATEID": "ajna_zk",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "ajna0-zk1-1-frf|ajna0-zk1-1-prd|ajna0-zk1-1-fra"
-      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "ajna_zk",
       "CLUSTER_TYPE": "AJNA"
@@ -2970,23 +2680,6 @@
       "TEMPLATEID": "mmrs",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
-      "FILTER": [
-        "(?!(ajna0-mirror1-1-frf|ajna0-mirror1-1-prd|ajna0-mirror1-1-fra))"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "ajna_mirror",
-      "CLUSTER_TYPE": "AJNA"
-    }
-  },
-  "ajna_mirror_canary_prod": {
-    "PROD": {
-      "PODGROUP": "ajna_canary_prodcl",
-      "TEMPLATEID": "mmrs",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "FILTER": [
-        "ajna0-mirror1-1-frf|ajna0-mirror1-1-prd|ajna0-mirror1-1-fra"
-      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "ajna_mirror",
       "CLUSTER_TYPE": "AJNA"
@@ -3186,23 +2879,6 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
-      "FILTER": [
-        "(?!(dev0ops0-grok[12345]-1-prd))"
-      ],
-      "ROLE": "grok",
-      "CLUSTER_TYPE": "GROK"
-    }
-  },
-  "grok_canary_prod": {
-    "PROD": {
-      "PODGROUP": "grok",
-      "TEMPLATEID": "grok",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "FILTER": [
-        "dev0ops0-grok[12345]-1-prd"
-      ],
       "ROLE": "grok",
       "CLUSTER_TYPE": "GROK"
     }
@@ -3486,19 +3162,6 @@
       "CLUSTER_TYPE": "NETMONITOR"
     }
   },
-  "stgmgt_canary_prod": {
-    "PROD": {
-      "PODGROUP": "stg_pm_and_mgt_prod",
-      "TEMPLATEID": "stgmgt",
-      "GROUPSIZE": 1,
-      "TAGGROUPS": 0,
-      "INFRA": "Supporting Infrastructure",
-      "FILTER": [
-        "ops0-stgmgt1-1-phx"
-      ],
-      "ROLE": "stgmgt"
-    }
-  },
   "stgmgt_prod": {
     "PROD": {
       "PODGROUP": "stg_pm_and_mgt_prod",
@@ -3506,9 +3169,6 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "INFRA": "STANDBY'",
-      "FILTER": [
-        "(?!(ops0-stgmgt1-1-phx))"
-      ],
       "ROLE": "stgmgt",
       "CLUSTER_TYPE": "OPSSTGMGT,STORAGEMGT"
     }
@@ -3755,25 +3415,6 @@
       "PATCHING": "minorset",
       "TAGGROUPS": 0,
       "HO_STATUS": "ACTIVE,PROVISIONING",
-      "FILTER": [
-        "(?!(ajna0-mgmt1-1-frf|ajna0-mgmt1-1-prd|ajna0-wrangler1-1-frf|ajna0-wrangler1-1-prd|ajna0-wranglertest1-1-prd|ajna0-mgmttest1-1-prd|ajna0-mgmt1-1-fra|ajna0-wrangler1-1-fra))"
-      ],
-      "INFRA": "Supporting Infrastructure",
-      "ROLE": "ajna_mgmt,ajna_wrangler",
-      "CLUSTER_TYPE": "AJNA_MGMT"
-    }
-  },
-  "ajnamgmt_canary_prod": {
-    "PROD": {
-      "PODGROUP": "ajna_mgmt",
-      "TEMPLATEID": "ajna_clusters",
-      "GROUPSIZE": 1,
-      "PATCHING": "minorset",
-      "TAGGROUPS": 0,
-      "HO_STATUS": "ACTIVE,PROVISIONING",
-      "FILTER": [
-        "ajna0-mgmt1-1-frf|ajna0-mgmt1-1-prd|ajna0-wrangler1-1-frf|ajna0-wrangler1-1-prd|ajna0-wranglertest1-1-prd|ajna0-mgmttest1-1-prd|ajna0-mgmt1-1-fra|ajna0-wrangler1-1-fra"
-      ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "ajna_mgmt,ajna_wrangler",
       "CLUSTER_TYPE": "AJNA_MGMT"
