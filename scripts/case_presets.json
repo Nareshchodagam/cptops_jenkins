@@ -722,6 +722,9 @@
       "TEMPLATEID": "mta.linux",
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
+      "FILTER": [
+        "(?!((ops-mta(20|21)-(1|2)-*)|(ops0-mta(1|2)-(3|4)-*)|(ops0-mta(1|2)-(1|2)-(chi|was|par))|(dev0-mta(1|2)-(1|2)-prd)))"
+      ],
       "INFRA": "Primary",
       "ROLE": "mta",
       "CLUSTER_TYPE": "MTA"
@@ -730,13 +733,11 @@
   "mta-notlive_prod": {
     "PROD": {
       "PODGROUP": "mtacl",
-      "TEMPLATEID": "straight-patch",
+      "TEMPLATEID": "straight-patch-Goc++",
       "GROUPSIZE": 4,
       "TAGGROUPS": 0,
       "FILTER": [
-        "ops-mta(20|21)-(1|2)",
-        "ops0-mta(1|2)-(3|4)",
-        "ops0-mta(1|2)-(1|2)-(chi|was|par)"
+        "((ops-mta(20|21)-(1|2))|(ops0-mta(1|2)-(3|4))|(ops0-mta(1|2)-(1|2)-(chi|was|par))|(dev0-mta(1|2)-(1|2)-prd))"
       ],
       "INFRA": "Primary",
       "CL_STATUS": "ACTIVE,PROVISIONING,HW_PROVISIONING",
