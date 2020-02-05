@@ -2582,7 +2582,7 @@
       "GROUPSIZE": 50,
       "TAGGROUPS": 0,
       "FILTER": [
-        "(?!shared-dhub1-1-chi)"
+        "(?!shared0-dhub1-1-chi)"
       ],
       "INFRA": "Supporting Infrastructure",
       "ROLE": "dusty",
@@ -2596,7 +2596,7 @@
       "GROUPSIZE": 1,
       "TAGGROUPS": 0,
       "FILTER": [
-        "shared-dhub1-1-chi"
+        "shared0-dhub1-1-chi"
       ],
       "INFRA": "Supporting Infrastructure",
       "REGEX": "failoverstatus=PRIMARY",
@@ -4539,7 +4539,7 @@
       "TAGGROUPS": 0,
       "INFRA": "Supporting Infrastructure",
       "FILTER": [
-        "((ops0-syslog[12]-1-prd))"
+        "((ops0-vc[12]-1-prd))"
       ],
       "ROLE": "vc",
       "CLUSTER_TYPE": "VC"
