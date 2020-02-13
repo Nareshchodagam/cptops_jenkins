@@ -2203,20 +2203,6 @@
           "CLUSTER_TYPE": "POD"
         }
       },
-      "siteproxy_canary_prod": {
-        "PROD": {
-          "PODGROUP": "sproxy.canary",
-          "TEMPLATEID": "siteproxy_canary.linux",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "FILTER": [
-            "cs994-proxy[1,2]-1-ord|stmfdna44ice1-proxy[1|2]-1-prd"
-          ],
-          "INFRA": "Primary",
-          "ROLE": "proxy",
-          "CLUSTER_TYPE": "POD"
-        }
-      },
       "publicproxy_prod": {
         "PROD": {
           "PODGROUP": "pproxy",
@@ -3819,5 +3805,5 @@
           "HOSTPERCENT": "30"
         }
       }
-    },
+    }
 
