@@ -659,7 +659,7 @@
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "FILTER": [
-            "(?!((ops-mta(20|21)-(1|2)-*)|(ops0-mta(1|2)-(3|4)-*)|(ops0-mta(1|2)-(1|2)-(chi|was|par))|(dev0-mta(1|2)-(1|2)-prd)))"
+            "(?!((ops-mta(20|21)-(1|2)-*)|(ops0-mta(1|2)-(3|4)-*)|(ops0-mta(1|2)-(1|2)-(chi|was|par))|(dev0-mta(1|2)-(1|2)-prd)|(ops0-mta(1|2)-1-xrd)|(rd0-mta(1|2)-1-xrd)))"
           ],
           "INFRA": "Primary",
           "ROLE": "mta",
@@ -673,7 +673,7 @@
           "GROUPSIZE": 4,
           "TAGGROUPS": 0,
           "FILTER": [
-            "((ops-mta(20|21)-(1|2))|(ops0-mta(1|2)-(3|4))|(ops0-mta(1|2)-(1|2)-(chi|was|par))|(dev0-mta(1|2)-(1|2)-prd))"
+            "((ops-mta(20|21)-(1|2))|(ops0-mta(1|2)-(3|4))|(ops0-mta(1|2)-(1|2)-(chi|was|par))|(dev0-mta(1|2)-(1|2)-prd)|(ops0-mta(1|2)-1-xrd)|(rd0-mta(1|2)-1-xrd))"
           ],
           "INFRA": "Primary",
           "CL_STATUS": "ACTIVE,PROVISIONING,HW_PROVISIONING",
