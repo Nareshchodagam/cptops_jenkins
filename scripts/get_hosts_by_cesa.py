@@ -131,13 +131,13 @@ class Atlas:
         url = None
         if cesa:
             url = "{0}{1}{2}{3}".format(self.atlas_url, self.cesa_end_point, self.cesa_query_filter, cesa)
-            logger.info("Fetching hosts details for CESA [%s] from URL %s ", cesa, url)
+            logger.debug("Fetching hosts details for CESA [%s] from URL %s ", cesa, url)
         elif host:
             url = "{0}{1}{2}{3}".format(self.atlas_url, self.host_query_filter, host, self.host_fields)
-            logger.info("Fetching data from atlas for host [%s] URL %s ", host, url)
+            logger.debug("Fetching data from atlas for host [%s] URL %s ", host, url)
         elif current:
             url = "{0}{1}".format(self.atlas_url, self.current_bundle)
-            logger.info("Fetching data from URL %s", url)
+            logger.debug("Fetching data from URL %s", url)
 
         session = requests.Session()
         try:

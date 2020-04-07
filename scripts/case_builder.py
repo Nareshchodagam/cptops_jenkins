@@ -58,13 +58,16 @@ def cmd_builder(sets, r_class=False):
     if options.template != None:
         bld_cmd['template'] = options.template
     elif options.straight:
-        user_input = raw_input('\033[31m' + "You choose to straight patch, it can be risky too. Are you sure you want to continue (y/n):" + '\033[m')
+        user_input = raw_input(
+            '\033[31m' + "You choose to straight patch, it can be risky too. Are you sure you want to continue (y/n):" +
+            '\033[m'
+        )
         if user_input == "y" or user_input == "Y":
             bld_cmd['template'] = "straight-patch-Goc++"
         else:
             sys.exit()
     else:
-        bld_cmd['template'] = sets[role_class][role_status]['TEMPLATEID']   
+        bld_cmd['template'] = sets[role_class][role_status]['TEMPLATEID']
     try:
         bld_cmd['patching'] = sets[role_class][role_status]['PATCHING']
     except KeyError:
@@ -108,10 +111,10 @@ def cmd_builder(sets, r_class=False):
     else:
         filter = ""
 
-    if options.filter and options.cesa:
+    if options.cesa:
         from get_hosts_by_cesa import Atlas, group_pods, write_files, remove_dups
         class_atlas = Atlas()
-        hosts_json = class_atlas.get_cesas_hosts(options.filter)  # extract all hosts for given CESA's
+        hosts_json = class_atlas.get_cesas_hosts(options.cesa)  # extract all hosts for given CESA's
         roles = sets[role_class][role_status]['ROLE']  # Get role from case_presets.json
 
         grouped_pods = {}
@@ -122,7 +125,8 @@ def cmd_builder(sets, r_class=False):
         # comma separated roles for a preset.
         for role in roles.split(","):
             if role not in hosts_json:  # there is possibility role is not impacted hence looping back
-                logger.info("No impacted hosts found for role %s - ".role)
+                logger.debug("Checking role %s ", role)
+                logger.info("No impacted hosts found for role %s ", role)
                 continue
 
             # To make sure hosts matches with existing filter in case_presets.json
@@ -172,7 +176,7 @@ def cmd_builder(sets, r_class=False):
         write_files(all_pods, sets[role_class][role_status]['PODGROUP'])
         remove_dups(sets[role_class][role_status]['PODGROUP'])
 
-    if options.filter and not options.cesa:
+    if options.filter:
         if filter:
             temp_filter = []
             filter_parts = options.filter.split("|")
@@ -496,7 +500,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--nolinebacker", dest="nolinebacker", action="store_true", default=False, help="Don't use line backer"
     )
-    parser.add_argument("--cesa", dest="cesa", action="store_true", default=False, help="enable cesa based patching")
+    parser.add_argument("--cesa", dest="cesa", help="enable cesa based patching")
     # W-4531197 Adding logic to remove already patched host for Case.
     parser.add_argument("--delpatched", dest="delpatched", action='store_true', help="command to remove patched host.")
     parser.add_argument("--casesubject", dest="casesubject", help="Initial case subject to use")
@@ -527,11 +531,14 @@ if __name__ == "__main__":
         help="Set the logging level"
     )
 
-    parser.add_argument("--canary", dest="canary", action ="store_true", help="All canary cases")
-    parser.add_argument("--csv", dest="csv", help="Read given CSV file and create cases as per the status, --hoststat is optional comma separated status Default is DECOM, --role is optional default take all roles")
-    parser.add_argument("--role", dest="role",help="provide a single or comma seperated role names, this option is optional with --csv. Default is ALL")
-    parser.add_argument("--straight", dest="straight", action ="store_true", default=False,help="Flag for generation straight patch cases  for non active hosts")
-    
+    parser.add_argument(
+        "--straight",
+        dest="straight",
+        action="store_true",
+        default=False,
+        help="Flag for generation straight patch cases  for non active hosts"
+    )
+
     options = parser.parse_args()
 
     initfile()  # function to clean existing cases.sh file
@@ -570,8 +577,8 @@ if __name__ == "__main__":
         logging.error("Usage: No role specified to search.")
     if options.search_role:
         find_role(sets)
-    # if options.list:
-    #     list_roles(sets)
+    if options.list:
+        list_roles(sets)
     if options.roleclass:
         cmd_builder(sets)
         dryrun()
