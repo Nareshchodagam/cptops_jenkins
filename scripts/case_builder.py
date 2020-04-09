@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#
+
 #
 '''
     Jenkins Python script to create implementation plans and create cases.
@@ -13,6 +13,8 @@ import re
 import subprocess
 import sys
 from functools import partial
+from pprint import pformat
+
 # from multiprocessing.dummy import Pool as ThreadPool
 from operator import attrgetter
 
@@ -116,18 +118,25 @@ def cmd_builder(sets, r_class=False):
         class_atlas = Atlas()
         hosts_json = class_atlas.get_cesas_hosts(options.cesa)  # extract all hosts for given CESA's
         roles = sets[role_class][role_status]['ROLE']  # Get role from case_presets.json
+        logger.debug("Hosts fetched from given CESA's %s ", pformat(hosts_json))
 
         grouped_pods = {}
         all_pods = []
         all_hosts = []
 
+        count = 0
+
         # This for loop is loop through all the roles from case_presets.json. There are few occasions when we have
-        # comma separated roles for a preset.
+        # comma separated roles for a preset hence looping.
         for role in roles.split(","):
+            logger.info("Processing for role %s ", role)
             if role not in hosts_json:  # there is possibility role is not impacted hence looping back
-                logger.debug("Checking role %s ", role)
+                count = count + 1
                 logger.info("No impacted hosts found for role %s ", role)
-                continue
+                if count == len(roles.split(",")):
+                    sys.exit(1)
+                else:
+                    continue
 
             # To make sure hosts matches with existing filter in case_presets.json
             if "FILTER" in sets[role_class][role_status]:
@@ -143,32 +152,36 @@ def cmd_builder(sets, r_class=False):
                 ]
                 logger.debug("Hosts %s  only for given datacenter %s", hosts_json[role], options.datacenter)
 
-            # pool = ThreadPool(25)
-            # raw_podlist = pool.map(class_atlas.get_pods, hosts_json[role])
-
             try:
                 with ThreadPoolExecutor(max_workers=10) as executor:
                     raw_podlist = executor.map(class_atlas.get_pods, hosts_json[role])
             except TimeoutError as error:
-                logger.exception("Thread Pool error %s", error)
+                logger.exception("Thread Pool error %s ", error)
 
             # Build podlist based on give CLUSTER_TYPE in case_presets.json
             if "CLUSTER_TYPE" in sets[role_class][role_status]:
                 grouped_pods[role] = group_pods(raw_podlist, cluster_type=sets[role_class][role_status]['CLUSTER_TYPE'])
             else:
                 grouped_pods[role] = group_pods(raw_podlist)
-            logger.debug("Grouped pods %s for role %s - ", grouped_pods[role], role)
+
+            logger.debug("Grouped pods %s for role %s ", grouped_pods[role], role)
 
             # prepare a single list for all hosts
             all_hosts.append(hosts_json[role])
+            logger.debug("All hosts %s ", all_hosts)
 
             if "PROD" in sets[role_class]:
                 grouped_pods[role] = grouped_pods[role]["prod"]
             elif "DR" in sets[role_class]:
                 grouped_pods[role] = grouped_pods[role]["dr"]
+
+        if not any(grouped_pods.values()):
+            logger.error("No match found for given POD and ClusterType, quitting")
+            raise SystemExit("Exiting")
+
         # Building a filter for all the hosts seperated by "|"
         filter = "|".join([host for host_list in all_hosts if isinstance(host_list, list) for host in host_list])
-        logger.debug("Host filter %s - ", filter)
+        logger.debug("Host filter %s  ", filter)
 
         for k, v in grouped_pods.items():
             for i in v:
@@ -239,17 +252,17 @@ def cmd_builder(sets, r_class=False):
     if options.datacenter:
         rebuild_list(bld_cmd)
 
-    logging.debug("TEMPLATEID = " + bld_cmd['template'])
-    logging.debug("GROUPSIZE = " + str(bld_cmd['gsize']))
-    logging.debug("TAGGROUPS = " + str(bld_cmd['tagsize']))
-    logging.debug("INFRA = " + bld_cmd['infra'])
-    logging.debug("ROLE = " + bld_cmd['role'])
-    logging.debug("SUBJECT = " + bld_cmd['subject'])
-    logging.debug("PODGROUP = " + bld_cmd['podgroup'])
-    logging.debug("REGEXFILTER = " + bld_cmd['regexfilter'])
-    logging.debug("FILTER = " + bld_cmd['filter'])
-    logging.debug("PATCHSET = " + bld_cmd['patchset'])
-    logging.debug("Contents of uploaded file %s" % bld_cmd['podgroup'])
+    logger.info("TEMPLATEID = " + bld_cmd['template'])
+    logger.info("GROUPSIZE = " + str(bld_cmd['gsize']))
+    logger.info("TAGGROUPS = " + str(bld_cmd['tagsize']))
+    logger.info("INFRA = " + bld_cmd['infra'])
+    logger.info("ROLE = " + bld_cmd['role'])
+    logger.info("SUBJECT = " + bld_cmd['subject'])
+    logger.info("PODGROUP = " + bld_cmd['podgroup'])
+    logger.info("REGEXFILTER = " + bld_cmd['regexfilter'])
+    logger.info("FILTER = " + bld_cmd['filter'])
+    logger.info("PATCHSET = " + bld_cmd['patchset'])
+    logger.info("Contents of uploaded file %s" % bld_cmd['podgroup'])
 
     if 'CL_STATUS' in sets[role_class][role_status].keys() or options.cluststat:
         logging.debug("CL_STATUS = " + bld_cmd['clusteropstat'])

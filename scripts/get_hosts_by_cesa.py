@@ -2,6 +2,7 @@
 
 import logging
 import re
+from pprint import pformat
 
 import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
@@ -42,34 +43,74 @@ def group_pods(podlist, cluster_type=None):
     :return:
     """
     pods = {"prod": [], "dr": []}
+    podlist_format = None
     for pod in podlist:
         # 'pod' is a list which has only one item, we leave the list behind and take only the dict within
         try:
             this_pod = pod[0]
+            logger.info("Checking  POD %s for iDB status & PERF environment ", this_pod["clusterName"])
+
+            # Only consider ACTIVE & DECOM cluster
+            if not (this_pod["clusterStatus"] == "ACTIVE" or this_pod["clusterStatus"] == "DECOM"):
+                logger.info(
+                    "Skipping NON ACTIVE-DECOM pods %s with status %s ", this_pod["clusterName"],
+                    this_pod["clusterStatus"]
+                )
+                continue
+
+            # skip pods from perf environment
+            if this_pod["clusterEnvironment"].lower() == "performance":
+                logger.info(
+                    "SKIPPING POD %s from perf environment %s ", this_pod["clusterName"], this_pod["clusterEnvironment"]
+                )
+                continue
+
             if cluster_type:
-                if re.search(r"|".join(cluster_type.split(",")), this_pod["clusterType"], re.IGNORECASE):
-                    podlist_format = [
-                        this_pod["clusterName"], this_pod["datacenterName"].upper(), this_pod["superpodName"],
-                        this_pod["clusterStatus"]
-                    ]
+                logger.info(
+                    "Checking POD %s with preset clusterType(case_presets) %s & actual clusterType(Atlas) %s ",
+                    this_pod["clusterName"], cluster_type, this_pod["clusterType"]
+                )
+
+                match = re.match(r"|".join(cluster_type.split(",")), this_pod["clusterType"], re.IGNORECASE)
+                if match:
+                    regex = re.compile(r"{}$".format(match.group()))
+                    if regex.search(this_pod["clusterType"]):
+                        podlist_format = [
+                            this_pod["clusterName"], this_pod["datacenterName"].upper(), this_pod["superpodName"],
+                            this_pod["clusterStatus"]
+                        ]
+                    else:
+                        logger.info(
+                            "Podlist ClusterType %s doesn't match clusterType %s, hence skipping", cluster_type,
+                            this_pod["clusterType"]
+                        )
+                        continue
+
+                else:
+                    logger.info(
+                        "Podlist ClusterType %s doesn't match clusterType %s, hence skipping", cluster_type,
+                        this_pod["clusterType"]
+                    )
+                    continue
             else:
                 podlist_format = [
                     this_pod["clusterName"], this_pod["datacenterName"].upper(), this_pod["superpodName"],
                     this_pod["clusterStatus"]
                 ]
 
-            # Skip non-ACTIVE clusters
-            if this_pod["clusterStatus"] != "ACTIVE":
-                continue
+            logger.debug("DR & PROD PODS %s", podlist_format)
 
             # Segregate the PODS based on DR/PROD
             if this_pod["clusterDr"]:
                 pods["dr"].append(podlist_format)
+                logger.debug("DR PODS %s", pods["dr"])
             else:
                 pods["prod"].append(podlist_format)
+                logger.debug("PROD PODS %s", pods["prod"])
         except BaseException as error:
             logger.exception(error)
-    logger.debug("Grouped podlist ")
+    logger.debug("PODS returned %s", pods)
+    logger.info("Final podlist %s", pods)
     return pods
 
 
@@ -82,13 +123,13 @@ def write_files(data, podlist_file):
     exclude_dcs = ["chx", "wax", "ttd", "hio"]
     try:
         file_loc = "/root/git/cptops_case_gen/hostlists/{0}".format(podlist_file)
-        logger.info("Opening podlist %s for writing", file_loc)
+        logger.info("Opening podlist %s for writing ", file_loc)
         with open(file_loc, "w") as f:
             for item in data:
                 podlist_line = " ".join(item)
-                if not any(dc in podlist_line for dc in exclude_dcs):
+                if not any(dc.upper() in podlist_line for dc in exclude_dcs):
                     f.write(podlist_line + "\n")
-        logger.info("Podlist file %s written successfully", file_loc)
+        logger.info("Podlist file %s written successfully ", file_loc)
     except IOError as error:
         logger.exception(error)
 
@@ -115,7 +156,8 @@ class Atlas:
         self.cesa_query_filter = "hosts?cesa="
         self.host_query_filter = "/hosts?name="
         self.host_fields = ",clusterStatus=ACTIVE,hostStatus=ACTIVE&fields=clusterName,datacenterName," \
-                           "superpodName,clusterStatus,clusterDr,clusterType,hostName,hostOs"
+                           "superpodName,clusterStatus,clusterDr,clusterType,hostName,hostOs,hostOnboarded," \
+                           "clusterEnvironment"
         self.current_bundle = "/patch-bundles?current=true"
 
     def atlas_query(self, cesa=None, host=None, current=None):
@@ -142,7 +184,7 @@ class Atlas:
         session = requests.Session()
         try:
             result = session.get(url, verify=False)
-            logger.debug("Returned Status code from Atlas %s for url %s ", result.status_code, url)
+            logger.debug("Returned Status code from Atlas %s for URL %s ", result.status_code, url)
             return result.json()
         except requests.exceptions.RequestException as e:
             logger.exception("Exception %s from Atlas url %s ", e, url)
@@ -159,17 +201,19 @@ class Atlas:
 
         if len(cesas.split(",")) <= 5:  # If total CESA to query is less than 5
             all_cesa = self.atlas_query(cesas)
-            logger.info("Extracted all the hosts from CESA ( less then or equal to 5 ) [%s] ", cesas)
+            logger.info("Extracted all the hosts from CESA [%s] ", cesas)
             logger.debug("All impacted hosts %s  ", all_cesa)
+
         else:  # If total CESA to query is more than 5, break it down
             cesas_list1, cesas_list2 = split_list(cesas.split(","))
             all_cesa = dict()
             out = self.atlas_query(",".join(cesas_list1))
+            logger.debug("Hosts from first group of CESA [%s] ", pformat(out))
             out1 = self.atlas_query(",".join(cesas_list2))
-            logger.info("Extracted all the hosts from CESA ( less then or equal to 5 ) %s - ", cesas)
-            logger.debug("All impacted hosts %s - ", all_cesa)
+            logger.debug("Hosts from second group of CESA [%s] ", pformat(out1))
+            logger.info("Extracted all the hosts from CESA [ %s %s ] ", cesas_list1, cesas_list2)
 
-            # Combined the two returned data structure into a single one.
+            # Combined the two returned data structure into a single.
             dict_keys = set(out.keys() + out1.keys())  # Get unique keys from both dict keys
             for i in dict_keys:
                 if (i in out) and (i in out1):
@@ -178,7 +222,7 @@ class Atlas:
                     all_cesa[i] = out[i]
                 elif (i in out1) and (i not in out):
                     all_cesa[i] = out1[i]
-            logger.info("Successfully extracted hosts for all given CESA [%s]  ", cesas)
+            logger.info("Joined all hosts for all given CESA [%s]  ", cesas)
         return all_cesa
 
     def get_pods(self, host):
