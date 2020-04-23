@@ -3764,28 +3764,6 @@
           "CLUSTER_TYPE": "cnc"
         }
       },
-      "reimage_app_prod": {
-        "PROD": {
-          "PODGROUP": "reimage_app-prod",
-          "TEMPLATEID": "migration-app-prod",
-          "GROUPSIZE": 3,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "app",
-          "HOSTPERCENT": "20"
-        }
-      },
-      "reimage_app_dr": {
-        "DR": {
-          "PODGROUP": "reimage_app-dr",
-          "TEMPLATEID": "migration-app-dr",
-          "GROUPSIZE": 3,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "app",
-          "HOSTPERCENT": "30"
-        }
-      },
       "netevents_prod": {
         "PROD": {
           "PODGROUP": "netevents",
@@ -3797,27 +3775,112 @@
           "CLUSTER_TYPE": "NETEVENTS"
         }
       },
-      "reimage_search_prod": {
+      "migration_app_prod": {
         "PROD": {
-          "PODGROUP": "reimage_search-prod",
-          "TEMPLATEID": "migration-search-prod",
+          "PODGROUP": "migration_app_prod",
+          "TEMPLATEID": "migration_app_prod",
           "GROUPSIZE": 3,
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
-          "ROLE": "search",
+          "ROLE": "app",
           "HOSTPERCENT": "20"
         }
       },
-      "reimage_search_dr": {
+      "migration_app_dr": {
         "DR": {
-          "PODGROUP": "reimage_search-dr",
-          "TEMPLATEID": "migration-search-dr",
+          "PODGROUP": "migration_app_dr",
+          "TEMPLATEID": "migration_app_dr",
           "GROUPSIZE": 3,
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
-          "ROLE": "search",
-          "HOSTPERCENT": "30"
+          "ROLE": "app",
+          "HOSTPERCENT": "50"
+        }
+      },
+      "migration_search_prod": {
+        "PROD": {
+          "PODGROUP": "migration_search_prod",
+          "TEMPLATEID": "migration_search_prod",
+          "GROUPSIZE": 20,
+          "PATCHING": "all",
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "search"
+        }
+      },
+      "migration_search_dr": {
+        "DR": {
+          "PODGROUP": "migration_search_dr",
+          "TEMPLATEID": "migration_search_dr",
+          "GROUPSIZE": 20,
+          "PATCHING": "all",
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "search"
+        }
+      },
+      "migration_htgapp_prod": {
+        "PROD": {
+          "PODGROUP": "migration_htgapp_prod",
+          "TEMPLATEID": "migration_htgapp_prod",
+          "GROUPSIZE": 2,
+          "PATCHING": "all",
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "htgapp"
+        }
+      },
+      "migration_htgapp_dr": {
+        "DR": {
+          "PODGROUP": "migration_htgapp_dr",
+          "TEMPLATEID": "migration_htgapp_dr",
+          "GROUPSIZE": 2,
+          "PATCHING": "all",
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "htgapp"
+        }
+      },
+      "migration_mq_prod": {
+        "PROD": {
+          "PODGROUP": "migration_mq_prod",
+          "TEMPLATEID": "migration_mq_prod",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "mq"
+        }
+      },
+      "migration_mq_dr": {
+        "DR": {
+          "PODGROUP": "migration_mq_dr",
+          "TEMPLATEID": "migration_mq_dr",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "mq"
+        }
+      },
+      "migration_acs_prod": {
+        "PROD": {
+          "PODGROUP": "migration_acs_prod",
+          "TEMPLATEID": "migration_acs_prod",
+          "GROUPSIZE": 3,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "acs",
+          "HOSTPERCENT": "20"
+        }
+      },
+      "migration_acs_dr": {
+        "DR": {
+          "PODGROUP": "migration_acs_dr",
+          "TEMPLATEID": "migration_acs_dr",
+          "GROUPSIZE": 3,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "acs",
+          "HOSTPERCENT": "50"
         }
       }
     }
-
