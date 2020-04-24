@@ -2914,7 +2914,21 @@
           "ROLE": "dva_onboarding",
           "CLUSTER_TYPE": "HSD_ONBOARDING"
         }
-      },
+     },
+     "secrets_prod": {
+      "PROD": {
+        "PODGROUP": "vaultczarcl",
+        "TEMPLATEID": "secrets",
+        "GROUPSIZE": 1,
+        "TAGGROUPS": 0,
+        "FILTER": [
+        "(?!(.*-(xrd|prd|sfm)))"
+        ],
+        "INFRA": "PRIMARY'",
+        "ROLE": "secrets",
+        "CLUSTER_TYPE": "SECRETS"
+      }
+     },
       "secrets_jenkins_prod": {
         "PROD": {
           "PODGROUP": "secjenkins",
