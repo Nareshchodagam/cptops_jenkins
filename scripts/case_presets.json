@@ -1090,6 +1090,45 @@
           "CLUSTER_TYPE": "HAMMER,HMRLOG"
         }
       },
+      "hammer_hmrj_actv_prod": {
+        "PROD": {
+          "PODGROUP": "hmrj.pri",
+          "TEMPLATEID": "hammer-hmrj-actv",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "FILTER": [
+            "ops0-hmrj1-1-xrd"
+          ],
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "hmrj",
+          "CLUSTER_TYPE": "HMRJ"
+        }
+      },
+      "hammer_hmrj_dr": {
+        "DR": {
+          "PODGROUP": "hmrj.sec",
+          "TEMPLATEID": "hammer-hmrj-dr",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "hmrj",
+          "CLUSTER_TYPE": "HMRJ"
+        }
+      },
+      "hammer_hmrj_pasv_prod": {
+        "PROD": {
+          "PODGROUP": "hmrj.pri",
+          "TEMPLATEID": "hammer-hmrj-pasv",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "FILTER": [
+            "ops0-hmrj2-1-xrd"
+          ],
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "hmrj",
+          "CLUSTER_TYPE": "HMRJ"
+        }
+      },
       "searchzk_prod": {
         "PROD": {
           "PODGROUP": "searchzkcl",
