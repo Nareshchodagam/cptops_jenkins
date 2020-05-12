@@ -2074,6 +2074,20 @@
           "CLUSTER_TYPE": "OPSNETMGT"
         }
       },
+      "slbminion_canary_prod": {
+        "PROD": {
+          "PODGROUP": "slbminion.canary",
+          "TEMPLATEID": "sam_slb",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "FILTER": [
+            "shared0-slbminion2-[1-2]-prd"
+          ],
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "samcompute",
+          "CLUSTER_TYPE": "SAMMINION"
+        }
+      },
       "sam_prod": {
         "PROD": {
           "PODGROUP": "sam.pri",
