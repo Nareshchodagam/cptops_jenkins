@@ -3918,6 +3918,46 @@
           "ROLE": "mq"
         }
       },
+      "migration_cbatch_prod": {
+        "PROD": {
+          "PODGROUP": "migration_cbatch_prod",
+          "TEMPLATEID": "migration_cbatch_prod",
+          "GROUPSIZE": 2,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "cbatch"
+        }
+      },
+      "migration_cbatch_dr": {
+        "DR": {
+          "PODGROUP": "migration_cbatch_dr",
+          "TEMPLATEID": "migration_cbatch_dr",
+          "GROUPSIZE": 2,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "cbatch"
+        }
+      },
+      "migration_dapp_prod": {
+        "PROD": {
+          "PODGROUP": "migration_dapp_prod",
+          "TEMPLATEID": "migration_dapp_prod",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "dapp"
+        }
+      },
+      "migration_dapp_dr": {
+        "PROD": {
+          "PODGROUP": "migration_dapp_dr",
+          "TEMPLATEID": "migration_dapp_dr",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "dapp"
+        }
+      },
       "migration_mq_dr": {
         "DR": {
           "PODGROUP": "migration_mq_dr",
@@ -3928,26 +3968,83 @@
           "ROLE": "mq"
         }
       },
+      "migration_ajna_broker_prod": {
+        "PROD": {
+          "PODGROUP": "migration_ajna_broker_prod",
+          "TEMPLATEID": "migration_ajna_broker_prod",
+          "GROUPSIZE": 10,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "ajna_broker",
+          "CLUSTER_TYPE": "AJNA"
+        }
+      },
+      "migration_ajna_mirror_prod": {
+        "PROD": {
+          "PODGROUP": "migration_ajna_mirror_prod",
+          "TEMPLATEID": "migration_ajna_mirror_prod",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "PATCHING": "minorset",
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "ajna_mirror",
+          "CLUSTER_TYPE": "AJNA"
+        }
+      },
+      "migration_ajna_mgmt_prod": {
+        "PROD": {
+          "PODGROUP": "migration_ajna_mgmt_prod",
+          "TEMPLATEID": "migration_ajna_mgmt_prod",
+          "GROUPSIZE": 2,
+          "TAGGROUPS": 0,
+          "PATCHING": "minorset",
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "ajna_mgmt",
+          "CLUSTER_TYPE": "AJNA_MGMT"
+        }
+      },
+      "migration_ajna_wrangler_prod": {
+        "PROD": {
+          "PODGROUP": "migration_ajna_wrangler_prod",
+          "TEMPLATEID": "migration_ajna_wrangler_prod",
+          "GROUPSIZE": 2,
+          "TAGGROUPS": 0,
+          "PATCHING": "minorset",
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "ajna_wrangler",
+          "CLUSTER_TYPE": "AJNA_MGMT"
+        }
+      },
       "migration_acs_prod": {
         "PROD": {
           "PODGROUP": "migration_acs_prod",
           "TEMPLATEID": "migration_acs_prod",
-          "GROUPSIZE": 3,
+          "GROUPSIZE": 1,
           "TAGGROUPS": 0,
+          "FILTER": [
+            "^.*1-1",
+            "^.*1-2",
+            "^.*2-1",
+            "^.*2-2"
+          ],
           "INFRA": "Supporting Infrastructure",
-          "ROLE": "acs",
-          "HOSTPERCENT": "20"
+          "ROLE": "acs"
         }
       },
       "migration_acs_dr": {
         "DR": {
           "PODGROUP": "migration_acs_dr",
           "TEMPLATEID": "migration_acs_dr",
-          "GROUPSIZE": 3,
+          "GROUPSIZE": 1,
           "TAGGROUPS": 0,
+          "FILTER": [
+            "^.*1-1",
+            "^.*1-2",
+            "^.*2-1",
+            "^.*2-2"
+          ],
           "INFRA": "Supporting Infrastructure",
-          "ROLE": "acs",
-          "HOSTPERCENT": "50"
+          "ROLE": "acs"
         }
       }
     }
