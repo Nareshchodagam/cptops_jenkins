@@ -189,6 +189,7 @@ def cmd_builder(sets, r_class=False):
         write_files(all_pods, sets[role_class][role_status]['PODGROUP'])
         remove_dups(sets[role_class][role_status]['PODGROUP'])
 
+    skipped = []
     if options.filter:
         if filter:
             temp_filter = []
@@ -197,9 +198,17 @@ def cmd_builder(sets, r_class=False):
                 matched = re.match(filter, fp)
                 if matched:
                     temp_filter.append(fp)
+                else:
+                    skipped.append(fp)
             filter = "|".join(temp_filter)
         else:
             filter = options.filter
+
+    if not filter:
+        logging.error("The provided hosts with -f option does not match with filter from case_preset.json")
+        sys.exit(1)
+    elif skipped:
+        logging.error("Skipping the {0} hosts which does not match with case_preset.json".format(skipped))
 
     bld_cmd['filter'] = filter
     bld_cmd['regexfilter'] = options.regex
