@@ -204,11 +204,11 @@ def cmd_builder(sets, r_class=False):
         else:
             filter = options.filter
 
-    if not filter:
-        logging.error("The provided hosts with -f option does not match with filter from case_preset.json")
-        sys.exit(1)
-    elif skipped:
-        logging.error("Skipping the {0} hosts which does not match with case_preset.json".format(skipped))
+        if not filter:
+            logging.error("The provided hosts with -f option does not match with filter from case_preset.json")
+            sys.exit(1)
+        elif skipped:
+            logging.error("Skipping the {0} hosts which does not match with case_preset.json".format(skipped))
 
     bld_cmd['filter'] = filter
     bld_cmd['regexfilter'] = options.regex
