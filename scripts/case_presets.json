@@ -1754,6 +1754,21 @@
           "CL_STATUS": "DECOM"
         }
       },
+      "mnds_sayonara_prod": {
+        "PROD": {
+          "PODGROUP": "sayonaracl",
+          "TEMPLATEID": "sayonara",
+          "GROUPSIZE": 5,
+          "PATCHING": "zone",
+          "TAGGROUPS": 0,
+          "FILTER": [
+            "(sayonara-*)"
+          ],
+          "INFRA": "Supporting_Infrastructure",
+          "ROLE": "mnds",
+          "CLUSTER_TYPE": "KOIPONDXRD1"
+        }
+      },
       "hbase__dnds_argus_prod": {
         "PROD": {
           "PODGROUP": "hbase.clusters",
@@ -4048,3 +4063,4 @@
         }
       }
     }
+
