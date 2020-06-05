@@ -2389,21 +2389,6 @@
           "CLUSTER_TYPE": "DUSTYHUB"
         }
       },
-      "dustyhub_canary_prod": {
-        "PROD": {
-          "PODGROUP": "dustyhubcl",
-          "TEMPLATEID": "dusty",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "FILTER": [
-            "shared0-dhub1-1-chi"
-          ],
-          "INFRA": "Supporting Infrastructure",
-          "REGEX": "failoverstatus=PRIMARY",
-          "ROLE": "dusty",
-          "CLUSTER_TYPE": "DUSTYHUB"
-        }
-      },
       "cfgapp_prod": {
         "PROD": {
           "PODGROUP": "cfgapp",
