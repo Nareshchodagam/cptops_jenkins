@@ -306,7 +306,7 @@ def rebuild_list(bld_cmd):
     dc_fh = open(bld_cmd['podgroup'], "r")
     for line in dc_fh:
         for dc in dc_list:
-            if dc in line:
+            if dc in line.upper():
                 new_podgroup.write(line)
     new_podgroup.close()
 
