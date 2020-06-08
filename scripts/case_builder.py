@@ -309,6 +309,7 @@ def rebuild_list(bld_cmd):
             if dc in line.upper().split(" ")[1]: # To find out DC instead of entire line
                 new_podgroup.write(line)
     new_podgroup.close()
+    dc_fh.close()
 
     if os.path.getsize(pod_filename) == 0:
         logging.error("Podgroup file is emtpy")
