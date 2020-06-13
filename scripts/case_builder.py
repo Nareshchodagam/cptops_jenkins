@@ -22,6 +22,8 @@ from concurrent.futures import ThreadPoolExecutor, TimeoutError
 
 import case_opts as co
 from m_logger import CustomLogger
+from get_hosts_by_cesa import Atlas, group_pods, write_files, remove_dups
+class_atlas = Atlas()
 
 
 def json_imports():
@@ -34,7 +36,7 @@ def json_imports():
     return sets
 
 
-def cmd_builder(sets, r_class=False):
+def cmd_builder(dc_list, sets, r_class=False):
     '''
     Function that builds the gen_cases.py build command. It gathers options from
     the case_presets and builds the command.
@@ -114,8 +116,6 @@ def cmd_builder(sets, r_class=False):
         filter = ""
 
     if options.cesa:
-        from get_hosts_by_cesa import Atlas, group_pods, write_files, remove_dups
-        class_atlas = Atlas()
         hosts_json = class_atlas.get_cesas_hosts(options.cesa)  # extract all hosts for given CESA's
         roles = sets[role_class][role_status]['ROLE']  # Get role from case_presets.json
         logger.debug("Hosts fetched from given CESA's %s ", pformat(hosts_json))
@@ -144,12 +144,10 @@ def cmd_builder(sets, r_class=False):
                 logger.debug(hosts_json[role])
 
             #  Filter out hosts if datacenter passed to CLI
-            if options.datacenter:
+            if dc_list:
                 hosts_json[role] = [
                     i for i in hosts_json[role]
-                    if re.search("|".join(options.datacenter.split(",")),
-                                 i.split("-")[3], re.IGNORECASE)
-                ]
+                    if re.search("|".join(), i.split("-")[3], re.IGNORECASE)]
                 logger.debug("Hosts %s  only for given datacenter %s", hosts_json[role], options.datacenter)
 
             try:
@@ -258,8 +256,8 @@ def cmd_builder(sets, r_class=False):
             else:
                 bld_cmd[str.lower(key)] = sets[role_class][role_status][key]
 
-    if options.datacenter:
-        rebuild_list(bld_cmd)
+    if dc_list:
+        rebuild_list(dc_list, bld_cmd)
 
     logger.info("TEMPLATEID = " + bld_cmd['template'])
     logger.info("GROUPSIZE = " + str(bld_cmd['gsize']))
@@ -294,15 +292,15 @@ def initfile():
         f.write('#' * 86 + '\n')
 
 
-def rebuild_list(bld_cmd):
+def rebuild_list(dc_list, bld_cmd):
     '''
-
+    :param dc_list: List of DCs
     :param bld_cmd:
     :return:
     '''
     pod_filename = "/tmp/{}.list".format(options.roleclass)
     new_podgroup = open(pod_filename, "w")
-    dc_list = options.datacenter.upper().split(",")
+    dc_list = dc_list.upper()
     dc_fh = open(bld_cmd['podgroup'], "r")
     for line in dc_fh:
         for dc in dc_list:
@@ -480,6 +478,60 @@ def bundleName(fn, file, bundle):
     sub = str(sub).capitalize()
     return sub, bundle
 
+def custom_dc_list(region, rnd):
+    """
+    :param region: Region sepcified with script
+    :param rnd: For case creation of rnd hosts
+    """
+    all_dcs = class_atlas.atlas_query(datacenter=True)
+    dcs = []
+    loc_pattern = re.compile(region)
+    if rnd and region is not None:
+        for dc in all_dcs:
+            if loc_pattern.match(dc["location"]) and dc["gia"] == False and dc["rnd"] == True:
+                dcs.append(dc["name"])
+    elif not rnd and region is not None:
+        for dc in all_dcs:
+            if loc_pattern.match(dc["location"]) and dc["gia"] == False:
+                dcs.append(dc["name"])
+    elif rnd and region is None:
+        for dc in all_dcs:
+            if dc["rnd"] == True and dc["gia"] == False:
+                dcs.append(dc["name"])
+    return dcs
+
+def create_dc_list(dc, region, caps, nocaps, rnd):
+    """
+    :param dc: Datacenter specified with script
+    :param region: Region sepcified with script
+    :param caps: For case creation of only caps hosts
+    :param nocaps: Exclude caps dcs
+    :param rnd: For case creation of rnd hosts
+    :return dc_list: List of valid DCs
+    """
+    all_dc = os.environ["HOME"] + "/git/cptops_jenkins/scripts/all_dc.json"
+    with open(all_dc, 'r') as alldc:
+        dc_values = json.load(alldc)
+    dc_list = []
+    if dc:
+        dc_list = dc.split(",")
+    elif region or rnd:
+        dc_list = custom_dc_list(region, rnd)
+
+    if nocaps:
+        noncaps_dc = dc_values["noncaps"]
+        if dc_list:
+            dc_list = [dc for dc in dc_list if dc in noncaps_dc]
+        else:
+            dc_list = noncaps_dc
+    elif caps:
+        caps_dc = dc_values["caps"]
+        if dc_list:
+            dc_list = [dc for dc in dc_list if dc in caps_dc]
+        else:
+            dc_list = caps_dc
+
+    return dc_list
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Case Builder Program    ')
@@ -490,7 +542,6 @@ if __name__ == "__main__":
     parser.add_argument("--full", action="store_true", dest="full_list", help="View presets of a roleclass.")
     parser.add_argument("-s", dest="search_role", help="Search for a role.")
     parser.add_argument("--roleclass", dest="roleclass", help="Role Class")
-    parser.add_argument("-d", dest="datacenter", help="Select Datacenter to create cases")
     parser.add_argument("--template", dest="template", help="Template to use")
     parser.add_argument("--podgroup", dest="podgroup", help="Hostlist file for role.")
     parser.add_argument("--groupsize", dest="groupsize", help="Groupsize.")
@@ -562,9 +613,27 @@ if __name__ == "__main__":
         help="Flag for generation straight patch cases  for non active hosts"
     )
 
+    exclusive_group1 = parser.add_mutually_exclusive_group()
+    exclusive_group1.add_argument("--region", dest="region", choices=['EMEA', 'AMER', 'APAC'],
+                                  help="Create cases for the selected region")
+    exclusive_group1.add_argument("-d", dest="datacenter", help="Select Datacenter to create cases")
+
+    exclusive_group2 = parser.add_mutually_exclusive_group()
+    exclusive_group2.add_argument("--no-caps", dest="nocaps", action="store_true", default=False,
+                                  help="Create cases excluding caps hosts")
+    exclusive_group2.add_argument("--rnd", dest="rnd", action="store_true", default=False,
+                                  help="Create cases for rnd hosts")
+    exclusive_group2.add_argument("--caps", dest="caps", action="store_true", default=False,
+                                  help="Create cases for all caps hosts only")
+
     options = parser.parse_args()
 
     initfile()  # function to clean existing cases.sh file
+
+    if options.datacenter and (options.rnd or options.nocaps or options.caps):
+        print(
+            "\x1b[1;31mERROR: The --rnd, --caps and --nocaps options cannot be used with -d. Please re-run with proper options\x1b[0m")
+        sys.exit(1)
 
     # Logging setup
     if options.logLevel:
@@ -602,8 +671,9 @@ if __name__ == "__main__":
         find_role(sets)
     if options.list:
         list_roles(sets)
+    dc_list = create_dc_list(options.datacenter, options.region, options.caps, options.nocaps, options.rnd)
     if options.roleclass:
-        cmd_builder(sets)
+        cmd_builder(dc_list, sets)
         dryrun()
 
     # W-4546859 - Create cases of hosts provide in CSV file basically a sheet given by security.
@@ -637,7 +707,7 @@ if __name__ == "__main__":
             if re.search(r'app|cbatch|dapp', rcl):
                 options.hostpercent = "33"
             options.roleclass = rcl
-            cmd_builder(sets)
+            cmd_builder(dc_list=dc_list, sets=sets)
             dryrun()
 
         print(
@@ -650,5 +720,5 @@ if __name__ == "__main__":
         options.search_role = 'canary'
         canary_cases = find_role(sets)
         for canary in canary_cases:
-            cmd_builder(sets, canary)
+            cmd_builder(dc_list, sets, canary)
         dryrun()
