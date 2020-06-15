@@ -670,7 +670,7 @@ if __name__ == "__main__":
         find_role(sets)
     if options.list:
         list_roles(sets)
-    dc_list = create_dc_list(options.datacenter, options.region, options.caps, options.nocaps, options.rnd)
+    dc_list = create_dc_list(options.datacenter, options.region.lower(), options.caps, options.nocaps, options.rnd)
     if options.roleclass:
         cmd_builder(dc_list, sets)
         dryrun()
