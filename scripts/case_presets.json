@@ -92,7 +92,7 @@
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "FILTER": [
-            "(?!(shared1-argusajna2-5-prd))"
+            "(?!(shared1-argusajna2-5-prd)|(.*-xrd))"
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "argus_ajna",
@@ -136,7 +136,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "FILTER": [
-            "(?!shared1-argustsdbw1-1-prd)"
+            "(?!(shared1-argustsdbw1-1-prd)|(.*-xrd))"
           ],
           "ROLE": "argus_writed",
           "CLUSTER_TYPE": "ARGUS"
@@ -150,7 +150,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "FILTER": [
-            "(?!shared1-argustsdbw1-1-prd)"
+            "(?!(shared1-argustsdbw1-1-prd)|(.*-xrd))"
           ],
           "ROLE": "argus_metrics",
           "CLUSTER_TYPE": "ARGUS"
@@ -250,6 +250,9 @@
           "GROUPSIZE": 10,
           "TAGGROUPS": 0,
           "PATCHING": "all",
+          "FILTER": [
+            ".*-xrd"
+          ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "argus_metrics,argus_writed,argus_cache,argus_ws,argus_ajna",
           "CLUSTER_TYPE": "ARGUS"
@@ -2628,7 +2631,7 @@
           "GROUPSIZE": 3,
           "TAGGROUPS": 0,
           "FILTER": [
-            "(?!(.*argusws2-5-))"
+            "(?!(.*argusws2-5-)|(.*-xrd))"
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "argus_ws",
@@ -2763,7 +2766,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "FILTER": [
-            "(?!shared1-arguscache1-2-prd)"
+            "(?!(shared1-arguscache1-2-prd)|(.*-xrd))"
           ],
           "ROLE": "argus_cache",
           "CLUSTER_TYPE": "ARGUS"
