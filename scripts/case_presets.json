@@ -15,7 +15,7 @@
       },
       "argusmq_canary_prod": {
         "PROD": {
-          "PODGROUP": "arguscl",
+          "PODGROUP": "arguscl.canary",
           "TEMPLATEID": "argusmq",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
@@ -58,7 +58,7 @@
       },
       "argusannotation_canary_prod": {
         "PROD": {
-          "PODGROUP": "arguscl",
+          "PODGROUP": "arguscl.canary",
           "TEMPLATEID": "argusannotation",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
@@ -101,7 +101,7 @@
       },
       "argus_ajna_canary_prod": {
         "PROD": {
-          "PODGROUP": "arguscl",
+          "PODGROUP": "arguscl.canary",
           "TEMPLATEID": "argusajna",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
@@ -156,11 +156,10 @@
           "CLUSTER_TYPE": "ARGUS"
         }
       },
-
-      "argus_writed_matrics_canary_prod": {
+      "argus_writed_canary_prod": {
         "PROD": {
-          "PODGROUP": "arguscl",
-          "TEMPLATEID": "argus_writed_matrics",
+          "PODGROUP": "arguscl.canary",
+          "TEMPLATEID": "argus_writed",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
@@ -217,7 +216,7 @@
       },
       "argusreadd_canary_prod": {
         "PROD": {
-          "PODGROUP": "arguscl",
+          "PODGROUP": "arguscl.canary",
           "TEMPLATEID": "argusreadd",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
@@ -479,17 +478,17 @@
       },
       "acs_ice_prod": {
         "PROD": {
-        "PODGROUP": "acsice.pri",
-        "TEMPLATEID": "acs",
-        "GROUPSIZE": 1,
-        "TAGGROUPS": 0,
-        "INFRA": "Primary",
-        "ROLE": "acs,computedocker",
-        "FILTER": [
-          "dbl20ice.*"
-        ],
-        "CL_STATUS": "ACTIVE",
-        "CLUSTER_TYPE": "POD"
+          "PODGROUP": "acsice.pri",
+          "TEMPLATEID": "acs",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Primary",
+          "ROLE": "acs,computedocker",
+          "FILTER": [
+            "dbl20ice.*"
+          ],
+          "CL_STATUS": "ACTIVE",
+          "CLUSTER_TYPE": "POD"
         }
       },
       "search_prod": {
@@ -626,30 +625,30 @@
       },
       "ffx_caps_prod": {
         "PROD": {
-        "PODGROUP": "afw.pri",
-        "TEMPLATEID": "ffx_caps",
-        "GROUPSIZE": 5,
-        "TAGGROUPS": 0,
-        "FILTER": [
-          "(?!(.*-(prd|xrd|crd|yhu|yul|syd|cdu|crz|chi|was|lon)))"
-        ],
-        "INFRA": "Primary",
-        "ROLE": "ffx",
-        "CLUSTER_TYPE": "POD"
-      }
-    },
+          "PODGROUP": "afw.pri",
+          "TEMPLATEID": "ffx_caps",
+          "GROUPSIZE": 5,
+          "TAGGROUPS": 0,
+          "FILTER": [
+            "(?!(.*-(prd|xrd|crd|yhu|yul|syd|cdu|crz|chi|was|lon)))"
+          ],
+          "INFRA": "Primary",
+          "ROLE": "ffx",
+          "CLUSTER_TYPE": "POD"
+        }
+      },
       "ffx_ice_prod": {
         "PROD": {
-            "PODGROUP": "ffxice.pri",
-            "TEMPLATEID": "ffx",
-            "GROUPSIZE": 1,
-            "TAGGROUPS": 0,
-            "INFRA": "Primary",
-            "ROLE": "ffx",
-            "FILTER": [
-              "dbl20ice.*"
-            ],
-            "CLUSTER_TYPE": "POD"
+          "PODGROUP": "ffxice.pri",
+          "TEMPLATEID": "ffx",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Primary",
+          "ROLE": "ffx",
+          "FILTER": [
+            "dbl20ice.*"
+          ],
+          "CLUSTER_TYPE": "POD"
         }
       },
       "mta_prod": {
@@ -786,7 +785,7 @@
       },
       "mandm_splunk_api_canary_prod": {
         "PROD": {
-          "PODGROUP": "splunk-apicl",
+          "PODGROUP": "splunk-apicl.canary",
           "TEMPLATEID": "mandm-splunk-api",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
@@ -814,7 +813,7 @@
       },
       "mandm_splunk_deployer_canary_prod": {
         "PROD": {
-          "PODGROUP": "splunk-deployercl",
+          "PODGROUP": "splunk-deployercl.canary",
           "TEMPLATEID": "mandm-splunk-deployer",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
@@ -842,7 +841,7 @@
       },
       "mandm_splunk_web_canary_prod": {
         "PROD": {
-          "PODGROUP": "splunk-webcl",
+          "PODGROUP": "splunk-webcl.canary",
           "TEMPLATEID": "mandm-splunk-web",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
@@ -867,7 +866,7 @@
       },
       "mandm_splunk_idxr_ops_canary_crz_prod": {
         "PROD": {
-          "PODGROUP": "splunk-idx-ops_crzcl",
+          "PODGROUP": "splunk-idx-ops_crzcl.canary",
           "TEMPLATEID": "mandm-splunk-idxr",
           "GROUPSIZE": 5,
           "TAGGROUPS": 0,
@@ -949,7 +948,7 @@
       },
       "mandm_splunk_switch_crz_canary_prod": {
         "PROD": {
-          "PODGROUP": "splunk-switch_crzcl",
+          "PODGROUP": "splunk-switch_crzcl.canary",
           "TEMPLATEID": "mandm-splunk-switch.CRZ",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
@@ -1282,18 +1281,18 @@
       },
       "mq_ice_prod": {
         "PROD": {
-        "PODGROUP": "mqice.pri",
-        "TEMPLATEID": "mq.linux",
-        "GROUPSIZE": 1,
-        "TAGGROUPS": 0,
-        "INFRA": "Primary",
-        "ROLE": "mq",
-        "FILTER": [
-          "dbl20ice.*"
-        ],
-        "CL_STATUS": "ACTIVE",
-        "CLUSTER_TYPE": "POD"
-         }
+          "PODGROUP": "mqice.pri",
+          "TEMPLATEID": "mq.linux",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Primary",
+          "ROLE": "mq",
+          "FILTER": [
+            "dbl20ice.*"
+          ],
+          "CL_STATUS": "ACTIVE",
+          "CLUSTER_TYPE": "POD"
+        }
       },
       "sapp_prod": {
         "PROD": {
@@ -1429,7 +1428,7 @@
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "FILTER": [
-                "(^hbase.*-(yhu|syd|hio))"
+            "(^hbase.*-(yhu|syd|hio))"
           ],
           "INFRA": "Supporting_Infrastructure",
           "ROLE": "mnds",
@@ -1524,7 +1523,7 @@
       },
       "hbase_dch_canary_prod": {
         "PROD": {
-          "PODGROUP": "dchbase_internal.clusters",
+          "PODGROUP": "dchbase_internal.canary",
           "TEMPLATEID": "hbase.dchbase.canary",
           "GROUPSIZE": 2,
           "TAGGROUPS": 0,
@@ -1556,7 +1555,7 @@
       },
       "hbase_dch_mnds_canary_prod": {
         "PROD": {
-          "PODGROUP": "dchbase_internal.clusters",
+          "PODGROUP": "dchbase_internal.canary",
           "TEMPLATEID": "hbase.dchbase",
           "GROUPSIZE": 0,
           "TAGGROUPS": 0,
@@ -1696,7 +1695,7 @@
       },
       "hbase_mnds_canary_prod": {
         "PROD": {
-          "PODGROUP": "hbase.clusters",
+          "PODGROUP": "hbase_clusters.canary",
           "TEMPLATEID": "hbase.canary",
           "GROUPSIZE": 0,
           "TAGGROUPS": 5,
@@ -1710,20 +1709,20 @@
         }
       },
       "hbase_dnds_canary_prod": {
-         "PROD": {
-           "PODGROUP": "hbase.clusters",
-           "TEMPLATEID": "hbase.canary",
-           "GROUPSIZE": 2,
-           "TAGGROUPS": 5,
-           "PATCHING": "byrack",
-           "FILTER": [
-             "stg.*hdaas.*-prd"
-           ],
-           "INFRA": "Supporting_Infrastructure",
-           "ROLE": "dnds",
-           "CL_STATUS": "DECOM"
-         }
-       },
+        "PROD": {
+          "PODGROUP": "hbase_clusters.canary",
+          "TEMPLATEID": "hbase.canary",
+          "GROUPSIZE": 2,
+          "TAGGROUPS": 5,
+          "PATCHING": "byrack",
+          "FILTER": [
+            "stg.*hdaas.*-prd"
+          ],
+          "INFRA": "Supporting_Infrastructure",
+          "ROLE": "dnds",
+          "CL_STATUS": "DECOM"
+        }
+      },
       "hbase_deepsea_prod": {
         "PROD": {
           "PODGROUP": "hbase.clusters",
@@ -1912,7 +1911,7 @@
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "FILTER": [
-        "(?!(ice1sayonara2a-mnds1-1-prd$))(.*sayonara.*|^dbaas0.*)"
+            "(?!(ice1sayonara2a-mnds1-1-prd$))(.*sayonara.*|^dbaas0.*)"
           ],
           "INFRA": "Primary",
           "ROLE": "mnds",
@@ -1922,7 +1921,7 @@
       },
       "hbase_sayonara_canary_prod": {
         "PROD": {
-          "PODGROUP": "hbase_sayonara.clusters",
+          "PODGROUP": "hbase_sayonara.canary",
           "TEMPLATEID": "hbase.sayonara",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
@@ -2020,7 +2019,8 @@
           "INFRA": "Primary",
           "ROLE": "dnds",
           "CL_STATUS": "DECOM",
-          "CLUSTER_TYPE": "HBASE"    }
+          "CLUSTER_TYPE": "HBASE"
+        }
       },
       "hbase_mnds_1_dr": {
         "DR": {
@@ -2163,7 +2163,7 @@
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "FILTER": [
-        ".*(slbminion).*"
+            ".*(slbminion).*"
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "samcompute,samkubeapi",
@@ -2378,7 +2378,6 @@
         }
       },
       "insights_redis_prod": {
-
         "PROD": {
           "PODGROUP": "insights.pri",
           "TEMPLATEID": "insights-redis",
@@ -2513,7 +2512,7 @@
       },
       "log_hub_canary_prod": {
         "PROD": {
-          "PODGROUP": "hubcl",
+          "PODGROUP": "hubcl.canary",
           "TEMPLATEID": "log_hub",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
@@ -2542,12 +2541,12 @@
       },
       "argusui_canary_prod": {
         "PROD": {
-          "PODGROUP": "arguscl",
+          "PODGROUP": "arguscl.canary",
           "TEMPLATEID": "argusui",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "FILTER": [
-        "(.*(argusui2-1-))"
+            "(.*(argusui2-1-))"
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "argus_ui",
@@ -2575,7 +2574,7 @@
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "FILTER": [
-        "(?!(shared1-argusalert1-2-prd))"
+            "(?!(shared1-argusalert1-2-prd))"
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "argus_alert",
@@ -2584,12 +2583,12 @@
       },
       "argus_alert_canary_prod": {
         "PROD": {
-          "PODGROUP": "arguscl",
+          "PODGROUP": "arguscl.canary",
           "TEMPLATEID": "argusalert",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "FILTER": [
-        "shared1-argusalert1-2-prd"
+            "shared1-argusalert1-2-prd"
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "argus_alert",
@@ -2638,12 +2637,12 @@
       },
       "argusws_canary_prod": {
         "PROD": {
-          "PODGROUP": "arguscl",
+          "PODGROUP": "arguscl.canary",
           "TEMPLATEID": "argusws",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "FILTER": [
-        "(.*(argusws2-5-))"
+            "(.*(argusws2-5-))"
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "argus_ws",
@@ -2729,7 +2728,7 @@
       },
       "argus_mq_zk_canary_prod": {
         "PROD": {
-          "PODGROUP": "arguscl",
+          "PODGROUP": "arguscl.canary",
           "TEMPLATEID": "argus_mq_zk",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
@@ -2772,7 +2771,7 @@
       },
       "argus_cache_canary_prod": {
         "PROD": {
-          "PODGROUP": "arguscl",
+          "PODGROUP": "arguscl.canary",
           "TEMPLATEID": "argus_cache",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
@@ -2956,21 +2955,21 @@
           "ROLE": "dva_onboarding",
           "CLUSTER_TYPE": "HSD_ONBOARDING"
         }
-     },
-     "secrets_prod": {
-      "PROD": {
-        "PODGROUP": "vaultczarcl",
-        "TEMPLATEID": "secrets",
-        "GROUPSIZE": 1,
-        "TAGGROUPS": 0,
-        "FILTER": [
-        "(?!(.*-(xrd|prd|sfm)))"
-        ],
-        "INFRA": "PRIMARY'",
-        "ROLE": "secrets",
-        "CLUSTER_TYPE": "SECRETS"
-      }
-     },
+      },
+      "secrets_prod": {
+        "PROD": {
+          "PODGROUP": "vaultczarcl",
+          "TEMPLATEID": "secrets",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "FILTER": [
+            "(?!(.*-(xrd|prd|sfm)))"
+          ],
+          "INFRA": "PRIMARY'",
+          "ROLE": "secrets",
+          "CLUSTER_TYPE": "SECRETS"
+        }
+      },
       "secrets_jenkins_prod": {
         "PROD": {
           "PODGROUP": "secjenkins",
@@ -3099,7 +3098,7 @@
       },
       "dvasyslog_canary_prod": {
         "PROD": {
-          "PODGROUP": "dvasyslog_prod",
+          "PODGROUP": "dvasyslog_prod.canary",
           "TEMPLATEID": "dvasyslog",
           "GROUPSIZE": 3,
           "TAGGROUPS": 0,
@@ -3309,7 +3308,7 @@
       },
       "ginghamworker_canary_prod": {
         "PROD": {
-          "PODGROUP": "ginghamcl",
+          "PODGROUP": "ginghamcl.canary",
           "TEMPLATEID": "ginghamworker",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
@@ -3649,7 +3648,7 @@
           "CLUSTER_TYPE": "OPS,ENG"
         }
       },
-        "icesplunk_prod": {
+      "icesplunk_prod": {
         "PROD": {
           "PODGROUP": "icesplunkcl",
           "TEMPLATEID": "straight-patch-Goc++",
@@ -3695,7 +3694,7 @@
           "CLUSTER_TYPE": "PUPPETMASTER,puppet-kingdomlevel"
         }
       },
-        "bks_rpt_prod": {
+      "bks_rpt_prod": {
         "PROD": {
           "PODGROUP": "bksrcl",
           "TEMPLATEID": "bksrpt",
@@ -3706,7 +3705,7 @@
           "CLUSTER_TYPE": "BKSRPT"
         }
       },
-        "captainzk_prod": {
+      "captainzk_prod": {
         "PROD": {
           "PODGROUP": "captain",
           "TEMPLATEID": "captainzk",
@@ -3744,7 +3743,7 @@
       },
       "netbot_canary_prod": {
         "PROD": {
-          "PODGROUP": "netbot",
+          "PODGROUP": "netbot.canary",
           "TEMPLATEID": "netbot",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
@@ -3786,7 +3785,7 @@
       },
       "ns_canary_prod": {
         "PROD": {
-          "PODGROUP": "nscl",
+          "PODGROUP": "nscl.canary",
           "TEMPLATEID": "ns",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
@@ -4037,4 +4036,3 @@
         }
       }
     }
-
