@@ -484,7 +484,9 @@ def custom_dc_list(region, rnd):
     """
     all_dcs = class_atlas.atlas_query(datacenter=True)
     dcs = []
-    loc_pattern = re.compile(region)
+    loc_pattern = ""
+    if region:
+        loc_pattern = re.compile(region)
     if rnd and region is not None:
         for dc in all_dcs:
             if loc_pattern.match(dc["location"]) and dc["gia"] == False and dc["rnd"] == True:
