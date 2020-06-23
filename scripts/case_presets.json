@@ -3658,7 +3658,7 @@
           "GROUPSIZE": 10,
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
-          "ROLE": "ice-splunk-idxr,icesplunk,splunkdply,splunkfwd",
+          "ROLE": "ice-splunk-idxr,icesplunk,splunkdply,splunkfwd,icesplunkdply",
           "CLUSTER_TYPE": "SPLUNKFWD,SPLUNK-INDEXER"
         }
       },
