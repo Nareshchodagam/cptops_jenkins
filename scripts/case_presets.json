@@ -626,6 +626,18 @@
           "CLUSTER_TYPE": "POD"
         }
       },
+      "ffx_sing_prod": {
+        "PROD": {
+          "PODGROUP": "afw.pri",
+          "TEMPLATEID": "ffx_sing",
+          "GROUPSIZE": 5,
+          "TAGGROUPS": 0,
+          "INFRA": "Primary",
+          "ROLE": "ffx",
+          "CLUSTER_TYPE": "POD",
+          "HO_STATUS": "PROVISIONING,IN_MAINTENANCE"
+        }
+      },
       "ffx_caps_prod": {
         "PROD": {
           "PODGROUP": "afw.pri",
@@ -638,6 +650,21 @@
           "INFRA": "Primary",
           "ROLE": "ffx",
           "CLUSTER_TYPE": "POD"
+        }
+      },
+      "ffx_caps_sing_prod": {
+        "PROD": {
+          "PODGROUP": "afw.pri",
+          "TEMPLATEID": "ffx_caps_sing",
+          "GROUPSIZE": 5,
+          "TAGGROUPS": 0,
+          "FILTER": [
+            "(?!(.*-(prd|xrd|crd|yhu|yul|syd|cdu|crz|chi|was|lon)))"
+          ],
+          "INFRA": "Primary",
+          "ROLE": "ffx",
+          "CLUSTER_TYPE": "POD",
+          "HO_STATUS": "PROVISIONING,IN_MAINTENANCE"
         }
       },
       "ffx_ice_prod": {
@@ -1217,6 +1244,21 @@
           "CLUSTER_TYPE": "POD"
         }
       },
+      "ffx_sing_dr": {
+        "DR": {
+          "PODGROUP": "afw.sec",
+          "TEMPLATEID": "ffx_sing",
+          "GROUPSIZE": 5,
+          "TAGGROUPS": 0,
+          "FILTER": [
+            "(?!(cs46|gs0)-ffx(1|2)-[2-6]-*)"
+          ],
+          "INFRA": "Secondary",
+          "ROLE": "ffx",
+          "CLUSTER_TYPE": "POD",
+          "HO_STATUS": "PROVISIONING,IN_MAINTENANCE"
+        }
+      },
       "ffx_caps_dr": {
         "DR": {
           "PODGROUP": "afw.sec",
@@ -1226,6 +1268,21 @@
           "INFRA": "Secondary",
           "ROLE": "ffx",
           "CLUSTER_TYPE": "POD"
+        }
+      },
+      "ffx_caps_sing_dr": {
+        "DR": {
+          "PODGROUP": "afw.sec",
+          "TEMPLATEID": "ffx_caps_sing",
+          "GROUPSIZE": 5,
+          "TAGGROUPS": 0,
+          "FILTER": [
+            "(?!(.*-(prd|xrd|crd|yhu|yul|syd|cdu|crz|chi|was|lon)))"
+          ],
+          "INFRA": "Secondary",
+          "ROLE": "ffx",
+          "CLUSTER_TYPE": "POD",
+          "HO_STATUS": "PROVISIONING,IN_MAINTENANCE"
         }
       },
       "mq_prod": {
