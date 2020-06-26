@@ -159,8 +159,9 @@ class Atlas:
                            "superpodName,clusterStatus,clusterDr,clusterType,hostName,hostOs,hostOnboarded," \
                            "clusterEnvironment"
         self.current_bundle = "/patch-bundles?current=true"
+        self.datacenter_list = "/datacenters/list"
 
-    def atlas_query(self, cesa=None, host=None, current=None):
+    def atlas_query(self, cesa=None, host=None, current=None, datacenter=False):
         """
         This function is used to query Atlas for getting
         1. Hosts impacted by  given CESA
@@ -179,6 +180,9 @@ class Atlas:
             logger.debug("Fetching data from atlas for host [%s] URL %s ", host, url)
         elif current:
             url = "{0}{1}".format(self.atlas_url, self.current_bundle)
+            logger.debug("Fetching data from URL %s", url)
+        elif datacenter:
+            url = "{0}{1}".format(self.atlas_url, self.datacenter_list)
             logger.debug("Fetching data from URL %s", url)
 
         session = requests.Session()
