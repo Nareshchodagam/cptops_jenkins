@@ -2395,7 +2395,7 @@
       "orch_prod": {
         "PROD": {
           "PODGROUP": "orchcl",
-          "TEMPLATEID": "straight-patch-splunk",
+          "TEMPLATEID": "straight-patch-Goc++",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "INFRA": "Supporting_Infrastructure",
