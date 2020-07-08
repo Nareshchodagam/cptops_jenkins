@@ -1169,16 +1169,6 @@
           "CLUSTER_TYPE": "SEARCHZK"
         }
       },
-      "searchzk_canary_prod": {
-        "PROD": {
-          "PODGROUP": "searchzkcl_canary",
-          "TEMPLATEID": "searchzk",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "searchzk"
-        }
-      },
       "monitor_prod": {
         "PROD": {
           "PODGROUP": "monitor.pri",
@@ -1581,22 +1571,6 @@
           "CL_STATUS": "DECOM"
         }
       },
-      "hbase_dch_canary_prod": {
-        "PROD": {
-          "PODGROUP": "dchbase_internal.canary",
-          "TEMPLATEID": "hbase.dchbase.canary",
-          "GROUPSIZE": 2,
-          "TAGGROUPS": 0,
-          "PATCHING": "byrack",
-          "FILTER": [
-            "dev[7,8]hdaas.*"
-          ],
-          "INFRA": "Primary",
-          "ROLE": "dnds",
-          "CLUSTER_TYPE": "HBASE",
-          "CL_STATUS": "DECOM"
-        }
-      },
       "hbase_internal_dch_prod": {
         "PROD": {
           "PODGROUP": "dchbase_internal.clusters",
@@ -1768,21 +1742,6 @@
           "CL_STATUS": "DECOM"
         }
       },
-      "hbase_dnds_canary_prod": {
-        "PROD": {
-          "PODGROUP": "hbase_clusters.canary",
-          "TEMPLATEID": "hbase.canary",
-          "GROUPSIZE": 2,
-          "TAGGROUPS": 5,
-          "PATCHING": "byrack",
-          "FILTER": [
-            "stg.*hdaas.*-prd"
-          ],
-          "INFRA": "Supporting_Infrastructure",
-          "ROLE": "dnds",
-          "CL_STATUS": "DECOM"
-        }
-      },
       "hbase_deepsea_prod": {
         "PROD": {
           "PODGROUP": "hbase.clusters",
@@ -1796,6 +1755,20 @@
           "INFRA": "Supporting_Infrastructure",
           "ROLE": "dnds",
           "CL_STATUS": "DECOM"
+        }
+      },
+      "hbase_deepsea_canary_prod": {
+        "PROD": {
+          "PODGROUP": "deepsea.canary",
+          "TEMPLATEID": "straight-patch-Goc++",
+          "GROUPSIZE": 10,
+          "PATCHING": "byrack",
+          "TAGGROUPS": 1,
+          "FILTER": [
+            "sbox1hdaas-gnds2-1-prd|sbox1hdaas-gnds3-1-prd|sbox1hdaas-dnds1-2-prd|sbox1hdaas-dnds1-3-prd|sbox1hdaas-dnds1-5-prd|sbox1hdaas-dnds1-6-prd"
+          ],
+          "INFRA": "Supporting_Infrastructure",
+          "ROLE": "gnds,dnds"
         }
       },
       "hbase_mnds_argus_prod": {
@@ -2186,20 +2159,6 @@
           "INFRA": "Supporting Infrastructure",
           "ROLE": "netmgt",
           "CLUSTER_TYPE": "OPSNETMGT"
-        }
-      },
-      "slbminion_canary_prod": {
-        "PROD": {
-          "PODGROUP": "slbminion.canary",
-          "TEMPLATEID": "sam_slb",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "FILTER": [
-            "shared0-slbminion2-[1-2]-prd"
-          ],
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "samcompute",
-          "CLUSTER_TYPE": "SAMMINION"
         }
       },
       "sam_prod": {
@@ -3366,19 +3325,6 @@
           "CLUSTER_TYPE": "GINGHAM_WORKER"
         }
       },
-      "ginghamworker_canary_prod": {
-        "PROD": {
-          "PODGROUP": "ginghamcl.canary",
-          "TEMPLATEID": "ginghamworker",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "FILTER": [
-            ".*-(xrd|prd)"
-          ],
-          "ROLE": "gingham_worker"
-        }
-      },
       "deepsealego_prod": {
         "PROD": {
           "PODGROUP": "deepsealego",
@@ -3670,20 +3616,6 @@
           "INFRA": "Supporting_Infrastructure",
           "ROLE": "rps",
           "CLUSTER_TYPE": "RPS_TEST"
-        }
-      },
-      "hbase_deepsea_canary_prod": {
-        "PROD": {
-          "PODGROUP": "deepsea.canary",
-          "TEMPLATEID": "straight-patch-Goc++",
-          "GROUPSIZE": 10,
-          "PATCHING": "byrack",
-          "TAGGROUPS": 1,
-          "FILTER": [
-            "sbox1hdaas-gnds2-1-prd|sbox1hdaas-gnds3-1-prd|sbox1hdaas-dnds1-2-prd|sbox1hdaas-dnds1-3-prd|sbox1hdaas-dnds1-5-prd|sbox1hdaas-dnds1-6-prd"
-          ],
-          "INFRA": "Supporting_Infrastructure",
-          "ROLE": "gnds,dnds"
         }
       },
       "mmrelay_srtools_prod": {
