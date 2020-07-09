@@ -3,7 +3,6 @@
 import logging
 import re
 from pprint import pformat
-
 import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
@@ -15,17 +14,14 @@ logger = logging.getLogger(__name__)
 
 def split_list(s_list):
     """
-    A function to split the input list argument by half.
-    Since Atlas doesn't support more than 5 query string parameters, this will break down the query string in half
-    if they are more then 5.
+    A function to group the input list by 5 cesas each.
+    Since Atlas doesn't support more than 5 query string parameters, this will break the list grouping 5 cesa's each
     :param s_list: list
     :return: tuple
     """
-    logger.info("Split the list %s by half", s_list)
-    half = len(s_list) // 2
-    logger.debug("CESA's going to process %s", half)
-    return s_list[:half], s_list[half:]
-
+    logger.info("Splitting the list of %s by 5 cesas each", s_list)
+    grouped_cesas = [' '.join(s_list[i: i + 5]) for i in range(0, len(s_list), 5)]
+    return grouped_cesas
 
 def group_pods(podlist, cluster_type=None):
     """
@@ -209,24 +205,17 @@ class Atlas:
             logger.debug("All impacted hosts %s  ", all_cesa)
 
         else:  # If total CESA to query is more than 5, break it down
-            cesas_list1, cesas_list2 = split_list(cesas.split(","))
+            cesas_list = split_list(cesas.split(","))
             all_cesa = dict()
-            out = self.atlas_query(",".join(cesas_list1))
-            logger.debug("Hosts from first group of CESA [%s] ", pformat(out))
-            out1 = self.atlas_query(",".join(cesas_list2))
-            logger.debug("Hosts from second group of CESA [%s] ", pformat(out1))
-            logger.info("Extracted all the hosts from CESA [ %s %s ] ", cesas_list1, cesas_list2)
-
-            # Combined the two returned data structure into a single.
-            dict_keys = set(out.keys() + out1.keys())  # Get unique keys from both dict keys
-            for i in dict_keys:
-                if (i in out) and (i in out1):
-                    all_cesa[i] = list(set(out[i] + out1[i]))
-                elif (i in out) and (i not in out1):
-                    all_cesa[i] = out[i]
-                elif (i in out1) and (i not in out):
-                    all_cesa[i] = out1[i]
-            logger.info("Joined all hosts for all given CESA [%s]  ", cesas)
+            for cesa in cesas_list:
+                out = self.atlas_query(cesa.replace(" ",","))
+                dict_keys = set(out.keys() + all_cesa.keys())
+                for i in dict_keys:
+                    if (i in out) and (i in all_cesa):
+                        all_cesa[i] = list(set(out[i] + all_cesa[i]))
+                    elif (i in out) and (i not in all_cesa):
+                        all_cesa[i] = out[i]
+            logger.info("Extracted all the hosts from CESA [ %s ] ", pformat(all_cesa))
         return all_cesa
 
     def get_pods(self, host):
