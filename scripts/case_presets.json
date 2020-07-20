@@ -3003,11 +3003,11 @@
       "hadoop_prod": {
         "PROD": {
           "PODGROUP": "haddopcl",
-          "TEMPLATEID": "straight-patch",
-          "GROUPSIZE": 3,
+          "TEMPLATEID": "straight-patch-Goc++",
+          "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "INFRA": "PRIMARY'",
-          "ROLE": "infinsighthadoop",
+          "ROLE": "infinsighthadoop,infinsightapi,infinsightdb",
           "CLUSTER_TYPE": "INFINSIGHTPRD,INFINSIGHT"
         }
       },
