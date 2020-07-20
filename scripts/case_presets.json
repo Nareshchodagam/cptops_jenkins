@@ -3004,10 +3004,10 @@
         "PROD": {
           "PODGROUP": "haddopcl",
           "TEMPLATEID": "straight-patch",
-          "GROUPSIZE": 3,
+          "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "INFRA": "PRIMARY'",
-          "ROLE": "infinsighthadoop",
+          "ROLE": "infinsighthadoop,infinsightapi",
           "CLUSTER_TYPE": "INFINSIGHTPRD,INFINSIGHT"
         }
       },
