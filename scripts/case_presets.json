@@ -3874,7 +3874,8 @@
           "PATCHING": "all",
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
-          "ROLE": "htgapp"
+          "ROLE": "htgapp",
+          "CLUSTER_TYPE": "HAMMER"
         }
       },
       "migration_htgapp_dr": {
@@ -3885,7 +3886,8 @@
           "PATCHING": "all",
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
-          "ROLE": "htgapp"
+          "ROLE": "htgapp",
+          "CLUSTER_TYPE": "HAMMER"
         }
       },
       "migration_mq_prod": {
@@ -3929,13 +3931,41 @@
         }
       },
       "migration_dapp_dr": {
-        "PROD": {
+        "DR": {
           "PODGROUP": "migration_dapp_dr",
           "TEMPLATEID": "migration_dapp_dr",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "dapp"
+        }
+      },
+      "migration_dnds_prod": {
+        "PROD": {
+          "PODGROUP": "migration_dnds_prod",
+          "TEMPLATEID": "migration_dnds_prod",
+          "GROUPSIZE": 5,
+          "TAGGROUPS": 0,
+          "FILTER": [
+            "(?!(hdaas-*))"
+          ],
+          "PATCHING": "byrack",
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "dnds"
+        }
+      },
+      "migration_deepsea_prod": {
+        "PROD": {
+          "PODGROUP": "migration_deepsea_prod",
+          "TEMPLATEID": "migration_deepsea_prod",
+          "GROUPSIZE": 20,
+          "TAGGROUPS": 0,
+          "PATCHING": "byrack",
+          "FILTER": [
+            "(hdaas-*)"
+          ],
+          "INFRA": "Supporting_Infrastructure",
+          "ROLE": "dnds"
         }
       },
       "migration_mq_dr": {
@@ -3952,10 +3982,21 @@
         "PROD": {
           "PODGROUP": "migration_ajna_broker_prod",
           "TEMPLATEID": "migration_ajna_broker_prod",
-          "GROUPSIZE": 10,
+          "GROUPSIZE": 100,
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "ajna_broker",
+          "CLUSTER_TYPE": "AJNA"
+        }
+      },
+      "migration_ajna_zk_prod": {
+        "PROD": {
+          "PODGROUP": "migration_ajna_zk_prod",
+          "TEMPLATEID": "migration_ajna_zk_prod",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "ajna_zk",
           "CLUSTER_TYPE": "AJNA"
         }
       },
@@ -3963,7 +4004,7 @@
         "PROD": {
           "PODGROUP": "migration_ajna_mirror_prod",
           "TEMPLATEID": "migration_ajna_mirror_prod",
-          "GROUPSIZE": 1,
+          "GROUPSIZE": 2,
           "TAGGROUPS": 0,
           "PATCHING": "minorset",
           "INFRA": "Supporting Infrastructure",
@@ -3993,6 +4034,221 @@
           "INFRA": "Supporting Infrastructure",
           "ROLE": "ajna_wrangler",
           "CLUSTER_TYPE": "AJNA_MGMT"
+        }
+      },
+      "migration_mgmt_hub_prod": {
+        "PROD": {
+          "PODGROUP": "migration_mgmt_hub_prod",
+          "TEMPLATEID": "migration_mgmt_hub_prod",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Primary",
+          "REGEX": "failoverstatus=PRIMARY",
+          "ROLE": "mgmt_hub",
+          "CL_STATUS": "DECOM",
+          "CLUSTER_TYPE": "POD"
+        }
+      },
+      "migration_mgmt_hub_standby_prod": {
+        "PROD": {
+          "PODGROUP": "migration_mgmt_hub_standby_prod",
+          "TEMPLATEID": "migration_mgmt_hub_standby_prod",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Primary",
+          "REGEX": "failoverstatus=STANDBY",
+          "ROLE": "mgmt_hub",
+          "CL_STATUS": "DECOM"
+        }
+      },
+      "migration_mgmt_hub_dr": {
+        "DR": {
+          "PODGROUP": "migration_mgmt_hub_dr",
+          "TEMPLATEID": "migration_mgmt_hub_dr",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Secondary",
+          "REGEX": "failoverstatus=PRIMARY",
+          "ROLE": "mgmt_hub",
+          "CL_STATUS": "DECOM",
+          "CLUSTER_TYPE": "POD"
+        }
+      },
+      "migration_mgmt_hub_standby_dr": {
+        "DR": {
+          "PODGROUP": "migration_mgmt_hub_standby_dr",
+          "TEMPLATEID": "migration_mgmt_hub_standby_dr",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Secondary",
+          "REGEX": "failoverstatus=STANDBY",
+          "ROLE": "mgmt_hub",
+          "CL_STATUS": "DECOM",
+          "CLUSTER_TYPE": "POD"
+        }
+      },
+      "migration_nms_prod": {
+        "PROD": {
+          "PODGROUP": "migration_nms_prod",
+          "TEMPLATEID": "migration_nms_prod",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Primary",
+          "FILTER": [
+            ".*(nms[^3]-[1-2]-(?!sfm))"
+          ],
+          "ROLE": "nms",
+          "CLUSTER_TYPE": "SMARTS"
+        }
+      },
+      "migration_nms_nmsfwd_prod": {
+        "PROD": {
+          "PODGROUP": "migration_nms_nmsfwd_prod",
+          "TEMPLATEID": "migration_nms_nmsfwd_prod",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Primary",
+          "FILTER": [
+            ".*(nms3-[1-2]-(?!sfm))"
+          ],
+          "ROLE": "nms",
+          "CLUSTER_TYPE": "SMARTS"
+        }
+      },
+      "migration_dvamon_prod": {
+        "PROD": {
+          "PODGROUP": "migration_dvamon_prod",
+          "TEMPLATEID": "migration_dvamon_prod",
+          "GROUPSIZE": 2,
+          "TAGGROUPS": 0,
+          "PATCHING": "all",
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "dvamon",
+          "CLUSTER_TYPE": "MFM"
+        }
+      },
+      "migration_funnel_prod": {
+        "PROD": {
+          "PODGROUP": "migration_funnel_prod",
+          "TEMPLATEID": "migration_funnel_prod",
+          "GROUPSIZE": 4,
+          "TAGGROUPS": 0,
+          "PATCHING":"all",
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "funnel",
+          "CLUSTER_TYPE": "FUNNEL",
+          "HOSTPERCENT": "33"
+        }
+      },
+      "migration_pbsmatch_prod": {
+        "PROD": {
+          "PODGROUP": "migration_pbsmatch_prod",
+          "TEMPLATEID": "migration_pbsmatch_prod",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting_Infrastructure",
+          "ROLE": "pbsmatch",
+          "CLUSTER_TYPE": "PBSMATCH"
+        }
+      },
+      "migration_dvasyslog_prod": {
+        "PROD": {
+          "PODGROUP": "migration_dvasyslog_prod",
+          "TEMPLATEID": "migration_dvasyslog_prod",
+          "GROUPSIZE": 3,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "PATCHING": "all",
+          "ROLE": "dvasyslog",
+          "CLUSTER_TYPE": "DVA_SYSLOG",
+          "HOSTPERCENT": "25"
+        }
+      },
+      "migration_logbus_prod": {
+        "PROD": {
+          "PODGROUP": "migration_logbus_prod",
+          "TEMPLATEID": "migration_logbus_prod",
+          "GROUPSIZE": 30,
+          "TAGGROUPS": 0,
+          "INFRA": "Primary",
+          "ROLE": "logbus"
+        }
+      },
+      "migration_argus_ui_prod": {
+        "PROD": {
+          "PODGROUP": "migration_argus_ui_prod",
+          "TEMPLATEID": "migration_argus_ui_prod",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "argus_ui",
+          "CLUSTER_TYPE": "ARGUS"
+        }
+      },
+      "migration_argus_mq_prod": {
+        "PROD": {
+          "PODGROUP": "migration_argus_mq_prod",
+          "TEMPLATEID": "migration_argus_mq_prod",
+          "GROUPSIZE": 2,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "argus_mq",
+          "CLUSTER_TYPE": "ARGUS"
+        }
+      },
+      "migration_argus_rdbms_prod": {
+        "PROD": {
+          "PODGROUP": "migration_argus_rdbms_prod",
+          "TEMPLATEID": "migration_argus_rdbms_prod",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "argus_rdbms",
+          "CLUSTER_TYPE": "ARGUS"
+        }
+      },
+      "migration_mandm_splunk_idxr_prod": {
+        "PROD": {
+          "PODGROUP": "migration_mandm_splunk_idxr_prod",
+          "TEMPLATEID": "migration_mandm_splunk_idxr_prod",
+          "GROUPSIZE": 5,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "mandm-splunk-idxr",
+          "CLUSTER_TYPE": "SPLUNK-IDX,SPLUNK-TBD"
+        }
+      },
+      "migration_grok_prod": {
+        "PROD": {
+          "PODGROUP": "migration_grok_prod",
+          "TEMPLATEID": "migration_grok_prod",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "grok",
+          "CLUSTER_TYPE": "GROK"
+        }
+      },
+      "migration_ffx_prod": {
+        "PROD": {
+          "PODGROUP": "migration_ffx_prod",
+          "TEMPLATEID": "migration_ffx_prod",
+          "GROUPSIZE": 5,
+          "TAGGROUPS": 0,
+          "INFRA": "Primary",
+          "ROLE": "ffx",
+          "CLUSTER_TYPE": "POD"
+        }
+      },
+      "migration_ffx_dr": {
+        "DR": {
+          "PODGROUP": "migration_ffx_dr",
+          "TEMPLATEID": "migration_ffx_dr",
+          "GROUPSIZE": 5,
+          "TAGGROUPS": 0,
+          "INFRA": "Secondary",
+          "ROLE": "ffx",
+          "CLUSTER_TYPE": "POD"
         }
       },
       "migration_acs_prod": {
