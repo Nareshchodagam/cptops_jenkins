@@ -14,6 +14,7 @@ import subprocess
 import sys
 from functools import partial
 from pprint import pformat
+import requests
 
 # from multiprocessing.dummy import Pool as ThreadPool
 from operator import attrgetter
@@ -547,7 +548,7 @@ if __name__ == "__main__":
     parser.add_argument("--podgroup", dest="podgroup", help="Hostlist file for role.")
     parser.add_argument("--groupsize", dest="groupsize", help="Groupsize.")
     parser.add_argument("--taggroups", dest="taggroups", help="Taggroups.")
-    parser.add_argument("--bundle", dest="bundle", default=None, help="Patch Bundle.")
+    parser.add_argument("--bundle", dest="bundle", default="current", help="Patch Bundle.")
     parser.add_argument("--skip_bundle", dest="skip_bundle", help="Skip Bundle.")
     parser.add_argument("--subject", dest="subject", help="Subject.")
     parser.add_argument("--dowork", dest="dowork", help="Task to perform")
@@ -651,10 +652,29 @@ if __name__ == "__main__":
             print("\n--os valid options are 6 and 7, provided {0}\n".format(options.os))
             sys.exit(1)
 
-    if not options.bundle:
-        verFile = os.path.join(os.environ["HOME"], "git/cptops_validation_tools/includes/valid_versions.json")
-        bundleOut = partial(bundleName, file=verFile, bundle='current')
-        options.casesubject, options.bundle = bundleOut(readFile)
+
+    if options.bundle.lower() in ["current", "canary"]:
+        try:
+            bundle_data = requests.get("https://ops0-cpt1-1-xrd.eng.sfdc.net:9876/api/v1/patch-bundles", verify=False, timeout=10)
+            if not bundle_data.status_code == 200:
+                raise Exception
+            casesubject = ""
+            bundle_data = bundle_data.json()
+            for release in bundle_data:
+                if release.get(options.bundle.lower(), False):
+                    if release["osMajor"] == "7":
+                        ce_7 = release["release"]
+                    else:
+                        ce_6 = release["release"]
+            casesubject = ce_6 + "/" + ce_7
+            if not casesubject:
+                raise Exception
+        except Exception:
+            print("Error connecting to Atlas/fetching patch bundles, exiting!")
+            sys.exit(1)
+        options.casesubject = casesubject
+    else:
+        options.casesubject = "/".join([options.bundle]*2)
 
     if options.full_list and options.roleclass:
         pp = pprint.PrettyPrinter(indent=2)
