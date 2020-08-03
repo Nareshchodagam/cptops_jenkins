@@ -2551,7 +2551,7 @@
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "FILTER": [
-            "(?!(.*(argusui2-1-))"
+            "(?!(.*(argusui2-1-)))"
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "argus_ui",
