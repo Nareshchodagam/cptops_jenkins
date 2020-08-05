@@ -2257,9 +2257,6 @@
           "TEMPLATEID": "deploydata",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
-          "FILTER": [
-            "^(?!ops[0]?-deploydata[1|2]-.*(crd)).*"
-          ],
           "INFRA": "Primary",
           "ROLE": "deploydata",
           "CLUSTER_TYPE": "DEPLOYDATA"
