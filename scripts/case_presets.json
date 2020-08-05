@@ -3593,7 +3593,7 @@
           "COMMENT": "Kaiju",
           "WORKITEM": "W-4243192",
           "PODGROUP": "syntheticsmastercl",
-          "TEMPLATEID": "syntheticsmaster_1",
+          "TEMPLATEID": "straight-patch-Goc++",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
