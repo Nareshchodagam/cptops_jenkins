@@ -3148,6 +3148,9 @@
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
+          "FILTER": [
+                     "(?!(ops0-sysmgt1-1-prd|ops0-sysmgt2-1-xrd))"
+          ],
           "ROLE": "sysmgt"
         }
       },
