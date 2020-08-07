@@ -1384,6 +1384,9 @@
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
+          "FILTER": [
+            "(?!(ops0-artifactrepo2-3-prd|ops0-artifactrepo2-1-xrd))"
+          ],
           "ROLE": "artifactrepo",
           "CLUSTER_TYPE": "ARTIFACTREPO"
         }
