@@ -3233,6 +3233,9 @@
           "GROUPSIZE": 3,
           "PATCHING": "minorset",
           "TAGGROUPS": 0,
+          "FILTER": [
+            "(?!(ajna0-wrangler1-1-prd|ajna0-wrangler1-1-xrd|ajna0-mgmt1-1-prd|ajna0-mgmt1-1-xrd))"
+          ],
           "HO_STATUS": "ACTIVE,PROVISIONING",
           "INFRA": "Supporting Infrastructure",
           "ROLE": "ajna_mgmt,ajna_wrangler",
