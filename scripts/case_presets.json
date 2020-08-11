@@ -716,6 +716,9 @@
           "TEMPLATEID": "ajna_broker",
           "GROUPSIZE": 100,
           "TAGGROUPS": 0,
+          "FILTER": [
+            "(?!(ajna0-broker1-1-xrd|ajna0-broker2-25-prd))"
+          ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "ajna_broker",
           "CLUSTER_TYPE": "AJNA"
@@ -3152,7 +3155,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "FILTER": [
-                     "(?!(ops0-sysmgt1-1-prd|ops0-sysmgt2-1-xrd))"
+            "(?!(ops0-sysmgt1-1-prd|ops0-sysmgt2-1-xrd))"
           ],
           "ROLE": "sysmgt"
         }
