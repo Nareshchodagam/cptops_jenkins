@@ -2638,6 +2638,9 @@
           "TEMPLATEID": "ajna_zk",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
+          "FILTER": [
+            "(?!(ajna0-zk1-1-prd|ajna0-zk2-1-xrd))"
+          ],        
           "INFRA": "Supporting Infrastructure",
           "ROLE": "ajna_zk",
           "CLUSTER_TYPE": "AJNA"
