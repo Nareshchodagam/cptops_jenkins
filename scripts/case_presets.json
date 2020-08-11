@@ -3689,6 +3689,17 @@
           "CLUSTER_TYPE": "PUPPETMASTER,puppet-kingdomlevel"
         }
       },
+      "puppetng_prod": {
+        "PROD": {
+          "PODGROUP": "puppetcl",
+          "TEMPLATEID": "puppetng",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "puppetng",
+          "CLUSTER_TYPE": "PUPPETMASTER,puppet-kingdomlevel"
+        }
+      },
       "bks_rpt_prod": {
         "PROD": {
           "PODGROUP": "bksrcl",
