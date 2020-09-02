@@ -62,7 +62,7 @@ def cmd_builder(dc_list, sets, r_class=False):
     bld_cmd['role'] = sets[role_class][role_status]['ROLE']
     if options.template != None:
         bld_cmd['template'] = options.template
-    elif options.straight:
+    elif options.straight and sets[role_class][role_status]['ROLE'] != "ffx":
         user_input = raw_input(
             '\033[31m' + "You choose to straight patch, it can be risky too. Are you sure you want to continue (y/n):" +
             '\033[m'
@@ -246,6 +246,8 @@ def cmd_builder(dc_list, sets, r_class=False):
         bld_cmd['hostopstat'] = sets[role_class][role_status]['HO_STATUS']
     if 'HOSTPERCENT' in sets[role_class][role_status].keys():
         bld_cmd['hostpercent'] = sets[role_class][role_status]['HOSTPERCENT']
+    if 'NONACTIVE_STRAIGHT' in sets[role_class][role_status].keys():
+        bld_cmd['nonactive_straight'] = sets[role_class][role_status]['NONACTIVE_STRAIGHT']
 
     # Custom parameters within the case_presets.json
     # These options are not within each predefined role_class.
@@ -280,7 +282,8 @@ def cmd_builder(dc_list, sets, r_class=False):
 
     if 'HOSTPERCENT' in sets[role_class][role_status].keys() or options.hostpercent:
         logging.debug("HOSTPERCENT = " + bld_cmd['hostpercent'])
-
+    if 'NONACTIVE_STRAIGHT' in sets[role_class][role_status].keys():
+        logging.debug("NONACTIVE_STRAIGHT = " + bld_cmd['nonactive_straight'])
     with open(bld_cmd['podgroup'], 'r') as fin:
         print fin.read()
     case_builder(bld_cmd)
