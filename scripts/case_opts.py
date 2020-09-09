@@ -30,7 +30,8 @@ opt_dict = {'gsize': '-s',
 	        'skip_bundle': '--skip_bundle',
             'bpv2': '--bpv2',
             'os': '--os',
-            'csv': '--csv'}
+            'csv': '--csv',
+            'nonactive_straight': '--nonactive_straight'}
 
 req_sub = ['search(23|43)_prod',
            'search(21|22,41|42)_prod',

@@ -38,6 +38,7 @@
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "argus_dev_mq",
+          "NONACTIVE_STRAIGHT": "Yes",
           "HOSTPERCENT": "50",
           "CLUSTER_TYPE": "ARGUS"
         }
@@ -81,6 +82,7 @@
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "argus_dev_annotation",
+          "NONACTIVE_STRAIGHT": "Yes",
           "HOSTPERCENT": "50",
           "CLUSTER_TYPE": "ARGUS"
         }
@@ -124,6 +126,7 @@
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "argus_dev_ajna",
+          "NONACTIVE_STRAIGHT": "Yes",
           "HOSTPERCENT": "50",
           "CLUSTER_TYPE": "ARGUS"
         }
@@ -181,6 +184,7 @@
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "argus_dev_writed",
+          "NONACTIVE_STRAIGHT": "Yes",
           "HOSTPERCENT": "50",
           "CLUSTER_TYPE": "ARGUS"
         }
@@ -239,6 +243,7 @@
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "argus_dev_readd",
+          "NONACTIVE_STRAIGHT": "Yes",
           "HOSTPERCENT": "50",
           "CLUSTER_TYPE": "ARGUS"
         }
@@ -255,6 +260,7 @@
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "argus_metrics,argus_writed,argus_cache,argus_ws,argus_ajna",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "ARGUS"
         }
       },
@@ -279,6 +285,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "ddiagg",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "OPSNS"
         }
       },
@@ -293,6 +300,7 @@
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "mmmbus",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "AJNA"
         }
       },
@@ -341,6 +349,7 @@
             "(?!(ops0-ns[1234]-1-prd))"
           ],
           "ROLE": "ns",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "OPSNS"
         }
       },
@@ -351,6 +360,7 @@
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
+          "NONACTIVE_STRAIGHT": "Yes",
           "ROLE": "inst",
           "CLUSTER_TYPE": "OPSINST"
         }
@@ -363,6 +373,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "edns",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "OPSEDNS"
         }
       },
@@ -721,6 +732,7 @@
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "ajna_broker",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "AJNA"
         }
       },
@@ -813,6 +825,7 @@
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "mandm-splunk-api",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "SPLUNK-API,SPLUNK-TBD"
         }
       },
@@ -841,6 +854,7 @@
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "mandm-splunk-deployer",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "SPLUNK-DEPLOYER"
         }
       },
@@ -869,6 +883,7 @@
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "mandm-splunk-web",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "SPLUNK-WEB,SPLUNK-TBD"
         }
       },
@@ -894,6 +909,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "mandm-splunk-idxr",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "SPLUNK-IDX,SPLUNK-TBD"
         }
       },
@@ -920,6 +936,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "mandm-splunk-idxr",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "SPLUNK-IDX-OPS,SPLUNK-MADEIRA,SPLUNK-MADEIRA-TEST"
         }
       },
@@ -934,6 +951,7 @@
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "mandm-splunk-switch",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "SPLUNK-IDX"
         }
       },
@@ -948,6 +966,7 @@
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "mandm-splunk-switch",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "SPLUNK-IDX"
         }
       },
@@ -976,6 +995,7 @@
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "mandm-splunk-switch",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "SPLUNK-SWITCH"
         }
       },
@@ -1064,6 +1084,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "htgapp",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "HAMMER"
         }
       },
@@ -1075,6 +1096,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "htgapp",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "HAMMER"
         }
       },
@@ -1208,6 +1230,7 @@
           "INFRA": "Supporting Infrastructure",
           "ROLE": "nbmedia",
           "CL_STATUS": "DECOM",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "NETBACKUP"
         }
       },
@@ -1220,6 +1243,7 @@
           "INFRA": "Supporting Infrastructure",
           "ROLE": "nbmaster",
           "CL_STATUS": "DECOM",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "NETBACKUP"
         }
       },
@@ -1355,6 +1379,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Primary",
           "ROLE": "sapp",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CL_STATUS": "DECOM"
         }
       },
@@ -1460,6 +1485,7 @@
           "PATCHING": "byrack",
           "INFRA": "Supporting_Infrastructure",
           "ROLE": "rnds",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "HBASE",
           "CL_STATUS": "DECOM"
         }
@@ -1473,6 +1499,7 @@
           "PATCHING": "byrack",
           "INFRA": "Supporting_Infrastructure",
           "ROLE": "cnds",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "HBASE",
           "CL_STATUS": "DECOM"
         }
@@ -1533,6 +1560,7 @@
           "INFRA": "Supporting_Infrastructure",
           "ROLE": "dnds",
           "CLUSTER_TYPE": "HBASE",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CL_STATUS": "DECOM"
         }
       },
@@ -1548,6 +1576,7 @@
           "INFRA": "Supporting_Infrastructure",
           "ROLE": "dnds",
           "CLUSTER_TYPE": "HBASE",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CL_STATUS": "DECOM"
         }
       },
@@ -1562,6 +1591,7 @@
           "HOSTPERCENT": "10",
           "ROLE": "dnds",
           "CLUSTER_TYPE": "HBASE",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CL_STATUS": "DECOM"
         }
       },
@@ -1590,6 +1620,7 @@
           "INFRA": "Primary",
           "ROLE": "dnds",
           "CLUSTER_TYPE": "HBASE",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CL_STATUS": "DECOM"
         }
       },
@@ -1636,6 +1667,7 @@
           "HOSTPERCENT": "10",
           "INFRA": "Primary",
           "ROLE": "dnds",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "HBASE",
           "CL_STATUS": "DECOM"
         }
@@ -1652,6 +1684,7 @@
           ],
           "INFRA": "Supporting_Infrastructure",
           "ROLE": "dnds",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "HBASE",
           "CL_STATUS": "DECOM"
         }
@@ -1667,6 +1700,7 @@
           ],
           "INFRA": "Supporting_Infrastructure",
           "ROLE": "dnds",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "HBASE",
           "CL_STATUS": "DECOM"
         }
@@ -1760,6 +1794,7 @@
           ],
           "INFRA": "Supporting_Infrastructure",
           "ROLE": "dnds",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CL_STATUS": "DECOM"
         }
       },
@@ -1819,6 +1854,7 @@
           ],
           "INFRA": "Supporting_Infrastructure",
           "ROLE": "dnds",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CL_STATUS": "DECOM"
         }
       },
@@ -1894,6 +1930,7 @@
           ],
           "INFRA": "Primary",
           "ROLE": "dnds",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CL_STATUS": "DECOM"
         }
       },
@@ -1909,6 +1946,7 @@
           ],
           "INFRA": "Primary",
           "ROLE": "dnds",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CL_STATUS": "DECOM"
         }
       },
@@ -1924,6 +1962,7 @@
           ],
           "INFRA": "Primary",
           "ROLE": "qnds",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CL_STATUS": "DECOM"
         }
       },
@@ -1939,6 +1978,7 @@
           ],
           "INFRA": "Primary",
           "ROLE": "dnds",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "HBASE",
           "CL_STATUS": "DECOM"
         }
@@ -2042,6 +2082,7 @@
           ],
           "INFRA": "Primary",
           "ROLE": "dnds",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CL_STATUS": "DECOM",
           "CLUSTER_TYPE": "HBASE"
         }
@@ -2057,6 +2098,7 @@
           ],
           "INFRA": "Primary",
           "ROLE": "dnds",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CL_STATUS": "DECOM",
           "CLUSTER_TYPE": "HBASE"
         }
@@ -2131,6 +2173,7 @@
           ],
           "INFRA": "Secondary",
           "ROLE": "dnds",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CL_STATUS": "DECOM",
           "CLUSTER_TYPE": "HBASE"
         }
@@ -2146,6 +2189,7 @@
           ],
           "INFRA": "Secondary",
           "ROLE": "dnds",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CL_STATUS": "DECOM",
           "CLUSTER_TYPE": "HBASE"
         }
@@ -2254,6 +2298,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Primary",
           "ROLE": "gdsdclient",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "GDSDCLIENT"
         }
       },
@@ -2265,6 +2310,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Primary",
           "ROLE": "deploydata",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "DEPLOYDATA"
         }
       },
@@ -2280,6 +2326,7 @@
           ],
           "INFRA": "Primary",
           "ROLE": "proxy",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CL_STATUS": "DECOM",
           "CLUSTER_TYPE": "POD"
         }
@@ -2292,6 +2339,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Secondary",
           "ROLE": "proxy",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CL_STATUS": "DECOM",
           "CLUSTER_TYPE": "POD"
         }
@@ -2304,6 +2352,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting_Infrastructure",
           "ROLE": "publicproxy",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "PUBLICPROXY"
         }
       },
@@ -2315,6 +2364,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting_Infrastructure",
           "ROLE": "rps",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "RPS"
         }
       },
@@ -2329,6 +2379,7 @@
           ],
           "INFRA": "Supporting_Infrastructure",
           "ROLE": "release",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "RELEASE"
         }
       },
@@ -2340,6 +2391,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting_Infrastructure",
           "ROLE": "hwmon",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "HWMON"
         }
       },
@@ -2362,6 +2414,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting_Infrastructure",
           "ROLE": "orch",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "GIGANTOR"
         }
       },
@@ -2373,6 +2426,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting_Infrastructure",
           "ROLE": "pbsgeo",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "PBSGEO"
         }
       },
@@ -2384,6 +2438,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting_Infrastructure",
           "ROLE": "pbsmatch",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "PBSMATCH"
         }
       },
@@ -2421,6 +2476,7 @@
             "(?!shared0-dhub1-1-chi)"
           ],
           "INFRA": "Supporting Infrastructure",
+          "NONACTIVE_STRAIGHT": "Yes",
           "ROLE": "dusty",
           "CLUSTER_TYPE": "DUSTYHUB"
         }
@@ -2490,6 +2546,7 @@
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "log_hub",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "HUB"
         }
       },
@@ -2502,6 +2559,7 @@
           "REGEX": "failoverstatus=STANDBY",
           "INFRA": "Supporting Infrastructure",
           "ROLE": "log_hub",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "HUB"
         }
       },
@@ -2517,6 +2575,7 @@
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "log_hub",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "HUB"
         }
       },
@@ -2529,6 +2588,7 @@
           "REGEX": "failoverstatus=STANDBY",
           "INFRA": "Supporting Infrastructure",
           "ROLE": "log_hub",
+          "NONACTIVE_STRAIGHT": "Yes",  
           "CLUSTER_TYPE": "HUB"
         }
       },
@@ -2586,6 +2646,7 @@
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "argus_dev_ui",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "ARGUS"
         }
       },
@@ -2628,6 +2689,7 @@
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "argus_dev_alert",
+          "NONACTIVE_STRAIGHT": "Yes",
           "HOSTPERCENT": "50",
           "CLUSTER_TYPE": "ARGUS"
         }
@@ -2643,6 +2705,7 @@
           ],        
           "INFRA": "Supporting Infrastructure",
           "ROLE": "ajna_zk",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "AJNA"
         }
       },
@@ -2685,6 +2748,7 @@
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "argus_dev_ws",
+          "NONACTIVE_STRAIGHT": "Yes",
           "HOSTPERCENT": "50",
           "CLUSTER_TYPE": "ARGUS"
         }
@@ -2710,6 +2774,7 @@
             "ops-irc(1|2)-(1|2)-(sfm)"
           ],
           "INFRA": "Supporting Infrastructure",
+          "NONACTIVE_STRAIGHT": "Yes",
           "ROLE": "irc"
         }
       },
@@ -2734,6 +2799,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "ajna_mirror",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "AJNA"
         }
       },
@@ -2777,6 +2843,7 @@
           "INFRA": "Supporting Infrastructure",
           "ROLE": "argus_dev_mq_zk",
           "HOSTPERCENT": "50",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "ARGUS"
         }
       },
@@ -2819,6 +2886,7 @@
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "argus_dev_cache",
+          "NONACTIVE_STRAIGHT": "Yes",
           "HOSTPERCENT": "50",
           "CLUSTER_TYPE": "ARGUS"
         }
@@ -2831,6 +2899,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "netbot",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "OPSNETBOT"
         }
       },
@@ -2842,6 +2911,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "grok",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "GROK"
         }
       },
@@ -2853,6 +2923,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "scrtkafka",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "scrtkafka"
         }
       },
@@ -2865,6 +2936,7 @@
           "INFRA": "Secondary",
           "EXCLUDES": "logbus_prod",
           "ROLE": "logbus",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "POD"
         }
       },
@@ -2876,6 +2948,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Primary",
           "ROLE": "logbus",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CASETYPE": "hostlist"
         }
       },
@@ -2887,6 +2960,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Primary",
           "ROLE": "gateway",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "GATEWAY"
         }
       },
@@ -2898,6 +2972,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Secondary",
           "ROLE": "it_edw",
+          "NONACTIVE_STRAIGHT": "Yes",
           "FILTER": [
             "^.*1-1"
           ],
@@ -2956,6 +3031,7 @@
             "(?!(ops0-stgpm1-1-phx))"
           ],
           "ROLE": "stgpm",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "OPSSTGMGT,OPSSTGPM,NETBACKUP"
         }
       },
@@ -2978,6 +3054,7 @@
           "TAGGROUPS": 0,
           "INFRA": "PRIMARY'",
           "ROLE": "dva_onboarding",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "HSD_ONBOARDING"
         }
       },
@@ -3014,6 +3091,7 @@
           "TAGGROUPS": 0,
           "INFRA": "PRIMARY'",
           "ROLE": "infinsighthadoop,infinsightapi,infinsightdb",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "INFINSIGHTPRD,INFINSIGHT"
         }
       },
@@ -3036,6 +3114,7 @@
           "TAGGROUPS": 0,
           "INFRA": "STANDBY'",
           "ROLE": "stgmgt",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "OPSSTGMGT,STORAGEMGT"
         }
       },
@@ -3048,6 +3127,7 @@
           "INFRA": "Supporting Infrastructure",
           "ROLE": "nwexp",
           "CLUSTER_TYPE": "NWEXP",
+          "NONACTIVE_STRAIGHT": "Yes",
           "HOSTPERCENT": "100"
         }
       },
@@ -3092,6 +3172,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "health",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "HEALTH"
         }
       },
@@ -3146,6 +3227,7 @@
             "(?!(stage0shared0-dvasyslog[1-2]-1-prd|test0shared0-dvasyslog1-1-prd|shared0-dvasyslog1-5-prd))"
           ],
           "ROLE": "dvasyslog",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "DVA_SYSLOG",
           "HOSTPERCENT": "30"
         }
@@ -3160,6 +3242,7 @@
           "FILTER": [
             "(?!(ops0-sysmgt1-1-prd|ops0-sysmgt2-1-xrd))"
           ],
+          "NONACTIVE_STRAIGHT": "Yes",
           "ROLE": "sysmgt"
         }
       },
@@ -3170,6 +3253,7 @@
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
+          "NONACTIVE_STRAIGHT": "Yes",
           "ROLE": "rtinst"
         }
       },
@@ -3239,6 +3323,7 @@
           "HO_STATUS": "ACTIVE,PROVISIONING",
           "INFRA": "Supporting Infrastructure",
           "ROLE": "ajna_mgmt,ajna_wrangler",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "AJNA_MGMT"
         }
       },
@@ -3276,6 +3361,7 @@
           "INFRA": "Supporting Infrastructure",
           "ROLE": "funnel",
           "CLUSTER_TYPE": "FUNNEL",
+          "NONACTIVE_STRAIGHT": "Yes",
           "HOSTPERCENT": "33"
         }
       },
@@ -3287,6 +3373,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "searchmgr",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "SEARCHMGR"
         }
       },
@@ -3309,6 +3396,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "rdb",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "PUPPETRDB"
         }
       },
@@ -3320,6 +3408,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "riakdb",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "PUPPETRDB"
         }
       },
@@ -3356,6 +3445,7 @@
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
+          "NONACTIVE_STRAIGHT": "Yes",
           "ROLE": "sdbs"
         }
       },
@@ -3366,6 +3456,7 @@
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
+          "NONACTIVE_STRAIGHT": "Yes",
           "ROLE": "sdbs"
         }
       },
@@ -3443,6 +3534,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "tools",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "RAZOR"
         }
       },
@@ -3454,6 +3546,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "edge_accd",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "EDGE_ACCD"
         }
       },
@@ -3475,6 +3568,7 @@
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
+          "NONACTIVE_STRAIGHT": "Yes",
           "ROLE": "sfstore"
         }
       },
@@ -3485,6 +3579,7 @@
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
+          "NONACTIVE_STRAIGHT": "Yes",
           "ROLE": "sfstore"
         }
       },
@@ -3535,6 +3630,7 @@
             "shared0-syntheticsagent1-1-prd"
           ],
           "ROLE": "synthetics_agent",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "DVA_SYNTHETICS_AGENT"
         }
       },
@@ -3551,6 +3647,7 @@
             "((shared0-syntheticsagent(1-[3,4])|.*2-3)-prd)"
           ],
           "ROLE": "synthetics_agent",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "DVA_SYNTHETICS_AGENT"
         }
       },
@@ -3567,6 +3664,7 @@
             "(?!((shared0-syntheticsagent(1-[1,3,4])|.*2-3)-prd))"
           ],
           "ROLE": "synthetics_agent",
+          "NONACTIVE_STRAIGHT": "Yes",
           "HO_STATUS": "ACTIVE,PRE_PRODUCTION",
           "CLUSTER_TYPE": "DVA_SYNTHETICS_AGENT"
         }
@@ -3584,6 +3682,7 @@
             "((shared0-syntheticsmaster1-2|.*2-1)-prd)"
           ],
           "ROLE": "synthetics_master",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "DVA_SYNTHETICS_MASTER"
         }
       },
@@ -3600,6 +3699,7 @@
             "shared0-syntheticsmaster1-1-prd"
           ],
           "ROLE": "synthetics_master",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "DVA_SYNTHETICS_MASTER"
         }
       },
@@ -3616,6 +3716,7 @@
             "shared0-syntheticsmaster2-2-prd"
           ],
           "ROLE": "synthetics_master",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "DVA_SYNTHETICS_MASTER"
         }
       },
@@ -3649,6 +3750,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "rackbot,rbossdb",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "OPS,ENG"
         }
       },
@@ -3660,6 +3762,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "ice-splunk-idxr,icesplunk,splunkdply,splunkfwd,icesplunkdply",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "SPLUNKFWD,SPLUNK-INDEXER"
         }
       },
@@ -3706,6 +3809,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "puppetng",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "PUPPETMASTER,puppet-kingdomlevel"
         }
       },
@@ -3728,6 +3832,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "captainzk",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "CAPTAIN"
         }
       },
@@ -3739,6 +3844,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "captainmgt",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "CAPTAIN"
         }
       },
@@ -3831,6 +3937,7 @@
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
           "ROLE": "cnc",
+          "NONACTIVE_STRAIGHT": "Yes",
           "CLUSTER_TYPE": "cnc"
         }
       },
@@ -4306,4 +4413,4 @@
           "ROLE": "acs"
         }
       }
-    }
+    } 
