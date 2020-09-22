@@ -2499,23 +2499,6 @@
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "INFRA": "Primary",
-          "FILTER": [
-            ".*(nms[^3]-[1-2]-(?!sfm))"
-          ],
-          "ROLE": "smarts,nms",
-          "CLUSTER_TYPE": "SMARTS"
-        }
-      },
-      "smarts_nmsfwd_prod": {
-        "PROD": {
-          "PODGROUP": "smartscl",
-          "TEMPLATEID": "smarts-nmsfwd",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Primary",
-          "FILTER": [
-            ".*(nms3-[1-2]-(?!sfm))"
-          ],
           "ROLE": "smarts,nms",
           "CLUSTER_TYPE": "SMARTS"
         }
