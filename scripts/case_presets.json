@@ -3773,6 +3773,34 @@
           "CLUSTER_TYPE": "DUST_DELPHI"
         }
       },
+      "dust_delphi_prod": {
+        "PROD": {
+          "PODGROUP": "delphigackparsercl",
+          "TEMPLATEID": "dust-delphi",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "FILTER": [
+            "(dev0delphi0-watch(1|2)-1-(prd))|(delphi0-watch(1|2)-1-(rz1))"
+          ],
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "dust_delphi",
+          "CLUSTER_TYPE": "DUST_DELPHI,DEV0-DELPHI"
+        }
+      },
+      "gackparser_prod": {
+        "PROD": {
+          "PODGROUP": "delphigackparsercl",
+          "TEMPLATEID": "gackparser",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "FILTER": [
+            "(dev0delphi0-gack(1|2)-1-(prd))|(delphi0-gack(1|2)-1-(rz1))"
+          ],
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "gackparser",
+          "CLUSTER_TYPE": "DUST_DELPHI,DEV0-DELPHI"
+        }
+      },
       "puppet_prod": {
         "PROD": {
           "PODGROUP": "puppetcl",
