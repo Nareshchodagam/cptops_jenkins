@@ -4640,10 +4640,10 @@
         }
       },
 
-      "migration_ffx_prod": {
+      "migration_ffx_standard_prod": {
         "PROD": {
-          "PODGROUP": "migration_ffx_prod",
-          "TEMPLATEID": "migration_ffx_prod",
+          "PODGROUP": "migration_ffx_standard_prod",
+          "TEMPLATEID": "migration_ffx_standard_prod",
           "GROUPSIZE": 10,
           "PATCHING":"all",
           "TAGGROUPS": 0,
@@ -4656,10 +4656,42 @@
           "CLUSTER_TYPE": "POD"
         }
       },
-      "migration_ffx_dr": {
+      "migration_ffx_standard_dr": {
         "DR": {
-          "PODGROUP": "migration_ffx_dr",
-          "TEMPLATEID": "migration_ffx_dr",
+          "PODGROUP": "migration_ffx_standard_dr",
+          "TEMPLATEID": "migration_ffx_standard_dr",
+          "GROUPSIZE": 10,
+          "TAGGROUPS": 0,
+          "FILTER": [
+            "^.*ffx1-.*",
+            "^.*ffx2-.*"
+          ],
+          "PATCHING":"all",
+          "INFRA": "Secondary",
+          "ROLE": "ffx",
+          "CLUSTER_TYPE": "POD"
+        }
+      },
+      "migration_ffx_stage1_prod": {
+        "PROD": {
+          "PODGROUP": "migration_ffx_stage1_prod",
+          "TEMPLATEID": "migration_ffx_stage1_prod",
+          "GROUPSIZE": 10,
+          "PATCHING":"all",
+          "TAGGROUPS": 0,
+          "FILTER": [
+            "^.*ffx1-.*",
+            "^.*ffx2-.*"
+          ],
+          "INFRA": "Primary",
+          "ROLE": "ffx",
+          "CLUSTER_TYPE": "POD"
+        }
+      },
+      "migration_ffx_stage1_dr": {
+        "DR": {
+          "PODGROUP": "migration_ffx_stage1_dr",
+          "TEMPLATEID": "migration_ffx_stage1_dr",
           "GROUPSIZE": 10,
           "TAGGROUPS": 0,
           "FILTER": [
