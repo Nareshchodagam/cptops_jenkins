@@ -159,20 +159,6 @@
           "CLUSTER_TYPE": "ARGUS"
         }
       },
-      "argus_writed_canary_prod": {
-        "PROD": {
-          "PODGROUP": "arguscl.canary",
-          "TEMPLATEID": "argus_writed",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "FILTER": [
-            "shared1-argustsdbw1-1-prd"
-          ],
-          "ROLE": "argus_writed",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
       "argus_dev_writed_prod": {
         "PROD": {
           "PODGROUP": "arguscl",
@@ -2647,20 +2633,6 @@
           "CLUSTER_TYPE": "ARGUS"
         }
       },
-      "argus_alert_canary_prod": {
-        "PROD": {
-          "PODGROUP": "arguscl.canary",
-          "TEMPLATEID": "argusalert",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "FILTER": [
-            "shared1-argusalert1-2-prd"
-          ],
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_alert",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
       "argus_dev_alert_prod": {
         "PROD": {
           "PODGROUP": "arguscl",
@@ -2700,20 +2672,6 @@
           "TAGGROUPS": 0,
           "FILTER": [
             "(?!(.*argusws2-5-)|(.*-xrd))"
-          ],
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_ws",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
-      "argusws_canary_prod": {
-        "PROD": {
-          "PODGROUP": "arguscl.canary",
-          "TEMPLATEID": "argusws",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "FILTER": [
-            "(.*(argusws2-5-))"
           ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "argus_ws",
@@ -2795,20 +2753,6 @@
           "INFRA": "Supporting Infrastructure",
           "FILTER": [
             "(?!shared1-argusmqzk2-1-prd)"
-          ],
-          "ROLE": "argus_mq_zk",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
-      "argus_mq_zk_canary_prod": {
-        "PROD": {
-          "PODGROUP": "arguscl.canary",
-          "TEMPLATEID": "argus_mq_zk",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "FILTER": [
-            "shared1-argusmqzk2-1-prd"
           ],
           "ROLE": "argus_mq_zk",
           "CLUSTER_TYPE": "ARGUS"
@@ -3183,20 +3127,6 @@
           "INFRA": "Supporting Infrastructure",
           "ROLE": "momui",
           "CLUSTER_TYPE": "MOMUI"
-        }
-      },
-      "dvasyslog_canary_prod": {
-        "PROD": {
-          "PODGROUP": "dvasyslog_prod.canary",
-          "TEMPLATEID": "dvasyslog",
-          "GROUPSIZE": 3,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "FILTER": [
-            "(stage0shared0-dvasyslog[1-2]-1-prd|test0shared0-dvasyslog1-1-prd|shared0-dvasyslog1-5-prd)"
-          ],
-          "ROLE": "dvasyslog",
-          "CLUSTER_TYPE": "DVA_SYSLOG"
         }
       },
       "dvasyslog_prod": {
@@ -3873,20 +3803,6 @@
           "CLUSTER_TYPE": "SECDS"
         }
       },
-      "netbot_canary_prod": {
-        "PROD": {
-          "PODGROUP": "netbot.canary",
-          "TEMPLATEID": "netbot",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "FILTER": [
-            "((ops0-netbot[12]-[12]-prd))"
-          ],
-          "ROLE": "netbot",
-          "CLUSTER_TYPE": "OPSNETBOT"
-        }
-      },
       "secmgt_prod": {
         "PROD": {
           "PODGROUP": "secmgt",
@@ -3899,34 +3815,6 @@
           ],
           "ROLE": "secmgt",
           "CLUSTER_TYPE": "SECMGT"
-        }
-      },
-      "secmgt_canary_prod": {
-        "PROD": {
-          "PODGROUP": "secmgt",
-          "TEMPLATEID": "secmgt",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "FILTER": [
-            "((ops0-secmgt[12]-1-prd))"
-          ],
-          "ROLE": "secmgt",
-          "CLUSTER_TYPE": "SECMGT"
-        }
-      },
-      "ns_canary_prod": {
-        "PROD": {
-          "PODGROUP": "nscl.canary",
-          "TEMPLATEID": "ns",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "FILTER": [
-            "((ops0-ns[1234]-1-prd))"
-          ],
-          "ROLE": "ns",
-          "CLUSTER_TYPE": "OPSNS"
         }
       },
       "airdev_prod": {
