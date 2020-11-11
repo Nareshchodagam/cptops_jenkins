@@ -4623,5 +4623,16 @@
           "INFRA": "Supporting Infrastructure",
           "ROLE": "acs"
         }
+      },
+      "migration_health_prod": {
+        "PROD": {
+          "PODGROUP": "migration_health_prod",
+          "TEMPLATEID": "migration_straight",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "health",
+          "CLUSTER_TYPE": "HEALTH"
+        }
       }
     } 
