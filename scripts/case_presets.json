@@ -3984,9 +3984,6 @@
           "TEMPLATEID": "migration_dnds_prod",
           "GROUPSIZE": 5,
           "TAGGROUPS": 0,
-          "FILTER": [
-            "!(hdaas-*)"
-          ],
           "PATCHING": "byrack",
           "INFRA": "Supporting Infrastructure",
           "ROLE": "dnds"
@@ -4633,6 +4630,17 @@
           "INFRA": "Supporting Infrastructure",
           "ROLE": "health",
           "CLUSTER_TYPE": "HEALTH"
+        }
+      },
+      "migration_it_edw_prod": {
+        "PROD": {
+          "PODGROUP": "migration_it_edw_prod",
+          "TEMPLATEID": "migration_straight",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "it_edw",
+          "CLUSTER_TYPE": "IT_EDW"
         }
       }
     } 
