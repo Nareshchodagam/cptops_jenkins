@@ -4642,5 +4642,37 @@
           "ROLE": "it_edw",
           "CLUSTER_TYPE": "IT_EDW"
         }
+      },
+       "migration_dusty_prod": {
+        "PROD": {
+          "PODGROUP": "migration_dusty_prod",
+          "TEMPLATEID": "migration_dusty_prod",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "dusty",
+          "CLUSTER_TYPE": "DUSTYHUB"
+        }
+      },
+      "migration_sapp_prod": {
+        "PROD": {
+          "PODGROUP": "migration_sapp_prod",
+          "TEMPLATEID": "migration_sapp_prod",
+          "GROUPSIZE": 2,
+          "TAGGROUPS": 0,
+          "INFRA": "Primary",
+          "ROLE": "sapp"
+        }
+      },
+      "migration_log_hub_prod": {
+        "PROD": {
+          "PODGROUP": "migration_log_hub_prod",
+          "TEMPLATEID": "migration_orch_prod",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "log_hub",
+          "CLUSTER_TYPE": "HUB"
+        }
       }
-    } 
+    }
