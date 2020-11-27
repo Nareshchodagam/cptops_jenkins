@@ -3992,7 +3992,7 @@
       "migration_mnds_prod": {
         "PROD": {
           "PODGROUP": "migration_mnds_prod",
-          "TEMPLATEID": "migration_mnds_prod_dont_create_case",
+          "TEMPLATEID": "migration_mnds_prod",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "PATCHING": "byrack",
@@ -4532,6 +4532,10 @@
           "GROUPSIZE": 10,
           "PATCHING":"all",
           "TAGGROUPS": 0,
+          "FILTER": [
+            "^.*ffx1-.*",
+            "^.*ffx2-.*"
+          ],
           "INFRA": "Primary",
           "ROLE": "ffx",
           "CLUSTER_TYPE": "POD"
@@ -4543,6 +4547,10 @@
           "TEMPLATEID": "migration_ffx_standard_dr",
           "GROUPSIZE": 10,
           "TAGGROUPS": 0,
+          "FILTER": [
+            "^.*ffx1-.*",
+            "^.*ffx2-.*"
+          ],
           "PATCHING":"all",
           "INFRA": "Secondary",
           "ROLE": "ffx",
@@ -4556,6 +4564,10 @@
           "GROUPSIZE": 10,
           "PATCHING":"all",
           "TAGGROUPS": 0,
+          "FILTER": [
+            "^.*ffx1-.*",
+            "^.*ffx2-.*"
+          ],
           "INFRA": "Primary",
           "ROLE": "ffx",
           "CLUSTER_TYPE": "POD"
@@ -4567,6 +4579,10 @@
           "TEMPLATEID": "migration_ffx_stage1_dr",
           "GROUPSIZE": 10,
           "TAGGROUPS": 0,
+          "FILTER": [
+            "^.*ffx1-.*",
+            "^.*ffx2-.*"
+          ],
           "PATCHING":"all",
           "INFRA": "Secondary",
           "ROLE": "ffx",
@@ -4619,7 +4635,7 @@
       "migration_it_edw_prod": {
         "PROD": {
           "PODGROUP": "migration_it_edw_prod",
-          "TEMPLATEID": "migration_orch_prod",
+          "TEMPLATEID": "migration_straight",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
           "INFRA": "Supporting Infrastructure",
@@ -4627,7 +4643,7 @@
           "CLUSTER_TYPE": "IT_EDW"
         }
       },
-      "migration_dusty_prod": {
+       "migration_dusty_prod": {
         "PROD": {
           "PODGROUP": "migration_dusty_prod",
           "TEMPLATEID": "migration_dusty_prod",
@@ -4658,225 +4674,5 @@
           "ROLE": "log_hub",
           "CLUSTER_TYPE": "HUB"
         }
-      },
-      "migration_argus_ui_prod": {
-        "PROD": {
-          "PODGROUP": "migration_argus_ui_prod",
-          "TEMPLATEID": "migration_argus_ui_prod",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_ui",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
-      "migration_argus_mq_prod": {
-        "PROD": {
-          "PODGROUP": "migration_argus_mq_prod",
-          "TEMPLATEID": "migration_argus_mq_prod",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_mq",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
-      "migration_argus_rdbms_prod": {
-        "PROD": {
-          "PODGROUP": "migration_argus_rdbms_prod",
-          "TEMPLATEID": "migration_argus_rdbms_prod",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_rdbms",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
-      "migration_argus_ajna_prod": {
-        "PROD": {
-          "PODGROUP": "migration_argus_ajna_prod",
-          "TEMPLATEID": "migration_argus_ajna_prod",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_ajna",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
-      "migration_argus_writed_prod": {
-        "PROD": {
-          "PODGROUP": "migration_argus_writed_prod",
-          "TEMPLATEID": "migration_argus_writed_prod",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_writed",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
-      "migration_argus_ws_prod": {
-        "PROD": {
-          "PODGROUP": "migration_argus_ws_prod",
-          "TEMPLATEID": "migration_argus_ws_prod",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_ws",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
-      "migration_argus_mq_zk_prod": {
-        "PROD": {
-          "PODGROUP": "migration_argus_mq_zk_prod",
-          "TEMPLATEID": "migration_argus_mq_zk_prod",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_mq_zk",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
-      "migration_argus_annotation_prod": {
-        "PROD": {
-          "PODGROUP": "migration_argus_annotation_prod",
-          "TEMPLATEID": "migration_argus_annotation_prod",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_annotation",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
-      "migration_argus_cache_prod": {
-        "PROD": {
-          "PODGROUP": "migration_argus_cache_prod",
-          "TEMPLATEID": "migration_argus_cache_prod",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_cache",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
-      "migration_argus_alert_prod": {
-        "PROD": {
-          "PODGROUP": "migration_argus_alert_prod",
-          "TEMPLATEID": "migration_argus_alert_prod",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_alert",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
-      "migration_argus_metrics_prod": {
-        "PROD": {
-          "PODGROUP": "migration_argus_metrics_prod",
-          "TEMPLATEID": "migration_argus_metrics_prod",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_metrics",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
-      "migration_argus_dev_cache_prod": {
-        "PROD": {
-          "PODGROUP": "migration_argus_dev_cache_prod",
-          "TEMPLATEID": "migration_argus_dev_cache_prod",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_dev_cache",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
-      "migration_argus_dev_alert_prod": {
-        "PROD": {
-          "PODGROUP": "migration_argus_dev_alert_prod",
-          "TEMPLATEID": "migration_argus_dev_alert_prod",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_dev_alert",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
-      "migration_argus_dev_ws_prod": {
-        "PROD": {
-          "PODGROUP": "migration_argus_dev_ws_prod",
-          "TEMPLATEID": "migration_argus_dev_ws_prod",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_dev_ws",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
-      "migration_argus_dev_writed_prod": {
-        "PROD": {
-          "PODGROUP": "migration_argus_dev_writed_prod",
-          "TEMPLATEID": "migration_argus_dev_writed_prod",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_dev_writed",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
-      "migration_argus_dev_readd_prod": {
-        "PROD": {
-          "PODGROUP": "migration_argus_dev_readd_prod",
-          "TEMPLATEID": "migration_argus_dev_readd_prod",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_dev_readd",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
-      "migration_argus_dev_mq_prod": {
-        "PROD": {
-          "PODGROUP": "migration_argus_dev_mq_prod",
-          "TEMPLATEID": "migration_argus_dev_mq_prod",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_dev_mq",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
-      "migration_argus_cache_prod": {
-        "PROD": {
-          "PODGROUP": "migration_argus_cache_prod",
-          "TEMPLATEID": "migration_argus_cache_prod",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_cache",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
-      "migration_argus_readd_prod": {
-        "PROD": {
-          "PODGROUP": "migration_argus_readd_prod",
-          "TEMPLATEID": "migration_argus_readd_prod",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_readd",
-          "CLUSTER_TYPE": "ARGUS"
-        }
-      },
-      "migration_argus_dev_ajna_prod": {
-        "PROD": {
-          "PODGROUP": "migration_argus_dev_ajna_prod",
-          "TEMPLATEID": "migration_argus_dev_ajna_prod",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "argus_dev_ajna",
-          "CLUSTER_TYPE": "ARGUS"
-        }
       }
-    } 
+    }
