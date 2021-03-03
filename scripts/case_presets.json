@@ -1375,6 +1375,9 @@
           "TEMPLATEID": "shared-apputil",
           "GROUPSIZE": 2,
           "TAGGROUPS": 0,
+          "FILTER": [
+            "(?!(^restore0-app.*))"
+          ],
           "INFRA": "Supporting_Infrastructure",
           "ROLE": "app",
           "CLUSTER_TYPE": "DATA_RESTORE"
@@ -1386,6 +1389,23 @@
           "TEMPLATEID": "shared-apputil",
           "GROUPSIZE": 1,
           "TAGGROUPS": 0,
+          "FILTER": [
+            "(?!(^restore0-app.*))"
+          ],
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "app",
+          "CLUSTER_TYPE": "DATA_RESTORE"
+        }
+      },
+      "restoreapp_straight_patch_prod": {
+        "PROD": {
+          "PODGROUP": "restore",
+          "TEMPLATEID": "straight-patch-Goc++",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "FILTER": [
+            "^restore0-app.*"
+          ],
           "INFRA": "Supporting Infrastructure",
           "ROLE": "app",
           "CLUSTER_TYPE": "DATA_RESTORE"
