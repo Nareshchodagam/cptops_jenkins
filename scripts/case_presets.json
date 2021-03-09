@@ -404,7 +404,7 @@
       },
       "coreafw_caps_dr": {
         "DR": {
-          "PODGROUP": "afw.pri",
+          "PODGROUP": "afw.sec",
           "TEMPLATEID": "coreapp_caps-dr",
           "GROUPSIZE": 3,
           "TAGGROUPS": 0,
