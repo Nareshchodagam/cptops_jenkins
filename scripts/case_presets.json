@@ -402,6 +402,22 @@
           "HOSTPERCENT": "20"
         }
       },
+      "coreafw_caps_dr": {
+        "DR": {
+          "PODGROUP": "afw.pri",
+          "TEMPLATEID": "coreapp_caps-dr",
+          "GROUPSIZE": 3,
+          "TAGGROUPS": 0,
+          "FILTER": [
+            "(?!(.*-(prd|xrd|crd|yhu|yul|syd|cdu|crz|chi|was|lon)))"
+          ],
+          "INFRA": "Primary",
+          "ROLE": "app",
+          "CL_STATUS": "DECOM",
+          "CLUSTER_TYPE": "POD",
+          "HOSTPERCENT": "20"
+        }
+      },
       "coreafw-cbatch-dapp_prod": {
         "PROD": {
           "PODGROUP": "afw.pri",
