@@ -275,6 +275,62 @@
           "CLUSTER_TYPE": "OPSNS"
         }
       },
+      "ddisite_prod": {
+        "PROD": {
+          "PODGROUP": "ddisitecl",
+          "TEMPLATEID": "ddisite",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "FILTER": [
+            ".*-(crz|crd|yhu|yul|cdu|syd)"
+          ],        
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "ddisite",
+          "CLUSTER_TYPE": "DDISITE"
+        }
+      },
+      "ddicore_prod": {
+        "PROD": {
+          "PODGROUP": "ddicorecl",
+          "TEMPLATEID": "ddicore",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "FILTER": [
+            ".*-(crz|crd|rz1)"
+          ],        
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "ddicore",
+          "CLUSTER_TYPE": "DDICORE,OPSDDILAB"
+        }
+      },
+      "ddilab_prod": {
+        "PROD": {
+          "PODGROUP": "ddilabcl",
+          "TEMPLATEID": "ddilab",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "FILTER": [
+            "(?!ops0-ddilab1-6-crd)"
+          ],        
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "ddilab",
+          "CLUSTER_TYPE": "OPSDDILAB"
+        }
+      },
+      "ddireport_prod": {
+        "PROD": {
+          "PODGROUP": "ddireportcl",
+          "TEMPLATEID": "ddireport",
+          "GROUPSIZE": 1,
+          "TAGGROUPS": 0,
+          "FILTER": [
+            "ops0-ddireport1-1-rz1"
+          ],        
+          "INFRA": "Supporting Infrastructure",
+          "ROLE": "ddireport",
+          "CLUSTER_TYPE": "OPSDDIGM"
+        }
+      },
       "mmmbus_funnel_sfz_prod": {
         "PROD": {
           "PODGROUP": "ajna_prodcl",
