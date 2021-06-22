@@ -823,21 +823,6 @@
           "CLUSTER_TYPE": "AJNA"
         }
       },
-      "mmxcvr_canary_prod": {
-        "PROD": {
-          "PODGROUP": "ajna_prodcl",
-          "TEMPLATEID": "mmxcvr",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "REGEX": "failoverstatus=PRIMARY",
-          "FILTER": [
-            "ops-mmxcvr16-2-sfz"
-          ],
-          "INFRA": "Supporting Infrastructure",
-          "ROLE": "mmxcvr",
-          "CLUSTER_TYPE": "AJNA"
-        }
-      },
       "mmxcvr_standby_prod": {
         "PROD": {
           "PODGROUP": "ajna_prodcl",
@@ -1702,21 +1687,6 @@
           "CL_STATUS": "DECOM"
         }
       },
-      "hbase_dch_mnds_canary_prod": {
-        "PROD": {
-          "PODGROUP": "dchbase_internal.canary",
-          "TEMPLATEID": "hbase.dchbase",
-          "GROUPSIZE": 0,
-          "TAGGROUPS": 0,
-          "PATCHING": "byrack",
-          "FILTER": [
-            "dev[7,8]hdaas.*"
-          ],
-          "INFRA": "Primary",
-          "ROLE": "mnds",
-          "CL_STATUS": "DECOM"
-        }
-      },
       "hbase_internal_dch_mnds_prod": {
         "PROD": {
           "PODGROUP": "dchbase_internal.clusters",
@@ -1845,21 +1815,6 @@
           "CL_STATUS": "DECOM"
         }
       },
-      "hbase_mnds_canary_prod": {
-        "PROD": {
-          "PODGROUP": "hbase_clusters.canary",
-          "TEMPLATEID": "hbase.canary",
-          "GROUPSIZE": 0,
-          "TAGGROUPS": 5,
-          "PATCHING": "byrack",
-          "FILTER": [
-            "stg.*hdaas.*-prd"
-          ],
-          "INFRA": "Supporting_Infrastructure",
-          "ROLE": "mnds",
-          "CL_STATUS": "DECOM"
-        }
-      },
       "hbase_deepsea_prod": {
         "PROD": {
           "PODGROUP": "hbase.clusters",
@@ -1874,20 +1829,6 @@
           "ROLE": "dnds",
           "NONACTIVE_STRAIGHT": "Yes",
           "CL_STATUS": "DECOM"
-        }
-      },
-      "hbase_deepsea_canary_prod": {
-        "PROD": {
-          "PODGROUP": "deepsea.canary",
-          "TEMPLATEID": "straight-patch-Goc++",
-          "GROUPSIZE": 10,
-          "PATCHING": "byrack",
-          "TAGGROUPS": 1,
-          "FILTER": [
-            "sbox1hdaas-gnds2-1-prd|sbox1hdaas-gnds3-1-prd|sbox1hdaas-dnds1-2-prd|sbox1hdaas-dnds1-3-prd|sbox1hdaas-dnds1-5-prd|sbox1hdaas-dnds1-6-prd"
-          ],
-          "INFRA": "Supporting_Infrastructure",
-          "ROLE": "gnds,dnds"
         }
       },
       "hbase_mnds_argus_prod": {
@@ -2073,20 +2014,6 @@
           "INFRA": "Primary",
           "ROLE": "mnds",
           "CLUSTER_TYPE": "HBASE",
-          "CL_STATUS": "DECOM"
-        }
-      },
-      "hbase_sayonara_canary_prod": {
-        "PROD": {
-          "PODGROUP": "hbase_sayonara.canary",
-          "TEMPLATEID": "hbase.sayonara",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "FILTER": [
-            "ice1sayonara2a-mnds1-1-prd"
-          ],
-          "INFRA": "Primary",
-          "ROLE": "mnds",
           "CL_STATUS": "DECOM"
         }
       },
@@ -2581,20 +2508,6 @@
           "CLUSTER_TYPE": "SMARTS"
         }
       },
-      "smarts_canary_prod": {
-        "PROD": {
-          "PODGROUP": "smartscl",
-          "TEMPLATEID": "smarts",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "FILTER": [
-            ".*-sfm"
-          ],
-          "INFRA": "Primary",
-          "ROLE": "smarts,nms",
-          "CLUSTER_TYPE": "SMARTS"
-        }
-      },
       "log_hub_prod": {
         "PROD": {
           "PODGROUP": "hubcl",
@@ -3010,33 +2923,6 @@
             "^.*(2-1)-(?!ord)"
           ],
           "CLUSTER_TYPE": "it_edw"
-        }
-      },
-      "dbextract_canary_prod": {
-        "PROD": {
-          "PODGROUP": "itedw_cl",
-          "TEMPLATEID": "it_edw",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Secondary",
-          "ROLE": "it_edw",
-          "FILTER": [
-            "shared0-dbextract2-1-ord"
-          ],
-          "CLUSTER_TYPE": "it_edw"
-        }
-      },
-      "stgpm_canary_prod": {
-        "PROD": {
-          "PODGROUP": "stg_pm_and_mgt_prod",
-          "TEMPLATEID": "stgpm",
-          "GROUPSIZE": 1,
-          "TAGGROUPS": 0,
-          "INFRA": "Supporting Infrastructure",
-          "FILTER": [
-            "ops0-stgpm1-1-phx"
-          ],
-          "ROLE": "stgpm"
         }
       },
       "stgpm_prod": {
