@@ -147,7 +147,7 @@ class Atlas:
     This class is use to extract hosts information from Atlas
     """
     def __init__(self):
-        self.atlas_url = "https://ops0-cpt1-1-xrd.eng.sfdc.net:9876/api/v1"
+        self.atlas_url = "https://ops0-sysmgt1-1-xrd.eng.sfdc.net:9876/api/v1"
         self.cesa_end_point = "/vulnerability-details/"
         self.cesa_query_filter = "hosts?cesa="
         self.host_query_filter = "/hosts?name="

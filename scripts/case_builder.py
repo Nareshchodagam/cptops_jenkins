@@ -658,7 +658,7 @@ if __name__ == "__main__":
 
     if options.bundle.lower() in ["current", "canary"]:
         try:
-            bundle_data = requests.get("https://ops0-cpt1-1-xrd.eng.sfdc.net:9876/api/v1/patch-bundles", verify=False, timeout=10)
+            bundle_data = requests.get("https://ops0-sysmgt1-1-xrd.eng.sfdc.net:9876/api/v1/patch-bundles", verify=False, timeout=10)
             if not bundle_data.status_code == 200:
                 raise Exception
             casesubject = ""

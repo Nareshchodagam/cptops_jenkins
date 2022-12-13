@@ -13,6 +13,18 @@
           "CLUSTER_TYPE": "ARGUS"
         }
       },
+      "praccn_prod": {
+        "PROD": {
+          "PODGROUP": "praccn",
+          "TEMPLATEID": "praimage",
+          "GROUPSIZE": 0,
+          "PATCHING": "all",
+          "TAGGROUPS": 0,
+          "INFRA": "Primary",
+          "ROLE": "praccn",
+          "CLUSTER_TYPE": "POD"
+        }
+      },
       "argusmq_canary_prod": {
         "PROD": {
           "PODGROUP": "arguscl.canary",
